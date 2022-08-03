@@ -3,7 +3,7 @@
 
 1) dans la partie " BLOG SECTION "
 
-2)  juste copier coller une partie "<section>"
+2)  juste copier coller une partie "section"
 
 3) modifier a sa guise, et sauvegarder
 
