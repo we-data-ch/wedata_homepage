@@ -1,0 +1,40 @@
+/* ---------- Custom ----------------- */
+
+.js-scroll-trigger:hover {
+    text-decoration: none;
+}
+
+.explanation_portfolio {
+    font-size: small;
+    /* font-size: 14px; */
+    margin: 20px;
+}
+
+.title_portfolio {
+    font-size: medium;
+    /* font-size: 14px; */
+    margin: 20px;
+}
+
+img.hbm {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+img.iqm {
+    padding-left: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+img.tbt {
+    padding-left: 10px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.parentDiv {  
+    display: flex; 
+    justify-content: center; 
+    align-items: center;} 

@@ -746,6 +746,30 @@ ul.social-buttons {
 }
 
 ul.social-buttons li a {
+  font-size: 60px;
+  line-height: 90px;
+  display: block;
+  width: 90px;
+  height: 90px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 100%;
+  outline: none;
+  background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+  background-color: #fed136;
+}
+
+
+ul.social-buttons2 {
+  margin-bottom: 0;
+}
+
+ul.social-buttons2 li a {
   font-size: 20px;
   line-height: 40px;
   display: block;
@@ -760,10 +784,9 @@ ul.social-buttons li a {
   background-color: #212529;
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+ul.social-buttons2 li a:active, ul.social-buttons li a:focus, ul.social-button2s li a:hover {
   background-color: #fed136;
 }
-
 
 
 

@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
+<!-- todo -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-5"></script>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KTW1Z7J25"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-79254642-5');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6KTW1Z7J25');
     </script> -->
 
     <meta charset="utf-8">
@@ -38,10 +43,15 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
-  </head>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-  <body id="page-top">
+</head>
+
+<body id="page-top">
 
 
 
@@ -49,26 +59,38 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-      <div class="container">
-        <a href="index.html">
-          &larr; We Data HOMEPAGE
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home Page</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <!-- <div class="container"> -->
+            <a class="js-scroll-trigger" href="#page-top">
+              &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-home fa-2x"></i>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#description">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="consulting.html">Consulting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        <!-- </div> -->
     </nav>
+
+
+
 
 
 
@@ -88,24 +110,36 @@
 <header class="masthead">
   <div id="particles-js"></div>
   <div class="textlanding">
-    <p style="display:inline; font-size: 35px">ONLY</p><p style="display:inline; font-size: 35px"> - </p><p style="display:inline; font-size: 35px">DATA</p>
+
+    <div class="parentDiv"> 
+      <img src="img/logo/wedata_gif.gif" alt="we data logo" > 
+      </div> 
+      <br>
+    <!-- <p style="display:inline; font-size: 35px">ONLY - DATA</p> -->
       <hr style="width: 100px; height: 1px; border:none;color:#333;background-color:#333;">
       <br>
       <ul class="list-inline social-buttons">
         <li class="list-inline-item social-buttons">
-          <a href="https://github.com/munoztd0">
+          <a href="https://github.com/we-data-ch">
             <i class="fa fa-github" style="color: white"></i>
+          </a>
+        </li>
+        <li class="list-inline-item social-buttons">
+          <a href="https://www.youtube.com/channel/UCGktdbvbc_H-JEkYYTvwRVw">
+            <i class="fa fa-youtube" style="color: white"></i>
+          </a>
+        </li>
+        <li class="list-inline-item social-buttons">
+          <a href="https://www.instagram.com/wedata_unige/">
+            <i class="fa fa-instagram" style="color: white"></i>
           </a>
         </li>
       </ul>
       <br><br>
-      <p>We Data's <u>blog</u> on statistics, R and Dataviz. More or less linked with our world, always related to data.
-        <!-- <br>Part of the <a href="https://www.r-bloggers.com">R bloggers</a> network. -->
-      </p>
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">Visit</a>
+<!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#blog">Visit</a> -->
   </div>
   <div class="arrowlanding">
-    <a class="js-scroll-trigger" href="#blog"><p style="font-size: 80px; color: #69b3a2">&#xfe40;</p></a>
+    <a class="js-scroll-trigger" href="#description"><p style="font-size: 80px; color: #69b3a2">&#xfe40;</p></a>
   </div>
 
 
@@ -124,28 +158,355 @@
 
 
 
+    <!-- =======================  DESCRIPTION SECTION ======================= -->
+
+    <section id="description" class="bg-white">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-8 col-sm-8 text-center">
+                    <img class="img-fluid" src="img/logo/wedata.png" alt="we data logo" style="margin-bottom: 30px">
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-10">
+                    <br><br>
+                    <h4>We Data is a Swiss organization created in 2020 that shares knowledge about statistics in social sciences, gives statistical courses, and do coding demonstrations.
+                      <br><br> Our goal is to promote code in the social science and raise awareness of new digital technologies.</h4>
+                    <br>
+                    <!-- <div class="row">
+                        <div class="col-lg-12 col-md-5 col-sm-3 text-right">
+                            <a class="btn flex-fill btn-secondary btn-l text-uppercase" href="https://github.com/munoztd0/publications">Publications</a>
+                            <a class="btn flex-fill btn-secondary btn-l text-uppercase" href="https://github.com/munoztd0/teaching">Teaching</a>
+                            <a class="btn flex-fill btn-secondary btn-l text-uppercase" href="https://github.com/munoztd0">Github</a>
+                            <a class="btn flex-fill btn-secondary btn-l text-uppercase" href="https://github.com/munoztd0/CV_DMT/raw/main/CV_DMT.pdf">CV</a>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
 
 
-<!-- ======================== BLOG SECTION ============================ -->
+
+            <!-- <div class="row hide-if-small-screen" style="padding-top: 5%">
+                <div class="col-lg-12 text-center">
+                    <svg width="1000" height="100">
+            <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
+
+            <circle cx="200" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="200" y="80" fill="black">2018</text>
+            <text font-size="13" text-anchor="middle" x="100" y="30" fill="black">Master Degree</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="100" y="80" fill="#808080">Geneva Neurocenter</text>
+
+            <circle cx="400" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="400" y="80" fill="black">2019</text>
+            <text font-size="13" text-anchor="middle" x="300" y="30" fill="black">Data Visualization</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="300" y="80" fill="#808080">Campus Biotech</text>
+
+            <circle cx="650" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="650" y="80" fill="black">2020</text>
+            <text font-size="13" text-anchor="middle" x="525" y="30" fill="black">Data Analyst</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="525" y="80" fill="#808080">Swiss Center for </text> 
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="525" y="95" fill="#808080">Affective Sciences</text>
+
+
+            <circle cx="850" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+            <text text-anchor="middle" x="850" y="80" fill="black">2021</text>
+            <text font-size="13" text-anchor="middle" x="750" y="30" fill="black">Teaching Assistant</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="750" y="80" fill="#808080">Statistics</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="750" y="95" fill="#808080">Univeristy of Geneva</text>
+
+            <text font-size="13" text-anchor="middle" x="930" y="30" fill="black">Data - Science - Viz</text>
+            <text style="font-style: italic" font-size="13" text-anchor="middle" x="930" y="80"
+              fill="#808080">Freelance</text>
+
+          </svg>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+    <!-- ======================================================================= -->
 
 
 
-    <section id="blog" style="padding-top: 3%; padding-bottom: 3%">
-      <div class="container">
-        <div class="row">
 
 
-          <div class="col-lg-12 text-left" style="padding-bottom: 4%">
-            <a href="blog/dataToViz.html"><p class="blogtitle">Base R</p></a>
-            <p class="blogfeature">January 2018 - 6 minutes read</p>
-            <p class="blogtext">But: Initier les personnes qui souhaiterait débuter R en commençant par
-               les bases ou les personnes souhaitant renforcer leur connaissance en passant par des concepts importants en programmation.<span class="blogreadmore"> - <a href="blog/XX">Read more</a></span></p>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======================== PORTFOLIO SECTION ============================ -->
+    <!-- Images must be 380 x 445, resize them with -->
+    <!-- Change image size o have height = 445: convert tmp.png -resize 380x445 new.png -->
+    <!-- Add white space on the side to have the good size: convert -size 380x445 xc:white new.png  -gravity center -composite output.png -->
+    <!-- Or adapt to add height on top / bottom -->
+
+
+
+
+    <section class="bg-light" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Our Team</h2>
+                    <h3 class="section-subheading text-muted">A glimpse of our team members</h3>
+                    <!-- <div id="portfolio-button-container">
+                        <button class="btn btn-secondary active" data-portfolio-section="all">Show all</button>
+                        <button class="btn btn-secondary" data-portfolio-section="mining">Data mining</button>
+                        <button class="btn btn-secondary" data-portfolio-section="ml">Machine Learning</button>
+                        <button class="btn btn-secondary" data-portfolio-section="stat">Statistical Tools</button>
+                        <button class="btn btn-secondary" data-portfolio-section="dataviz">Dataviz</button>
+                    </div> -->
+                    <br>
+                </div>
+            </div>
+            <br><br>
+            <div id="portfolio-items" class="row">
+
+
+
+                <div class="col-md-3 col-sm-6 portfolio-item show column dataviz">
+                    <div class="portfolio-link" data-toggle="modal" href="#vestin">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <p>Vestin Hategekimana</p>
+                                <hr>
+                                <p class="explanation_portfolio"> Sociologist /</p>
+                                <p class="explanation_portfolio"> Content Creator<br></p>
+                            </div>
+                        </div>
+                        <img src="img/team/vestin.jpg" alt="" width="100%">
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 portfolio-item show column dataviz">
+                  <div class="portfolio-link" data-toggle="modal" href="#fabrice">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <p>Fabrice Hategekimana</p>
+                              <hr>
+                              <p class="explanation_portfolio"> Developper / Linux enthusiast / </p>
+                              <p class="explanation_portfolio"> Content Creator<br></p>
+                          </div>
+                      </div>
+                      <img src="img/team/vestin.jpg" alt="" width="100%">
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 portfolio-item show column dataviz">
+                <div class="portfolio-link" data-toggle="modal" href="#david">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <p>David Munoz Tord</p>
+                            <hr>
+                            <p class="explanation_portfolio"> Data Scientist /</p>
+                            <p class="explanation_portfolio"> R Developper<br></p>
+                        </div>
+                    </div>
+                    <img src="img/team/DMT_pic_square.png" alt="" width="100%">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 portfolio-item show column dataviz">
+              <div class="portfolio-link" data-toggle="modal" href="#hicham">
+                  <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                          <p>Hicham</p>
+                          <hr>
+                          <!-- <p class="explanation_portfolio"> Sociologist /</p> -->
+                          <p class="explanation_portfolio"> Sociologist<br></p>
+                      </div>
+                  </div>
+                  <img src="img/team/vestin.jpg" alt="" width="100%">
+              </div>
           </div>
 
+                
+            </div>
+        </div>
+    </section>
 
+
+    <!-- ======================================================================= -->
+
+
+
+
+
+
+
+    <!-- =========================== REFERENCE SECTION ============================ -->
+
+    <!-- <section class="bg-light" id="testimonial">
+        <div class="container">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active bg-light">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                                <img src="img/reference/biotech.jpg" style="border-radius: 50%" width="170px">
+                            </div>
+                            <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
+                                <br>
+                                <p style="color: grey; font-size: 8"><i>"I had the pleasure to collaborate with David 
+                  on a project where he successfully adapted a data analysis pipeline developed 
+                  at the California Institute of Technology to retrieve physiological signal from 
+                  a very noisy dataset. [...] David also has impressive skills in data visualization, 
+                  which were critical for a clear and transparent communication of the results."</i></p>
+                                <p><a href="https://www.unige.ch/fapse/e3lab/members1/senior-researchers-and-lecturers/dr-eva-r-pool/">Dr. Eva R. Pool</a> - <span style="font-size: 12px; display: inline;"><i>Senior Researcher at <a
+                        href="https://www.campusbiotech.ch/en">Campus Biotech</a></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                                <img src="img/reference/CISA.jpg" style="border-radius: 50%" width="170px">
+                            </div>
+                            <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
+                                <br>
+                                <p style="color: grey; font-size: 8"><i>"David was able to implement a series of complex statistical 
+                  analysis on four-dimensional data, such as massive univariate general linear models, multivariate pattern analysis, 
+                  functional time-series analysis and hierarchical Bayesian modeling. Moreover, he assisted in the administration 
+                  of our high-performance computing server, by installing data management tools and pipelines and maintaining them up to date."</i></p>
+                                <p><a href="https://www.unige.ch/fapse/e3lab/director/">Pr. D. Sander</a> - <span style="font-size: 12px; display: inline;"><i>Director of the <a
+                        href="https://www.affective-sciences.org">Swiss Center for Affective Sciences</a></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                                <img src="img/reference/BBL.jpg" style="border-radius: 50%" width="170px">
+                            </div>
+                            <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
+                                <br>
+                                <p style="color: grey; font-size: 8"><i>"David has proven to be a driving force in the development of large database 
+                  analysis techniques that laboratories like ours are now faced with. Not only does he have the ability to understand 
+                  the intricacies and limitations of the procedures he employs, but he concretely implements them by coding effective 
+                  solutions that he has subsequently disseminated to the community in a spirit of rigor and honesty. David has an immediate 
+                  understanding of the issues at stake in the task at hand and views difficulties as challenges rather than problems."</i></p>
+                                <p><a href="https://bbl.unige.ch/home-1/organisation/bbl-staff/delplanque-sylvain/">Dr. S. Delplanque</a> - <span style="font-size: 12px; display: inline;"><i>Senior Researcher at <a
+                        href="https://bbl.unige.ch/">Brain and Behaviour Laboratory</a></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item bg-light">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                                <img src="img/reference/neuro.jpg" style="border-radius: 50%;" width="170px">
+                            </div>
+                            <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
+                                <br>
+                                <p style="color: grey; font-size: 8"><i>"I would never have been able to carry out my statistical 
+                  analyses without internship supervisor; David Muñoz Tord. He taught me a lot of skills that I
+                  could use in the future. He is a smart and talented person and I am very grateful to have had the
+                  opportunity to work with."</i></p>
+                                <p>
+                                    <a href="https://www.linkedin.com/in/bryan-sanders14/?originalSubdomain=ch"></a> Bryan Sanders - <span style="font-size: 12px; display: inline;"><i>Master student at the <a
+                        href="https://neurocenter-unige.ch/">Geneva Neurocenter</a></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item bg-light">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="text-align: center">
+                                <img src="img/reference/Fer.jpeg" style="border-radius: 50%;" width="170px">
+                            </div>
+                            <div class="col-lg-8 col-md-6 col-sm-6 text-center text-md-left">
+                                <br>
+                                <p style="color: grey; font-size: 8"><i>"David is a promising data scientist with 
+                                    expertise in MRI methods. He has great programming and statistics skills, with a 
+                                    strong grasp of cutting-edge data classification and machine learning algorithms. 
+                                    Autonomous, as he finds the best solutions to the problems submitted to him, and also 
+                                    well structured and organized, with clean & clear datasets, result files, and software 
+                                    outputs. I have no hesitation in recommending him, as he has a bright future. I'm sure 
+                                    any company will be happy to have him on their team."</i></p>
+                                <p>
+                                    <a href="https://www.linkedin.com/in/munozfer/h"></a> Fernando Muñoz - <span style="font-size: 12px; display: inline;">
+                                        <i>Business Representative at <a
+                        href="https://github.com">GitHub Enterprise</a></i></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
 
         </div>
-      </div>
+    </section> -->
+
+
+    <!-- ======================================================================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======================= CONTACT SECTION =============================== -->
+
+    <section id="contact" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 text-center"></div>
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-heading text-uppercase" style="color: black">Contact</h2>
+                    <p>Feel free to contact us for any question. For open source projects, please open an issue or pull request on
+                        <a href="https://github.com/munoztd0/">Github</a>. If you want to follow our work, reach us by email at <a href="mailto:info@we-data.ch">info@we-data.ch</a>.</p>
+                    <div style="text-align:center">
+                        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/we-data-ch">Github</a>
+                        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="mailto:info@we-data.ch">Mail</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <br><br>
+            <!-- <div class="row">
+                <div class="col-lg-2 text-center"></div>
+                <div class="col-lg-8 text-center">
+                    <div id="map"></div>
+                </div>
+            </div> -->
+        </div>
     </section>
 
 
@@ -155,331 +516,19 @@
 
 
 
+   
 
 
 
+    <!-- ======================= FOOTER SECTION ================================ -->
 
-
-
-
-
-<!-- ======================= CONTACT SECTION =============================== -->
-
-
-
-  <section id="contact" class="bg-light" style="padding-top: 2%; padding-bottom: 6%">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-2 text-center"></div>
-         <div class="col-lg-8 text-center">
-           <br><br><br>
-           <h2 class="section-heading text-uppercase" style="color: black">Contact</h2>
-           <p>Feel free to contact us for any question. For open source project, please open an issue or pull request on <a href="https://github.com/munoztd0/">Github</a>. 
-            If you want to follow our work, reach us on on <a href="https://github.com/munoztd0/">Github</a>. Otherwise, send me an email at <a href="mailto:XXX">XXX@gmail.com</a>.</p>
-           <div style="text-align:center">
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/">Github</a>
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="mailto:XXX">Mail</a>
-            </div>
-
-         </div>
-       </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-<!-- ======================== MAP SECTION ============================ -->
-<!-- 
-    <style>
-       /* Set the size of the div element that contains the map */
-      #map {
-        height: 300px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-        background-color: grey;
-        opacity: 1
-
-       }
-    </style>
-  </head>
-  <body> -->
-    <!--The div element for the map -->
-    <!-- <div id="map"></div>
-    <script>
-      function initMap() {
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: {lat: 43.61092, lng: 3.87723},
-          styles: [
-                    {
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#1d2c4d"
-                        }
-                      ]
-                    },
-                    {
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#8ec3b9"
-                        }
-                      ]
-                    },
-                    {
-                      "elementType": "labels.text.stroke",
-                      "stylers": [
-                        {
-                          "color": "#1a3646"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "administrative.country",
-                      "elementType": "geometry.stroke",
-                      "stylers": [
-                        {
-                          "color": "#4b6878"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "administrative.land_parcel",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#64779e"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "administrative.province",
-                      "elementType": "geometry.stroke",
-                      "stylers": [
-                        {
-                          "color": "#4b6878"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "landscape.man_made",
-                      "elementType": "geometry.stroke",
-                      "stylers": [
-                        {
-                          "color": "#334e87"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "landscape.natural",
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#023e58"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "poi",
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#283d6a"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "poi",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#6f9ba5"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "poi",
-                      "elementType": "labels.text.stroke",
-                      "stylers": [
-                        {
-                          "color": "#1d2c4d"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "poi.park",
-                      "elementType": "geometry.fill",
-                      "stylers": [
-                        {
-                          "color": "#023e58"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "poi.park",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#3C7680"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road",
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#304a7d"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#98a5be"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road",
-                      "elementType": "labels.text.stroke",
-                      "stylers": [
-                        {
-                          "color": "#1d2c4d"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road.highway",
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#2c6675"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road.highway",
-                      "elementType": "geometry.stroke",
-                      "stylers": [
-                        {
-                          "color": "#255763"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road.highway",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#b0d5ce"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "road.highway",
-                      "elementType": "labels.text.stroke",
-                      "stylers": [
-                        {
-                          "color": "#023e58"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "transit",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#98a5be"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "transit",
-                      "elementType": "labels.text.stroke",
-                      "stylers": [
-                        {
-                          "color": "#1d2c4d"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "transit.line",
-                      "elementType": "geometry.fill",
-                      "stylers": [
-                        {
-                          "color": "#283d6a"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "transit.station",
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#3a4762"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "water",
-                      "elementType": "geometry",
-                      "stylers": [
-                        {
-                          "color": "#0e1626"
-                        }
-                      ]
-                    },
-                    {
-                      "featureType": "water",
-                      "elementType": "labels.text.fill",
-                      "stylers": [
-                        {
-                          "color": "#4e6d70"
-                        }
-                      ]
-                    }
-                  ]
-        });
-      var contentString = '<div id="content" style="font-size: 14px; line-height: 20px">Montpellier, France<br></div>'
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-      var marker = new google.maps.Marker({position: {lat: 43.61092, lng: 3.52}, map: map})
-      marker.addListener('click', function() {
-          infowindow.open(map, marker);
-      });
-    }
-    </script> -->
-    <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&callback=initMap">
-    </script> -->
-
-
-
-
-
-
-
-
-<!-- ======================= FOOTER SECTION ================================ -->
     <footer>
       <div class="container">
+
         <div class="row">
+
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; David Munoz Tord 2021</span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
+            <ul class="list-inline social-buttons2">
               <li class="list-inline-item">
                 <a href="https://github.com/munoztd0">
                   <i class="fa fa-github"></i>
@@ -487,21 +536,41 @@
               </li>
             </ul>
           </div>
-          <!-- <div class="col-md-4">
-            <ul class="list-inline quicklinks">
+
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons2">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="https://www.youtube.com/channel/UCGktdbvbc_H-JEkYYTvwRVw">
+                  <i class="fa fa-youtube" style="color: white"></i>
+                </a>
               </li>
             </ul>
-          </div> -->
+          </div>
+
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons2">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/wedata_unige/">
+                  <i class="fa fa-instagram" style="color: white"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
         </div>
+        <br> <br> 
+        <div class="row">
+          <div class="col-md-12">
+            <span class="copyright">Copyright &copy; David Munoz Tord 2021</span>
+          </div>
+        </div>
+
       </div>
     </footer>
 
-<!-- ======================================================================= -->
+    
+    <!-- ======================================================================= -->
 
 
 
@@ -515,13 +584,400 @@
 
 
 
+    <!-- =================== MODAL SECTION ===================================== -->
+
+
+    <!-- Data management -->
+    <center>
+        <div class="portfolio-modal modal fade" id="dataManagement" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+            <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+         </span>
+                        <!-- <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div> -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <i class="fa fa-wrench services-logo"></i>
+                                        <h4>Data Management</h4>
+                                        <p style="max-width: 600px">A data project always start with a data enginering step. You need to harvest data and store it in an adequate format to be able to use it.</p>
+                                        <div style="text-align: left">
+                                            <h6>I can help you to..</h6>
+                                            <hr>
+                                            <ul>
+                                                <li><u>Harvest</u> data from different sources like <code>APIs</code>, <code>SQL</code> databases or messy <code>Excel</code> spreadsheets.</li>
+                                                <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
+                                                <li><u>Clean</u> datasets removing outliers and abberant data.</li>
+                                                <li>Create reproducible data preparation <u>workflows</u></li>
+                                                <li><u>Automatize</u> the creation of data related reports</li>
+                                            </ul>
+                                            <br>
+                                            <h6>Example:</h6>
+                                            <hr>
+                                            <ul>
+                                                <!-- <li>I collected tweets containing the <code>#surf</code> for 9 months to study how surfers use
+                        social media. I used the <code>twitter API</code> and made the data collection automatic
+                        thanks to a personnal <code>webserver</code> and a custom <code>R script</code>.</li>
+                      <li>I created a <code>dashboard</code> for a company called Terres Inovia. It is directly
+                        plugged on their <code>SQL database</code> and allows to access its information in real time.
+                      </li> -->
+                                            </ul>
+                                            <br>
+                                            <h6>Contact me</h6>
+                                            <hr>
+                                            <span>Tell me more about your project at <a
+                        href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
+                      together.</span>
+                                            <div style="margin-top: 15px;">
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/data_to_viz">Github</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                            </div>
+                                            <br><br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </center>
+
+
+    <!-- Data mining -->
+    <center>
+        <div class="portfolio-modal modal fade" id="dataMining" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close">
+            <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i>
+         </span>
+                        <!-- <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div> -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <i class="fa fa-search services-logo"></i>
+                                        <h4>Data Mining</h4>
+                                        <p style="max-width: 600px">Crunch the data to get answer to your question. Give insight to the information.
+                                        </p>
+                                        <div style="text-align: left">
+                                            <h6>I can help you for</h6>
+                                            <hr>
+                                            <ul>
+                                                <li><u>Exploratory analysis</u> of a dataset.</li>
+                                                <li>Creation of clean and reproducible <u>reports</u> using <code>R Markdown</code>.</li>
+                                                <li>Application of <u>statistical methods</u> on your dataset.</li>
+                                                <li>Creation of <u>custom scripts</u> for analysing your data automatically</li>
+                                            </ul>
+                                            <br>
+                                            <h6>Example:</h6>
+                                            <hr>
+                                            <ul>
+                                                <li>I'm the author of several <a href="https://github.com/munoztd0/Publication">scientific
+                          publications</a> where I was in charge to explore and understand complex dataset in order to answer scientific questions.</li>
+                                                <!-- <li>I recovered information about crypto currency prices on different exchanges and explored the
+                        data looking for <a target="_blank" href="https://munoztd0.github.io/Crypto-Arbitrage/">arbitrage
+                          opportunities</a>.</li> -->
+                                            </ul>
+                                            <br>
+                                            <h6>Contact me</h6>
+                                            <hr>
+                                            <span>Tell me more about your project at <a
+                        href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
+                      together.</span>
+                                            <div style="margin-top: 15px;">
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0">Github</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                            </div>
+                                            <br><br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </center>
+
+
+
+    <!-- Data viz -->
+    <center>
+        <div class="portfolio-modal modal fade" id="dataViz" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close">
+            <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i>
+         </span>
+                        <!-- <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div> -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <i class="fa fa-bar-chart services-logo"></i>
+                                        <h4>Data Visualization</h4>
+                                        <p style="max-width: 600px">I'm an expert in the field of dataviz.
+                                            <!-- I've created several <a
+                      href="#website" target="_blank">websites</a> and given <a target="_blank"
+                      href="https://github.com/munoztd0/Talk">talks</a> on this topic. -->
+                                        </p>
+                                        <div style="text-align: left">
+                                            <h6>I can help you with:</h6>
+                                            <hr>
+                                            <ul>
+                                                <li>Creation and review of graphs for <u>scientific publication</u>.</li>
+                                                <li>Development of <u>data application</u> using <code>R</code> and <code>Shiny</code>.</li>
+                                                <li>Creation of custom <u>data visualization for the web.</li>
+                      <!-- <li><u>Dashboard</u> creation for real time data analysis.</li> -->
+                                                <li>Visualization of <u>spatial</u> data.</li>
+                                            </ul>
+                                            <!-- <br>
+                    <h6>Example:</h6>
+                    <hr>
+                    <ul>
+                      <li>A <a href="https://munoztd0an.shinyapps.io/the-nb-como-project/">website</a> describing
+                        research results on mental disorders comorbidity.</li>
+                      <li><a href="https://www.data-to-viz.com">Data to viz</a>: a decision tree leading to the most
+                        appropriate chart type for your data.</li>
+                      <li>See many more examples in the <a href="#portofolio" target="_blank">portfolio</a> section of
+                        this website.</li> -->
+                                            </ul>
+                                            <br>
+                                            <h6>Contact me</h6>
+                                            <hr>
+                                            <span>Tell me more about your project at <a
+                        href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
+                      together.</span>
+                                            <div style="margin-top: 15px;">
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0">Github</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                            </div>
+                                            <br><br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </center>
+
+
+      <!-- Vestin -->
+      <center>
+        <div class="portfolio-modal modal fade" id="vestin" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+          <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+       </span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <img src="img/team/DMT_pic_square.png" width="180">
+        
+                                        <h4>Vestin Hategekimana</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="margin-top: 5px;">
+                                          <!-- <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/">Github <i class="fa fa-github"></i></a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://david-munoztord.com/">website</a> -->
+                                      </div>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+                                            <p> </p>
+                                               
+                                                <hr>
+                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+      <!-- Fabrice -->
+      <center>
+        <div class="portfolio-modal modal fade" id="fabrice" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+                    <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+                </span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <!-- <img src="img/team/DMT_pic_square.png" width="180"> -->
+        
+                                        <h4>Fabrice Hategekimana</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="margin-top: 5px;">
+                                          <!-- <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/">Github <i class="fa fa-github"></i></a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://david-munoztord.com/">website</a> -->
+                                      </div>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+                                            <p> I am passionate about Linux, terminal, programming languages, semantics and formal modeling tools </p>
+                                               
+                                                <hr>
+                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+      <!-- Hicham -->
+      <center>
+        <div class="portfolio-modal modal fade" id="hicham" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+          <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+       </span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <!-- <img src="img/team/DMT_pic_square.png" width="180"> -->
+        
+                                        <h4>Hicham</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="margin-top: 5px;">
+                                          <!-- <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/">Github <i class="fa fa-github"></i></a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://david-munoztord.com/">website</a> -->
+                                      </div>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+                                            <p> </p>
+                                               
+                                                <hr>
+                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+
+    <!-- David -->
+    <center>
+        <div class="portfolio-modal modal fade" id="david" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+          <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+       </span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <img src="img/team/DMT_pic_square.png" width="180">
+        
+                                        <h4>David Munoz Tord</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="margin-top: 5px;">
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/">Github <i class="fa fa-github"></i></a>
+                                          <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://david-munoztord.com/">website</a>
+                                      </div>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+                                            <p> I'm a data analysis and data visualisation enthousiast with an academic background in neurosciences.</p>
+                    
+                                                <p> My job consists in helping companies and researchers to analyse their datasets. I am skilled for most data-science 
+                                                  steps: data pre-processing, application of statistical methods, data visualization and results communication. </p>
+                                                <p>After having worked for renowned research institutes like the <a href=" https://neurocenter-unige.ch/">Geneva Neurocenter</a> and the <a href="https://www.unige.ch/cisa/">Swiss Center 
+                                                        for Affective Sciences</a>, I'm now working as a freelance data scientist.</p>
+                                               
+                                                <hr>
+                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+    <!-- ======================================================================= -->
 
 
 
 
 
 
-<!-- ======================== JAVASCRIPT SECTION =========================== -->
+
+
+
+
+
+    <!-- ======================== JAVASCRIPT SECTION =========================== -->
 
 
 
@@ -532,48 +988,18 @@
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
     <script src="js/portfolio.js"></script>
-    <script src="js/tree.js"></script>
 
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <script>
-      showTree('num');
-    </script>
-
-    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
-    <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();})
-    </script>
 
 
 
 
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-79254642-3');
-  </script> -->
-
-
-
-
-
-<!-- ======================================================================= -->
+    <!-- ======================================================================= -->
 </body>
 
 </html>
