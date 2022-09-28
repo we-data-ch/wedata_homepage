@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
+<!-- todo -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-5"></script>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KTW1Z7J25"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-79254642-5');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6KTW1Z7J25');
     </script> -->
 
     <meta charset="utf-8">
-    <title>We data's blog on data, science and visualization.</title>
+    <title>We data's blog on statistics, programming and data visualization.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Welcome to We Data's blog. We talk about data, science & viz, mainly using R and Python">
     <meta name="keywords" content="Datascience,Training,Data,Dataviz,Datavisualization,Plot,Chart,Graph,R,Python,Learning,Caveat,Pitfall,Mistake,Classification">
@@ -38,10 +43,15 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
-  </head>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-  <body id="page-top">
+</head>
+
+<body id="page-top">
 
 
 
@@ -49,26 +59,40 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-      <div class="container">
-        <a href="index.html">
-          &larr; We Data HOMEPAGE
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home Page</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <!-- <div class="container"> -->
+            <a class="js-scroll-trigger" href="index.html">
+              &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-home fa-2x"></i>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#description">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="teaching.html">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="consulting.html">Consulting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        <!-- </div> -->
     </nav>
+
+
 
 
 
@@ -93,7 +117,7 @@
       <br>
       <ul class="list-inline social-buttons">
         <li class="list-inline-item social-buttons">
-          <a href="https://github.com/munoztd0">
+          <a href="https://github.com/we-data-ch">
             <i class="fa fa-github" style="color: white"></i>
           </a>
         </li>
@@ -317,10 +341,10 @@
            <br><br><br>
            <h2 class="section-heading text-uppercase" style="color: black">Contact</h2>
            <p>Feel free to contact us for any question. For open source project, please open an issue or pull request on <a href="https://github.com/munoztd0/">Github</a>. 
-            If you want to follow our work, reach us on on <a href="https://github.com/munoztd0/">Github</a>. Otherwise, send me an email at <a href="mailto:XXX">XXX@gmail.com</a>.</p>
+            If you want to follow our work, reach us on on <a href="https://github.com/we-data-ch/">Github</a>. Otherwise, send me an email at <a href="mailto:XXX">XXX@gmail.com</a>.</p>
            <div style="text-align:center">
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/">Github</a>
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="mailto:XXX">Mail</a>
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/we-data-ch/">Github</a>
+              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="mailto:info@we-data.ch">info@we-data.ch</a>
             </div>
 
          </div>
