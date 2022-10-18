@@ -153,25 +153,40 @@
 
 
 
+<!-- =======================  Google Translate ======================= -->
 
 
 
 <div id="google_translate_element"></div>
  
 <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {pageLanguage: 'fr'},
-            'google_translate_element'
-        );
-    }
+ 
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                // layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: true,
+                includedLanguages: 'en,fr,it,ar',
+            }, 'google_translate_element');
+            setTimeout(() => {
+                changeLangToSV();
+            }, 2000);
+        }
+        function changeLangToSV(){
+            let ele = document.querySelector("#google_translate_element select");
+                ele.selectedIndex = 2;
+                ele.dispatchEvent(new Event("change"));
+        }
 </script>
 
 <script type="text/javascript"
         src=
-"https://translate.google.com/translate_a/element.js?language=fr?
+"https://translate.google.com/translate_a/element.js?
 cb=googleTranslateElementInit">
 </script>
+
+
+<!-- =======================  END Google Translate ======================= -->
 
 
 
@@ -508,10 +523,10 @@ cb=googleTranslateElementInit">
                     <h2 class="section-heading text-uppercase" style="color: black">Contact</h2>
                     <p>Feel free to contact us for any question. For open source projects, please open an issue or pull request on
                         <a href="https://github.com/munoztd0/">Github</a>. If you want to follow our work, reach us by email at <a href="mailto:info@we-data.ch">info@we-data.ch</a>.</p>
-                    <div style="text-align:center">
+                    <!-- <div style="text-align:center">
                         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://github.com/we-data-ch">Github</a>
                         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="mailto:info@we-data.ch">Mail</a>
-                    </div>
+                    </div> -->
 
 
                 </div>

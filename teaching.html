@@ -69,7 +69,7 @@
                         <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Team</a>
+                        <a class="nav-link js-scroll-trigger" href="index.html#portfolio">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="teaching.html">Teaching</a>
@@ -139,7 +139,40 @@
 
 
 
+<!-- =======================  Google Translate ======================= -->
 
+
+
+<div id="google_translate_element"></div>
+ 
+<script type="text/javascript">
+ 
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                // layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: true,
+                includedLanguages: 'en,fr,it,ar',
+            }, 'google_translate_element');
+            setTimeout(() => {
+                changeLangToSV();
+            }, 2000);
+        }
+        function changeLangToSV(){
+            let ele = document.querySelector("#google_translate_element select");
+                ele.selectedIndex = 2;
+                ele.dispatchEvent(new Event("change"));
+        }
+</script>
+
+<script type="text/javascript"
+        src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+</script>
+
+
+<!-- =======================  END Google Translate ======================= -->
 
 
 <!-- ======================== BLOG SECTION ============================ -->
