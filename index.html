@@ -170,11 +170,11 @@
             }, 'google_translate_element');
             setTimeout(() => {
                 changeLangToSV();
-            }, 2000);
+            }, 200);
         }
         function changeLangToSV(){
             let ele = document.querySelector("#google_translate_element select");
-                ele.selectedIndex = 2;
+                ele.value = 'fr';
                 ele.dispatchEvent(new Event("change"));
         }
 </script>
@@ -726,9 +726,9 @@ cb=googleTranslateElementInit">
                           opportunities</a>.</li> -->
                                             </ul>
                                             <br>
-                                            <h6>Contact me</h6>
+                                            <h6>Contact us</h6>
                                             <hr>
-                                            <span>Tell me more about your project at <a
+                                            <span>Tell us more about your project at <a
                         href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
                       together.</span>
                                             <div style="margin-top: 15px;">

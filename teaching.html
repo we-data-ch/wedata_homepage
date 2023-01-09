@@ -156,11 +156,11 @@
             }, 'google_translate_element');
             setTimeout(() => {
                 changeLangToSV();
-            }, 2000);
+            }, 200);
         }
         function changeLangToSV(){
             let ele = document.querySelector("#google_translate_element select");
-                ele.selectedIndex = 2;
+                ele.value = 'fr';;
                 ele.dispatchEvent(new Event("change"));
         }
 </script>
