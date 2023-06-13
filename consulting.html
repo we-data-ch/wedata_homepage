@@ -219,12 +219,6 @@ cb=googleTranslateElementInit">
 
 
 
-
-
-
-
-
-
     <!-- ======================== PORTFOLIO SECTION ============================ -->
     <!-- Images must be 380 x 445, resize them with -->
     <!-- Change image size o have height = 445: convert tmp.png -resize 380x445 new.png -->
@@ -242,11 +236,11 @@ cb=googleTranslateElementInit">
                     <h3 class="section-subheading text-muted">A glimpse of the projects we have been working on</h3>
                     <div id="portfolio-button-container">
                         <button class="btn btn-secondary active" data-portfolio-section="all">Show all</button>
-                        <button class="btn btn-secondary" data-portfolio-section="mining">Database Management</button>
-                        <button class="btn btn-secondary" data-portfolio-section="mining">Data Mining</button>
+                        <button class="btn btn-secondary" data-portfolio-section="mining">Data mining</button>
                         <button class="btn btn-secondary" data-portfolio-section="ml">Machine Learning</button>
                         <button class="btn btn-secondary" data-portfolio-section="stat">Statistical Tools</button>
                         <button class="btn btn-secondary" data-portfolio-section="dataviz">Dataviz</button>
+                        <button class="btn btn-secondary" data-portfolio-section="dataeng">Data Engineering</button>
                     </div>
                     <br>
                 </div>
@@ -255,7 +249,7 @@ cb=googleTranslateElementInit">
             <div id="portfolio-items" class="row">
 
 
-                <!-- http://139.162.131.59:3838/DBMS/ -->
+
                 <div class="col-md-3 col-sm-6 portfolio-item show column dataviz">
                     <div class="portfolio-link" data-toggle="modal" href="#SBM">
                         <div class="portfolio-hover">
@@ -295,19 +289,27 @@ cb=googleTranslateElementInit">
                 </div>
 
 
-                <div class="col-md-3 col-sm-6 portfolio-item show column mining ml">
-                    <a class="portfolio-link" data-toggle="modal" href="#MarioRL">
+
+                <div class="col-md-3 col-sm-6 portfolio-item show column dataeng">
+                    <a class="portfolio-link" data-toggle="modal" href="#monitor">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <p>AI Building</p>
-                                <p class="explanation_portfolio">Building AI to play games.</p>
+                                <p>Shiny App Usage Monitor</p>
+                                <p class="explanation_portfolio"> Want to see how many people are using your apps?
+
+                                </p>
                             </div>
                         </div>
-                        <img class="hbm" src="img/portfolio/mario.gif" alt="" width="80%">
+                        <img src="img/portfolio/monitor.gif" alt="Shiny app sto mo nitor shiny apps" width="90%">
                     </a>
                 </div>
 
+
+                
+
             </div>
+            
+            
             <!-- row2 -->
             <div id="portfolio-items" class="row">
 
@@ -336,13 +338,65 @@ cb=googleTranslateElementInit">
                     </a>
                 </div>
 
+
+                <div class="col-md-3 col-sm-6 portfolio-item show column dataeng">
+                    <a class="portfolio-link" data-toggle="modal" href="#DBMS">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <p>Database Management System</p>
+                                <p class="explanation_portfolio"> This Shiny app simulates a database management system with R and SQL.
+
+                                </p>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/DBMS.png" alt="Shiny app simulates a database management system " width="90%">
+                    </a>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 portfolio-item show column mining ml">
+                    <a class="portfolio-link" data-toggle="modal" href="#MarioRL">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <p>AI Building</p>
+                                <p class="explanation_portfolio">Building AI to play games.</p>
+                            </div>
+                        </div>
+                        <img class="hbm" src="img/portfolio/mario.gif" alt="" width="80%">
+                    </a>
+                </div>
+
+
+
             </div>
+
+
+
+
+            <!-- row3 -->
+            <div id="portfolio-items" class="row">
+
+                <div class="col-md-3 col-sm-6 portfolio-item show column dataviz stat ml">
+                    <a class="portfolio-link" data-toggle="modal" href="#echarts">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <p>Echarts4r</p>
+                                <p class="explanation_portfolio">Echarts4r provide functions to generate interactive charts in R.</p>
+                            </div>
+                        </div>
+                        <img class="tbt" src="img/portfolio/echarts.png" alt="echarts logo" width="75%">
+                    </a>
+                </div>
+
+
+            </div>
+
+
         </div>
     </section>
 
 
     <!-- ======================================================================= -->
-
 
 
 
@@ -553,6 +607,15 @@ cb=googleTranslateElementInit">
 
 
 
+
+
+
+
+
+
+
+
+
     <!-- =================== MODAL SECTION ===================================== -->
 
 
@@ -564,25 +627,25 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-            <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+            <!-- <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i> -->
          </span>
-                        <!-- <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
+                        <div class="close-modal" data-dismiss="modal">
+             <div class="lr">
+              <div class="rl"></div> 
             </div>
-          </div> -->
+           </div> 
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
                                     <div class="modal-body">
                                         <i class="fa fa-wrench services-logo"></i>
-                                        <h4>Data Management</h4>
-                                        <p style="max-width: 600px">A data project always start with a data enginering step. You need to harvest data and store it in an adequate format to be able to use it.</p>
+                                        <h4>Data Engineering</h4>
+                                        <p style="max-width: 600px">A data project always start with a data engineering step. You need to harvest data and store it in an adequate format to be able to use it.</p>
                                         <div style="text-align: left">
-                                            <h6>I can help you to..</h6>
+                                            <h6>We can help you to..</h6>
                                             <hr>
                                             <ul>
-                                                <li><u>Harvest</u> data from different sources like <code>APIs</code>, <code>SQL</code> databases or messy <code>Excel</code> spreadsheets.</li>
+                                                <li><u>Harvest</u> data from different sources like <code>APIs </code>, <code>SQL </code>    databases or messy <code>Excel </code>    spreadsheets.</li>
                                                 <li><u>Reformat</u> and reshape data to make further analyses easier.</li>
                                                 <li><u>Clean</u> datasets removing outliers and abberant data.</li>
                                                 <li>Create reproducible data preparation <u>workflows</u></li>
@@ -592,22 +655,23 @@ cb=googleTranslateElementInit">
                                             <h6>Example:</h6>
                                             <hr>
                                             <ul>
-                                                <!-- <li>I collected tweets containing the <code>#surf</code> for 9 months to study how surfers use
-                        social media. I used the <code>twitter API</code> and made the data collection automatic
-                        thanks to a personnal <code>webserver</code> and a custom <code>R script</code>.</li>
-                      <li>I created a <code>dashboard</code> for a company called Terres Inovia. It is directly
-                        plugged on their <code>SQL database</code> and allows to access its information in real time.
-                      </li> -->
+                                                <li>We automated amalgamation of data from spreadsheet revenue calculations and PDF reports
+                                        reducing month end processing time from 2 days to 4 minutes.</li>
+                                    <li>We worked closely with analysts across departments to design, build and deploy various initiatives
+                                        within the data platform.</li>
+                                        <li>We created a <code>dashboard </code> for a NGO called CICAD. It is directly
+                                            plugged on their <code>SQL database </code> and allows to access its information in real time.
+                                        </li> 
                                             </ul>
                                             <br>
                                             <h6>Contact me</h6>
                                             <hr>
-                                            <span>Tell us more about your project at <a
-                        href="mailto:info@wedata.ch">info@wedata.ch</a> to see if we can work
+                                            <span>Tell me more about your project at <a
+                        href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
                       together.</span>
                                             <div style="margin-top: 15px;">
-                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/we-data-ch/data_to_viz">Github</a>
-                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:info@wedata.ch">Mail</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/data_to_viz">Github</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
                                             </div>
                                             <br><br><br>
                                         </div>
@@ -628,13 +692,13 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close">
-            <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i>
+            <!-- <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i> -->
          </span>
-                        <!-- <div class="close-modal" data-dismiss="modal">
+                        <div class="close-modal" data-dismiss="modal">
             <div class="lr">
               <div class="rl"></div>
             </div>
-          </div> -->
+          </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -644,33 +708,31 @@ cb=googleTranslateElementInit">
                                         <p style="max-width: 600px">Crunch the data to get answer to your question. Give insight to the information.
                                         </p>
                                         <div style="text-align: left">
-                                            <h6>I can help you for</h6>
+                                            <h6>We can help you for</h6>
                                             <hr>
                                             <ul>
                                                 <li><u>Exploratory analysis</u> of a dataset.</li>
                                                 <li>Creation of clean and reproducible <u>reports</u> using <code>R Markdown</code>.</li>
                                                 <li>Application of <u>statistical methods</u> on your dataset.</li>
-                                                <li>Creation of <u>custom scripts</u> for analysing your data automatically</li>
+                                                <li>Creation of <u>custom scripts</u> for analyzing your data automatically</li>
                                             </ul>
                                             <br>
                                             <h6>Example:</h6>
                                             <hr>
                                             <ul>
-                                                <li>I'm the author of several <a href="https://github.com/munoztd0/Publication">scientific
-                          publications</a> where I was in charge to explore and understand complex dataset in order to answer scientific questions.</li>
-                                                <!-- <li>I recovered information about crypto currency prices on different exchanges and explored the
-                        data looking for <a target="_blank" href="https://munoztd0.github.io/Crypto-Arbitrage/">arbitrage
-                          opportunities</a>.</li> -->
+                                                <li>We are the author of several <a href="https://github.com/munoztd0/Publications">scientific
+                          publications</a> where we were in charge to explore and understand complex dataset in order to answer scientific questions.</li>
+                                                <li>We built machine learning pipelines to implement predictive models to detect fraud in clients behavior and analyze it.</a>.</li>
                                             </ul>
                                             <br>
-                                            <h6>Contact us</h6>
+                                            <h6>Contact me</h6>
                                             <hr>
-                                            <span>Tell us more about your project at <a
-                        href="mailto:info@wedata.ch">info@wedata.ch</a> to see if we can work
+                                            <span>Tell me more about your project at <a
+                        href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
                       together.</span>
                                             <div style="margin-top: 15px;">
-                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/we-data-ch">Github</a>
-                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:info@wedata.ch">Mail</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0">Github</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
                                             </div>
                                             <br><br><br>
                                         </div>
@@ -692,54 +754,52 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close">
-            <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i>
+            <!-- <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i> -->
          </span>
-                        <!-- <div class="close-modal" data-dismiss="modal">
+                        <div class="close-modal" data-dismiss="modal">
             <div class="lr">
               <div class="rl"></div>
             </div>
-          </div> -->
+          </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
                                     <div class="modal-body">
                                         <i class="fa fa-bar-chart services-logo"></i>
                                         <h4>Data Visualization</h4>
-                                        <p style="max-width: 600px">I'm an expert in the field of dataviz.
-                                            <!-- I've created several <a
-                      href="#website" target="_blank">websites</a> and given <a target="_blank"
-                      href="https://github.com/munoztd0/Talk">talks</a> on this topic. -->
+                                        <p style="max-width: 600px">We are an expert in the field of dataviz.
+                                             We have created several <a
+                      href="https://github.com/munoztd0/teaching" target="_blank">tutorials</a> and given <a target="_blank"
+                      href="https://unige.zoom.us/rec/share/bmPWK9YqdK9FI74DtVnhEgaca8isNWNkjwxjVP2TeRJ_TnRsRp3HpRb5DFuYQZXO.hBVyShgZ9SLyqESP">talks</a> on this topic.
                                         </p>
                                         <div style="text-align: left">
-                                            <h6>I can help you with:</h6>
+                                            <h6>We can help you with:</h6>
                                             <hr>
                                             <ul>
                                                 <li>Creation and review of graphs for <u>scientific publication</u>.</li>
-                                                <li>Development of <u>data application</u> using <code>R</code> and <code>Shiny</code>.</li>
+                                                <li>Development of <u>data application</u> using <code>R </code> and <code>Shiny </code>.</li>
                                                 <li>Creation of custom <u>data visualization for the web.</li>
-                      <!-- <li><u>Dashboard</u> creation for real time data analysis.</li> -->
+                                                <li><u>Dashboard</u> creation for real time data analysis.</li>
                                                 <li>Visualization of <u>spatial</u> data.</li>
                                             </ul>
-                                            <!-- <br>
+                                            <br>
                     <h6>Example:</h6>
                     <hr>
                     <ul>
-                      <li>A <a href="https://munoztd0an.shinyapps.io/the-nb-como-project/">website</a> describing
-                        research results on mental disorders comorbidity.</li>
-                      <li><a href="https://www.data-to-viz.com">Data to viz</a>: a decision tree leading to the most
-                        appropriate chart type for your data.</li>
+                      <li>We maintain and develop <a href="https://shiny.john-coene.com/echarts4rShiny/">Echarts4r</a>, a declarative 
+                        framework for rapid construction of Web-based data visualization.</li>
                       <li>See many more examples in the <a href="#portofolio" target="_blank">portfolio</a> section of
-                        this website.</li> -->
+                        this website.</li>
                                             </ul>
                                             <br>
                                             <h6>Contact me</h6>
                                             <hr>
-                                            <span>Tell us more about your project at <a
-                        href="mailto:info@wedata.ch">info@wedata.ch</a> to see if we can work
+                                            <span>Tell me more about your project at <a
+                        href="mailto:david.munoztord@mailbox.org">david.munoztord@mailbox.org</a> to see if we can work
                       together.</span>
                                             <div style="margin-top: 15px;">
-                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/we-data-ch">Github</a>
-                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:info@wedata.ch">Mail</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0">Github</a>
+                                                <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="mailto:david.munoztord@mailbox.org">Mail</a>
                                             </div>
                                             <br><br><br>
                                         </div>
@@ -759,13 +819,13 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-          <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+          <!-- <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i> -->
        </span>
-                        <!-- <div class="close-modal" data-dismiss="modal">
+                        <div class="close-modal" data-dismiss="modal">
           <div class="lr">
             <div class="rl"></div>
           </div>
-        </div> -->
+        </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -780,7 +840,7 @@ cb=googleTranslateElementInit">
                                             <hr>
                                             <p>A group of researcher from the <a href="https://www.unige.ch/cisa/">
                     Swiss Center of Affective Science</a> investigated the neuronal networks underlying fundamental processes of taste perception.
-                                                <p>I processed all the MRI data of 97 individuals to analyze and summarize the results in support of the paper intitled <a href="https://www.eneuro.org/content/8/5/ENEURO.0208-21.2021">3D-Printed Mouthpiece 
+                                                <p>We processed all the MRI data of 97 individuals to analyze and summarize the results in support of the paper intitled <a href="https://www.eneuro.org/content/8/5/ENEURO.0208-21.2021">3D-Printed Mouthpiece 
                       for fMRI-Compatible Gustometers</a>.</p>
                                                 <img src="img/portfolio/brain.png" style="width:100%;">
                                                 <p>My work allowed to visualize the parameter distribution of the BOLD signal in 3D.</p>
@@ -816,13 +876,13 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-            <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+            <!-- <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i> -->
          </span>
-                        <!-- <div class="close-modal" data-dismiss="modal">
+                        <div class="close-modal" data-dismiss="modal">
             <div class="lr">
               <div class="rl"></div>
             </div>
-          </div> -->
+          </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -871,13 +931,13 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-          <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
+          <!-- <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i> -->
        </span>
-                        <!-- <div class="close-modal" data-dismiss="modal">
+                        <div class="close-modal" data-dismiss="modal">
           <div class="lr">
             <div class="rl"></div>
           </div>
-        </div> -->
+        </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -890,7 +950,7 @@ cb=googleTranslateElementInit">
                                         <div style="text-align: left">
                                             <h6>Description</h6>
                                             <hr>
-                                            <p> I collaborated on the Hierarchical Bayesian modeling of Decision-Making tasks library <a href="https://github.com/CCS-Lab/hBayesDM/">
+                                            <p> We collaborated on the Hierarchical Bayesian modeling of Decision-Making tasks library <a href="https://github.com/CCS-Lab/hBayesDM/">
                     hBayesDM</a>. <a href="https://github.com/CCS-Lab/hBayesDM/">
                       hBayesDM</a> is a user-friendly package that offers hierarchical Bayesian analysis of various computational models on an array of decision-making tasks.
 
@@ -928,8 +988,12 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-      <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
-   </span>
+                        </span>
+                        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -948,8 +1012,8 @@ cb=googleTranslateElementInit">
 
 
                                             <center><img src="img/portfolio/mario.gif" style="width:50%;"></center>
-                                            <br> Here I used <a href="https://openai.com/">OpenAI</a> gym tools to build a Super Mario Bros environment, and trained a Proximal Policy Optimization (PPO) algorithm with actor/critic networks being convolutional
-                                            neural networks (CNNs) with <a href="https://pytorch.org/PyTorch">PyTorch</a> to play the game with reduced actions. I also used <a href="https://www.tensorflow.org/tensorboard/">TensorBoard</a> to visualize
+                                            <br> Here We used <a href="https://openai.com/">OpenAI</a> gym tools to build a Super Mario Bros environment, and trained a Proximal Policy Optimization (PPO) algorithm with actor/critic networks being convolutional
+                                            neural networks (CNNs) with <a href="https://pytorch.org/PyTorch">PyTorch</a> to play the game with reduced actions. We also used <a href="https://www.tensorflow.org/tensorboard/">TensorBoard</a> to visualize
                                             and evaluate the quality metrics of the model.
 
                                             <br>
@@ -969,7 +1033,7 @@ cb=googleTranslateElementInit">
                                             <br>
 
                                             <a href="https://leekwars.com/">Leek Wars</a> is a multiplayer AI programming game in which you train leeks to fight each others. The language of Leek Wars is LeekScript, built in Java. Follow my leek
-                                            <a href="https://leekwars.com/leek/82556">@leakit22</a> ! I remain in the top 100 for the time being.
+                                            <a href="https://leekwars.com/leek/82556">@leakit22</a> ! We remain in the top 100 for the time being.
 
                                             <br>
                                             <br>
@@ -1030,8 +1094,12 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-              <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
-           </span>
+              </span>
+              <div class="close-modal" data-dismiss="modal">
+<div class="lr">
+  <div class="rl"></div>
+</div>
+</div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -1045,7 +1113,7 @@ cb=googleTranslateElementInit">
                                             <hr>
                                             <p>
 
-                                                <br> I have been involved in We Data since 2020. We Data is a Swiss organization that shares knowledge on code in social sciences, gives statistical courses, and do coding demonstrations.
+                                                <br> We have been involved in We Data since 2020. We Data is a Swiss organization that shares knowledge on code in social sciences, gives statistical courses, and do coding demonstrations.
                                                 <br><br> Our goal is to promote code in the social science and raise awareness of new digital technologies.
                                                 <br><br>
                                                 <center><img src="img/portfolio/wedata.jpg" style="width:40%;"></center>
@@ -1074,7 +1142,7 @@ cb=googleTranslateElementInit">
 
 
 
-    <!-- We Data -->
+    <!--IQM -->
     <center>
         <div class="portfolio-modal modal fade" id="IQM" tabindex="-1" role="dialog" aria-hidden="true">
             <div class='modal__overlay'></div>
@@ -1082,8 +1150,13 @@ cb=googleTranslateElementInit">
                 <div class="modal-dialog h-100">
                     <div class="modal-content">
                         <span class="btn_close btn-lg">
-              <i class="fa fa-times fa-2x" aria-hidden="true" data-dismiss="modal"></i>
-           </span>
+              
+            </span>
+            <div class="close-modal" data-dismiss="modal">
+<div class="lr">
+<div class="rl"></div>
+</div>
+</div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-10 mx-auto">
@@ -1126,12 +1199,216 @@ cb=googleTranslateElementInit">
 
 
 
+    <!--Monitor Shiny -->
+    <center>
+        <div class="portfolio-modal modal fade" id="monitor" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+                        </span>
+                        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <img src="img/portfolio/monitor.gif" width="480">
+                                        <h4>Shiny Usage MonitoR</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+                                            <p>
+                                                Using Shiny Server Open Source? Want to see how many people are using your apps? This app allows you to monitor the number of users on your Shiny Server by continuously parsing through your server's logs and charting the data over time.
+                                                <br><br>
+                                                <strong>  Know thyself </strong>
 
+                                        <br><br>
+                                                Keeping track of the number of users on your Shiny Server is helpful for several reasons:
+                                                <br><br>
+                                               -  Identifies low-traffic periods (best times to push updates or restart the server). <br>
+                                               -  Tells you if you need to pay more attention to scaling your apps (i.e. adjust server size, optimize slow apps). <br>
+                                               -  Shows which apps are most popular. <br>
+                                               -  Basic architecture. <br>
+                                               -  Deploy Shiny Server Open Source with one or more apps. <br>
+                                               -  Continuously check your server's logs and save off data on the number of users on each app (check_server.R plus a cronjob). <br>
+                                               -  Use Shiny to display the data over time (app.R). <br>
+
+                                               <br><br>
+                                                
+                                                <span>You can check the project on <a href="https://github.com/munoztd0/shiny-usage-monitor">Github</a>.
+                                                    </span>
+                                                <br><br>
+                                                <div style="margin-top: 5px;">
+                                                    <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/shiny-usage-monitor">Github</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+
+    <!--DBMS -->
+    <center>
+        <div class="portfolio-modal modal fade" id="DBMS" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+                        </span>
+                        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <img src="img/portfolio/DBMS.png" width="180">
+                                        <h4>DbVieweR</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+                                            <p>
+                                                This Shiny app simulates a database management system featuring functions like login/logout, save/create/delete tables, add/rename columns, etc.
+                                                <br><br>
+                                                Features of this app:
+                                                <br><br>
+                                                Back-end database: A SQLite or PostgreSQL database that stores dummy data.
+
+                                                Authorization: Credit to the package <a href="https://github.com/paulc91/shinyauthr">shinyauthr</a> which provides module functions that can be used to add an authentication layer to shiny apps.
+                                                
+                                                <br><br>
+
+                                                Highlights of the functions: <br><br>
+
+                                                - Save tables: save a store sales summary table to the database.<br>
+                                                - Update existing tables: rename tables, rename/add columns of tables.<br>
+                                                - Create new tables: table and column names can be customized. Provide 4 types of column to be added - integer, float, varchar(255), and boolean.<br>
+                                                - Create entries to tables: prompt columns contained in the selected table together with their types.<br>
+                                                - Delete tables: the action is only accessible to specific authorization.<br>
+                                                - Robustness: Defense mechanism that prevents duplicates, invalid expressions, and conflicts with SQL keywords are set for all the input table and colunm names to ensure the smooth execution of SQL queries. Once errors are detected, prompt messages will show up suggesting possible failure reasons.<br>
+    
+                                                <br><br>
+
+                                                The code provided creates an online interactive data management app using R and SQL. Check the Demo <a href="http://www.munoztd0.space:3838/apps/DBMS/">here</a>.
+                                                <br><br>
+                                            
+
+                                                
+                                                <span>You can check the project on <a href="https://github.com/munoztd0/DBMS">Github</a>.
+                                                    </span>
+                                                <br><br>
+                                                <div style="margin-top: 5px;">
+                                                    <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/munoztd0/DBMS">Github</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+
+    <!--echarts -->
+    <center>
+        <div class="portfolio-modal modal fade" id="echarts" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class='modal__overlay'></div>
+            <div class='modal__content'>
+                <div class="modal-dialog h-100">
+                    <div class="modal-content">
+                        <span class="btn_close btn-lg">
+                        </span>
+                        <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="modal-body">
+                                        <img src="img/portfolio/echarts.png" width="180">
+                                        <h4>Echarts4r</h4>
+                                        <p style="max-width: 600px"></p>
+                                        <br>
+                                        <div style="text-align: left">
+                                            <h6>Description</h6>
+                                            <hr>
+
+                                            <br><br>
+                                            <center><img src="img/portfolio/states.png" style="width:80%;"></center>
+                                            <br><br>
+                                            <p>
+                                                This R package is a wrapper of the <a href="https://echarts.apache.org/en/index.html">ECharts</a> library. 
+                                                It provides a set of functions to generate interactive charts in R.
+                                                <br><br>
+                                                Highlights of this package:
+                                                <br><br>
+                                                - Provide functions to generate interactive charts in R.<br>
+                                                - The package is built on top of the <a href="https://echarts.apache.org/en/index.html">ECharts</a> library, which is a powerful library for data visualization.<br>
+                                                - The package provides a set of functions that can be used to generate charts with ECharts.<br>
+                                                - The package is still under development. More features will be added in the future.<br>
+                                                - The package is open source. 
+                                                <br><br>
+                                                <center><img src="img/portfolio/webGL.png" style="width:80%;"></center>
+                                                <br><br>
+
+                                                Features of the package: <br><br>
+
+
+                                                - Provides more than 20 chart types available out of the box, along with a dozen components, and each of them can be arbitrarily combined to use.
+                                                - Has a powerful rendering engine that allows you to easily switch between Canvas and SVG rendering. Progressive rendering and stream loading make it possible to render 10 million data in realtime.
+                                                - Offers professional data analysis through datasets, which support data transforms like filtering, clustering, and regression to help analyze multi-dimensional analysis of the same data.
+                                                - Has an elegant visual design that follows visualization principles and supports responsive design. Flexible configurations make it easy to customize.
+                                                - Has a healthy community that ensures the healthy development of the project and contributes a wealth of third-party extensions.
+                                                - Is accessibility-friendly with automatically generated chart descriptions and decal patterns that help users with disabilities understand the content and the stories behind the charts.
+                                                <br><br>
+                                                <center><img src="img/portfolio/tics.png" style="width:80%;"></center>
+                                                <br><br>
+
+                                                
+                                                <span>You can check the project on <a href="https://github.com/JohnCoene/echarts4r">Github</a>.
+                                                    </span>
+                                                <br><br>
+                                                <div style="margin-top: 5px;">
+                                                    <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/JohnCoene/echarts4r">Github</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
 
 
     <!-- ======================================================================= -->
-
-
 
 
 
