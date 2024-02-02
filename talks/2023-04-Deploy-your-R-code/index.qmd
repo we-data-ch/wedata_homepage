@@ -1,0 +1,17 @@
+---
+title: "Deploy Your R Code!"
+author: "David Munoz Tord"
+date: 2023-04-04
+categories: [Talk, Thoughts, Web, R, Implementing an idea, DevOps]
+format: html
+---
+
+::: {.iframe-container}
+<iframe class="iframe-responsive" scrolling="no" src="https://we-data-ch.github.io/Web_Deployment_With_R/R-Lunch#1"></iframe>
+:::
+
+<br>
+
+<a href="https://we-data-ch.github.io/Web_Deployment_With_R/R-Lunch#1" class="btn btn-secondary">Full Slides</a>
+
+<a href="https://unige.zoom.us/rec/share/bmPWK9YqdK9FI74DtVnhEgaca8isNWNkjwxjVP2TeRJ_TnRsRp3HpRb5DFuYQZXO.hBVyShgZ9SLyqESP" class="btn btn-secondary">Presentation Recording</a>

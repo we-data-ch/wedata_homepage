@@ -1,0 +1,15 @@
+{
+  "hash": "e4fb1f384bab239d704a8da7320037ff",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Your first chat bot with python!\"\nauthor: \"David Munoz Tord\"\ndate: \"2023-06-27\"\ncategories: [\"Python\", \"AI\"]\ntags: [\"language models\", \"llm\", \"chatGPT\"]\n---\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

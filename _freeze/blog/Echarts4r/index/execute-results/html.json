@@ -1,0 +1,19 @@
+{
+  "hash": "8d33482bf21967780b702c040382bc55",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Data Viz with Echarts4r\"\nauthor: \"David Munoz Tord\"\ndate: \"2023-06-25\"\ncategories: [\"R\"]\ntags: [\"dataviz\", \"interactive plots\", \"echarts4r\"]\nimage: viz.png\n---\n\n\n\n\n\n# Goal\n\nLearn about *data visualization* and familiarize yourself with some of the basic functions of the {[echarts4r](https://echarts4r.john-coene.com/index.html)}.\n\n{[echarts4r](https://echarts4r.john-coene.com/index.html)} is back! And with version 4.5 the new features from version 5 of echarts.js are available now. Moreover, the morphing capabilities of echart.js have been ported to echarts4r as we will show in this post.\n\n[Read more about it](https://echarts4r.john-coene.com/)\n\nYou can morph between plot like this:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n\nlibrary(echarts4r)\n\nmtcars2 <- mtcars |> \n  head() |> \n  tibble::rownames_to_column(\"model\")\n\ne1 <- mtcars2 |> \n  e_charts(model) |> \n  e_bar(\n    carb, \n    universalTransition = TRUE,\n    animationDurationUpdate = 1000L\n  )\n\ne2 <- mtcars2 |> \n  e_charts(model) |> \n  e_pie(\n    carb, \n    universalTransition = TRUE,\n    animationDurationUpdate = 1000L\n  )\n\ncb <- \"() => {\n  let x = 0;\n  setInterval(() => {\n    x++\n    chart.setOption(opts[x % 2], true);\n  }, 3000);\n}\"\n\n```\n:::\n\n\n<br/>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n\ne_morph(e1, e2, callback = cb)\n## Warning in e_morph(e1, e2, callback = cb): This is experimental\n```\n\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"echarts4r html-widget html-fill-item\" id=\"htmlwidget-3976ff9e01e9ea8d508f\" style=\"width:100%;height:500px;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-3976ff9e01e9ea8d508f\">{\"x\":{\"theme\":\"\",\"tl\":false,\"draw\":true,\"renderer\":\"canvas\",\"events\":[],\"buttons\":[],\"opts\":[[{\"yAxis\":[{\"show\":true}],\"xAxis\":[{\"data\":[\"Mazda RX4\",\"Mazda RX4 Wag\",\"Datsun 710\",\"Hornet 4 Drive\",\"Hornet Sportabout\",\"Valiant\"],\"type\":\"category\",\"boundaryGap\":true}],\"legend\":{\"data\":[\"carb\"]},\"series\":[{\"data\":[{\"value\":[\"Mazda RX4\",\"4\"]},{\"value\":[\"Mazda RX4 Wag\",\"4\"]},{\"value\":[\"Datsun 710\",\"1\"]},{\"value\":[\"Hornet 4 Drive\",\"1\"]},{\"value\":[\"Hornet Sportabout\",\"2\"]},{\"value\":[\"Valiant\",\"1\"]}],\"name\":\"carb\",\"type\":\"bar\",\"yAxisIndex\":0,\"xAxisIndex\":0,\"coordinateSystem\":\"cartesian2d\",\"universalTransition\":true,\"animationDurationUpdate\":1000}]},{\"legend\":{\"data\":[\"Mazda RX4\",\"Mazda RX4 Wag\",\"Datsun 710\",\"Hornet 4 Drive\",\"Hornet Sportabout\",\"Valiant\"]},\"series\":[{\"name\":\"carb\",\"type\":\"pie\",\"universalTransition\":true,\"animationDurationUpdate\":1000,\"data\":[{\"value\":4,\"name\":\"Mazda RX4\"},{\"value\":4,\"name\":\"Mazda RX4 Wag\"},{\"value\":1,\"name\":\"Datsun 710\"},{\"value\":1,\"name\":\"Hornet 4 Drive\"},{\"value\":2,\"name\":\"Hornet Sportabout\"},{\"value\":1,\"name\":\"Valiant\"}]}]}]],\"dispose\":true,\"morphed\":{\"callback\":\"() => {\\n  let x = 0;\\n  setInterval(() => {\\n    x++\\n    chart.setOption(opts[x % 2], true);\\n  }, 3000);\\n}\",\"default\":0}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<script src=\"../../site_libs/echarts4r-4.8.0/echarts-en.min.js\"></script>\n<script src=\"../../site_libs/echarts4r-4.8.0/ecStat.min.js\"></script>\n<script src=\"../../site_libs/echarts4r-4.8.0/dataTool.min.js\"></script>\n<script src=\"../../site_libs/echarts4r-binding-0.4.5/echarts4r.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

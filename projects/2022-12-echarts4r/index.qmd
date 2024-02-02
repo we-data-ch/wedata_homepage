@@ -1,0 +1,52 @@
+---
+title: "Echarts4r"
+author: "David Munoz Tord"
+date: 2022-04-12
+categories: [Project, Package, R, Interactive, DataViz]
+format: html
+---
+
+::: {.iframe-container}
+<iframe class="iframe-responsive" scrolling="yes" src="https://echarts4r.john-coene.com/"></iframe>
+:::
+<br><br>
+<a href="https://echarts4r.john-coene.com/" class="btn btn-secondary">Full Screen</a>
+
+
+<br>
+<div style="text-align: left">
+<h6>Description</h6>
+<hr>
+
+<p>
+    This R package is a wrapper of the <a href="https://echarts.apache.org/en/index.html">ECharts</a> library. 
+    It provides a set of functions to generate interactive charts in R.
+    <br><br>
+    Highlights of this package:
+    <br><br>
+    - Provide functions to generate interactive charts in R.<br>
+    - The package is built on top of the <a href="https://echarts.apache.org/en/index.html">ECharts</a> library, which is a powerful library for data visualization.<br>
+    - The package provides a set of functions that can be used to generate charts with ECharts.<br>
+    - The package is still under development. More features will be added in the future.<br>
+    - The package is open source. <br>
+    <br><br>
+    Features of the package: 
+<br><br>
+
+
+- Provides more than 20 chart types available out of the box, along with a dozen components, and each of them can be arbitrarily combined to use.<br>
+- Has a powerful rendering engine that allows you to easily switch between Canvas and SVG rendering. Progressive rendering and stream loading make it possible to render 10 million data in realtime.<br>
+- Offers professional data analysis through datasets, which support data transforms like filtering, clustering, and regression to help analyze multi-dimensional analysis of the same data.<br>
+- Has an elegant visual design that follows visualization principles and supports responsive design. Flexible configurations make it easy to customize.<br>
+- Has a healthy community that ensures the healthy development of the project and contributes a wealth of third-party extensions.<br>
+- Is accessibility-friendly with automatically generated chart descriptions and decal patterns that help users with disabilities understand the content and the stories behind the charts.<br>
+
+<br>
+    
+<span>You can check the project on <a href="https://github.com/JohnCoene/echarts4r">Github</a>.
+    </span>
+<br><br>
+
+
+
+

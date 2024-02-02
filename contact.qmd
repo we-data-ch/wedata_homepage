@@ -1,0 +1,13 @@
+---
+title: ""
+page-layout: full
+title-block-banner: true
+---
+
+# Contact
+
+<br>
+
+<address>
+Contact us at <a href="mailto:info@wedat.ch">info@wedat.ch</a>.<br>
+</address>

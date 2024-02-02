@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vestin Hategekimana">
+<meta name="dcterms.date" content="2024-01-07">
+
+<title>David Munoz Tord</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/me.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DGPQ7WF7PV"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DGPQ7WF7PV', { 'anonymize_ip': true});
+</script>
+
+
+<meta name="twitter:title" content="David Munoz Tord">
+<meta name="twitter:image" content="https://david-munoztord.com/blog/My-problem-with-python/image.jpg">
+<meta name="twitter:creator" content="@munoztd0">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/rbmv-secondary.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> 
+<span class="menu-text"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text"><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/munoztd0/CV_DMT/raw/main/CV_DMT.pdf"> 
+<span class="menu-text"><i class="fa-solid fa-paperclip" aria-label="paperclip"></i> Vitae</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/munoztd0"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tord_munoz"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/david-munoz-tord-409639150/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      
+                                <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vestin Hategekimana </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 7, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="my-problem-with-python" class="level1">
+<h1>My problem with Python</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Today, we’re diving into a rather controversial topic: ‘My problem with Python.’ But before you raise your eyebrows, let me clarify: It’s not quite what you think. So, let’s unravel this Python conundrum.</p>
+</section>
+<section id="why-learn-python" class="level2">
+<h2 class="anchored" data-anchor-id="why-learn-python">Why learn Python?</h2>
+<p>Let’s start by setting the record straight. Python, the language, is pretty fantastic. It’s versatile, boasts a treasure trove of data science libraries, and guess what? It was my first programming language. That’s right, Python and I go way back to my days as a stats newbie, looking for something more robust than STATA.</p>
+<p>Back then, it was a showdown between R and Python for me. The online world seemed to be in a Python frenzy. Everywhere I looked, articles, tutorials, you name it – they all seemed to be chanting ‘Python, Python, Python!’ So, naturally, I jumped on the bandwagon. Python became my go-to for data science, my knight in shining armor, if you will.</p>
+</section>
+<section id="but" class="level2">
+<h2 class="anchored" data-anchor-id="but">But…</h2>
+<p>But then, plot twist! During my master’s, I was forced to learn R. And guess what? I was blown away. R was like this hidden gem, perfectly cut for data analysis. Slowly but surely, R started replacing Python in my data science toolkit. That got me thinking: Were those Python-preaching articles a bit too… biased?</p>
+<p>As I dug deeper, it became clear. Many of those Python articles had misunderstood R, or worse, underestimated it. The craziest thing about all this is that many of these articles have literally pointed out things that aren’t true, such as the fact that R doesn’t have any good machine learning or visualization libraries. Also, some were comparing plain R with Python + Pandas + Numpy + ScikitLearn + TensorFlow. This realization hit me hard.</p>
+<p>These articles and videos were much more subjective than they seemed in their choice of examples (sometimes these examples were already out of date) and concretely little effort was made in searching in R.</p>
+<p>Latter I ventured further, exploring languages like Julia and Nim. I needed performance, I craved compilation, and I was hunting for application. These new languages opened my eyes to a world beyond Python. Yet, Python remained in my arsenal, like an old friend you can’t let go of.</p>
+</section>
+<section id="my-problem-with-python-1" class="level2">
+<h2 class="anchored" data-anchor-id="my-problem-with-python-1">My problem with Python</h2>
+<p>Like all programming languages, Python has its shortcomings, which I can easily mention. These flaws become obvious when I compare it to other programming languages I use: - It’s slow (not compiled) - Has a huge dependency on C for heavy tasks - Possible to create desktop applications, but inappropriate - Has no built-in linear algebra functionality - No integrated dataframe management functionality - No integrated statistics or machine learning functionality - Object-oriented doesn’t integrate well with any of the above functionalities (Numpy and Pandas for instance feel weird to use personally)</p>
+<p>And the list goes on. But these aren’t my problem: no programming language is perfect.</p>
+<p>So, here’s my ‘problem’ with Python: <strong>It’s not the language itself, but the popularity bias surrounding it</strong>. This bias blinds us, leading many to overlook alternatives that might be better suited for certain tasks. It creates a bubble, where Python is the be-all and end-all, and other languages are mere afterthoughts. This bubble isn’t just limiting; it’s dangerous for beginners.</p>
+<p>In concrete terms, thanks to its versatility, Python can become a comfort zone from which it’s hard to escape. But focusing on just one language and ignoring the alternatives can lead to a number of problems: - <strong>Performance:</strong> In the case of languages like Python, performance is limited and you have to rely on libraries that depend on other, more powerful languages for specific uses (C/C++). What’s more, when it comes to writing high-performance programs in their own right, it’s a bad idea to write them in Python or other supposedly faster alternatives (Pypy or Cython) when you could be using other more powerful and almost equally easy-to-use languages like Julia, Mojo or Nim. This solve the <a href="https://scientificcoder.com/how-to-solve-the-two-language-problem">two language problem</a> in a better way. - <strong>Ecosystem:</strong> Even if Python could virtually be used in many circumstances, there are languages that have ecosystems better suited to certain tasks, such as JavaScript for Web development, R for statistics, Kotlin for application development or Rust for system development. - <strong>Career:</strong> It’s possible to make a career out of a single programming language. The chances of working with just one language seem high in a rare programming language. In the case of a language like Python (which everyone uses), it’s more appropriate to have another language to back up your skills. Even in a field like data science, it’s very often required to know how to use SQL or R in addition to Python. What’s more, it’s not only machine learning skills that are required, but also knowledge of statistics, architecture (AWS, Azure, etc.) and other skills. What’s more, having more than one language means more career opportunities.</p>
+<p>Don’t get me wrong, Python is great. I still use it for many projects (nice for scripting). But the key takeaway? <strong>Don’t get cloistered in a single language</strong>. Explore, experiment, and most importantly, keep an open mind. Each language has its strengths, its charm, and yes, its quirks.</p>
+<p>So, whether you’re a Python pro, an R enthusiast, or a Julia fan, remember: the world of programming is vast and varied. Embrace it. And hey, who knows? You might just find your new programming soulmate.</p>
+</section>
+<section id="popularity-bias" class="level2">
+<h2 class="anchored" data-anchor-id="popularity-bias">Popularity bias</h2>
+<p>So, we’ve talked about the language, its strengths, and the bias around it. Now, let’s explore the darker side of popularity bias and the hit-parade effect in programming.</p>
+<p>You see, popularity bias isn’t unique to Python or even programming. It’s a widespread phenomenon, where popularity feeds more popularity, often overshadowing other equally or more deserving options. In music, it’s the hit-parade effect – the more a song is played, the more popular it becomes, regardless of its quality.</p>
+<p>This hit-parade effect seeps into the world of programming too. Python, no doubt a great language, has benefitted from this. Its popularity has skyrocketed, not solely because of its merits but partly due to a self-perpetuating cycle of popularity. It’s like a snowball rolling downhill, getting bigger and bigger.</p>
+<p>But why is this dangerous? Well, think about it. When one language dominates the spotlight, others are left in the shadows, no matter how good they might be. This creates a monoculture in programming, where diversity of thought, approach, and solution is stifled. We start seeing every problem as a nail, and Python as the only hammer we have.</p>
+<p>This is less a problem for large companies using several programming languages, but rather for programmers engaged in a war to find the best programming language, or simply looking for the easy way out.</p>
+<p>But let’s not get it twisted. Python is a fantastic language and a safe choice. Its simplicity, vast libraries, and community support are unparalleled. It’s like the friendly neighborhood of programming languages – welcoming and accessible (take notes Nim). But, part of its overwhelming popularity is definitely fueled by this hit-parade effect: It’s taught everywhere (even compulsary), and it’s virtually impossible not to have heard of it.</p>
+<p>Python is pushed by companies, articles, tutorials, over-enthusiastic Pythonistas, hype for Artificial Intelligence and yes, even content like this one. The danger lies in becoming so enamored with Python that we become blind to other languages’ potential. Remember, every language was designed with a purpose in mind, and sometimes, that purpose aligns perfectly with your specific needs.</p>
+<p>Like JavaScript, Python represents the piano in music; everyone knows how to play it in addition to their instrument of choice. But in the end, an orchestra is made up of a diversity of instruments, and without this diversity, there could be no beautiful symphony.</p>
+<p>So, here’s my call to action: Explore. Be curious. Don’t let popularity bias dictate your choice of programming language. Dive into R for statistical analysis, Julia for high-performance computing, or even Rust for systems programming. The landscape is rich and diverse – a treasure trove waiting to be explored.</p>
+<p>In the end, it’s about using the right tool for the job, not the most popular one. It’s about innovation, exploration, and sometimes, about going against the grain. So, whether you’re a seasoned coder or a newbie, remember: there’s a whole world beyond Python, and it’s just waiting for you to discover it.</p>
+</section>
+<section id="conclusion-python-vs-r" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-python-vs-r">Conclusion: Python vs R</h2>
+<p>Now, let’s tackle the age-old debate: R versus Python. It’s a question as old as time in the data science world. <strong>Which one should you choose?</strong></p>
+<p>When someone asks me, “Should I go for R or Python?” I don’t just throw an answer at them. Instead, I turn into a bit of a detective. I ask questions about their needs, motivations, and the environment they’re working in. Who around them is using these languages? What kind of analysis/code are they dealing with? What’s their end goal?</p>
+<p>You see, it’s not about which language is “the best”. It’s about which language is better for you, for your specific situation. Python, with its simplicity and vast libraries, might be the go-to for general-purpose programming and machine learning. R, on the other hand, shines in statistical analysis and has fantastic packages for data visualization.</p>
+<section id="become-polyglot" class="level3">
+<h3 class="anchored" data-anchor-id="become-polyglot">Become polyglot!</h3>
+<p>But here’s the kicker: I always suggest learning both (not at the same time of course). That’s right. Why limit yourself to one when you can have the best of both worlds? That’s what I wish someone had told me back in the day. Ask “<strong>Which one should I learn first?</strong>” not “Which one is the best?” And base your decision on your needs, not on a false competition filled with bias and misinformation. It’s easier to choose when you don’t feel that the choice you’ve made will impact your whole life. Knowing that you can learn the one you want next based on your needs is liberating.</p>
+<p>Being a programming polyglot opens up a world of possibilities. It’s like being a chef with access to a global pantry of ingredients. You can pick and choose the best tool for each recipe, for each task at hand. And when you’re ready, why stop at R and Python? Dive into Julia for high-performance tasks, or explore SQL for database management. The more languages you know, the more versatile and capable you become.</p>
+<p>So, dear listeners, embrace the journey of learning. Be open to expanding your skillset. Remember, in the rapidly evolving world of programming, being adaptable and versatile is key. And most importantly, never stop being curious. Who knows what incredible solutions you’ll discover when you step out of your comfort zone?</p>
+</section>
+<section id="the-misunderstanding-surrounding-r" class="level3">
+<h3 class="anchored" data-anchor-id="the-misunderstanding-surrounding-r">The misunderstanding surrounding R</h3>
+<p>I would like to offer some insights for Python enthusiasts who might not fully appreciate the capabilities of R. My observations suggest that there’s a prevalent misconception among many Python users about R’s utility and scope. This misconception seems to originate from two main factors. Firstly, in academic settings, R is typically introduced as a statistical tool, primarily taught by experts in mathematics or statistics. This approach often limits the exposure to R’s potential in data science, contrasting with Python, which is predominantly showcased in this context. Such a skewed presentation could contribute to the underestimation of R. Secondly, Python’s overwhelming presence on the internet, particularly in data science forums, reinforces its popularity. This larger user base naturally leads to a dominance in online discussions, overshadowing R’s presence. It’s also important to address a common oversight regarding the application of programming languages in industry settings.</p>
+<p>While the usage of Python in major companies like Google and Amazon is well-publicized, it’s a misconception to assume it’s their exclusive choice for data science tasks. In reality, many large corporations also incorporate R in their data science operations. Such as Airbnb, Amazon Web Service Ebay, Facebook, Google, Microsoft, Mozilla, Netflix, Twitter or Uber to name a few (<a href="https://github.com/ThinkR-open/companies-using-r">source</a>). Even companies made the choice to work mainly with R like Thinkr and Appsilon.</p>
+<p>In fact R has solid libraries and tools for data science task: Quarto or Rmarkdown notebook for versatile publication, the Tidyverse ecosystem for data wrangling, the Tidymodels ecosystem or Caret or Mlr3 for machine learning, the Torch ecosystem for deep learning or Shiny for web application to name some famous ones.</p>
+<p>The key takeaway is that R is far from being a dated, esoteric, and impenetrable statistical language confined to academic circles and favored only by nearing-retirement professors. Rather, it is a vibrant and dynamic language supported by a robust community deeply invested in data science. R is already a staple in production environments, actively used for a variety of real-world applications. The intent here is not to argue that R matches Python in terms of widespread usage – they are distinct languages with different strengths – but rather to challenge and correct the misconceptions some Python users might hold about R. This perspective aims to broaden the understanding and appreciation of what R brings to the table in the realm of data science.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <img src="../../images/rbmv-secondary.png" width="auto" height="30px">
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/munoztd0">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tord_munoz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/david-munoz-tord-409639150/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

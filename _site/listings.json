@@ -1,0 +1,45 @@
+[
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2023-04-Deploy-your-R-code/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/llm/index.html",
+      "/blog/R-Lunches/index.html",
+      "/blog/Live/index.html",
+      "/blog/Data_manip_Fundamental/index.html",
+      "/blog/Data_explor_Fundamentals/index.html",
+      "/blog/Stats_With_R/index.html",
+      "/blog/Code_Hygiene/index.html",
+      "/blog/Data_Viz_Fundamentals/index.html",
+      "/blog/R_basics/index.html",
+      "/talks/2023-04-Deploy-your-R-code/index.html",
+      "/projects/2022-12-echarts4r/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/Coding_road_map/Index.html",
+      "/blog/llm/index.html",
+      "/blog/R-Lunches/index.html",
+      "/blog/Live/index.html",
+      "/blog/Data_manip_Fundamental/index.html",
+      "/blog/Data_explor_Fundamentals/index.html",
+      "/blog/Stats_With_R/index.html",
+      "/blog/Code_Hygiene/index.html",
+      "/blog/Data_Viz_Fundamentals/index.html",
+      "/blog/R_basics/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/2022-12-echarts4r/index.html"
+    ]
+  }
+]
