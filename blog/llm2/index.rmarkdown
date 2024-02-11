@@ -17,10 +17,6 @@ reticulate::use_virtualenv(paste0(path, "/renv/python/virtualenvs/renv-python-3.
 ```
 
 
-
-
-
-
 ![](ai.jpg)
 
 By [David Munoz Tord](https://david-munoztord.com/)
@@ -33,20 +29,15 @@ By [David Munoz Tord](https://david-munoztord.com/)
 
 
 
-
-
-
-
 ```{python}
-
+#| label: setup
+#| message: false
 import languagemodels as lm
-lm.do("What color is the sky?")
-
 ```
 
-
-
-
+```{python}
+lm.do("What color is the sky?")
+```
 
 
 <br/>
@@ -54,17 +45,9 @@ lm.do("What color is the sky?")
 To easy, let's try something a bit harder
 
 
-
-
-
-
 ```{python}
 lm.do("If I have 7 apples then eat 5, how many apples do I have?")
 ```
-
-
-
-
 
 
 Aouch...
@@ -74,18 +57,16 @@ Indeed the model performance is quite low because the models used by this packag
 The base model should work on any system with 512MB of memory, but this memory limit can be increased. Setting this value higher will require more memory and generate results more slowly, but the results should be superior. 
 
 
-
-
-
-
 ```{python}
+#| label: setup 4GB
+#| message: false
 lm.set_max_ram('4gb')
-lm.do("If I have 7 apples then eat 5, how many apples do I have?")
 ```
 
-
-
-
+```{python}
+#| label: run 4GB
+lm.do("If I have 7 apples then eat 5, how many apples do I have?")
+```
 
 
 Yeah, here we go little (4gb) buddy!
@@ -93,10 +74,6 @@ Yeah, here we go little (4gb) buddy!
 <br/>
 
 Now that we got the basics, let's play with it! You can change the prompt like such
-
-
-
-
 
 
 ```{python}
@@ -112,15 +89,7 @@ lm.chat('''
 ```
 
 
-
-
-
-
 <br/>
-
-
-
-
 
 
 ```{python}
@@ -130,15 +99,7 @@ lm.complete("She hid in her room until")
 ```
 
 
-
-
-
-
 <br/>
-
-
-
-
 
 
 ```{python}
@@ -148,13 +109,5 @@ lm.get_wiki("Physics")
 ```
 
 
-
-
-
-
 <br/>
-
-
-
-
 

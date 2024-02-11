@@ -29,7 +29,7 @@ By [David Munoz Tord](https://david-munoztord.com/)
 
 
 ```{python}
-#| label: setup 4GB
+#| label: setup
 #| message: false
 import languagemodels as lm
 ```
