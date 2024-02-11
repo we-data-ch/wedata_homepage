@@ -22,7 +22,7 @@ jobs:
         - name: Install libcurl
           run: >
             sudo apt-get update && sudo apt-get install --yes
-            libcurl4-openssl-dev
+            libcurl4-openssl-dev libharfbuzz-dev
             
         - name: Install dependencies with renv!
           uses: r-lib/actions/setup-renv@v2
