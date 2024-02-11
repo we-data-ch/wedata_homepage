@@ -21,7 +21,7 @@ jobs:
 
         - name: Install libcurl
           run: >
-            sudo apt-get update && sudo apt-get install --yeslazyg
+            sudo apt-get update && sudo apt-get install --yes
             libcurl4-openssl-dev
             
         - name: Install dependencies with renv!
