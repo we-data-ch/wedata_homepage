@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vestin Hategekimana">
+<meta name="dcterms.date" content="2023-07-16">
+
+<title>We Data - You must use projects with RStudio!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/me.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECFW8LLBS7"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
+</script>
+
+
+<meta name="twitter:title" content="We Data - You must use projects with RStudio!">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://we-data.ch/blog/2023-07-16-you-must-use-rproject/cover.jpg">
+<meta name="twitter:creator" content="@munoztd0">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/primary.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">You must use projects with RStudio!</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vestin Hategekimana </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 16, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cover.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Rprojects</figcaption>
+</figure>
+</div>
+<section id="lets-start-using-projects-right-now" class="level2">
+<h2 class="anchored" data-anchor-id="lets-start-using-projects-right-now">Let’s start using projects right now!</h2>
+<p>Hello budding data scientist! Welcome to another thrilling journey in the enigmatic world of coding. Today, we’re here to chat about a topic so fascinating that it might just outshine your grandmother’s knitting saga. It’s the “Project” feature in RStudio. Yes, you heard it right - it’s time to unravel the secret weapon that will catapult you to new heights in your R journey.</p>
+<p>Before we embark, let’s clarify something. What’s RStudio, you ask? RStudio is an integrated development environment (IDE) for R, a programming language for statistical computing and graphics. If R is a car, then RStudio is the fancy garage where you improve it up and give it a good polish. But hey, even in the best garages, there are tools that are underused – and ‘projects’ is the underappreciated power drill that’s gathering dust in the corner.</p>
+</section>
+<section id="what-are-projects-in-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-projects-in-rstudio">What are projects in RStudio?</h2>
+<p>Imagine having a room so messy, you can’t tell the difference between your cat and a fur-lined sweater. Now, think of projects as a giant storage box that allows you to organize your mess (or codes, in our case) and avoid getting your data files, scripts, and outputs mixed up. Remember, no one wants to find a sock in their sandwich!</p>
+<p>So, in RStudio, a Project is essentially a way to keep all relevant files and specific settings in a single place. Every time you open a Project, RStudio knows exactly where it is, it gets its bearings, and has the sense not to look for your datasets in your downloads or image folder.</p>
+<p>projects are like trusty sidekicks in the world of programming. They keep our work organized and shielded from the chaos of the digital universe. Just like RStudio’s Rproject, other editors have their own quirky projects. Visual Studio has projects, Sublime Text has projects, and even your grandma’s ancient text editor might have a project feature. projects are like clean bubbles for our code, ensuring it remains unperturbed by the messy dance of files on our computers.</p>
+<p><strong>Note: stop making excuses</strong></p>
+<p>Listen up, fellow statisticians! Just because you’re more into numbers than code doesn’t mean you get a free pass on staying desorganized. When you’re knee-deep in dissertations or buried under a pile of homework, you don’t scatter your papers haphazardly around the room, do you? No way! You keep everything in one place, separated from the rest of the chaos. It’s like having a binder for each subject and dividers for each assignment—clear, simple, and organized. projects are no different, my friends! They’re like those fancy binders, but for your digital life. They corral all your code, data, and documentation into one neat little package, shielding it from the tumultuous whirlwind of your computer’s file system.</p>
+</section>
+<section id="why-should-you-use-them" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-you-use-them">Why should you use them?</h2>
+<section id="stay-organized" class="level3">
+<h3 class="anchored" data-anchor-id="stay-organized">1. Stay organized</h3>
+<p>Imagine having to find the latest script in a haystack of documents or a file saved under a particularly “creative” name like “final_script_v3.2_final_FINAL.R”. A nightmare, isn’t it? With projects, every file you need is in one place - no more, no less. It’s like having a drawer labeled ‘Socks’: you’re not going to find a shirt in there!</p>
+</section>
+<section id="maintain-your-working-directory" class="level3">
+<h3 class="anchored" data-anchor-id="maintain-your-working-directory">2. Maintain your working directory</h3>
+<p>Your working directory is like your home base in R. With projects, every time you open a particular Project, RStudio sets the working directory to the project’s directory. No more lengthy codes with numerous file paths. It’s like waking up in your own bed every morning, not in the middle of a supermarket.</p>
+</section>
+<section id="work-on-multiple-projects" class="level3">
+<h3 class="anchored" data-anchor-id="work-on-multiple-projects">3. Work on multiple projects</h3>
+<p>Let’s say you’re juggling different projects, like a statistical analysis of avocado prices and a predictive model for the lottery. You don’t want your avocados messing with your lotto dreams, right? With RStudio projects, you can keep them separate and switch between them seamlessly. It’s like having different rooms for different tasks in your house.</p>
+</section>
+<section id="share-and-collaborate" class="level3">
+<h3 class="anchored" data-anchor-id="share-and-collaborate">4. Share and collaborate</h3>
+<p>If you’ve tried to share your R code with someone who couldn’t run it because they didn’t have their directories set up like yours, then you’ll love projects. They allow other people to run your code without getting tangled up in missing file errors. It’s the equivalent of sending someone a packed lunch with instructions instead of sending them to forage in your fridge.</p>
+<p>In conclusion, using projects in RStudio is like having a personal assistant who’s a pro at organizing, file managing, and ensuring you don’t get your socks mixed up with your sandwiches. And trust me, in the bustling kitchen of R programming, you’re going to want that!</p>
+</section>
+</section>
+<section id="the-cost-of-ignoring-rstudios-projects" class="level2">
+<h2 class="anchored" data-anchor-id="the-cost-of-ignoring-rstudios-projects">The cost of ignoring Rstudio’s projects</h2>
+<p>While coding in R can be a delightful and rewarding experience, there’s a peculiar habit that seems to persist among some developers—a reluctance to embrace the wonders of Rproject. In this blog post, we shall explore the mishaps and frustrations that arise from ignoring Rproject, highlighting the importance of this indispensable tool. So buckle up, and let’s embark on this humorous journey together!</p>
+<section id="absolute-paths-and-why-you-should-avoid-using-them" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-paths-and-why-you-should-avoid-using-them">1. Absolute paths and why you should avoid using them</h3>
+<section id="if-you-dont-know-what-absolute-paths-are" class="level4">
+<h4 class="anchored" data-anchor-id="if-you-dont-know-what-absolute-paths-are">If you don’t know what absolute paths are</h4>
+<p>Ah, absolute paths and relative paths, the dynamic duo of file navigation! Think of them as Batman and Robin, but with fewer capes and more directory drama.</p>
+<p><strong>Absolute paths</strong> are like treasure maps that provide the exact coordinates to your desired file or directory. They start from the root of your computer.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Examples</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Windows:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">"C:\Users\Username\Documents\Project\Folder\File.txt"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Mac:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">"/Users/Username/Documents/Project/Folder/File.txt"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Linux:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">"/home/Username/Documents/Project/Folder/File.txt"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On the other hand, <strong>relative paths</strong> are more like giving directions to your friend using landmarks. You guide them based on his current location. It’s like saying, “Go three steps to the right, pass the coffee shop, and you’ll find the mystical file you seek”.</p>
+<p>The example assume that your current working directory (where your R script or project is located) is at: <code>C:\Users\Username\Documents\Project\</code></p>
+<p>To navigate to a file named <code>File.txt</code> located in the <code>Folder</code> directory within the current working directory, the relative path would be:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Windows:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="st">'Folder\File.txt'</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Mac:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">'Folder/File.txt'</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Linux:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">'Folder/File.txt'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In R, to use relative paths, you simply do the same. If you want more options simply embrace the power of the dots! Use “..” to navigate up one level in the directory hierarchy and “.” to represent the current directory.</p>
+<p>Assume that your current working directory (where your R script or project is located) is at: <code>C:\Users\Username\Documents\Project\</code></p>
+<p>To navigate to the folder <code>Document</code> which is one level up you would use:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Windows:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="st">'..\'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Mac:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">'../'</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Linux:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="st">'../'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, here comes the thrilling part! Inside RStudio, imagine the <code>tab</code> key as a magical wand. When you’re typing a file or directory name within quotation marks, tap that <code>tab</code> key, and behold! <strong>A navigation bar appears</strong>, offering you a smorgasbord of choices. So, unleash your inner explorer, play with the relative paths, and tap that <code>tab</code> key like a maestro.</p>
+</section>
+<section id="back-to-the-dramatic-inconvenience-of-absolute-paths" class="level4">
+<h4 class="anchored" data-anchor-id="back-to-the-dramatic-inconvenience-of-absolute-paths">Back to the dramatic inconvenience of absolute paths</h4>
+<p>Picture this: You’ve written a fantastic piece of code in R, filled with wit, charm, and impeccable logic. But there’s a twist—your code contains an absolute file path. Now, when someone else attempts to run your code on their machine, it’s as if you’ve sent them on a mystery tour, wandering through file directories to locate the missing pieces. Be careful! Using the <code>setwd()</code> function (and even worse, the ctrl+shift+H shortcut) doesn’t solve the problem at all. You’re still using absolute paths, which will have to be changed manually by your victim - sorry, I mean colleague! Avoid this problem by utilizing Rproject, which enables you to maintain relative paths and keeps everyone on the same page.</p>
+</section>
+</section>
+<section id="mixed-files" class="level3">
+<h3 class="anchored" data-anchor-id="mixed-files">2. Mixed files</h3>
+<p>Imagine a symphony performance where each musician plays a different piece entirely. Irritating, right? Well, that’s what happens when you have mixed files scattered across different locations. One file resides in your “Documents” folder, while another hides in the depths of your “Downloads” folder. When collaborating or sharing your code, chaos ensues, leaving others scratching their heads. Rproject corrals all your files into a neat and tidy package, ensuring harmony and preserving the sanity of those who dare to read your code.</p>
+</section>
+<section id="versioning-woes" class="level3">
+<h3 class="anchored" data-anchor-id="versioning-woes">3. Versioning woes</h3>
+<p>Ah, the bane of every programmer’s existence—versioning woes. Without Rproject, you enter the realm of time travel bugs, where code from a different era unexpectedly emerges. You find yourself debugging issues that were resolved ages ago, akin to encountering a T-Rex in a modern metropolis. With Rproject, version control systems like Git become your trusty time-traveling companions, allowing you to journey through the annals of code history with ease. Let’s not forget <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>, but it will be the topic for another blog post!</p>
+</section>
+<section id="size-doesnt-matter" class="level3">
+<h3 class="anchored" data-anchor-id="size-doesnt-matter">4. Size doesn’t matter</h3>
+<p>“But my project is tiny! I don’t need Rproject,” you protest. Well, dear reader, even the tiniest projects deserve some love and organization. Rproject is not solely for colossal undertakings but a best practice that can save you from future headaches. Plus, it’s a delightful excuse to embark on an adventure, designing your own little universe within RStudio. Alternatively, you can always create a “Test” folder .</p>
+<p>Now, we understand that sometimes you just want to run a quick test, free from the constraints of a formal project. Fear not, intrepid adventurer! You can alter the default path of RStudio and create a whimsical “Test” folder where you can safely experiment and play. It’s a haven for all your quick tests and a sanctuary for spontaneous code escapades (see below in “Test and Project - Yin and Yang”).</p>
+</section>
+</section>
+<section id="organize-your-folder-structure" class="level2">
+<h2 class="anchored" data-anchor-id="organize-your-folder-structure">Organize your folder structure</h2>
+<p>Structure example</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Code/</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;</span> C++/</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;</span> Julia/</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;</span> Python/</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">&gt;</span> R/</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Test/</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Project/</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="op">&gt;</span> Analysis/</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="op">&gt;</span> Web_scraping/</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="op">&gt;</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="the-code-folder" class="level3">
+<h3 class="anchored" data-anchor-id="the-code-folder">The “Code” folder</h3>
+<p>Start with a code project to put all your code (regardless of the programming language) together.</p>
+</section>
+<section id="language-specific-folders" class="level3">
+<h3 class="anchored" data-anchor-id="language-specific-folders">Language-specific folders</h3>
+<p>Within your “Code” folder, it’s time to create language-specific subfolders, each housing a programming language you use. For our R enthusiasts, let’s dive into the “R” folder. Inside, we’ll unveil the secrets of a well-structured R programming project.</p>
+</section>
+<section id="test-and-project---yin-and-yang" class="level3">
+<h3 class="anchored" data-anchor-id="test-and-project---yin-and-yang">Test and project - Yin and Yang</h3>
+<p>Behold, the dynamic duo of the R folder—the “Test” and “Project” folders. These siblings play distinct roles in your coding journey, ensuring order and clarity.</p>
+<p><strong>The “Test” folder</strong> is your haven for experimentation and ad-hoc code trials. When you’re not working within a formal Rproject, this folder becomes your working directory. It’s here that you can tinker, test, and push the boundaries of your R code without affecting your main projects. To make life easier, <strong>let’s make the “Test” folder your permanent default working directory in RStudio</strong>.</p>
+<p>In RStudio, navigate to <code>Tools</code> -&gt; <code>Global Options</code> -&gt; <code>General</code> Look for the <code>Default working directory</code> and select <code>Browse...</code> next to it. Find and select your “Test” folder. Voila! RStudio will now use the “Test” folder as the default working directory whenever you’re not working within an Rproject.</p>
+<p>On the other hand, <strong>the “Project” folder</strong> is where the work truly unfolds. When creating an Rproject in RStudio, it will generate a dedicated project folder with all the necessary files and configurations. You have the freedom to structure this folder as you please, organizing your code, data, documentation, and any additional resources. It’s the ideal place to encapsulate the entirety of your project, ensuring that everything stays organized and coherent.</p>
+</section>
+<section id="create-rstudios-rproject" class="level3">
+<h3 class="anchored" data-anchor-id="create-rstudios-rproject">Create RStudio’s Rproject</h3>
+<p>Now, you may be wondering, “How do I create an Rproject in RStudio?”</p>
+<p>In RStudio, navigate to <code>File</code> -&gt; <code>New Project</code> -&gt; <code>New Directory</code> -&gt; <code>Empty Project</code> Choose the location of your Project folder within the “R” folder, provide a name for your project, and click <code>Create Project</code> Voila! RStudio conjures an Rproject, complete with an “.Rproj” file and a wondrous new world awaits.</p>
+<p>If you already have an existing folder, it is the same way. Click <code>New Project</code> in RStudio’s <code>File</code> menu. Choose <code>Existing Directory</code> click <code>Create Project</code>. The project will take the folder name.</p>
+<p>Within your newly minted Rproject, you can work correctly while basking in the organized files, version control, and a consistent working directory. RStudio conveniently sets the working directory to the project’s root folder, saving you from horrible absolute paths.</p>
+</section>
+</section>
+<section id="organize-your-folder-inside-a-rproject" class="level2">
+<h2 class="anchored" data-anchor-id="organize-your-folder-inside-a-rproject">Organize your folder inside a Rproject</h2>
+<p>How to organize folders inside an Rproject? It’s like cleaning your room, but without the actual physical labor. Keep in mind that there are many way to organize it, here are a few examples:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Minimal</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> project_name/</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Data/</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Script/</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Result/</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># A more complex example</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> project_name/</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Codebook/</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Data/</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Script/</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;</span> R/</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;</span> Rcpp/</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Plots/</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># R package basic structure</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> package_name/</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> R/</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> man/</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> tests/</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># My way</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> project_name</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Data_raw</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Data_clean</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Script</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;</span> Fun</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Report</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;</span> Results</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;</span> Figures</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;</span> Tables</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>As R programming enthusiasts, we’ve ventured through its intricacies with Rproject, an essential tool that safeguards against absolute paths, file mix-ups, and versioning issues. All projects, large or small, merit organization and care. We’ve explored the allure of folder structures and Rproject creation, finding peace in structured coding by managing specific subfolders and enhancing the relationship between “Test” and “Project” folders. RStudio assists us in this journey, simplifying the creation of Rprojects, thus promoting productivity and precision. Fellow coders, let’s advance with our folder structures as elegant as our code!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <img src="../../images/primary.png" width="auto" height="30px">
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

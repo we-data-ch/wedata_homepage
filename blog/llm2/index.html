@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="David Munoz Tord">
+<meta name="dcterms.date" content="2023-06-27">
+
+<title>We Data - Your first chat bot with python!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/me.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECFW8LLBS7"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
+</script>
+
+
+<meta name="twitter:title" content="We Data - Your first chat bot with python!">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://we-data.ch/blog/llm2/ai.jpg">
+<meta name="twitter:creator" content="@munoztd0">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/primary.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Your first chat bot with python!</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">AI</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>David Munoz Tord </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 27, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><img src="ai.jpg" class="img-fluid"></p>
+<p>By <a href="https://david-munoztord.com/">David Munoz Tord</a></p>
+<p><strong>Goal</strong>: Learn about <em>language models</em> and familiarize yourself with some of the basic functions of the {<a href="https://github.com/jncraton/languagemodels">languagemodels</a>} to create your own chat bot.</p>
+<p>{<a href="https://github.com/jncraton/languagemodels">languagemodels</a>} is a python module designed to be as simple as possible for learners and educators exploring how large language models intersect with modern software development. The interfaces to this package are all simple functions using standard types. The complexity of large language models is hidden from view while providing free local inference using light-weight, open models. All included models are free for educational use, no API keys are required, and all inference is performed locally by default.</p>
+<p><a href="https://github.com/jncraton/languagemodels">Read more about it</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> languagemodels <span class="im">as</span> lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lm.do(<span class="st">"What color is the sky?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'The color of the sky is blue.'
+
+
+tokenizer.json:   0%|          | 0.00/2.42M [00:00&lt;?, ?B/s]
+tokenizer.json: 100%|##########| 2.42M/2.42M [00:00&lt;00:00, 41.4MB/s]
+
+Fetching 6 files:   0%|          | 0/6 [00:00&lt;?, ?it/s]
+
+config.json:   0%|          | 0.00/162 [00:00&lt;?, ?B/s][A
+config.json: 100%|##########| 162/162 [00:00&lt;00:00, 1.29MB/s]
+
+Fetching 6 files:  17%|#6        | 1/6 [00:00&lt;00:00,  7.43it/s]
+
+model.bin:   0%|          | 0.00/249M [00:00&lt;?, ?B/s][A
+
+model.bin:   8%|8         | 21.0M/249M [00:00&lt;00:03, 58.6MB/s][A
+
+model.bin:  17%|#6        | 41.9M/249M [00:00&lt;00:02, 92.8MB/s][A
+
+model.bin:  25%|##5       | 62.9M/249M [00:00&lt;00:01, 99.3MB/s][A
+
+model.bin:  34%|###3      | 83.9M/249M [00:01&lt;00:02, 75.2MB/s][A
+
+model.bin:  38%|###7      | 94.4M/249M [00:01&lt;00:02, 76.2MB/s][A
+
+model.bin:  42%|####2     | 105M/249M [00:01&lt;00:02, 67.1MB/s] [A
+
+model.bin:  46%|####6     | 115M/249M [00:01&lt;00:02, 64.3MB/s][A
+
+model.bin:  51%|#####     | 126M/249M [00:01&lt;00:01, 67.2MB/s][A
+
+model.bin:  55%|#####4    | 136M/249M [00:01&lt;00:01, 61.0MB/s][A
+
+model.bin:  59%|#####8    | 147M/249M [00:02&lt;00:01, 67.2MB/s][A
+
+model.bin:  67%|######7   | 168M/249M [00:02&lt;00:01, 70.9MB/s][A
+
+model.bin:  72%|#######1  | 178M/249M [00:02&lt;00:01, 58.6MB/s][A
+
+model.bin:  80%|########  | 199M/249M [00:02&lt;00:00, 57.1MB/s][A
+
+model.bin:  84%|########4 | 210M/249M [00:03&lt;00:00, 59.1MB/s][A
+
+model.bin:  93%|#########2| 231M/249M [00:03&lt;00:00, 73.6MB/s][A
+
+model.bin:  97%|#########6| 241M/249M [00:03&lt;00:00, 66.4MB/s][A
+model.bin: 100%|##########| 249M/249M [00:03&lt;00:00, 68.6MB/s]
+
+Fetching 6 files:  33%|###3      | 2/6 [00:04&lt;00:09,  2.34s/it]
+
+shared_vocabulary.txt:   0%|          | 0.00/299k [00:00&lt;?, ?B/s][A
+shared_vocabulary.txt: 100%|##########| 299k/299k [00:00&lt;00:00, 34.0MB/s]
+
+
+special_tokens_map.json:   0%|          | 0.00/2.20k [00:00&lt;?, ?B/s][A
+special_tokens_map.json: 100%|##########| 2.20k/2.20k [00:00&lt;00:00, 23.3MB/s]
+
+Fetching 6 files:  67%|######6   | 4/6 [00:04&lt;00:01,  1.10it/s]
+
+tokenizer_config.json:   0%|          | 0.00/2.50k [00:00&lt;?, ?B/s][A
+tokenizer_config.json: 100%|##########| 2.50k/2.50k [00:00&lt;00:00, 26.4MB/s]
+
+Fetching 6 files: 100%|##########| 6/6 [00:04&lt;00:00,  1.44it/s]</code></pre>
+</div>
+</div>
+<p><br></p>
+<p>To easy, let’s try something a bit harder</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lm.do(<span class="st">"If I have 7 apples then eat 5, how many apples do I have?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'You have 8 apples.'</code></pre>
+</div>
+</div>
+<p>Aouch…</p>
+<p>Indeed the model performance is quite low because the models used by this package are 1000x smaller than the largest models in use today. They are useful as learning tools, but if you are expecting ChatGPT or similar performance, you will be very disappointed…</p>
+<p>The base model should work on any system with 512MB of memory, but this memory limit can be increased. Setting this value higher will require more memory and generate results more slowly, but the results should be superior.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lm.set_max_ram(<span class="st">'4gb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4.0</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>lm.do(<span class="st">"If I have 7 apples then eat 5, how many apples do I have?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'After eating 5 apples, you will have 7 - 5 = 4 apples left.'
+
+
+tokenizer.json:   0%|          | 0.00/2.42M [00:00&lt;?, ?B/s]
+tokenizer.json: 100%|##########| 2.42M/2.42M [00:00&lt;00:00, 56.3MB/s]
+
+Fetching 7 files:   0%|          | 0/7 [00:00&lt;?, ?it/s]
+
+config.json:   0%|          | 0.00/162 [00:00&lt;?, ?B/s][A
+config.json: 100%|##########| 162/162 [00:00&lt;00:00, 1.20MB/s]
+
+
+generation_config.json:   0%|          | 0.00/142 [00:00&lt;?, ?B/s][A
+generation_config.json: 100%|##########| 142/142 [00:00&lt;00:00, 1.13MB/s]
+
+Fetching 7 files:  29%|##8       | 2/7 [00:00&lt;00:00, 16.60it/s]
+
+model.bin:   0%|          | 0.00/2.86G [00:00&lt;?, ?B/s][A
+
+model.bin:   1%|          | 21.0M/2.86G [00:00&lt;00:30, 92.3MB/s][A
+
+model.bin:   1%|1         | 41.9M/2.86G [00:00&lt;00:30, 91.7MB/s][A
+
+model.bin:   2%|1         | 52.4M/2.86G [00:00&lt;00:36, 77.3MB/s][A
+
+model.bin:   3%|2         | 73.4M/2.86G [00:00&lt;00:40, 67.9MB/s][A
+
+model.bin:   3%|2         | 83.9M/2.86G [00:01&lt;00:41, 66.0MB/s][A
+
+model.bin:   4%|3         | 105M/2.86G [00:01&lt;00:39, 68.8MB/s] [A
+
+model.bin:   4%|4         | 115M/2.86G [00:01&lt;00:46, 59.1MB/s][A
+
+model.bin:   5%|4         | 136M/2.86G [00:01&lt;00:41, 66.2MB/s][A
+
+model.bin:   5%|5         | 147M/2.86G [00:02&lt;00:45, 59.1MB/s][A
+
+model.bin:   6%|5         | 168M/2.86G [00:02&lt;00:40, 66.5MB/s][A
+
+model.bin:   6%|6         | 178M/2.86G [00:02&lt;00:38, 69.6MB/s][A
+
+model.bin:   7%|6         | 199M/2.86G [00:02&lt;00:39, 66.4MB/s][A
+
+model.bin:   7%|7         | 210M/2.86G [00:03&lt;00:39, 67.5MB/s][A
+
+model.bin:   8%|8         | 231M/2.86G [00:03&lt;00:39, 66.2MB/s][A
+
+model.bin:   8%|8         | 241M/2.86G [00:03&lt;00:42, 60.9MB/s][A
+
+model.bin:   9%|9         | 262M/2.86G [00:03&lt;00:38, 67.7MB/s][A
+
+model.bin:  10%|9         | 273M/2.86G [00:04&lt;00:42, 60.9MB/s][A
+
+model.bin:  10%|9         | 283M/2.86G [00:04&lt;00:38, 66.6MB/s][A
+
+model.bin:  10%|#         | 294M/2.86G [00:04&lt;00:42, 60.8MB/s][A
+
+model.bin:  11%|#         | 304M/2.86G [00:04&lt;00:48, 53.2MB/s][A
+
+model.bin:  11%|#1        | 325M/2.86G [00:05&lt;00:42, 59.0MB/s][A
+
+model.bin:  12%|#1        | 336M/2.86G [00:05&lt;00:41, 60.5MB/s][A
+
+model.bin:  12%|#2        | 346M/2.86G [00:05&lt;00:40, 61.6MB/s][A
+
+model.bin:  12%|#2        | 357M/2.86G [00:05&lt;00:42, 58.2MB/s][A
+
+model.bin:  13%|#3        | 377M/2.86G [00:05&lt;00:39, 62.3MB/s][A
+
+model.bin:  14%|#3        | 388M/2.86G [00:05&lt;00:37, 65.3MB/s][A
+
+model.bin:  14%|#4        | 409M/2.86G [00:06&lt;00:34, 70.0MB/s][A
+
+model.bin:  15%|#4        | 419M/2.86G [00:06&lt;00:38, 62.7MB/s][A
+
+model.bin:  15%|#5        | 440M/2.86G [00:06&lt;00:40, 59.4MB/s][A
+
+model.bin:  16%|#5        | 451M/2.86G [00:07&lt;00:44, 54.6MB/s][A
+
+model.bin:  17%|#6        | 472M/2.86G [00:07&lt;00:39, 60.6MB/s][A
+
+model.bin:  17%|#6        | 482M/2.86G [00:07&lt;00:37, 63.1MB/s][A
+
+model.bin:  18%|#7        | 503M/2.86G [00:07&lt;00:38, 60.8MB/s][A
+
+model.bin:  18%|#8        | 524M/2.86G [00:08&lt;00:30, 77.2MB/s][A
+
+model.bin:  19%|#8        | 535M/2.86G [00:08&lt;00:32, 70.6MB/s][A
+
+model.bin:  19%|#9        | 545M/2.86G [00:08&lt;00:31, 73.7MB/s][A
+
+model.bin:  20%|#9        | 566M/2.86G [00:08&lt;00:29, 76.4MB/s][A
+
+model.bin:  20%|##        | 577M/2.86G [00:08&lt;00:37, 61.5MB/s][A
+
+model.bin:  21%|##        | 598M/2.86G [00:09&lt;00:32, 69.7MB/s][A
+
+model.bin:  21%|##1       | 608M/2.86G [00:09&lt;00:36, 60.8MB/s][A
+
+model.bin:  22%|##1       | 619M/2.86G [00:09&lt;00:33, 66.1MB/s][A
+
+model.bin:  22%|##2       | 629M/2.86G [00:09&lt;00:36, 61.6MB/s][A
+
+model.bin:  23%|##2       | 650M/2.86G [00:09&lt;00:30, 72.3MB/s][A
+
+model.bin:  23%|##3       | 661M/2.86G [00:10&lt;00:31, 69.5MB/s][A
+
+model.bin:  24%|##3       | 671M/2.86G [00:10&lt;00:32, 67.6MB/s][A
+
+model.bin:  24%|##3       | 682M/2.86G [00:10&lt;00:30, 71.8MB/s][A
+
+model.bin:  24%|##4       | 692M/2.86G [00:10&lt;00:35, 60.2MB/s][A
+
+model.bin:  25%|##4       | 713M/2.86G [00:10&lt;00:27, 79.3MB/s][A
+
+model.bin:  25%|##5       | 724M/2.86G [00:10&lt;00:29, 71.9MB/s][A
+
+model.bin:  26%|##6       | 744M/2.86G [00:11&lt;00:23, 91.0MB/s][A
+
+model.bin:  26%|##6       | 755M/2.86G [00:11&lt;00:27, 76.3MB/s][A
+
+model.bin:  27%|##7       | 776M/2.86G [00:11&lt;00:24, 83.3MB/s][A
+
+model.bin:  28%|##7       | 786M/2.86G [00:11&lt;00:26, 78.1MB/s][A
+
+model.bin:  28%|##8       | 807M/2.86G [00:11&lt;00:24, 83.1MB/s][A
+
+model.bin:  29%|##8       | 818M/2.86G [00:12&lt;00:28, 70.8MB/s][A
+
+model.bin:  29%|##9       | 839M/2.86G [00:12&lt;00:27, 72.8MB/s][A
+
+model.bin:  30%|##9       | 849M/2.86G [00:12&lt;00:29, 67.6MB/s][A
+
+model.bin:  30%|###       | 870M/2.86G [00:12&lt;00:28, 70.4MB/s][A
+
+model.bin:  31%|###       | 881M/2.86G [00:13&lt;00:28, 68.1MB/s][A
+
+model.bin:  32%|###1      | 902M/2.86G [00:13&lt;00:25, 76.7MB/s][A
+
+model.bin:  32%|###1      | 912M/2.86G [00:13&lt;00:36, 53.7MB/s][A
+
+model.bin:  33%|###2      | 933M/2.86G [00:13&lt;00:28, 67.5MB/s][A
+
+model.bin:  33%|###3      | 954M/2.86G [00:14&lt;00:24, 76.9MB/s][A
+Fetching 7 files:  29%|##8       | 2/7 [00:14&lt;00:00, 16.60it/s]
+
+model.bin:  34%|###3      | 965M/2.86G [00:14&lt;00:28, 65.6MB/s][A
+
+model.bin:  34%|###4      | 975M/2.86G [00:14&lt;00:26, 70.8MB/s][A
+
+model.bin:  35%|###4      | 986M/2.86G [00:14&lt;00:27, 67.5MB/s][A
+
+model.bin:  35%|###4      | 996M/2.86G [00:14&lt;00:29, 63.0MB/s][A
+
+model.bin:  36%|###5      | 1.02G/2.86G [00:15&lt;00:29, 61.3MB/s][A
+
+model.bin:  36%|###5      | 1.03G/2.86G [00:15&lt;00:31, 57.3MB/s][A
+
+model.bin:  37%|###6      | 1.05G/2.86G [00:15&lt;00:25, 71.0MB/s][A
+
+model.bin:  37%|###7      | 1.06G/2.86G [00:15&lt;00:25, 71.3MB/s][A
+
+model.bin:  38%|###7      | 1.08G/2.86G [00:16&lt;00:23, 74.1MB/s][A
+
+model.bin:  38%|###8      | 1.09G/2.86G [00:16&lt;00:26, 67.2MB/s][A
+
+model.bin:  39%|###8      | 1.11G/2.86G [00:16&lt;00:25, 67.5MB/s][A
+
+model.bin:  39%|###9      | 1.12G/2.86G [00:16&lt;00:29, 58.4MB/s][A
+
+model.bin:  40%|###9      | 1.13G/2.86G [00:17&lt;00:32, 52.8MB/s][A
+
+model.bin:  40%|####      | 1.15G/2.86G [00:17&lt;00:23, 71.7MB/s][A
+
+model.bin:  41%|####1     | 1.17G/2.86G [00:17&lt;00:18, 90.2MB/s][A
+
+model.bin:  42%|####1     | 1.20G/2.86G [00:17&lt;00:18, 87.8MB/s][A
+
+model.bin:  42%|####2     | 1.21G/2.86G [00:17&lt;00:18, 86.9MB/s][A
+
+model.bin:  43%|####2     | 1.22G/2.86G [00:17&lt;00:19, 84.3MB/s][A
+
+model.bin:  43%|####3     | 1.24G/2.86G [00:18&lt;00:26, 61.4MB/s][A
+
+model.bin:  44%|####4     | 1.26G/2.86G [00:18&lt;00:21, 73.7MB/s][A
+
+model.bin:  44%|####4     | 1.27G/2.86G [00:18&lt;00:21, 73.0MB/s][A
+
+model.bin:  45%|####4     | 1.28G/2.86G [00:18&lt;00:23, 67.3MB/s][A
+
+model.bin:  46%|####5     | 1.30G/2.86G [00:19&lt;00:20, 77.1MB/s][A
+
+model.bin:  46%|####6     | 1.32G/2.86G [00:19&lt;00:19, 80.8MB/s][A
+
+model.bin:  47%|####6     | 1.33G/2.86G [00:19&lt;00:19, 79.4MB/s][A
+
+model.bin:  47%|####7     | 1.35G/2.86G [00:19&lt;00:18, 82.4MB/s][A
+
+model.bin:  48%|####7     | 1.36G/2.86G [00:19&lt;00:18, 78.9MB/s][A
+
+model.bin:  48%|####8     | 1.38G/2.86G [00:20&lt;00:18, 80.4MB/s][A
+
+model.bin:  49%|####8     | 1.39G/2.86G [00:20&lt;00:19, 73.5MB/s][A
+
+model.bin:  50%|####9     | 1.42G/2.86G [00:20&lt;00:20, 69.9MB/s][A
+
+model.bin:  50%|####9     | 1.43G/2.86G [00:20&lt;00:22, 63.6MB/s][A
+
+model.bin:  51%|#####     | 1.45G/2.86G [00:21&lt;00:21, 67.0MB/s][A
+
+model.bin:  51%|#####1    | 1.46G/2.86G [00:21&lt;00:20, 67.2MB/s][A
+
+model.bin:  52%|#####1    | 1.48G/2.86G [00:21&lt;00:19, 70.5MB/s][A
+
+model.bin:  52%|#####2    | 1.49G/2.86G [00:21&lt;00:21, 62.9MB/s][A
+
+model.bin:  53%|#####2    | 1.51G/2.86G [00:22&lt;00:19, 69.0MB/s][A
+
+model.bin:  53%|#####3    | 1.52G/2.86G [00:22&lt;00:19, 68.1MB/s][A
+
+model.bin:  54%|#####3    | 1.54G/2.86G [00:22&lt;00:17, 73.2MB/s][A
+
+model.bin:  55%|#####4    | 1.56G/2.86G [00:22&lt;00:16, 77.4MB/s][A
+
+model.bin:  55%|#####5    | 1.57G/2.86G [00:22&lt;00:19, 67.4MB/s][A
+
+model.bin:  56%|#####5    | 1.59G/2.86G [00:23&lt;00:16, 78.6MB/s][A
+
+model.bin:  56%|#####6    | 1.60G/2.86G [00:23&lt;00:18, 69.0MB/s][A
+
+model.bin:  57%|#####6    | 1.63G/2.86G [00:23&lt;00:17, 68.9MB/s][A
+
+model.bin:  57%|#####7    | 1.64G/2.86G [00:23&lt;00:18, 67.4MB/s][A
+
+model.bin:  58%|#####8    | 1.66G/2.86G [00:24&lt;00:19, 63.0MB/s][A
+
+model.bin:  58%|#####8    | 1.67G/2.86G [00:24&lt;00:20, 57.6MB/s][A
+
+model.bin:  59%|#####9    | 1.69G/2.86G [00:24&lt;00:19, 60.7MB/s][A
+
+model.bin:  59%|#####9    | 1.70G/2.86G [00:24&lt;00:17, 64.7MB/s][A
+
+model.bin:  60%|######    | 1.72G/2.86G [00:25&lt;00:15, 74.0MB/s][A
+
+model.bin:  61%|######    | 1.73G/2.86G [00:25&lt;00:18, 60.1MB/s][A
+
+model.bin:  61%|######1   | 1.75G/2.86G [00:25&lt;00:17, 61.7MB/s][A
+
+model.bin:  62%|######1   | 1.76G/2.86G [00:25&lt;00:20, 53.6MB/s][A
+
+model.bin:  62%|######2   | 1.78G/2.86G [00:26&lt;00:17, 62.6MB/s][A
+
+model.bin:  63%|######2   | 1.79G/2.86G [00:26&lt;00:21, 50.1MB/s][A
+
+model.bin:  63%|######3   | 1.80G/2.86G [00:26&lt;00:19, 55.1MB/s][A
+
+model.bin:  64%|######3   | 1.81G/2.86G [00:26&lt;00:17, 58.9MB/s][A
+
+model.bin:  64%|######3   | 1.82G/2.86G [00:27&lt;00:20, 50.0MB/s][A
+
+model.bin:  65%|######4   | 1.85G/2.86G [00:27&lt;00:17, 59.3MB/s][A
+
+model.bin:  65%|######5   | 1.87G/2.86G [00:27&lt;00:13, 71.9MB/s][A
+
+model.bin:  66%|######5   | 1.88G/2.86G [00:27&lt;00:13, 72.5MB/s][A
+
+model.bin:  66%|######6   | 1.90G/2.86G [00:27&lt;00:11, 83.0MB/s][A
+
+model.bin:  67%|######6   | 1.91G/2.86G [00:28&lt;00:11, 82.8MB/s][A
+
+model.bin:  68%|######7   | 1.93G/2.86G [00:28&lt;00:10, 92.5MB/s][A
+
+model.bin:  68%|######7   | 1.94G/2.86G [00:28&lt;00:16, 56.9MB/s][A
+
+model.bin:  69%|######8   | 1.96G/2.86G [00:29&lt;00:14, 60.2MB/s][A
+
+model.bin:  69%|######9   | 1.97G/2.86G [00:29&lt;00:15, 57.0MB/s][A
+
+model.bin:  70%|######9   | 1.99G/2.86G [00:29&lt;00:13, 62.9MB/s][A
+
+model.bin:  70%|#######   | 2.00G/2.86G [00:29&lt;00:14, 58.5MB/s][A
+
+model.bin:  71%|#######   | 2.02G/2.86G [00:30&lt;00:13, 59.5MB/s][A
+
+model.bin:  71%|#######1  | 2.03G/2.86G [00:30&lt;00:18, 45.6MB/s][A
+
+model.bin:  72%|#######1  | 2.06G/2.86G [00:30&lt;00:13, 59.2MB/s][A
+
+model.bin:  72%|#######2  | 2.07G/2.86G [00:30&lt;00:13, 56.9MB/s][A
+
+model.bin:  73%|#######3  | 2.09G/2.86G [00:31&lt;00:11, 67.7MB/s][A
+
+model.bin:  73%|#######3  | 2.10G/2.86G [00:31&lt;00:12, 60.5MB/s][A
+
+model.bin:  74%|#######4  | 2.12G/2.86G [00:31&lt;00:11, 62.4MB/s][A
+
+model.bin:  75%|#######4  | 2.13G/2.86G [00:32&lt;00:13, 52.4MB/s][A
+
+model.bin:  75%|#######5  | 2.15G/2.86G [00:32&lt;00:14, 49.9MB/s][A
+
+model.bin:  76%|#######5  | 2.16G/2.86G [00:32&lt;00:12, 54.9MB/s][A
+
+model.bin:  76%|#######6  | 2.18G/2.86G [00:32&lt;00:09, 70.8MB/s][A
+
+model.bin:  77%|#######7  | 2.20G/2.86G [00:33&lt;00:09, 72.5MB/s][A
+
+model.bin:  77%|#######7  | 2.21G/2.86G [00:33&lt;00:08, 71.5MB/s][A
+
+model.bin:  78%|#######8  | 2.23G/2.86G [00:33&lt;00:08, 75.8MB/s][A
+
+model.bin:  79%|#######8  | 2.24G/2.86G [00:33&lt;00:07, 79.8MB/s][A
+
+model.bin:  79%|#######9  | 2.26G/2.86G [00:33&lt;00:06, 87.3MB/s][A
+
+model.bin:  80%|#######9  | 2.28G/2.86G [00:34&lt;00:08, 64.8MB/s][A
+
+model.bin:  80%|########  | 2.30G/2.86G [00:34&lt;00:06, 82.3MB/s][A
+
+model.bin:  81%|########  | 2.31G/2.86G [00:34&lt;00:06, 84.4MB/s][A
+
+model.bin:  82%|########1 | 2.33G/2.86G [00:34&lt;00:06, 84.6MB/s][A
+
+model.bin:  82%|########1 | 2.34G/2.86G [00:34&lt;00:05, 87.4MB/s][A
+
+model.bin:  83%|########2 | 2.36G/2.86G [00:34&lt;00:05, 90.8MB/s][A
+
+model.bin:  83%|########2 | 2.37G/2.86G [00:35&lt;00:06, 70.8MB/s][A
+
+model.bin:  83%|########3 | 2.38G/2.86G [00:35&lt;00:06, 69.0MB/s][A
+
+model.bin:  84%|########3 | 2.39G/2.86G [00:35&lt;00:07, 66.1MB/s][A
+
+model.bin:  84%|########4 | 2.40G/2.86G [00:35&lt;00:07, 63.3MB/s][A
+
+model.bin:  84%|########4 | 2.41G/2.86G [00:35&lt;00:06, 63.7MB/s][A
+
+model.bin:  85%|########4 | 2.42G/2.86G [00:36&lt;00:07, 60.2MB/s][A
+
+model.bin:  85%|########5 | 2.43G/2.86G [00:36&lt;00:07, 52.9MB/s][A
+
+model.bin:  86%|########5 | 2.45G/2.86G [00:36&lt;00:05, 69.2MB/s][A
+
+model.bin:  86%|########6 | 2.46G/2.86G [00:36&lt;00:05, 69.7MB/s][A
+
+model.bin:  87%|########6 | 2.47G/2.86G [00:36&lt;00:05, 75.4MB/s][A
+
+model.bin:  87%|########7 | 2.49G/2.86G [00:37&lt;00:06, 58.0MB/s][A
+
+model.bin:  88%|########7 | 2.51G/2.86G [00:37&lt;00:05, 61.9MB/s][A
+
+model.bin:  88%|########8 | 2.52G/2.86G [00:37&lt;00:05, 65.8MB/s][A
+
+model.bin:  89%|########8 | 2.54G/2.86G [00:37&lt;00:04, 69.1MB/s][A
+
+model.bin:  89%|########9 | 2.55G/2.86G [00:37&lt;00:04, 71.8MB/s][A
+
+model.bin:  90%|########9 | 2.56G/2.86G [00:37&lt;00:04, 73.8MB/s][A
+
+model.bin:  90%|########9 | 2.57G/2.86G [00:38&lt;00:04, 68.0MB/s][A
+
+model.bin:  91%|######### | 2.59G/2.86G [00:38&lt;00:03, 87.3MB/s][A
+
+model.bin:  91%|#########1| 2.60G/2.86G [00:38&lt;00:03, 75.3MB/s][A
+
+model.bin:  91%|#########1| 2.61G/2.86G [00:38&lt;00:03, 76.7MB/s][A
+
+model.bin:  92%|#########2| 2.63G/2.86G [00:38&lt;00:03, 74.2MB/s][A
+
+model.bin:  93%|#########2| 2.64G/2.86G [00:39&lt;00:03, 64.7MB/s][A
+
+model.bin:  93%|#########3| 2.66G/2.86G [00:39&lt;00:02, 72.4MB/s][A
+
+model.bin:  94%|#########3| 2.67G/2.86G [00:39&lt;00:02, 67.3MB/s][A
+
+model.bin:  94%|#########4| 2.68G/2.86G [00:39&lt;00:02, 60.0MB/s][A
+
+model.bin:  95%|#########4| 2.71G/2.86G [00:40&lt;00:02, 67.8MB/s][A
+
+model.bin:  95%|#########5| 2.73G/2.86G [00:40&lt;00:01, 68.8MB/s][A
+
+model.bin:  96%|#########5| 2.74G/2.86G [00:40&lt;00:01, 66.9MB/s][A
+
+model.bin:  97%|#########6| 2.76G/2.86G [00:40&lt;00:01, 79.6MB/s][A
+
+model.bin:  97%|#########6| 2.77G/2.86G [00:40&lt;00:01, 71.0MB/s][A
+
+model.bin:  98%|#########7| 2.79G/2.86G [00:41&lt;00:01, 56.3MB/s][A
+
+model.bin:  98%|#########8| 2.81G/2.86G [00:41&lt;00:00, 65.5MB/s][A
+
+model.bin:  99%|#########8| 2.82G/2.86G [00:41&lt;00:00, 68.1MB/s][A
+
+model.bin:  99%|#########9| 2.83G/2.86G [00:41&lt;00:00, 64.6MB/s][A
+
+model.bin: 100%|#########9| 2.85G/2.86G [00:42&lt;00:00, 66.2MB/s][A
+model.bin: 100%|##########| 2.86G/2.86G [00:42&lt;00:00, 67.5MB/s]
+
+Fetching 7 files:  43%|####2     | 3/7 [00:42&lt;01:11, 17.78s/it]
+
+shared_vocabulary.txt:   0%|          | 0.00/299k [00:00&lt;?, ?B/s][A
+shared_vocabulary.txt: 100%|##########| 299k/299k [00:00&lt;00:00, 29.6MB/s]
+
+
+special_tokens_map.json:   0%|          | 0.00/2.20k [00:00&lt;?, ?B/s][A
+special_tokens_map.json: 100%|##########| 2.20k/2.20k [00:00&lt;00:00, 17.5MB/s]
+
+Fetching 7 files:  71%|#######1  | 5/7 [00:42&lt;00:16,  8.15s/it]
+
+tokenizer_config.json:   0%|          | 0.00/2.35k [00:00&lt;?, ?B/s][A
+tokenizer_config.json: 100%|##########| 2.35k/2.35k [00:00&lt;00:00, 18.7MB/s]
+
+Fetching 7 files: 100%|##########| 7/7 [00:42&lt;00:00,  6.13s/it]</code></pre>
+</div>
+</div>
+<p>Yeah, here we go little (4gb) buddy!</p>
+<p><br></p>
+<p>Now that we got the basics, let’s play with it! You can change the prompt like such</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lm.chat(<span class="st">'''</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">     System: Respond as a physics professor.</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">     User: What is relativity?</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="st">     Assistant:</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="st">     '''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'Sure, I am an AI assistant and do not have the capability to provide physical answers. However, you can find more information on relativity in physics textbooks or online resources.'</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>lm.complete(<span class="st">"She hid in her room until"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>' the storm passed, then went out to face it with determination and courage.'</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>lm.get_wiki(<span class="st">"Physics"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'Physics is the natural science of matter, involving the study of matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, with its main goal being to understand how the universe behaves. A scientist who specializes in the field of physics is called a physicist.\n\nPhysics is one of the oldest academic disciplines and, through its inclusion of astronomy, perhaps the oldest. Over much of the past two millennia, physics, chemistry, biology, and certain branches of mathematics were a part of natural philosophy, but during the Scientific Revolution in the 17th century these natural sciences emerged as unique research endeavors in their own right. Physics intersects with many interdisciplinary areas of research, such as biophysics and quantum chemistry, and the boundaries of physics are not rigidly defined. New ideas in physics often explain the fundamental mechanisms studied by other sciences and suggest new avenues of research in these and other academic disciplines such as mathematics and philosophy.\n\nAdvances in physics often enable new technologies. For example, advances in the understanding of electromagnetism, solid-state physics, and nuclear physics led directly to the development of new products that have dramatically transformed modern-day society, such as television, computers, domestic appliances, and nuclear weapons; advances in thermodynamics led to the development of industrialization; and advances in mechanics inspired the development of calculus.'</code></pre>
+</div>
+</div>
+<p><br></p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <img src="../../images/primary.png" width="auto" height="30px">
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vestin Hategekimana">
+<meta name="dcterms.date" content="2023-07-16">
+
+<title>We Data - Contributing to projects on GitHub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/me.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECFW8LLBS7"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
+</script>
+
+
+<meta name="twitter:title" content="We Data - Contributing to projects on GitHub">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://we-data.ch/blog/2023-07-16-contributing-to-project-on-github/teamwork.jpg">
+<meta name="twitter:creator" content="@munoztd0">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/primary.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Contributing to projects on GitHub</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Computer Science</div>
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vestin Hategekimana </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 16, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages : 'fr,de,it,es,rw,eo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<p><img src="teamwork.jpg" class="img-fluid"></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Welcome to the magical world of GitHub, where every coder, regardless of their skill level, has the power to contribute. Today, we’ll guide you on an intriguing journey of understanding how to contribute to GitHub projects. You’ll learn the value of even the smallest contribution, how to contribute to R packages, and importantly, a special approach for beginners through the realm of documentation. So whether you’re a seasoned coder or a beginner, this guide is for you!</p>
+</section>
+<section id="the-importance-of-github-contributions-small-steps-to-great-impact" class="level1">
+<h1>The importance of GitHub Contributions: Small Steps to Great Impact</h1>
+<p>Hello all you code wizards, hobbyist programmers, and script sorcerers out there! Ready to embark on a fun-filled, whimsical journey in the wonderful world of GitHub? Great, because we’re going to take you on a whirlwind tour of how you can contribute to a GitHub project, regardless of your preferred programming language.</p>
+<p>Nope, we’re not expecting you to turn lead into gold or rewrite the laws of physics. We’re here to celebrate the importance of the small contributions, those tiny little changes that might not seem like much but collectively make a ginormous difference.</p>
+<section id="start-small-aim-big" class="level2">
+<h2 class="anchored" data-anchor-id="start-small-aim-big">Start Small, Aim Big</h2>
+<p>First things first, let’s get this out of the way. There is no such thing as a ‘too small’ contribution. Even a single-line change, fixing a typo, or enhancing the readability of a README file – these seemingly minuscule contributions already have an impact in open-source projects.</p>
+</section>
+<section id="the-perks-of-contributing" class="level2">
+<h2 class="anchored" data-anchor-id="the-perks-of-contributing">The Perks of Contributing</h2>
+<p>“But why should I contribute?”, you might ask. Excellent question! Here’s why:</p>
+<ol type="1">
+<li><p><strong>Personal Growth</strong>: Contributing to open-source projects can improve your skills, give you practical experience, expand your network, and even potentially catch the eyes of potential employers or collaborators. Your GitHub account is a portfolio that show what your are doing, it is the solid proof of your competences.</p></li>
+<li><p><strong>Improving the Software</strong>: By contributing, you help in maintaining and enhancing the project, ensuring its longevity and reliability. That’s why we recommand you to chose projets that you like or could bring you valuable outcome in your coding learning.</p></li>
+<li><p><strong>Take and Give</strong>: Contributing is a fantastic way to give back to the community that has probably helped you in one way or another.</p></li>
+</ol>
+</section>
+<section id="your-first-contribution" class="level2">
+<h2 class="anchored" data-anchor-id="your-first-contribution">Your First Contribution</h2>
+<p>For the rest of the tutorial you need to have a GitHub account and to understand how it works. If you don’t know there are, here are some tutorials:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8Dd7KRpKeaE">English</a></li>
+<li><a href="https://www.youtube.com/watch?v=rP3T0Ee6pLU&amp;list=PLjwdMgw5TTLXuY5i7RW0QqGdW0NZntqiP">French</a></li>
+<li><a href="https://www.youtube.com/watch?v=N-vFTYEqguU">German</a></li>
+</ul>
+<p>If you have the basic of Git and GitHub, let’s get started. Here’s the nitty-gritty:</p>
+<ol type="1">
+<li><p><strong>Choose your Quest</strong>: Find a project that piques your interest. It could be anything, from a complex machine learning library to a simple script that automates meme generation (because who doesn’t love memes?). Keep in mind to chose projects that goes into your interest and that can bring you joy and wisdom. Even if the project seems chalenging and you think you don’t have the level, just ask the owner of the project what you can bring to it at your level. Even doing the documentation is a good way to start (See bellow in ==complet here==). Sometimes owner of project write themselve what are the things to take care of and openly ask for help in specific area (or in the whole project).</p></li>
+<li><p><strong>Fork it</strong>: Fork the repository to your account. Think of it as creating your own magic clone of the project where you can tinker without disturbing the original.</p></li>
+<li><p><strong>Clone it</strong>: Clone the forked repository onto your local machine. Basically, it’s like summoning your cloned project from the cloud onto your computer.</p></li>
+<li><p><strong>Create a Branch</strong>: It’s always a good practice to create a new branch for your changes. Consider this as creating a parallel universe where your changes won’t affect the main storyline.</p></li>
+<li><p><strong>Make Changes</strong>: Here comes the fun part. Dive in and make your changes. Remember, no contribution is too small.</p></li>
+<li><p><strong>Commit and Push</strong>: Once you’re satisfied with your changes, commit them with a clear, informative message and push them to your forked repository.</p></li>
+<li><p><strong>Pull Request (PR)</strong>: Back on the GitHub site, you can now open a PR against the original repository. It is sending your change to the main project online. Then the owner of the project can read your changes and see if they can accept it.</p></li>
+<li><p><strong>Wait</strong>: Now, the repository owner reviews your changes. If they like them, they’ll merge them into the project. Congrats, you just made your first contribution!</p></li>
+<li><p><strong>Celebrate</strong>: Grab yourself a cake, you’ve earned it!</p></li>
+</ol>
+</section>
+<section id="quick-tricks-for-a-rapid-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-tricks-for-a-rapid-start">Quick Tricks for a Rapid Start</h2>
+<p>Alright, here are some tricks for a fast start:</p>
+<ol type="1">
+<li><p><strong>‘Good First Issues’</strong>: Many <code>repositories</code> tag some issues as <code>Good First Issues</code> or ‘Beginner-Friendly’. These are perfect for getting your feet wet. You can then go to GitHub and look for those terms in the search bar.</p></li>
+<li><p><strong>Read the Docs</strong>: Always, ALWAYS, read the project’s README and CONTRIBUTING guide before starting. Every <code>repository</code> is a new world with its own set of rules.</p></li>
+<li><p><strong>Communicate</strong>: Open-source is all about collaboration. If you’re unsure about something, just ask. The community is generally friendly and helpful.</p></li>
+<li><p><strong>Don’t Fear Rejection</strong>: Sometimes your changes might not get accepted. That’s okay! Each rejection is a stepping stone to improvement. Learn from it, and keep contributing.</p></li>
+</ol>
+<p>In the end, contributing to GitHub is not just about writing code, it’s about being a part of something bigger than yourself. So, are you ready to contribute your skills of GitHub?</p>
+</section>
+<section id="the-r-case-contributing-to-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="the-r-case-contributing-to-r-packages">The R case: Contributing to R Packages</h2>
+<p>If you’re familiar with the R’s universe, contributing to R packages can be a rewarding adventure. Why? Because in this realm, the structure is your friend. You’ll find it’s not just facile but rather enjoyable!</p>
+<section id="why-contribute-to-r-packages" class="level3">
+<h3 class="anchored" data-anchor-id="why-contribute-to-r-packages">Why Contribute to R Packages?</h3>
+<p>R packages are the lifeblood of the R ecosystem, facilitating data analysis, visualization, and much more. When you contribute to R packages, you are helping to enhance the functionality, efficiency, and reliability of these packages.</p>
+</section>
+<section id="how-to-contribute-to-r-packages" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-contribute-to-r-packages">How to Contribute to R Packages?</h3>
+<p>The best ressource to learn how to create solid packages in R is the following book freely available online: <a href="https://r-pkgs.org/">R packages</a></p>
+<p>Here are some interesting steps to guide you through the process:</p>
+<ol type="1">
+<li><p><strong>Identify the Package</strong>: First, identify the R package you want to contribute to. It could be a R package you use often or one you believe could benefit from your magical touch. For instance you could have noticed specific error or way to improve it in your taste that could please others.</p></li>
+<li><p><strong>Check the Package Guidelines</strong>: Each R package usually has its own contribution guidelines. Take a moment to read these, as they often contain valuable information on the package’s style and testing procedures. Remember, when in Rome, do as the Romans do.</p></li>
+<li><p><strong>Setup Your R Environment</strong>: You will need an integrated development environment (IDE) for R. RStudio is a fantastic choice (VS Code is also a good choice). Next, install the <code>devtools</code> package. This package provide functions to simplify package development and maintenance.</p>
+<p>To install <code>devtools</code>, you can use:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Fork and Clone the Package</strong>: Similar to the steps described earlier, fork the <code>repository</code> of the package to your GitHub account, and then clone it onto your local machine.</p></li>
+<li><p><strong>Load the Package</strong>: To load the package in R, use the <code>load_all()</code> function from the <code>devtools</code> package. This function loads all the functions and data in the package into your R environment, which lets you test your changes quickly and easily.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Branch Out</strong>: As with other contributions, it’s wise to create a new branch for your changes.</p></li>
+<li><p><strong>Make Changes</strong>: Sprinkle your magic dust. You can add features, fix bugs, improve documentation, or even enhance performance.</p></li>
+<li><p><strong>Test Your Changes</strong>: Testing is crucial. Use the <code>test()</code> function from the <code>devtools</code> package to run the package’s test cases and ensure your changes don’t break anything.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">test</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Document Your Changes</strong>: Use the <code>document()</code> function from <code>devtools</code> to update the package documentation.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Commit, Push, and PR</strong>: Once satisfied with your changes, commit them with a meaningful message, push to your forked repository, and open a PR against the original repository.</p></li>
+</ol>
+<p>R package development has its charms and challenges, but the joy of contributing and improving the package for the entire R community is undoubtedly enchanting.</p>
+</section>
+</section>
+</section>
+<section id="the-docu-mancer-conquering-github-with-documentation" class="level1">
+<h1>The ‘Docu-mancer’: Conquering GitHub with Documentation</h1>
+<p>Ladies and Gentlemen, let’s gather ’round for a little heart-to-heart. We know some of you are out there thinking, “I’m just a novice programmer. Can I contribute anything meaningful?”</p>
+<p>Hear us out - and prepare to drop your jaw in shock. You, my friends, can contribute something truly valuable: Documentation!</p>
+<p>Yes, documentation! The unsung hero of the coding world, the magic carpet that navigates through the mystical labyrinths of code, the enchanting tales that make sense of the cryptic world of programming. You’re going to be the ‘Docu-mancer’, the sorcerer of words in a realm of code.</p>
+<section id="why-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="why-documentation">Why Documentation?</h3>
+<p>Firstly, don’t let the term ‘documentation’ scare you. It isn’t as much about writing complex technical papers as it is about making code more understandable and usable.</p>
+<p>And why is documentation so important?</p>
+<ol type="1">
+<li><p><strong>The coders salvation</strong>: You know that moment when you find an amazing GitHub project but there’s no instruction manual? It’s like finding a magical spellbook in an ancient language! That’s where documentation comes in - it’s the Google Translate for code!</p></li>
+<li><p><strong>Helps Maintain Focus</strong>: Let’s be honest, writing documentation can be a chore for many developers, especially when they’re elbow-deep in writing code. Having someone to handle documentation can free them to focus on their primary task.</p></li>
+<li><p><strong>Learn While Documenting</strong>: Here’s a fundamental truth - documenting code actually makes you a better programmer! It forces you to understand code more deeply and improves your attention to detail.</p></li>
+</ol>
+</section>
+<section id="how-to-contribute-to-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-contribute-to-documentation">How to Contribute to Documentation?</h3>
+<ol type="1">
+<li><p><strong>Understand the Project</strong>: Before you can explain something, you have to understand it first. Spend some time to explore the project, play around with the code, and see what each part does. Don’t worry about mastering everything. Remember, every wizard starts by understanding the basics.</p></li>
+<li><p><strong>Look for Incomplete or Outdated Docs</strong>: Hunt for README files that are not clear or comprehensive, Wiki pages that are missing, comments in the code that are non-existent or make you go, “Huh?”. Sometimes it’s a no-brainer because the project has virtually no documentation, it is your chance then!</p></li>
+<li><p><strong>Check the Guidelines</strong>: Some projects have a certain structure or style they follow for their documentation. Make sure you adhere to those, maintaining consistency is a key part of the documantation process.</p></li>
+<li><p><strong>Write, Revise, Refine</strong>: Start writing the documentation, whether it’s enhancing comments in the code, updating the README, or creating Wiki pages. Don’t aim for perfection at first; remember, the first draft of anything is just that, a draft.</p></li>
+</ol>
+</section>
+<section id="best-practices-for-documenting" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-documenting">Best Practices for Documenting</h3>
+<p>As you ascend on your journey to becoming a master of documentation, here are a few best practices to help you along the way:</p>
+<ol type="1">
+<li><p><strong>Keep it Simple</strong>: Your main audience is other programmers who might not be familiar with the project. Keep your language simple and clear.</p></li>
+<li><p><strong>Explain the Why, not just the What</strong>: Don’t just describe what a piece of code does, explain why it does it. This gives readers a better context and understanding of the code.</p></li>
+<li><p><strong>Use Examples</strong>: If you can, include examples. They are an excellent way to show how to use a function or a feature.</p></li>
+<li><p><strong>Proofread</strong>: Typos and grammatical errors can distract from the message. Do a couple of passes to correct any mistakes.</p></li>
+</ol>
+<p>Remember, documentation is not about knowing everything, it’s about learning and sharing knowledge.</p>
+<p>As you embark on your journey, always remember the Docu-mancer’s mantra: “I read, I understand, I document, therefore I am!”</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>And there you have it! Now you know how to make your mark in the open-source universe. You’ve seen how everyone, from the most experienced programmer to the freshest newbie, can contribute in their own way. Remember, countless amazing projects are out there, waiting for your magical touch, your bug fixes, your fresh ideas, or your clarifying documentation.</p>
+<p>Indeed, some of the most brilliant projects on GitHub might still be hiding in the shadows, cloaked by obscure or missing documentation. So never underestimate the impact of documenting. As a ‘Docu-mancer’, you’re not just an interpreter but a light-bearer, bringing clarity and understanding to other developers and users.</p>
+<p>And if after all this article you still think you’re not ready for contributions, you can always do something simple: take note! Keep track of everything you’ve just read and save it somewhere, it might come in handy. Make a list of projects you’d like to work on when you’re more advanced. Note also that nothing prevents you from forking and cloning a project. As long as you don’t make a ‘Pull Request’, all the experimentation you do will remain on your computer, hidden from view.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <img src="../../images/primary.png" width="auto" height="30px">
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
