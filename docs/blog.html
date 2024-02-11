@@ -84,8 +84,7 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-title','listing-image','listing-author','listing-categories','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 25,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -217,7 +216,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Bash">Bash <span class="quarto-category-count">(1)</span></div><div class="category" data-category="C">C <span class="quarto-category-count">(1)</span></div><div class="category" data-category="C++">C++ <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Computer Science">Computer Science <span class="quarto-category-count">(4)</span></div><div class="category" data-category="HTML/CSS">HTML/CSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Haskell">Haskell <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Interactive Exercises">Interactive Exercises <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JavaScript">JavaScript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Julia">Julia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lua">Lua <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Nim">Nim <span class="quarto-category-count">(2)</span></div><div class="category" data-category="OCaml">OCaml <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(16)</span></div><div class="category" data-category="SQL">SQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YouTube">YouTube <span class="quarto-category-count">(7)</span></div><div class="category" data-category="conference">conference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="plotly">plotly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="polars">polars <span class="quarto-category-count">(1)</span></div><div class="category" data-category="tidyverse">tidyverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webr">webr <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(25)</span></div><div class="category" data-category="AI">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Bash">Bash <span class="quarto-category-count">(1)</span></div><div class="category" data-category="C">C <span class="quarto-category-count">(1)</span></div><div class="category" data-category="C++">C++ <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Computer Science">Computer Science <span class="quarto-category-count">(4)</span></div><div class="category" data-category="HTML/CSS">HTML/CSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Haskell">Haskell <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Interactive Exercises">Interactive Exercises <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JavaScript">JavaScript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Julia">Julia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lua">Lua <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Nim">Nim <span class="quarto-category-count">(2)</span></div><div class="category" data-category="OCaml">OCaml <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(16)</span></div><div class="category" data-category="SQL">SQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YouTube">YouTube <span class="quarto-category-count">(7)</span></div><div class="category" data-category="conference">conference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="plotly">plotly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="polars">polars <span class="quarto-category-count">(1)</span></div><div class="category" data-category="tidyverse">tidyverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webr">webr <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -665,10 +664,10 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Python,AI" data-listing-date-sort="1687816800000" data-listing-file-modified-sort="1707665097176" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="302">
+<div class="quarto-post image-right" data-index="11" data-categories="Python,AI" data-listing-date-sort="1687816800000" data-listing-file-modified-sort="1707672332449" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="302">
 <div class="thumbnail">
 <p><a href="./blog/llm2/index.html" class="no-external"></a></p><a href="./blog/llm2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="blog/llm2/ai.jpg"  class="thumbnail-image card-img"/></p>
 </a><p><a href="./blog/llm2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -687,7 +686,7 @@ AI
 </div>
 </div>
 <div class="listing-description">
-<a href="./blog/llm2/index.html" class="no-external"></a>
+<a href="./blog/llm2/index.html" class="no-external">By David Munoz Tord</a>
 </div>
 </div>
 <div class="metadata">
@@ -701,43 +700,7 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Python,AI" data-listing-date-sort="1687816800000" data-listing-file-modified-sort="1707664840915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="302">
-<div class="thumbnail">
-<p><a href="./blog/llm2/index.html" class="no-external"></a></p><a href="./blog/llm2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./blog/llm2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/llm2/index.html" class="no-external">Your first chat bot with python!</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/llm2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('AI'); return false;">
-AI
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/llm2/index.html" class="no-external"></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/llm2/index.html" class="no-external">
-<div class="listing-date">
-Jun 27, 2023
-</div>
-<div class="listing-author">
-David Munoz Tord
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-categories="R" data-listing-date-sort="1687730400000" data-listing-file-modified-sort="1707219491942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1190">
+<div class="quarto-post image-right" data-index="12" data-categories="R" data-listing-date-sort="1687730400000" data-listing-file-modified-sort="1707219491942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1190">
 <div class="thumbnail">
 <p><a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external"></a></p><a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external">
 <p class="card-img-top"><img src="blog/2023-06-26-let-s-contribute/give-and-take.jpg"  class="thumbnail-image card-img"/></p>
@@ -770,7 +733,7 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="R" data-listing-date-sort="1687644000000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
+<div class="quarto-post image-right" data-index="13" data-categories="R" data-listing-date-sort="1687644000000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
 <div class="thumbnail">
 <p><a href="./blog/Echarts4r/index.html" class="no-external"></a></p><a href="./blog/Echarts4r/index.html" class="no-external">
 <p><img src="./blog/Echarts4r/viz.png" class="thumbnail-image"></p>
@@ -803,7 +766,7 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="R" data-listing-date-sort="1683928800000" data-listing-file-modified-sort="1707219491954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="quarto-post image-right" data-index="14" data-categories="R" data-listing-date-sort="1683928800000" data-listing-file-modified-sort="1707219491954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
 <div class="thumbnail">
 <p><a href="./blog/R-Lunches/index.html" class="no-external"></a></p><a href="./blog/R-Lunches/index.html" class="no-external">
 <p><img src="./blog/R-Lunches/conf.jpg" class="thumbnail-image"></p>
@@ -836,7 +799,7 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="YouTube" data-listing-date-sort="1672527600000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
+<div class="quarto-post image-right" data-index="15" data-categories="YouTube" data-listing-date-sort="1672527600000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
 <div class="thumbnail">
 <p><a href="./blog/Live/index.html" class="no-external"></a></p><a href="./blog/Live/index.html" class="no-external">
 <p><img src="https://i3.ytimg.com/vi/jfo1tuMHIMs/0.jpg" class="thumbnail-image"></p>
@@ -869,7 +832,7 @@ David Munoz Tord, Fabrice Hategekimana and Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="R,Interactive Exercises" data-listing-date-sort="1669849200000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="quarto-post image-right" data-index="16" data-categories="R,Interactive Exercises" data-listing-date-sort="1669849200000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
 <div class="thumbnail">
 <p><a href="./blog/Data_manip_Fundamental/index.html" class="no-external"></a></p><a href="./blog/Data_manip_Fundamental/index.html" class="no-external">
 <p><img src="./blog/Data_manip_Fundamental/homework.jpg" class="thumbnail-image"></p>
@@ -905,7 +868,7 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="Computer Science,YouTube" data-listing-date-sort="1669849200000" data-listing-file-modified-sort="1707219491958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
+<div class="quarto-post image-right" data-index="17" data-categories="Computer Science,YouTube" data-listing-date-sort="1669849200000" data-listing-file-modified-sort="1707219491958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
 <div class="thumbnail">
 <p><a href="./blog/True_Ignorant/index.html" class="no-external"></a></p><a href="./blog/True_Ignorant/index.html" class="no-external">
 <p><img src="https://i3.ytimg.com/vi/E9a5Lv0po-o/0.jpg" class="thumbnail-image"></p>
@@ -927,7 +890,7 @@ YouTube
 </div>
 </div>
 <div class="listing-description">
-<a href="./blog/True_Ignorant/index.html" class="no-external">By Fabrice Hategekimana</a>
+<a href="./blog/True_Ignorant/index.html" class="no-external">In this playlist are all the videos <strong>presenting useful tools</strong> when coding or when you are a student.</a>
 </div>
 </div>
 <div class="metadata">
@@ -941,7 +904,7 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="Python,YouTube" data-listing-date-sort="1667257200000" data-listing-file-modified-sort="1707219491950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
+<div class="quarto-post image-right" data-index="18" data-categories="Python,YouTube" data-listing-date-sort="1667257200000" data-listing-file-modified-sort="1707219491950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
 <div class="thumbnail">
 <p><a href="./blog/Python_Fundamentals/index.html" class="no-external"></a></p><a href="./blog/Python_Fundamentals/index.html" class="no-external">
 <p><img src="https://i3.ytimg.com/vi/jRpefZJKANY/0.jpg" class="thumbnail-image"></p>
@@ -963,7 +926,7 @@ YouTube
 </div>
 </div>
 <div class="listing-description">
-<a href="./blog/Python_Fundamentals/index.html" class="no-external">By Fabrice Hategekimana</a>
+<a href="./blog/Python_Fundamentals/index.html" class="no-external"><strong>Goal</strong>: To initiate people who would like to start with <strong>Python</strong> by <em>starting with the basics or the basics</em> or people who want to reinforce their knowledge by going through…</a>
 </div>
 </div>
 <div class="metadata">
@@ -977,7 +940,7 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="R,Interactive Exercises" data-listing-date-sort="1664575200000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
+<div class="quarto-post image-right" data-index="19" data-categories="R,Interactive Exercises" data-listing-date-sort="1664575200000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
 <div class="thumbnail">
 <p><a href="./blog/Data_explor_Fundamentals/index.html" class="no-external"></a></p><a href="./blog/Data_explor_Fundamentals/index.html" class="no-external">
 <p><img src="./blog/Data_explor_Fundamentals/homework.jpg" class="thumbnail-image"></p>
@@ -1013,7 +976,7 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="R,YouTube" data-listing-date-sort="1661983200000" data-listing-file-modified-sort="1707219491954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="quarto-post image-right" data-index="20" data-categories="R,YouTube" data-listing-date-sort="1661983200000" data-listing-file-modified-sort="1707219491954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
 <div class="thumbnail">
 <p><a href="./blog/Stats_With_R/index.html" class="no-external"></a></p><a href="./blog/Stats_With_R/index.html" class="no-external">
 <p><img src="https://i3.ytimg.com/vi/c4WkVrs1rKU/0.jpg" class="thumbnail-image"></p>
@@ -1049,7 +1012,7 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="Computer Science,YouTube" data-listing-date-sort="1661983200000" data-listing-file-modified-sort="1707219491942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
+<div class="quarto-post image-right" data-index="21" data-categories="Computer Science,YouTube" data-listing-date-sort="1661983200000" data-listing-file-modified-sort="1707219491942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
 <div class="thumbnail">
 <p><a href="./blog/Code_Hygiene/index.html" class="no-external"></a></p><a href="./blog/Code_Hygiene/index.html" class="no-external">
 <p><img src="https://i3.ytimg.com/vi/YaT1ksk--xc/0.jpg" class="thumbnail-image"></p>
@@ -1071,7 +1034,7 @@ YouTube
 </div>
 </div>
 <div class="listing-description">
-<a href="./blog/Code_Hygiene/index.html" class="no-external">By Fabrice Hategekimana</a>
+<a href="./blog/Code_Hygiene/index.html" class="no-external">Introduce the <em>basics of hygiene</em> in the code to have clean and reusable scripts. Workflow and refactoring are also important elements to achieve good results. We explain…</a>
 </div>
 </div>
 <div class="metadata">
@@ -1085,7 +1048,7 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="Bash,YouTube" data-listing-date-sort="1659304800000" data-listing-file-modified-sort="1707219491958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
+<div class="quarto-post image-right" data-index="22" data-categories="Bash,YouTube" data-listing-date-sort="1659304800000" data-listing-file-modified-sort="1707219491958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <div class="thumbnail">
 <p><a href="./blog/Terminal_Basic/index.html" class="no-external"></a></p><a href="./blog/Terminal_Basic/index.html" class="no-external">
 <p><img src="https://i3.ytimg.com/vi/X3kObIzGH2s/0.jpg" class="thumbnail-image"></p>
@@ -1107,7 +1070,7 @@ YouTube
 </div>
 </div>
 <div class="listing-description">
-<a href="./blog/Terminal_Basic/index.html" class="no-external">By Fabrice Hategekimana</a>
+<a href="./blog/Terminal_Basic/index.html" class="no-external"><strong>Video series</strong> on <em>terminal automation</em>. We explain why working with the terminal is still a good idea.</a>
 </div>
 </div>
 <div class="metadata">
@@ -1121,7 +1084,7 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="R,Interactive Exercises" data-listing-date-sort="1656626400000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
+<div class="quarto-post image-right" data-index="23" data-categories="R,Interactive Exercises" data-listing-date-sort="1656626400000" data-listing-file-modified-sort="1707219491946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
 <div class="thumbnail">
 <p><a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external"></a></p><a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external">
 <p><img src="./blog/Data_Viz_Fundamentals/homework.jpg" class="thumbnail-image"></p>
@@ -1157,10 +1120,10 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="R,YouTube" data-listing-date-sort="1654034400000" data-listing-file-modified-sort="1707219491954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
+<div class="quarto-post image-right" data-index="24" data-categories="R,YouTube" data-listing-date-sort="1654034400000" data-listing-file-modified-sort="1707219491954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
 <div class="thumbnail">
 <p><a href="./blog/R_basics/index.html" class="no-external"></a></p><a href="./blog/R_basics/index.html" class="no-external">
-<p><img data-src="https://i3.ytimg.com/vi/hWsmaR3Nh6w/0.jpg" class="thumbnail-image"></p>
+<p><img src="https://i3.ytimg.com/vi/hWsmaR3Nh6w/0.jpg" class="thumbnail-image"></p>
 </a><p><a href="./blog/R_basics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
@@ -1179,7 +1142,7 @@ YouTube
 </div>
 </div>
 <div class="listing-description">
-<a href="./blog/R_basics/index.html" class="no-external">By Vestin Hategekimana</a>
+<a href="./blog/R_basics/index.html" class="no-external"><strong>Goal</strong>: To initiate people who would like to <em>start with R</em> by starting with the basics or the basics or people who want to reinforce their knowledge by going through important…</a>
 </div>
 </div>
 <div class="metadata">
@@ -1197,9 +1160,6 @@ Fabrice Hategekimana
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

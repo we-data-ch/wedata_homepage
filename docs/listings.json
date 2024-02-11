@@ -14,7 +14,6 @@
       "/blog/2023-07-16-you-must-use-rproject/index.html",
       "/blog/2023-07-16-contributing-to-project-on-github/index.html",
       "/blog/llm2/index.html",
-      "/blog/llm2/index.html",
       "/blog/2023-06-26-let-s-contribute/index.html",
       "/blog/Echarts4r/index.html",
       "/blog/R-Lunches/index.html",
@@ -31,6 +30,12 @@
     ]
   },
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2023-04-Deploy-your-R-code/index.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/blog/2024-02-11_R_and_Python/index.html",
@@ -44,7 +49,6 @@
       "/blog/R_road_map/Index.html",
       "/blog/2023-07-16-you-must-use-rproject/index.html",
       "/blog/2023-07-16-contributing-to-project-on-github/index.html",
-      "/blog/llm2/index.html",
       "/blog/llm2/index.html",
       "/blog/2023-06-26-let-s-contribute/index.html",
       "/blog/Echarts4r/index.html",
@@ -65,12 +69,6 @@
     "listing": "/projects.html",
     "items": [
       "/projects/2022-12-echarts4r/index.html"
-    ]
-  },
-  {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/2023-04-Deploy-your-R-code/index.html"
     ]
   }
 ]

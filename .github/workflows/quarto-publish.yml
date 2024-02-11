@@ -19,7 +19,7 @@ jobs:
             version: 1.3.340
 
 
-        - name: Install libcurl
+        - name: Install libs
           run: >
             sudo apt-get update && sudo apt-get install --yes
             libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libxml2-dev libssl-dev
