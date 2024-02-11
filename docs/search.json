@@ -249,7 +249,7 @@
     "href": "index.html",
     "title": "We Data",
     "section": "",
-    "text": "About us\n\nWe are an association of the University of Geneva that aims to share its passion for data science and computer science. We have a strong interest in statistics and computational methods. Initially, the association’s target audience was people in the social sciences but we quickly expanded into other fields of research.  More concretely, the association aims to achieve its objectives by creating freely-accessible educational content on its platforms in a variety of forms: YouTube videos, blog posts, exercises, etc. The association co-organizes the R-Lunches, a series of events related to R in which various speakers present topics related to the R language. The association tries to keep abreast of and participate as often as possible in digital initiatives at the University of Geneva. \n\n\n\nStill curious? click ‘About’ above or this button here: Tell me more\n\n\n\n\n\n\n\nBlog\nLatest from the blog\n\n\n\n\nR and Python side-by-side for data wrangling\n\n Feb 11, 2024\n\nNo matching items\n\n\n  \n\n\n\n\nBlog\n\n\n\n\nTalks\nLatest talk I’ve done\n\n\n\n\nDeploy Your R Code!\n\n Apr 4, 2023\n\nNo matching items\n\n\n\n\nTalks\n\n\n\n\nProjects\nLatest tinkering\n\n\n\n\nEcharts4r\n\n Apr 12, 2022\n\nNo matching items\n\n\n\n\nProjects\n\n\n\n\n\nTalking about us\nVie de l'UNIGE Des vidéos pour acquérir des compétences en science des données  September 2023\nFull Article"
+    "text": "About us\n\nWe are an association of the University of Geneva that aims to share its passion for data science and computer science. We have a strong interest in statistics and computational methods. Initially, the association’s target audience was people in the social sciences but we quickly expanded into other fields of research.  More concretely, the association aims to achieve its objectives by creating freely-accessible educational content on its platforms in a variety of forms: YouTube videos, blog posts, exercises, etc. The association co-organizes the R-Lunches, a series of events related to R in which various speakers present topics related to the R language. The association tries to keep abreast of and participate as often as possible in digital initiatives at the University of Geneva. \n\n\n\nStill curious? click ‘About’ above or this button here: Tell me more\n\n\n\n\n\n\n\nBlog\nLatest from the blog\n\n\n\n\nR and Python side-by-side for data wrangling\n\n Feb 11, 2024\n\nNo matching items\n\n\n  \n\n\n\n\nBlog\n\n\n\n\nTalks\nLatest talk I’ve done\n\n\n\n\n\nTalks\n\n\n\n\nProjects\nLatest tinkering\n\n\n\n\n\nProjects\n\n\n\n\n\nTalking about us\nVie de l'UNIGE Des vidéos pour acquérir des compétences en science des données  September 2023\nFull Article"
   },
   {
     "objectID": "index.html#hi",
@@ -480,7 +480,7 @@
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Contact\n\n\nContact us at info@wedat.ch."
+    "text": "Contact\n\n\nContact us at info@wedata.ch."
   },
   {
     "objectID": "about.html",
@@ -494,7 +494,7 @@
     "href": "blog/2024-02-11_R_and_Python/index.html",
     "title": "R and Python side-by-side for data wrangling",
     "section": "",
-    "text": "After seeing many language wars style posts about  vs  and the sort of  to  comparisons being made, I realized that there aren’t many helpful side-by-sides that show you how to do x in y language (and vice versa).\n\nI decided to try and see if I could contribute something to the discourse. I’m not really trying to reinvent an analysis wheel and just want to focus on the how something is accomplished from one language to the other so I’m pulling from a few sources to just have some code to translate using the same data for both languages.\nSince polars is new to me and I like learning new things, I’m using it for the examples"
+    "text": "After seeing many language wars style posts about  vs  and the sort of comparisons being made, I realized that there aren’t many helpful side-by-sides that show you how to do x in y language (and vice versa).\n\nI decided to try and see if I could contribute something to the discourse. I’m not really trying to reinvent an analysis wheel and just want to focus on the how something is accomplished from one language to the other so I’m pulling from a few sources to just have some code to translate using the same data for both languages.\nSince polars is new to me and I like learning new things, I’m using it for the examples"
   },
   {
     "objectID": "blog/2024-02-11_R_and_Python/index.html#data",

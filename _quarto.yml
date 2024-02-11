@@ -27,10 +27,10 @@ website:
         href: index.qmd
       - text: "{{< fa laptop-code >}} Blog"
         href: blog.qmd
-      - text: "{{< fa chalkboard-user >}} Talks"
-        href: talks.qmd
-      - text: "{{< fa chart-line >}} Projects"
-        href: projects.qmd
+      # - text: "{{< fa chalkboard-user >}} Talks"
+      #   href: talks.qmd
+      # - text: "{{< fa chart-line >}} Projects"
+      #   href: projects.qmd
       - text: "{{< fa address-card >}} About"
         href: about.qmd
       # - text: "{{< fa paperclip >}} Vitae"

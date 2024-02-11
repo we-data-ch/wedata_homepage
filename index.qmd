@@ -9,14 +9,14 @@ listing:
     contents: "blog/"
     template: /ejs/most-recent-only.ejs
     sort: "date desc"
-  - id: listing-talks
-    contents: "talks/"
-    template: /ejs/most-recent-only.ejs
-    sort: "date desc"
-  - id: listing-projects
-    contents: "projects/"
-    template: /ejs/most-recent-only.ejs
-    sort: "date desc"
+  # - id: listing-talks
+    # contents: "talks/"
+    # template: /ejs/most-recent-only.ejs
+    # sort: "date desc"
+  # - id: listing-projects
+  #   contents: "projects/"
+  #   template: /ejs/most-recent-only.ejs
+  #   sort: "date desc"
 ---
 
 ::: {#img-me .center}

@@ -102,62 +102,6 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing-talks .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-title','listing-author','listing-date','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-title","listing-author","listing-date","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing-talks'] = new List('listing-listing-talks', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing-projects .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-title','listing-author','listing-date','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-title","listing-author","listing-date","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing-projects'] = new List('listing-listing-projects', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECFW8LLBS7"></script>
 
@@ -229,14 +173,6 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="./blog.html"> 
 <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./talks.html"> 
-<span class="menu-text"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Talks</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text"><i class="fa-solid fa-chart-line" aria-label="chart-line"></i> Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -347,29 +283,8 @@ No matching items
 <section id="talks" class="level3 feature-top">
 <h3 class="anchored" data-anchor-id="talks">Talks</h3>
 <p>Latest talk I’ve done</p>
-<div id="listing-listing-talks" class="quarto-listing quarto-listing-container-custom">
-<!-- attributes for item -->
-<!--  freeze,
-      title-block-banner,
-      title,
-      author,
-      date,
-      categories,
-      image,
-      path,
-      image-alt,
-      description,
-      filename,
-      file-modified,
-      reading-time,
-      sortableValues -->
-<h4 class="anchored">
-<a href="./talks/2023-04-Deploy-your-R-code/index.html">Deploy Your R Code!</a>
-</h4>
-<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Apr 4, 2023</small></p>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<div id="listing-talks">
+
 </div>
 </section>
 <div class="feature-bottom">
@@ -380,29 +295,8 @@ No matching items
 <section id="projects" class="level3 feature-top">
 <h3 class="anchored" data-anchor-id="projects">Projects</h3>
 <p>Latest tinkering</p>
-<div id="listing-listing-projects" class="quarto-listing quarto-listing-container-custom">
-<!-- attributes for item -->
-<!--  freeze,
-      title-block-banner,
-      title,
-      author,
-      date,
-      categories,
-      image,
-      path,
-      image-alt,
-      description,
-      filename,
-      file-modified,
-      reading-time,
-      sortableValues -->
-<h4 class="anchored">
-<a href="./projects/2022-12-echarts4r/index.html">Echarts4r</a>
-</h4>
-<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Apr 12, 2022</small></p>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<div id="listing-projects">
+
 </div>
 </section>
 <div class="feature-bottom">
