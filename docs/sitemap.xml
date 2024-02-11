@@ -158,7 +158,7 @@
   </url>
   <url>
     <loc>https://we-data.ch/index.html</loc>
-    <lastmod>2024-02-02T19:20:05.960Z</lastmod>
+    <lastmod>2024-02-06T11:38:12.138Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/contact.html</loc>
@@ -166,10 +166,30 @@
   </url>
   <url>
     <loc>https://we-data.ch/blog.html</loc>
-    <lastmod>2024-02-02T19:54:06.668Z</lastmod>
+    <lastmod>2024-02-06T11:38:11.942Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/about.html</loc>
     <lastmod>2024-02-02T20:16:43.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/projects/2022-12-echarts4r/index.html</loc>
+    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/talks.html</loc>
+    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/projects.html</loc>
+    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/talks/2023-04-Deploy-your-R-code/index.html</loc>
+    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/blog/2024-02-11_R_and_Python/index.html</loc>
+    <lastmod>2024-02-11T15:05:17.156Z</lastmod>
   </url>
 </urlset>
