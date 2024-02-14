@@ -95,8 +95,8 @@ Latest from the blog
 <!-- ::: -->
 <!-- ::: -->
 
-<!-- ::: -->
-<!-- ::: -->
+:::
+:::
 
 ### Talking about us
 

@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://we-data.ch/index.html</loc>
-    <lastmod>2024-02-13T18:00:32.466Z</lastmod>
+    <lastmod>2024-02-14T15:11:37.665Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects/2022-12-echarts4r/index.html</loc>
-    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/llm2/index.html</loc>
-    <lastmod>2024-02-11T17:25:32.449Z</lastmod>
+    <lastmod>2024-02-14T15:03:39.122Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_explor_Fundamentals/index.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://we-data.ch/blog/2024-02-11_R_and_Python/index.html</loc>
-    <lastmod>2024-02-11T15:05:53.480Z</lastmod>
+    <lastmod>2024-02-13T18:00:32.386Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Terminal_Basic/index.html</loc>
@@ -66,15 +66,15 @@
   </url>
   <url>
     <loc>https://we-data.ch/talks.html</loc>
-    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog.html</loc>
-    <lastmod>2024-02-06T11:38:11.942Z</lastmod>
+    <lastmod>2024-02-13T18:00:32.386Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects.html</loc>
-    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_manip_Fundamental/index.html</loc>
@@ -130,6 +130,6 @@
   </url>
   <url>
     <loc>https://we-data.ch/talks/2023-04-Deploy-your-R-code/index.html</loc>
-    <lastmod>2024-02-06T11:38:12.142Z</lastmod>
+    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
   </url>
 </urlset>
