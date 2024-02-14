@@ -104,8 +104,9 @@ gtag('js', new Date());
 gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<!-- =======================  Google Translate 
+======================= -->
 
 <meta name="twitter:title" content="We Data -">
 <meta name="twitter:description" content="">
@@ -114,9 +115,83 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 <meta name="twitter:image-height" content="213">
 <meta name="twitter:image-width" content="213">
 <meta name="twitter:card" content="summary_large_image">
-</head>
+</head><body class="nav-fixed"><div style="float: right">
+   <div id="google_translate_element" style="position: absolute; right: 0px; z-index: 1;"></div>
+</div>
 
-<body class="nav-fixed">
+
+ <style type="text/css">
+ 
+   .fixed-con {
+    z-index: 9724790009779558!important;
+    background-color: #f7f8fc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .VIpgJd-ZVi9od-aZ2wEe-wOHMyf{
+   z-index: 9724790009779!important;
+   top:0;
+   left:unset;
+   right:-5px;
+   display:none!important;
+   border-radius:50%;
+   border:2px solid gold;
+  }
+  .VIpgJd-ZVi9od-aZ2wEe-OiiCO{
+    width:80px;
+    height:80px;
+  }
+  /*hide google translate link | logo | banner-frame */
+  .goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame,div#goog-gt-{
+    display: none!important;
+  }
+  .goog-te-gadget {
+    color: transparent!important;
+    font-size:0px;
+  }
+
+  .goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+  }
+   
+ /*google translate Dropdown */
+ 
+ #google_translate_element select{
+ background:#f6edfd;
+ color:#383ffa;
+ border: none;
+ border-radius:3px;
+ padding:6px 8px
+ }
+</style>
+   
+
+
+  <script>
+ function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+ pageLanguage: 'en',
+ defaultLanguage: 'en',
+ includedLanguages: 'de,en,fr,es,ja,ko,ru,ar',
+ autoDisplay: 'true',
+ layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+ }, 'google_translate_element');
+ }
+ </script>
+ 
+ <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -207,7 +282,8 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 </div>
 </div>
 <p><br></p>
-<p>::: {.content-block} ::: {.features}</p>
+<div class="content-block">
+<div class="features">
 <div class="feature">
 <section id="blog" class="level3 feature-top">
 <h3 class="anchored" data-anchor-id="blog">Blog</h3>
@@ -264,8 +340,8 @@ No matching items
 <!-- [Projects](projects.qmd){.btn .btn-secondary role="button"} -->
 <!-- ::: -->
 <!-- ::: -->
-<!-- ::: -->
-<!-- ::: -->
+</div>
+</div>
 <section id="talking-about-us" class="level3">
 <h3 class="anchored" data-anchor-id="talking-about-us">Talking about us</h3>
 <p><code>Vie de l'UNIGE</code><br> <strong>Des vidéos pour acquérir des<br> compétences en science des données</strong> <br> <small>September 2023</small></p>
