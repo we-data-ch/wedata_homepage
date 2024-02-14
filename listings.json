@@ -6,25 +6,19 @@
     ]
   },
   {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/2022-12-echarts4r/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/blog/2024-02-11_R_and_Python/index.html",
-      "/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html",
       "/blog/My-problem-with-python/index.html",
-      "/blog/Polyglot_programmer/index.html",
+      "/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html",
       "/blog/Two_minutes_rule/index.html",
       "/blog/2023_posit_conference/index.html",
+      "/blog/Polyglot_programmer/index.html",
       "/blog/Programming_exercise_websites/index.html",
       "/blog/Coding_road_map/Index.html",
       "/blog/R_road_map/Index.html",
-      "/blog/2023-07-16-you-must-use-rproject/index.html",
       "/blog/2023-07-16-contributing-to-project-on-github/index.html",
+      "/blog/2023-07-16-you-must-use-rproject/index.html",
       "/blog/llm2/index.html",
       "/blog/2023-06-26-let-s-contribute/index.html",
       "/blog/Echarts4r/index.html",
@@ -42,19 +36,25 @@
     ]
   },
   {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/2022-12-echarts4r/index.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/blog/2024-02-11_R_and_Python/index.html",
-      "/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html",
       "/blog/My-problem-with-python/index.html",
-      "/blog/Polyglot_programmer/index.html",
+      "/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html",
       "/blog/Two_minutes_rule/index.html",
       "/blog/2023_posit_conference/index.html",
+      "/blog/Polyglot_programmer/index.html",
       "/blog/Programming_exercise_websites/index.html",
       "/blog/Coding_road_map/Index.html",
       "/blog/R_road_map/Index.html",
-      "/blog/2023-07-16-you-must-use-rproject/index.html",
       "/blog/2023-07-16-contributing-to-project-on-github/index.html",
+      "/blog/2023-07-16-you-must-use-rproject/index.html",
       "/blog/llm2/index.html",
       "/blog/2023-06-26-let-s-contribute/index.html",
       "/blog/Echarts4r/index.html",

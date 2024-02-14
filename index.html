@@ -75,9 +75,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-date','listing-title','listing-categories','listing-image','listing-author','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-slug','listing-tags','listing-editor_options','listing-page-layout','listing-toc','listing-toc-location','listing-code-line-numbers','listing-code-copy','listing-df-print',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-date','listing-title','listing-categories','listing-image','listing-author','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-tags','listing-slug','listing-editor_options','listing-page-layout','listing-toc','listing-toc-location','listing-code-line-numbers','listing-code-copy','listing-df-print',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-date","listing-title","listing-categories","listing-image","listing-author","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-slug","listing-tags","listing-editor_options","listing-page-layout","listing-toc","listing-toc-location","listing-code-line-numbers","listing-code-copy","listing-df-print"],
+      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-date","listing-title","listing-categories","listing-image","listing-author","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-tags","listing-slug","listing-editor_options","listing-page-layout","listing-toc","listing-toc-location","listing-code-line-numbers","listing-code-copy","listing-df-print"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -207,8 +207,7 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 </div>
 </div>
 <p><br></p>
-<div class="content-block">
-<div class="features">
+<p>::: {.content-block} ::: {.features}</p>
 <div class="feature">
 <section id="blog" class="level3 feature-top">
 <h3 class="anchored" data-anchor-id="blog">Blog</h3>
@@ -243,32 +242,30 @@ No matching items
 <p><a href="./blog.html" class="btn btn-secondary" role="button">Blog</a></p>
 </div>
 </div>
-<div class="feature">
-<section id="talks" class="level3 feature-top">
-<h3 class="anchored" data-anchor-id="talks">Talks</h3>
-<p>Latest talk I’ve done</p>
-<div id="listing-talks">
-
-</div>
-</section>
-<div class="feature-bottom">
-<p><a href="./talks.html" class="btn btn-secondary" role="button">Talks</a></p>
-</div>
-</div>
-<div class="feature">
-<section id="projects" class="level3 feature-top">
-<h3 class="anchored" data-anchor-id="projects">Projects</h3>
-<p>Latest tinkering</p>
-<div id="listing-projects">
-
-</div>
-</section>
-<div class="feature-bottom">
-<p><a href="./projects.html" class="btn btn-secondary" role="button">Projects</a></p>
-</div>
-</div>
-</div>
-</div>
+<!-- ::: {.feature} -->
+<!-- ::: {.feature-top} -->
+<!-- ### Talks -->
+<!-- Latest talk I've done -->
+<!-- ::: {#listing-talks} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.feature-bottom} -->
+<!-- [Talks](talks.qmd){.btn .btn-secondary role="button"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.feature} -->
+<!-- ::: {.feature-top} -->
+<!-- ### Projects -->
+<!-- Latest tinkering -->
+<!-- ::: {#listing-projects} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.feature-bottom} -->
+<!-- [Projects](projects.qmd){.btn .btn-secondary role="button"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
 <section id="talking-about-us" class="level3">
 <h3 class="anchored" data-anchor-id="talking-about-us">Talking about us</h3>
 <p><code>Vie de l'UNIGE</code><br> <strong>Des vidéos pour acquérir des<br> compétences en science des données</strong> <br> <small>September 2023</small></p>
