@@ -65,38 +65,38 @@ Latest from the blog
 :::
 :::
 
-::: {.feature}
-::: {.feature-top}
-### Talks
+<!-- ::: {.feature} -->
+<!-- ::: {.feature-top} -->
+<!-- ### Talks -->
 
-Latest talk I've done
+<!-- Latest talk I've done -->
 
-::: {#listing-talks}
-:::
-:::
+<!-- ::: {#listing-talks} -->
+<!-- ::: -->
+<!-- ::: -->
 
-::: {.feature-bottom}
-[Talks](talks.qmd){.btn .btn-secondary role="button"}
-:::
-:::
+<!-- ::: {.feature-bottom} -->
+<!-- [Talks](talks.qmd){.btn .btn-secondary role="button"} -->
+<!-- ::: -->
+<!-- ::: -->
 
-::: {.feature}
-::: {.feature-top}
-### Projects
+<!-- ::: {.feature} -->
+<!-- ::: {.feature-top} -->
+<!-- ### Projects -->
 
-Latest tinkering
+<!-- Latest tinkering -->
 
-::: {#listing-projects}
-:::
-:::
+<!-- ::: {#listing-projects} -->
+<!-- ::: -->
+<!-- ::: -->
 
-::: {.feature-bottom}
-[Projects](projects.qmd){.btn .btn-secondary role="button"}
-:::
-:::
+<!-- ::: {.feature-bottom} -->
+<!-- [Projects](projects.qmd){.btn .btn-secondary role="button"} -->
+<!-- ::: -->
+<!-- ::: -->
 
-:::
-:::
+<!-- ::: -->
+<!-- ::: -->
 
 ### Talking about us
 
