@@ -1,0 +1,100 @@
+---
+title: "Your first chat bot with python!"
+author: "David Munoz Tord"
+date: "2023-06-27"
+categories: ["Python", "AI"]
+tags: ["language models", "llm", "chatGPT"]
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r}
+#| label: setup python
+#| include: false
+library(reticulate)
+path <- here::here()
+reticulate::use_virtualenv(paste0(path, "/renv/python/virtualenvs/renv-python-3.11"))
+```
+
+![](ai.jpg)
+
+By [David Munoz Tord](https://david-munoztord.com/)
+
+**Goal**: Learn about *language models* and familiarize yourself with some of the basic functions of the {[languagemodels](https://github.com/jncraton/languagemodels)} to create your own chat bot.
+
+{[languagemodels](https://github.com/jncraton/languagemodels)} is a python module designed to be as simple as possible for learners and educators exploring how large language models intersect with modern software development. The interfaces to this package are all simple functions using standard types. The complexity of large language models is hidden from view while providing free local inference using light-weight, open models. All included models are free for educational use, no API keys are required, and all inference is performed locally by default.
+
+[Read more about it](https://github.com/jncraton/languagemodels)
+
+
+```{python}
+#| label: setup
+#| message: false
+import languagemodels as lm
+```
+
+```{python}
+lm.do("What color is the sky?")
+```
+
+<br/>
+
+To easy, let's try something a bit harder
+
+```{python}
+lm.do("If I have 7 apples then eat 5, how many apples do I have?")
+```
+
+Aouch...
+
+Indeed the model performance is quite low because the models used by this package are 1000x smaller than the largest models in use today. They are useful as learning tools, but if you are expecting ChatGPT or similar performance, you will be very disappointed...
+
+The base model should work on any system with 512MB of memory, but this memory limit can be increased. Setting this value higher will require more memory and generate results more slowly, but the results should be superior. 
+
+```{python}
+#| label: setup 4GB
+#| message: false
+#lm.set_max_ram('4gb')
+```
+
+```{python}
+#| label: run 4GB
+lm.do("If I have 7 apples then eat 5, how many apples do I have?")
+```
+
+Yeah, here we go little (4gb) buddy!
+
+<br/>
+
+Now that we got the basics, let's play with it! You can change the prompt like such
+
+```{python}
+
+lm.chat('''
+     System: Respond as a physics professor.
+
+     User: What is relativity?
+
+     Assistant:
+     ''')
+
+```
+
+<br/>
+
+```{python}
+
+lm.complete("She hid in her room until")
+
+```
+
+<br/>
+
+```{python}
+
+lm.get_wiki("Physics")
+
+```
+
+<br/>

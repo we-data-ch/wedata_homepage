@@ -1,0 +1,8 @@
+"0",""
+"0","import languagemodels as lm"
+"0","lm.do(""What color is the sky?"")"
+"2","Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]"
+"2","Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 14454.81it/s]
+"
+"1","'The color of the sky is blue.'
+"

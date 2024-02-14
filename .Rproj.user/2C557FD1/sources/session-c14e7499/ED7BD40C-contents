@@ -1,0 +1,36 @@
+name: Render and Publish
+on:
+  push:
+    branches:
+      - main  # changes pushed to this branch will trigger a build.
+
+jobs:
+  build-deploy:
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+      steps:
+        - name: Check out repository
+          uses: actions/checkout@v3
+          
+        - name: Set up Quarto
+          uses: quarto-dev/quarto-actions/setup@v2
+          with:
+            version: 1.3.340
+
+
+        - name: Install libs
+          run: >
+            sudo apt-get update && sudo apt-get install --yes
+            libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libxml2-dev libssl-dev
+            
+        - name: Install dependencies with renv!
+          uses: r-lib/actions/setup-renv@v2
+
+        - name: Publish to GitHub Pages (and render)
+          uses: quarto-dev/quarto-actions/publish@v2
+          with:
+            target: gh-pages # renderred html files will be pushed here
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+            
