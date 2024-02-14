@@ -2,134 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://we-data.ch/talks.html</loc>
-    <lastmod>2024-02-14T15:25:48.343Z</lastmod>
+    <lastmod>2024-02-14T15:26:43.352Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/about.html</loc>
-    <lastmod>2024-02-14T15:25:49.243Z</lastmod>
+    <lastmod>2024-02-14T15:26:44.264Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/talks/2023-04-Deploy-your-R-code/index.html</loc>
-    <lastmod>2024-02-14T15:25:49.539Z</lastmod>
+    <lastmod>2024-02-14T15:26:44.556Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/index.html</loc>
-    <lastmod>2024-02-14T15:25:50.155Z</lastmod>
+    <lastmod>2024-02-14T15:26:45.132Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/contact.html</loc>
-    <lastmod>2024-02-14T15:25:50.427Z</lastmod>
+    <lastmod>2024-02-14T15:26:45.440Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects/2022-12-echarts4r/index.html</loc>
-    <lastmod>2024-02-14T15:25:50.819Z</lastmod>
+    <lastmod>2024-02-14T15:26:45.788Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects.html</loc>
-    <lastmod>2024-02-14T15:25:51.143Z</lastmod>
+    <lastmod>2024-02-14T15:26:46.116Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_Viz_Fundamentals/index.html</loc>
-    <lastmod>2024-02-14T15:25:51.427Z</lastmod>
+    <lastmod>2024-02-14T15:26:46.420Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/R-Lunches/index.html</loc>
-    <lastmod>2024-02-14T15:25:51.715Z</lastmod>
+    <lastmod>2024-02-14T15:26:46.708Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Two_minutes_rule/index.html</loc>
-    <lastmod>2024-02-14T15:25:52.395Z</lastmod>
+    <lastmod>2024-02-14T15:26:47.416Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Stats_With_R/index.html</loc>
-    <lastmod>2024-02-14T15:25:52.691Z</lastmod>
+    <lastmod>2024-02-14T15:26:47.708Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/My-problem-with-python/index.html</loc>
-    <lastmod>2024-02-14T15:25:53.235Z</lastmod>
+    <lastmod>2024-02-14T15:26:48.272Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023-07-16-contributing-to-project-on-github/index.html</loc>
-    <lastmod>2024-02-14T15:25:53.979Z</lastmod>
+    <lastmod>2024-02-14T15:26:49.360Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023_posit_conference/index.html</loc>
-    <lastmod>2024-02-14T15:25:54.699Z</lastmod>
+    <lastmod>2024-02-14T15:26:49.988Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023-07-16-you-must-use-rproject/index.html</loc>
-    <lastmod>2024-02-14T15:25:55.487Z</lastmod>
+    <lastmod>2024-02-14T15:26:50.572Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Coding_road_map/Index.html</loc>
-    <lastmod>2024-02-14T15:25:55.899Z</lastmod>
+    <lastmod>2024-02-14T15:26:51.000Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html</loc>
-    <lastmod>2024-02-14T15:25:56.975Z</lastmod>
+    <lastmod>2024-02-14T15:26:52.104Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_explor_Fundamentals/index.html</loc>
-    <lastmod>2024-02-14T15:25:57.263Z</lastmod>
+    <lastmod>2024-02-14T15:26:52.396Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/R_road_map/Index.html</loc>
-    <lastmod>2024-02-14T15:25:57.623Z</lastmod>
+    <lastmod>2024-02-14T15:26:52.780Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/llm2/index.html</loc>
-    <lastmod>2024-02-14T15:25:57.979Z</lastmod>
+    <lastmod>2024-02-14T15:26:53.144Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Python_Fundamentals/index.html</loc>
-    <lastmod>2024-02-14T15:25:58.271Z</lastmod>
+    <lastmod>2024-02-14T15:26:53.436Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_manip_Fundamental/index.html</loc>
-    <lastmod>2024-02-14T15:25:58.567Z</lastmod>
+    <lastmod>2024-02-14T15:26:53.740Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/R_basics/index.html</loc>
-    <lastmod>2024-02-14T15:25:58.855Z</lastmod>
+    <lastmod>2024-02-14T15:26:54.024Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/True_Ignorant/index.html</loc>
-    <lastmod>2024-02-14T15:25:59.139Z</lastmod>
+    <lastmod>2024-02-14T15:26:54.304Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Programming_exercise_websites/index.html</loc>
-    <lastmod>2024-02-14T15:25:59.515Z</lastmod>
+    <lastmod>2024-02-14T15:26:54.684Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Code_Hygiene/index.html</loc>
-    <lastmod>2024-02-14T15:25:59.799Z</lastmod>
+    <lastmod>2024-02-14T15:26:54.976Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Polyglot_programmer/index.html</loc>
-    <lastmod>2024-02-14T15:26:00.451Z</lastmod>
+    <lastmod>2024-02-14T15:26:55.616Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Echarts4r/index.html</loc>
-    <lastmod>2024-02-14T15:26:00.911Z</lastmod>
+    <lastmod>2024-02-14T15:26:56.080Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2024-02-11_R_and_Python/index.html</loc>
-    <lastmod>2024-02-14T15:26:02.151Z</lastmod>
+    <lastmod>2024-02-14T15:26:57.336Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023-06-26-let-s-contribute/index.html</loc>
-    <lastmod>2024-02-14T15:26:03.323Z</lastmod>
+    <lastmod>2024-02-14T15:26:58.524Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Terminal_Basic/index.html</loc>
-    <lastmod>2024-02-14T15:26:03.607Z</lastmod>
+    <lastmod>2024-02-14T15:26:58.808Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Live/index.html</loc>
-    <lastmod>2024-02-14T15:26:03.919Z</lastmod>
+    <lastmod>2024-02-14T15:26:59.096Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog.html</loc>
-    <lastmod>2024-02-14T15:26:05.643Z</lastmod>
+    <lastmod>2024-02-14T15:27:00.900Z</lastmod>
   </url>
 </urlset>
