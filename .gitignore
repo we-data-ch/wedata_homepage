@@ -5,8 +5,5 @@
 .Ruserdata
 /blog/llm/
 /.quarto/
-site_libs/
 _freeze/
-_site/
-_index_files/
 docs/
