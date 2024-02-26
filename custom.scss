@@ -1,4 +1,53 @@
 /*-- scss:defaults --*/
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align items to the start of the flex container (top) */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.links a {
+  margin-right: 20px;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Override Bootstrap's .anchored class */
+.anchored {
+  margin-top: 0 !important;
+}
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  margin-left: 20px;
+  margin-top: 10px; /* Remove top margin for the text div */
+}
+
+img {
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
 
 // main colors
 $white: #fff;

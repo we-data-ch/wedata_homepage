@@ -1,0 +1,83 @@
+---
+title: ""
+output:
+  quarto::html_document:
+    css: custom.css
+    includes:
+      in_header: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-HJz20Y4MP4qEjrL4c3gReA5o2tC3mFd/S5zv+AN0XxvvxKvL1pKkECFzldonEMOpwQuDlZLL5uPwA+mK3/fRfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+---
+
+
+# Team Members
+
+
+<div class="card">
+<div class="container">
+<div class="image">
+<img src="./images/vestin.webp" alt="Vestin Hategekimana" style="width:150px; height:150px;">
+<div class="links">
+<a href="mailto:Vestin.Hategekimana@unige.ch"><i class="far fa-envelope"></i></a>
+<a href="https://twitter.com/PEcodemo"><i class="fab fa-twitter"></i></a>
+<a href="https://vestin-hategekimana.netlify.app/o"><i class="fas fa-globe"></i></a>
+<a href="https://github.com/CyuHat"><i class="fab fa-github"></i></a>
+</div>
+</div>
+<div class="text">
+<span style="font-size: 1.5em">Vestin Hategekimana - (Co-Founder)</span> <br>
+<span style="font-size: 1.2em"><b>Socioeconomist / R Fanatic / Content Creator</b></span> <br> <br>
+<p>
+<b>Description: </b> My interests are in migration, integration, statistics, text mining, web scraping, and network analysis.
+</p>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="card">
+<div class="container">
+<div class="image">
+<img src="./images/fabrice.jpg" alt="Fabrice Hategekimana" style="width:130px; height:150px;">
+<div class="links">
+<a href="https://twitter.com/FabriceHategek3"><i class="fab fa-twitter"></i></a>
+<a href="https://github.com/fabriceHategekimana"><i class="fab fa-github"></i></a>
+</div>
+</div>
+<div class="text">
+<span style="font-size: 1.5em">Fabrice Hategekimana  (Co-Founder)</span> <br>
+<span style="font-size: 1.2em"><b>Developer / Linux Enthusiast / Content Creator</b></span> <br> <br>
+<p>
+<b>Description: </b> I am passionate about Linux, terminal, programming languages, semantics and formal modeling tools.
+</p>
+
+</div>
+</div>
+</div>
+
+
+
+
+<div class="card">
+<div class="container">
+<div class="image">
+<img src="./images/DMT.png" alt="David Muñoz Tord" style="width:150px; height:150px;">
+<div class="links">
+<a href="mailto:david.munoztord@mailbox.org"><i class="far fa-envelope"></i></a>
+<a href="https://twitter.com/tord_munoz"><i class="fab fa-twitter"></i></a>
+<a href="https://david-munoztord.com"><i class="fas fa-globe"></i></a>
+<a href="https://github.com/munoztd0"><i class="fab fa-github"></i></a>
+</div>
+</div>
+<div class="text">
+<span style="font-size: 1.5em">David Muñoz Tord  (Admin)</span> <br>
+<span style="font-size: 1.2em"><b>Neuroscientist / Data Scientist / R Developer</b></span> <br> <br>
+<p>
+<b>Description: </b> I am a neuroscientist with a strong background in computer science. I am interested in the development of new tools for data analysis and visualization. I am always looking for a cool open-source project !
+</p>
+
+</div>
+</div>
+</div>
+
+

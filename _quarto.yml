@@ -32,6 +32,9 @@ website:
       #   href: talks.qmd
       # - text: "{{< fa chart-line >}} Projects"
       #   href: projects.qmd
+      # team members
+      - text: "{{< fa users >}} Team"
+        href: team.qmd
       - text: "{{< fa address-card >}} About"
         href: about.qmd
       # - text: "{{< fa paperclip >}} Vitae"
