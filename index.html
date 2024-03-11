@@ -75,9 +75,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-date','listing-title','listing-categories','listing-image','listing-author','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-tags','listing-slug','listing-editor_options','listing-page-layout','listing-toc','listing-toc-location','listing-code-line-numbers','listing-code-copy','listing-df-print',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-date","listing-title","listing-categories","listing-image","listing-author","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-tags","listing-slug","listing-editor_options","listing-page-layout","listing-toc","listing-toc-location","listing-code-line-numbers","listing-code-copy","listing-df-print"],
+      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-date','listing-title','listing-categories','listing-image','listing-author','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-page-layout','listing-toc','listing-toc-location','listing-code-line-numbers','listing-code-copy','listing-df-print','listing-editor_options','listing-slug','listing-tags',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-date","listing-title","listing-categories","listing-image","listing-author","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-page-layout","listing-toc","listing-toc-location","listing-code-line-numbers","listing-code-copy","listing-df-print","listing-editor_options","listing-slug","listing-tags"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -310,12 +311,15 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
       reading-time,
       sortableValues -->
 <h4 class="anchored">
-<a href="./blog/2024-02-11_R_and_Python/index.html">R and Python side-by-side for data wrangling</a>
+<a href="./blog/CNN/index.html">Look a doggo !: Computer Vision with Python</a>
 </h4>
-<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Feb 11, 2024</small></p>
+<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Mar 11, 2024</small></p>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-blog-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 </section>
 <div class="feature-bottom">
