@@ -84,7 +84,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-author','listing-date','listing-categories','listing-tags','listing-image','listing-path','listing-outputHref','listing-title','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-slug','listing-page-layout','listing-toc','listing-toc-location','listing-code-line-numbers','listing-code-copy','listing-df-print','listing-editor_options',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-date","listing-categories","listing-tags","listing-image","listing-path","listing-outputHref","listing-title","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-slug","listing-page-layout","listing-toc","listing-toc-location","listing-code-line-numbers","listing-code-copy","listing-df-print","listing-editor_options"],
     };
 
@@ -342,12 +343,15 @@ window.Quarto = {
       reading-time,
       sortableValues -->
 <h4 class="anchored">
-<a href="./blog/2024-02-11_R_and_Python/index.html">R and Python side-by-side for data wrangling</a>
+<a href="./blog/CNN/index.html">Look a doggo !: Computer Vision with Python</a>
 </h4>
-<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Feb 11, 2024</small></p>
+<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Mar 11, 2024</small></p>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-blog-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 </section>
 <div class="feature-bottom">
