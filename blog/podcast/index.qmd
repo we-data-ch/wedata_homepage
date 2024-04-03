@@ -1,0 +1,29 @@
+---
+date: "2024-04-03"
+title: "Learning From Data: A Podcast of WeData's Story now on Spotify 🎧"
+categories:
+  - Spotify
+  - Podcast
+  - Data Science
+  - Association
+image: podcast.png
+author: David Munoz Tord
+---
+
+
+# Unveiling Our Data Science Journey: Exploring WeData's Story
+
+Thrilled to share that Vestin Hategekimana and David Munoz Tord are featured in the latest episode of "Learning from Data" podcast! 🚀 Join us as we discuss WeData, our university association dedicated to sharing our passion for data science and computer science through an interdisciplinary approach. 🌐
+
+Episode Duration: 1 hr 14 min 🕒
+Listen in now on Spotify to gain valuable insights into the world of data science! 🎧 
+
+## About WeData
+
+WeData isn't just an association; it's a vibrant hub for data enthusiasts, a collaborative platform, and a driving force for innovation. Through a myriad of workshops, events, and knowledge-sharing initiatives, we empower individuals and catalyze advancements in data science and computer science.
+
+## The Interview
+
+During the interview, we uncovered our backgrounds, shared pivotal moments that ignited our passion for data science, and elucidated why WeData became our chosen platform. From exploring migration and integration to delving into statistics and text mining, we explored the diverse facets of data science that fuel our curiosity and propel our endeavors.
+
+[Listen to the full episode here.](https://open.spotify.com/episode/0YEwGkNdPBNnymTA4yKca8)
