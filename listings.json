@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/blog/podcast/index.html",
       "/blog/github_wrapped/index.html",
       "/blog/CNN/index.html",
+      "/blog/podcast/index.html",
       "/blog/2024-02-11_R_and_Python/index.html",
       "/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html",
       "/blog/My-problem-with-python/index.html",
@@ -41,9 +41,9 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/blog/podcast/index.html",
       "/blog/github_wrapped/index.html",
       "/blog/CNN/index.html",
+      "/blog/podcast/index.html",
       "/blog/2024-02-11_R_and_Python/index.html",
       "/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html",
       "/blog/My-problem-with-python/index.html",
