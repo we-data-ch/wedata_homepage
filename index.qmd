@@ -65,6 +65,53 @@ Latest from the blog
 :::
 :::
 
+
+::: {.feature}
+::: {.feature-top}
+
+<h3> Podcast </h3>
+
+<p>Exploring WeData’s Story</p>
+
+<h4>
+[Learning From Data: A Podcast of WeData’s Story now on Spotify 🎧 ](https://open.spotify.com/episode/0YEwGkNdPBNnymTA4yKca8)</h4>
+
+
+<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Apr 3, 2024</small></p>
+
+
+:::
+
+::: {.feature-bottom}
+[Full Podcast](https://open.spotify.com/episode/0YEwGkNdPBNnymTA4yKca8){.btn .btn-secondary role="button"}
+:::
+:::
+
+
+
+::: {.feature}
+::: {.feature-top}
+
+<h3> Talking about us </h3>
+
+<p>Vie de l'UNIGE</p>
+
+<h4>
+[Des vidéos pour acquérir des<br>  compétences en science des données](https://www.unige.ch/lejournal/vie-unige/automne-2023/data-science-for-all)</h4>
+
+
+<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Sep 8, 2023</small></p>
+
+
+:::
+
+::: {.feature-bottom}
+[Full Article](https://www.unige.ch/lejournal/vie-unige/automne-2023/data-science-for-all/){.btn .btn-secondary role="button"}
+:::
+:::
+
+
+
 <!-- ::: {.feature} -->
 <!-- ::: {.feature-top} -->
 <!-- ### Talks -->
@@ -98,12 +145,8 @@ Latest from the blog
 :::
 :::
 
-### Talking about us
 
-`Vie de l'UNIGE`<br>
-__Des vidéos pour acquérir des<br>  compétences en science des données__ <br>
-<small>September 2023</small> 
 
-[Full Article](https://www.unige.ch/lejournal/vie-unige/automne-2023/data-science-for-all/){.btn .btn-secondary role="button"}
 
-<link rel="me" href="https://github.com/we-data-ch">
+
+
