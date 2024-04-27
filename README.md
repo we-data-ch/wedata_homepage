@@ -1,6 +1,6 @@
 # This is a [Quarto](https://quarto.org/) blog
 
-## Organization
+## Organization ##
 
 I've decided to organize things into three main sections:
 
