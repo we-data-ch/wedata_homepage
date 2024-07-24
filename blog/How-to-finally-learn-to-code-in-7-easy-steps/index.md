@@ -10,15 +10,28 @@ image: image.jpg
 
 # How to finally learn to code in 7 easy steps
 
+## tldr
+
+0. **What to Learn?**: If you don't know which programming language to learn, seek help from relatives or colleagues before looking for advice from people on the internet, as they might be biased.
+1. **Make a Roadmap**: This part can last a maximum of 2 weeks. Start by listing your practical goals (What is my final objective?) and document what you need to know for each part. Then create a roadmap with specific steps. For each important step, add a final project. It does not need to be clear right now. You can share it with other more advanced people to get feedback.
+2. **Collect Resources**: This part can also last a maximum of 2 weeks. The goal is to collect resources that match your roadmap. Be flexible; it is okay to change resources along the way.
+3. **Take Notes Along the Way**: The best way to maintain your level is to take time to make your own notes so that if you are absent for a long time, you can quickly recover most of your level. Also, learn good practices; they help you at any level. Stop coding only. You have to realize that the best way to practice coding is to focus more on things around the code.
+4. **Learn the Basics**: Always start with the basics. Even if you start with a crash course, learn the basics anyway and as soon as possible. It will help you understand the programming language better and solve errors. You do not need to master all the basics since you will come back to them later (and often).
+5. **Engage in Projects**: Projects are fundamental to anchor your knowledge since they require you to use many simple concepts that seem detached at the beginning. By doing your project, you will need to go back to the basics and find resources to complete your knowledge.
+6. **Revisit the Basics**: After projects, you will understand better the importance of basics. Revisiting the basics is not only rereading the documentation or redoing tutorials but also helping others, teaching, creating resources, or joining communities.
+7. **Collaborate**: Working with others helps in many aspects such as being exposed to different coding styles, improving problem-solving skills, discovering new things, and having feedback. If you are not willing to collaborate (or you can't), simply put your code online so other people can see or use it (share it!).
+
+This blog provide an example at the end.
+
 ## Introduction
 
-Whether you're diving into your first programming language or adding another to your repertoire (let's become polyglot!), there's one thing many of us share: *the journey of learning to code on our own*. In today's world, it seems easy to embark on this journey, given the plethora of resources at our fingertips. However, this abundance brings its own set of unique challenges.
+Whether you're diving into your first programming language or adding another to your list (let's become polyglot!), there is one thing many of us share: *the journey of learning to code on our own*. In today's world, it seems easy to embark on this journey, given the plethora of resources available. However, this abundance brings many challenges.
 
-Learning to code independently often leads to what is known as the famous "tutorial hell." It's a common trap where learners, in their quest for the perfect guide, find themselves circling in a maze of tutorials. This endless search makes every tutorial appear indecipherable. And even when the right tutorials are found, months can pass in study without the satisfying sense of real progress, leading to weariness and frustration.
+Learning to code independently often leads to what is known as the famous "tutorial hell". It is a common trap where learners, in their quest for the perfect guide, find themselves circling in a maze of tutorials. This endless search makes every tutorial appear difficult to approach and even when the right tutorials are found, months can pass in study without the sense of real progress, leading to frustration and discouragement. It is normal to feel lost.
 
-Another significant hurdle is the ever-elusive 'perfect time' to learn. Many struggle to find or make time in their busy schedules to dedicate to coding, further prolonging their learning journey. If you need advice on that we have a nice blog post for you: ["The two-minute rule for busy coder/learner"](https://wedata-active-blog.netlify.app/posts/two_minutes_rule/)
+Another significant problem is the well-known 'perfect time' to learn. Many struggle to find or make time in their busy schedules to dedicate to coding, further prolonging their learning journey. If you need advice on that we have a nice blog post for you: ["The two-minute rule for busy coder/learner"](https://wedata-active-blog.netlify.app/posts/two_minutes_rule/)
 
-But fear not! The following 7 steps are designed to help you navigate these challenges more smoothly and effectively, ensuring you won't face the same obstacles that have hindered others. These steps are:
+The following 7 steps are designed to help you navigate these challenges more smoothly and effectively, ensuring you won't face the same obstacles that have hindered others. These steps are:
 
 1.  **Make a roadmap**: Plan your learning journey.
 2.  **Choose the right resources**: Select materials that suit your learning style.
@@ -28,63 +41,68 @@ But fear not! The following 7 steps are designed to help you navigate these chal
 6.  **Revisit the basics**: Regularly reinforce fundamental concepts.
 7.  **Collaborate**: Learn from and with others.
 
-In the rest of this article, we will dive deep into each of these steps, providing you with practical advice and insider tips to make your coding journey a successful and enjoyable one. So, let's get started and turn those coding dreams into reality!
+In the rest of this article, we will dive deep into each of these steps, to provide practical advices to make your coding journey a successful and enjoyable one.
 
-## 0. Help! I don't know what to learn!
+## 0. Help! I don't know what language to learn!
 
 *Note: If you exactly know what you want to learn you can skip this part!*
 
-If you're **feeling overwhelmed** about where to start your coding journey, you're not alone. "What should I learn first?" is an increasingly common question, not just due to the vast array of options available, but also because of the ongoing 'wars' between different programming languages, each claiming to be the best. Navigating through these passionate and often subjective debates can be tricky. It can lead to **two main issues**: **difficulty in making a choice** (which breeds procrastination) or **ending up with a language that doesn’t really suit your needs**.
+If you're **feeling overwhelmed** about where to start your coding journey, you are not alone. "What should I learn first?" is an increasingly common question, not just due to the big number of options available, but also because of the ongoing 'wars' between different programming languages, each claiming to be the best (not the programming language but their hardcore fans). Navigating through these passionate and often subjective debates can be tricky. It can lead to **two main issues**: **difficulty in making a choice** (which leads to procrastination) or **ending up with a language that doesn’t really suit your needs**.
 
 Take, for instance, the classic debates like “The best programming language for...”, “Which JavaScript Framework to choose?”, or the famous “Python vs. R”. These discussions are recurrent and can be more confusing than helpful. So, how do you cut through the noise?
 
-The simplest approach is to **avoid starting your search on the Internet**. Instead, **make a list of your own needs and objectives**. On the Internet, there's a risk that others will decide for you, pitching a language as the be-all and end-all (though, thankfully, not everyone does this). Approaching with a clear idea of what you want to achieve helps limit undue influence and indecision.
+The simplest approach is to **avoid starting your search on the Internet**. Instead, **make a list of your own needs and objectives as clear as possible**. On the Internet (in discussion), there is a risk that others will decide for you, pitching a language as the be-all and end-all (though, thankfully, not everyone does this). Approaching with a clear idea of what you want to achieve helps limit bad influence and indecision.
 
-Also, **consider the support and resources available around you** (friends, colleagues or books) and align them with your personal or professional plans. **If you're still in doubt, it's okay to pick an option at random or go with a 'default' choice**. Don't linger too long in this phase of decision-making. Remember, you can always pivot to another language later – no learning is ever wasted.
+Also, **consider the support and resources available around you** (friends, colleagues or books) and align them with your personal or professional plans.
 
-The beauty of programming is that the **core concepts are often transferable between languages**. Different programming languages are just tools – it's how you use them that matters. For example, if you start with Python due to its simplicity and later decide to switch to Java, you’ll find that many concepts like loops, variables, and data structures are similar, just with different syntax.
+**If you're still in doubt, it's okay to pick an option at random or go with a 'default' choice**. Take your time but don't linger too long in this phase of decision-making. Remember, you can always pivot to another language later – no learning is ever wasted.
+
+The beauty of programming is that the **core concepts are often transferable between languages**. Different programming languages are just tools – it is how you use them that matters. For example, if you start with Python due to its simplicity and later decide to switch to Java, you will find that many concepts like loops, variables, and data structures are similar, just with different syntax.
 
 ### But who to talk to?
 
-It's a legitimate question - as a beginner, we don't necessarily know how to translate our needs into clear, domain-specific objectives. Before going on the Internet, it's always wiser to **talk it over with a more advanced acquaintance**. Now, in the age of artificial intelligence, an in-depth **discussion with a model like ChatGPT can be enlightening** (but becareful it might be biased!).
-
-In summary, step zero is about **making an informed, yet not overthought, decision**. Choose a language or a technology based on your current needs, availability of resources, and your future goals. And remember, the journey of coding is flexible – it’s perfectly fine to change paths as you grow and discover more about your interests and the tech world.
+It's a legitimate question - as a beginner, we don't necessarily know how to translate our needs into clear, domain-specific objectives. Before going on the Internet, it's always wiser to **talk it over with a more advanced acquaintance**. Now, in the age of artificial intelligence, an in-depth **discussion with a model like ChatGPT can be enlightening**. But becareful it might be really really really biased! Use it as a last resort!
 
 ## 1. Make a roadmap
 
-The journey of learning to code is akin to embarking on a voyage – having a roadmap is crucial. The path of least resistance often leads to joining online curricula or courses on platforms like \[Coursera\](<https://www.coursera.org/,> [Udemy](https://www.udemy.com/), or [freeCodeCamp](https://www.freecodecamp.org/). While these courses are beneficial and circumvent the need to design your own program, they are, by nature, very standardized. They may not align perfectly with your objectives or your preferred learning style.
+**Having a roadmap is crucial**. The path of least resistance often leads to joining online curricula or courses on platforms like [Coursera](https://www.coursera.org/), [Udemy](https://www.udemy.com/) or [freeCodeCamp](https://www.freecodecamp.org/). While these courses are beneficial and avoid the need to design your own program, they are, by nature, very standardized. They may not align perfectly with your objectives or your preferred learning style.
 
-If you find that these courses don't meet your unique needs, crafting your own roadmap is a viable alternative. It's tempting to dive straight into tutorials and start coding, but this approach can often lead to confusion and discouragement. **The key is to have a clear goal**. You should be able to answer questions like, "Why do I want to learn this programming language?" or "What do I specifically want to create with it?" Remember, a programming language can serve many purposes – from developing websites (like HTML/CSS/JavaScript for front-end development) to creating data analysis tools (such as Python for data science).
+If you find that these courses don't meet your unique needs, creating your own roadmap is a viable alternative. It is tempting to dive straight into tutorials and start coding, but this approach can often lead to confusion and discouragement as discussed in introduction. **The key is to have a clear goal**. You should be able to answer questions like, "Why do I want to learn this programming language?" or "What do I specifically want to create with it?" Remember, a programming language can serve many purposes – from developing websites (like HTML/CSS/JavaScript for front-end development) to creating data analysis tools (such as Python for data science). In the case of R for instance, you may want to learn it for biologie, social science, or outside research, for finance or building web app.
 
-Once you've defined your objective, the next step is to **break it down into smaller, achievable, and measurable goals**. For instance, if your aim is to build a website, start by learning basic HTML and CSS. Then, gradually progress to more complex tasks like JavaScript and back-end development.
+Once you have defined your objectives, the next step is to **break it/them down into smaller, achievable, and measurable goals**. For instance, if your aim is to build a website, start by learning basic HTML and CSS. Then, gradually progress to more complex tasks like JavaScript and back-end/front-end development.
 
-With these smaller goals in mind, **order them and compile them into a learning roadmap**. The more personalized your roadmap, the better. However, it's essential to **start with the basics** regardless of your ultimate goal. At this stage, your roadmap doesn’t have to be incredibly detailed, but you should at least know what skills you need to acquire at each stage.
+With these smaller goals in mind, **order them and compile them into a learning roadmap**. The more personalized your roadmap, the better. However, it's essential to **start with the basics** regardless of your ultimate goal. At this stage, your roadmap does not have to be incredibly detailed, but you should at least know what skills you need to acquire at each stage.
 
-**Don't underestimate the importance of this planning phase**. Dedicate **a good amount of time** to it – **up to two weeks**, if necessary. During this period, don't hesitate to seek advice from more advanced individuals or even artificial intelligence platforms. Compare your plan with roadmaps recommended by others to ensure you're on the right track.
+If it is hard to make goals, find online ressources that compile ressources specific to your need or, in last resort, already made roadmaps. For instance, for R UseRs I highly recommand [the big book of R](https://www.bigbookofr.com/) that compile many (almost) free ressources on R for many subject (data science, finance, natural science, etc.). It can give good ideas.
 
-Remember, your roadmap is not set in stone. It should be a living document that evolves as you gain more knowledge and understanding of the subject. You can't know everything from the outset, and it's perfectly fine to adapt your plan as you progress. **Especially when it comes to projects (see "6. Engage in projects")**.
+**Don't underestimate the importance of this planning phase**. Dedicate **a good amount of time** to it – **up to two weeks**, if necessary. During this period, don't hesitate to seek advice from more advanced individuals.
 
-In conclusion, a well-thought-out roadmap tailored to your specific goals and learning style is an invaluable tool in your journey to learn coding. It provides direction, keeps you focused, and helps measure your progress, setting you up for a successful and fulfilling learning experience.
+Remember, your roadmap is not set in stone. It should be a living document that evolves as you gain more knowledge and understanding of the subject. You can't know everything from the start, and it is perfectly fine to adapt your plan as you progress. **Especially when it comes to projects (see "6. Engage in projects")**.
 
 ## 2. Choose the right resources
 
-Selecting the right resources is a crucial step in making your roadmap more tangible. It’s not necessary to have resources for every step right away; you can discover new resources as you progress. The key is not to get bogged down in finding the 'best' resources, as this can be a laborious and often futile task. Focus on finding resources that best suit your learning style.
+Selecting the right resources is a crucial step in making your roadmap more tangible. It is not necessary to have resources for every step right away; you can discover new resources as you progress. The key is not to focus too much in finding the 'best' resources, as this can be a laborious and often futile task. Focus on finding resources that best suit your learning style.
 
-To help you with this, ask yourself some guiding questions: - **"Am I willing to spend money to learn?"** - **"Do I prefer paper or digital resources?"** - **"Do I prefer static or interactive resources?"**
+To help you with this, ask yourself some guiding questions: 
+- **"Am I willing to spend money to learn?"**
+- **"Do I prefer paper or digital resources?"**
+- **"Do I prefer static or interactive resources?"**
 
-For each of these combinations, there are corresponding resource types: - If you’re open to spending money and prefer paper resources, consider investing in **comprehensive coding books**. - If you prefer digital and are willing to invest, **paid online courses** on platforms like [Udemy](https://www.udemy.com/) or [Pluralsight](https://www.pluralsight.com/) offer structured learning paths. - For those who prefer free resources, there’s a wealth of **YouTube tutorials** and **online documentation**. - If interactive learning is your style, platforms like [**Codecademy**](https://www.codecademy.com/) or [**freeCodeCamp**](https://www.freecodecamp.org/) offer hands-on coding exercises.
+For each of these combinations, there are corresponding resource types:
+- If you’re open to spending money and prefer paper resources, consider investing in **comprehensive coding books**.
+- If you prefer digital and are willing to invest, **paid online courses** on platforms like [Udemy](https://www.udemy.com/) or [Pluralsight](https://www.pluralsight.com/) offer structured learning paths.
+- For those who prefer free resources, there is a bunch of **YouTube tutorials** and **online documentation**.
+- If interactive learning is your style, platforms like [**Codecademy**](https://www.codecademy.com/) or [**freeCodeCamp**](https://www.freecodecamp.org/) offer hands-on coding exercises.
 
 For more interactive learning ressources (exercices) I wrote a blog post here: ["Free programming exercice website"](https://wedata-active-blog.netlify.app/posts/programming_exercise_websites/).
 
-It’s important to note that preferences might change based on your experience level. For example, if you’re learning your second programming language, you might find more advanced resources like **technical blogs or community forums** more beneficial.
+It is important to note that preferences might change based on your experience level. For example, if you are learning your second programming language, you might find more advanced resources like **technical blogs or community forums** more beneficial.
 
 However, each type of resource has its shortcomings. Books can become outdated, online courses might not cover the latest technologies, and videos can sometimes lack depth. Don’t hesitate to ask for recommendations from experienced coders or online communities for a list of useful resources.
 
-A great way to start strong is by taking a **crash course (written or video) of maximum 2 hours**, and coding along with it. This approach helps you quickly grasp the syntax and philosophy of the language. Remember, it’s crucial to **practice actively** and not just passively follow along with the theory. For more advanced programmer with a good understanding of programming concepts reaching their new programming language a website like ["learning x in y minutes"](https://learnxinyminutes.com/) might be a good ressource.
+A great way to start strong is by taking a **crash course (written or video) of maximum 2 hours**, and coding along with it. This approach helps you quickly grasp the syntax and philosophy of the language. Remember, it’s crucial to **practice actively** and not just passively follow along with the theory. For more advanced programmer with a good understanding of programming concepts reaching their new programming language a website like ["learning x in y minutes"](https://learnxinyminutes.com/) might be a good ressource (but you can also try it at any level even if it is your first programming language).
 
-Keep in mind that there’s no such thing as a perfect resource. It’s okay to change your resources as you progress. The most important thing is to work hard and stick with it for as long as possible.
-
-Now that the beginning of your roadmap is set, you're ready to embark on your coding journey with confidence. Remember, the journey of a thousand lines of code begins with a single keystroke!
+Keep in mind that there’s no such thing as a perfect resource. It is okay to change your resources as you progress. The most important thing is to work hard and stick with it for as long as possible.
 
 ## 3. Take notes along the way
 
@@ -134,22 +152,22 @@ As data scientists or statisticians, we have the impression that these concepts 
 
 ### Estimated learning times for programming languages
 
-Here’s an estimated learning time for various programming languages (non-exhaustive list), ordered from easiest to most difficult:
+Here is an estimated learning time for basic concepts in various programming languages (non-exhaustive and subjective list), ordered from easiest to most difficult:
 
 | Programming language | Level of difficulty | Estimated learning time |
 |----------------------|---------------------|-------------------------|
 | Lua                  | Easy                | 2-3 weeks               |
 | Python               | Easy                | 3-4 weeks               |
-| R                    | Easy-Moderate       | 4-5 weeks               |
-| Julia                | Moderate            | 5-6 weeks               |
+| R                    | Easy                | 3-4 weeks               |
+| Julia                | Easy-Moderate       | 4-5 weeks               |
 | JavaScript           | Moderate            | 5-6 weeks               |
-| Go                   | Moderate-Hard       | 6-8 weeks               |
+| Go                   | Moderate            | 5-6 weeks               |
 | Java                 | Moderate-Hard       | 6-8 weeks               |
-| Rust                 | Hard                | 8-10 weeks              |
-| Nim                  | Hard                | 8-10 weeks              |
+| Nim                  | Moderate-Hard       | 6-8 weeks               |
 | C/C++                | Hard                | 8-10 weeks              |
+| Rust                 | Hard                | 10-15 weeks             |
 
-Remember, it’s okay not to master everything at first. Your understanding will deepen as you work on projects and revisit the basics later. The most important thing is to **take comprehensive notes** during your learning process. You will come back to it latter!
+Remember, it is okay not to master everything at first. Your understanding will deepen as you work on projects and revisit the basics later. The most important thing is to **take comprehensive notes** during your learning process. You will come back to it latter!
 
 In conclusion, give yourself time to thoroughly learn and understand the basics of your chosen programming language. This solid foundation will set you up for success as you progress in your coding journey.
 
