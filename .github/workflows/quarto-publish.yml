@@ -17,6 +17,9 @@ jobs:
           uses: quarto-dev/quarto-actions/setup@v2
           with:
             version: 1.3.340
+            
+        - name: Set CRAN Mirror
+          run: R -e 'options(repos = c(CRAN = "https://cloud.r-project.org"))'
 
 
         - name: Install libs
