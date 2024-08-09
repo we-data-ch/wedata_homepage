@@ -235,7 +235,6 @@ The Single-Year Showdown: We outsmarted the dreaded "span is too small" error. T
 #### 🚀 Launching Our Creation into the Wild
 
 ```{r eval=FALSE}
-::
 rsconnect::deployApp()
 ```
 

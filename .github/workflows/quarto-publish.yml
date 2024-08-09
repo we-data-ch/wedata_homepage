@@ -29,7 +29,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install --yes libcurl4-openssl-dev
+          sudo apt-get install --yes libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libxml2-dev libssl-dev
 
       - name: Install dependencies with renv
         uses: r-lib/actions/setup-renv@v2
