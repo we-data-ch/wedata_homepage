@@ -19,9 +19,6 @@ jobs:
           with:
             version: 1.3.340
 
-        - name: Set CFLAGS
-          run: echo "CFLAGS += -Wno-error=format-security" >> ~/.R/Makevars
-
 
         - name: Set CRAN Mirror
           run: R -e 'options(repos = c(CRAN = "https://cloud.r-project.org"))'
