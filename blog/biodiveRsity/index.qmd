@@ -1,0 +1,287 @@
+---
+date: "2024-08-09"
+title: "Biodiversity Bonanza: Crafting a Shiny Species Spotter!"
+categories:
+  - R
+  - Shiny
+  - Data Visualization
+  - App
+  - Data Wrangling
+  - GIS
+image: bio.webp
+author: David Munoz Tord
+---
+
+## 🌿 Welcome to the Forest of Data!
+
+<img src="./bio.webp" alt="diversity" style="width: 100%; height: auto;">
+
+
+Ahoy, fellow code adventurers and nature enthusiasts! Today, we're diving headfirst into the wild world of biodiversity data. Grab your digital binoculars, because we're about to embark on a thrilling journey to build a Shiny app that'll make David Attenborough jealous!
+
+### 🔍 Our Mission: Operation Species Spotter
+
+Picture this: You're a wildlife researcher with a mountain of data and a burning question - "How have animal sightings changed over time?" Fear not! We're crafting a tool so snazzy, it'll turn that data mountain into a molehill faster than you can say "Marmota marmota"!
+
+### 🛠️ Our Weapons of Mass Data-struction
+1. **The Shapeshifting Maps**: Different ways to visualize you data and even query the actual images.
+2. **The All-Seeing Search Bar**: A selectize input so smart, it'll find your species faster than a cheetah chasing its lunch.
+3. **The Time-Traveling Timeline**: A plot that'll zip through years of animal sightings quicker than you can say "Great Scott!"
+
+Let's peek under the hood of our biodiversity hotrod...
+
+[See the full code on GitHub](https://github.com/munoztd0/biodiversity_app)
+
+
+
+## 🎭 The Star Players in Our Data Drama
+
+### 🗺️ The Cartographer's Delight: Our Magical Map Module
+
+Hold onto your compasses, explorers! We're about to unfold a map so interactive!
+
+```{r}
+
+
+map_server <- function(id, selected_species_data, use_heatmap, config) {
+  moduleServer(id, function(input, output, session) {
+    output$map <- renderLeaflet({
+      leaflet() |>
+        addTiles() |>
+        setView(lng = config$MAP_CENTER_LNG, lat = config$MAP_CENTER_LAT, zoom = config$MAP_ZOOM)
+    })
+    
+    observe({
+      data <- selected_species_data()
+      use_heatmap <- use_heatmap()
+      
+      if (!is.null(data) && nrow(data) > 0) {
+        valid_data <- data[!is.na(data$latitudeDecimal) & !is.na(data$longitudeDecimal), ]
+        if (nrow(valid_data) > 0) {
+          map <- leafletProxy("map") |>
+            clearMarkerClusters() |>
+            clearHeatmap()
+          
+          if (use_heatmap) {
+            map |> addHeatmap(
+              data = valid_data,
+              lng = ~longitudeDecimal, 
+              lat = ~latitudeDecimal,
+              blur = config$HEATMAP_BLUR, 
+              max = config$HEATMAP_MAX, 
+              radius = config$HEATMAP_RADIUS
+            )
+          } else {
+
+            
+            map |> addMarkers(
+              data = valid_data,
+              lng = ~longitudeDecimal, 
+              lat = ~latitudeDecimal,
+              popup = ~paste(
+                "<strong>", scientificName, "</strong><br>",
+                "Date: ", eventDate, "<br>",
+                ifelse(!is.na(accessURI), 
+                       paste0("<img src='", accessURI, "' width='100'><br>",
+                              "Image by: ", creator, "<br>",
+                              "License: ", multimedia_license),
+                       "No image available")
+              ),
+              clusterOptions = markerClusterOptions(
+                showCoverageOnHover = FALSE,
+                zoomToBoundsOnClick = TRUE,
+                spiderfyOnMaxZoom = TRUE,
+                removeOutsideVisibleBounds = TRUE,
+                disableClusteringAtZoom = config$CLUSTER_ZOOM_DISABLE
+              )
+            )
+          }
+        }
+      }
+    })
+  })
+}
+```
+
+#### 🌋 Features That'll Make You Erupt with Joy
+
+Shapeshifting Views: Toggle between marker clusters and heatmaps faster than a chameleon changes colors!
+Popup Bonanza: Click a marker and BOOM! Species info, dates, and even glamour shots of our animal celebs!
+Cluster Parties: Watch as our markers gather in cliques like teenagers at a mall. Zoom in to break up the party!
+
+#### 🎭 The Great Heatmap vs. Marker Debate
+Our map is like a secret agent with two disguises:
+
+Heatmap Mode: Transform your map into a thermal vision of biodiversity hotspots. It's like predator vision, but for science!
+Marker Mode: Unleash a confetti of markers, each hiding a treasure trove of information. It's Where's Waldo, but for species!
+
+
+
+### 🔠 The Search Sorcerer
+This little wizard conjures up species names faster than you can type "platypus". It's like Google for critters, but cooler!
+
+
+```{r}
+search_server <- function(id, biodiversity_data) {
+  # Server sorcery unfolds
+
+  search_server <- function(id, biodiversity_data) {
+  moduleServer(id, function(input, output, session) {
+    # Prepare search data
+    search_data <- biodiversity_data |>
+      select(scientificName, vernacularName) |>
+      distinct() |>
+      mutate(search_term = paste(scientificName, vernacularName, sep = " - ")) |>
+      arrange(scientificName)
+
+    updateSelectizeInput(session, "species_search", 
+                         choices = setNames(search_data$scientificName, search_data$search_term),
+                         selected = "Marmota marmota",
+                         options = list(
+                           placeholder = 'Type to search species',
+                           maxOptions = 10000,  # Increase this number
+                           searchField = c('value', 'label'),
+                           render = I("{
+                             option: function(item, escape) {
+                               return '<div>' + escape(item.label) + '</div>';
+                             }
+                           }")
+                         ))
+    
+    return(reactive({ input$species_search }))
+  })
+}
+
+}
+```
+
+
+
+### 📊 The Timeline Tamer
+Watch years of animal sightings dance before your eyes! This module turns boring numbers into a visual feast that would make any statistician swoon.
+
+
+```{r}
+
+timeline_server <- function(id, selected_data) {
+  # Data wrangling extravaganza
+    timeline_server <- function(id, selected_data) {
+  moduleServer(id, function(input, output, session) {
+    output$timeline <- renderPlotly({
+      data <- selected_data()
+      if (!is.null(data) && nrow(data) > 0) {
+        # Aggregate data by year
+        yearly_counts <- data |>
+          mutate(year = lubridate::year(eventDate)) |>
+          count(year)
+        
+        # Create the base plot
+        p <- plot_ly() |>
+          add_trace(data = yearly_counts, x = ~year, y = ~n, type = "bar", 
+                    name = "Observations", marker = list(color = "#165098"))
+        
+        # Check if data spans more than one year
+        if (length(unique(yearly_counts$year)) > 1) {
+          # Calculate smooth regression
+          loess_fit <- loess(n ~ year, data = yearly_counts, span = 0.75)
+          smoothed_data <- data.frame(
+            year = seq(min(yearly_counts$year), max(yearly_counts$year), length.out = 100)
+          )
+          smoothed_data$n <- predict(loess_fit, newdata = smoothed_data)
+          
+          # Add trend line to the plot
+          p <- p |>
+            add_trace(data = smoothed_data, x = ~year, y = ~n, type = "scatter", mode = "lines",
+                      name = "Trend", line = list(color = "#e94560", width = 3))
+        }
+        
+        # Layout (same as before)
+        p <- p |>
+          layout(
+            title = list(text = "Observations Over Time", font = list(size = 24, color = "#ffffff")),
+            xaxis = list(title = "Year", titlefont = list(size = 18, color = "#a9a9a9"),
+                         tickfont = list(size = 14, color = "#a9a9a9"),
+                         tickformat = "d"),
+            yaxis = list(title = "Number of Observations", titlefont = list(size = 18, color = "#a9a9a9"),
+                         tickfont = list(size = 14, color = "#a9a9a9")),
+            legend = list(font = list(color = "#a9a9a9")),
+            paper_bgcolor = "#1a1a2e",
+            plot_bgcolor = "#16213e",
+            margin = list(l = 80, r = 40, b = 60, t = 80, pad = 4),
+            barmode = "overlay"
+          )
+        
+        p
+      }
+    })
+  })
+}
+  
+}
+
+```
+
+
+
+#### 🎢 Thrills, Spills, and Coding Chills
+Building this cartographic app was no walk in the park. We faced:
+
+The Coordinate Conundrum: We wrangled latitude and longitude like a cowboy at a rodeo. Yee-haw, data points!
+The Cluster Kerfuffle: We taught our markers to play nice and form orderly groups. It's like herding cats, but with GPS!
+The Heatmap Hustle: We turned data density into a visual feast. It's hotter than a jalapeño... visually speaking!
+The Great Data Deluge: We tamed a tsunami of biodiversity data with our bare hands (and some nifty dplyr magic)!
+The Single-Year Showdown: We outsmarted the dreaded "span is too small" error. Take that, statistics gremlins!
+
+#### 🚀 Launching Our Creation into the Wild
+
+```{r eval=FALSE}
+::
+rsconnect::deployApp()
+```
+
+
+#### 🔮 The Future is Wild
+With our map module, you can:
+
+Zoom from continent to backyard faster than you can say "biodiversity hotspot"
+Uncover species hangout spots like a nature paparazzi
+Play "Six Degrees of Species Separation" with our interconnected data points
+Search for species faster than a peregrine falcon in a nosedive
+Watch observation trends unfold like a time-lapse of a blooming rainforest
+Impress your scientist friends at parties (because who doesn't talk about R at parties?)
+
+
+But wait, there's more! Imagine if this app could:
+
+
+
+Time-travel through species migrations (DeLorean not included)
+Predict future animal meetup spots (like Tinder, but for wildlife)
+Generate 3D holograms of habitats (Star Wars, eat your heart out!)
+Map species like a GPS for the animal kingdom
+Predict animal trends better than a psychic octopus
+Generate David Attenborough-style narration for each species (okay, we're dreaming big here)
+
+
+So there you have it, folks! Our map module isn't just a feature, it's a portal to adventure. It's not just showing where animals have been spotted; it's inviting you to become the next great explorer from the comfort of your laptop.
+Remember, in the world of biodiversity data, X marks the spot... and we've got all the Xs you could ever want! Now go forth and map your way to glory!
+
+
+
+#### 🎉 The Grand Finale
+There you have it, folks! 
+
+
+```{=html}
+<iframe width="760" height="815" src="https://munoztd0.shinyapps.io/BiodiveRsity"></iframe>
+```
+
+
+
+We've just built the Swiss Army knife of biodiversity visualization. It slices, it dices, it even makes julienne fries! (Okay, maybe not that last part.)
+Remember, in the jungle of data, the prepared coder is king. So go forth, explore, and may your plots be ever in your favor!
+
+[Open it full](https://munoztd0.shinyapps.io/BiodiveRsity)
+
+#### Notes
+P.S. No animals were harmed in the making of this Shiny app, but several keyboards were tickled mercilessly.
