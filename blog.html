@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>We Data -</title>
+<title>blog – We Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -52,7 +52,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -61,8 +67,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -109,10 +117,9 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 <!-- =======================  Google Translate 
 ======================= -->
 
-<meta name="twitter:title" content="We Data -">
-<meta name="twitter:image" content="https://we-data.ch/blog/biodiveRsity/bio.webp">
+<meta name="twitter:title" content="– We Data">
 <meta name="twitter:creator" content="@munoztd0">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head><body class="nav-fixed"><div style="float: right">
    <div id="google_translate_element" style="position: absolute; right: 0px; z-index: 1;"></div>
 </div>
@@ -184,75 +191,106 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
  
  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 
 
 
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./images/primary.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-users" aria-label="users"></i> Team</span></a>
+    <a class="nav-link" href="./exercises.html"> 
+<span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Exercises</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+    <a class="nav-link" href="./team.html"> 
+<span class="menu-text"><i class="fa-solid fa-users" aria-label="users"></i> Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html"> 
+<span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/we-data-ch" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/we-data-ch"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/@wedata_unige" rel="" target=""><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige"> <i class="bi bi-youtube" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/wedata_unige" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/wedata_unige"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -268,6 +306,7 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 
 
 
+
 <section id="blog" class="level1">
 <h1>Blog</h1>
 <p><br></p>
@@ -278,19 +317,19 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,Shiny,Data Visualization,App,Data Wrangling,GIS" data-listing-date-sort="1723161600000" data-listing-file-modified-sort="1723194824744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14">
+<div class="quarto-post image-right" data-index="0" data-categories="R,Shiny,Data Visualization,App,Data Wrangling,GIS" data-listing-date-sort="1723161600000" data-listing-file-modified-sort="1723503459842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2694">
 <div class="thumbnail">
-<p><a href="./blog/biodiveRsity/index.html"> <img src="./blog/biodiveRsity/bio.webp" class="thumbnail-image"> </a></p>
+<p><a href="./blog/biodiveRsity/index.html" class="no-external"></a></p><a href="./blog/biodiveRsity/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/biodiveRsity/bio.webp" class="thumbnail-image"></p>
+</a><p><a href="./blog/biodiveRsity/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/biodiveRsity/index.html">
 <h3 class="no-anchor listing-title">
-Biodiversity Bonanza: Crafting a Shiny Species Spotter!
+<a href="./blog/biodiveRsity/index.html" class="no-external">Biodiversity Bonanza: Crafting a Shiny Species Spotter!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/biodiveRsity/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -311,14 +350,12 @@ Data Wrangling
 GIS
 </div>
 </div>
-<a href="./blog/biodiveRsity/index.html">
 <div class="listing-description">
-Ahoy, fellow code adventurers and nature enthusiasts! Today, we’re diving headfirst into the…
+<a href="./blog/biodiveRsity/index.html" class="no-external">Ahoy, fellow code adventurers and nature enthusiasts! Today, we’re diving headfirst into the wild world of biodiversity data. Grab your digital binoculars, because we’re…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/biodiveRsity/index.html">
+<a href="./blog/biodiveRsity/index.html" class="no-external">
 <div class="listing-date">
 Aug 9, 2024
 </div>
@@ -328,19 +365,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="R,Quarto,Github,Stats" data-listing-date-sort="1710806400000" data-listing-file-modified-sort="1723194824744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="1" data-categories="R,Quarto,Github,Stats" data-listing-date-sort="1710806400000" data-listing-file-modified-sort="1723503459842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2236">
 <div class="thumbnail">
-<p><a href="./blog/github_wrapped/index.html"> <img src="./blog/github_wrapped/octo.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/github_wrapped/index.html" class="no-external"></a></p><a href="./blog/github_wrapped/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/github_wrapped/octo.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/github_wrapped/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/github_wrapped/index.html">
 <h3 class="no-anchor listing-title">
-🚀🚀 Github Wrapped 2023 🚀🚀
+<a href="./blog/github_wrapped/index.html" class="no-external">🚀🚀 Github Wrapped 2023 🚀🚀</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/github_wrapped/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -355,14 +392,12 @@ Github
 Stats
 </div>
 </div>
-<a href="./blog/github_wrapped/index.html">
 <div class="listing-description">
-The time has come to create a personal GitHub wrapped using Quarto Dashboards. This is a great way to showcase your work and projects.
+<a href="./blog/github_wrapped/index.html" class="no-external">The time has come to create a personal GitHub wrapped using Quarto Dashboards. This is a great way to showcase your work and projects.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/github_wrapped/index.html">
+<a href="./blog/github_wrapped/index.html" class="no-external">
 <div class="listing-date">
 Mar 19, 2024
 </div>
@@ -372,19 +407,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Python,CNN,Deep Learning,Machine Learning,Computer Vision" data-listing-date-sort="1710115200000" data-listing-file-modified-sort="1723194824728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-categories="Python,CNN,Deep Learning,Machine Learning,Computer Vision" data-listing-date-sort="1710115200000" data-listing-file-modified-sort="1723503459826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
 <div class="thumbnail">
-<p><a href="./blog/CNN/index.html"> <img src="./blog/CNN/dog.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/CNN/index.html" class="no-external"></a></p><a href="./blog/CNN/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/CNN/dog.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/CNN/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/CNN/index.html">
 <h3 class="no-anchor listing-title">
-Look a doggo !: Computer Vision with Python
+<a href="./blog/CNN/index.html" class="no-external">Look a doggo !: Computer Vision with Python</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/CNN/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -402,14 +437,12 @@ Machine Learning
 Computer Vision
 </div>
 </div>
-<a href="./blog/CNN/index.html">
 <div class="listing-description">
-The goal is to build a pipeline that can be used within a web or mobile app to process real-world, user-supplied…
+<a href="./blog/CNN/index.html" class="no-external">The goal is to build a pipeline that can be used within a web or mobile app to process real-world, user-supplied images. Given an image of a dog, the algorithm will identify…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/CNN/index.html">
+<a href="./blog/CNN/index.html" class="no-external">
 <div class="listing-date">
 Mar 11, 2024
 </div>
@@ -419,19 +452,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Spotify,Podcast,Data Science,Association" data-listing-date-sort="1709424000000" data-listing-file-modified-sort="1723194824744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="Spotify,Podcast,Data Science,Association" data-listing-date-sort="1709424000000" data-listing-file-modified-sort="1723503459842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
 <div class="thumbnail">
-<p><a href="./blog/podcast/index.html"> <img src="./blog/podcast/podcast.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/podcast/index.html" class="no-external"></a></p><a href="./blog/podcast/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/podcast/podcast.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/podcast/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/podcast/index.html">
 <h3 class="no-anchor listing-title">
-Learning From Data: A Podcast of WeData’s Story now on Spotify 🎧
+<a href="./blog/podcast/index.html" class="no-external">Learning From Data: A Podcast of WeData’s Story now on Spotify 🎧</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/podcast/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Spotify'); return false;">
 Spotify
@@ -446,14 +479,12 @@ Data Science
 Association
 </div>
 </div>
-<a href="./blog/podcast/index.html">
 <div class="listing-description">
-Thrilled to share that Vestin Hategekimana and David Munoz Tord are featured in the latest episode of “Learning from Data”…
+<a href="./blog/podcast/index.html" class="no-external">Thrilled to share that Vestin Hategekimana and David Munoz Tord are featured in the latest episode of “Learning from Data” podcast! 🚀 Join us as we discuss WeData, our…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/podcast/index.html">
+<a href="./blog/podcast/index.html" class="no-external">
 <div class="listing-date">
 Mar 3, 2024
 </div>
@@ -463,19 +494,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="R,Python,tidyverse,polars,plotly" data-listing-date-sort="1707609600000" data-listing-file-modified-sort="1723194824724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="4" data-categories="R,Python,tidyverse,polars,plotly" data-listing-date-sort="1707609600000" data-listing-file-modified-sort="1723503459822" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1535">
 <div class="thumbnail">
-<p><a href="./blog/2024-02-11_R_and_Python/index.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaU1MQP7bh0D7BBUpYd3qE2SrBW9_6kq_7DAjdJ_zvSmppcYHi0zfV6TAnCUAeOLXHb60&amp;usqp=CAU" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external"></a></p><a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external">
+<p><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaU1MQP7bh0D7BBUpYd3qE2SrBW9_6kq_7DAjdJ_zvSmppcYHi0zfV6TAnCUAeOLXHb60&amp;usqp=CAU" class="thumbnail-image"></p>
+</a><p><a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2024-02-11_R_and_Python/index.html">
 <h3 class="no-anchor listing-title">
-R and Python side-by-side for data wrangling
+<a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external">R and Python side-by-side for data wrangling</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -493,14 +524,12 @@ polars
 plotly
 </div>
 </div>
-<a href="./blog/2024-02-11_R_and_Python/index.html">
 <div class="listing-description">
-After seeing many <em>language wars</em> style posts about <i class="fa-brands fa-r-project" aria-label="r-project"></i> vs <i class="fa-brands fa-python" aria-label="python"></i> and the sort of comparisons being made, I realized that there aren’t many helpful side-by-sides that show you how to do <em>…</em><em></em><em></em>
+<a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external">After seeing many <em>language wars</em> style posts about <i class="fa-brands fa-r-project" aria-label="r-project"></i> vs <i class="fa-brands fa-python" aria-label="python"></i> and the sort of comparisons being made, I realized that there aren’t many helpful side-by-sides that show you how to do <em>…</em><em></em><em></em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2024-02-11_R_and_Python/index.html">
+<a href="./blog/2024-02-11_R_and_Python/index.html" class="no-external">
 <div class="listing-date">
 Feb 11, 2024
 </div>
@@ -510,19 +539,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="R,Python" data-listing-date-sort="1704585600000" data-listing-file-modified-sort="1723194824732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="28">
+<div class="quarto-post image-right" data-index="5" data-categories="R,Python" data-listing-date-sort="1704585600000" data-listing-file-modified-sort="1723503459830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="28" data-listing-word-count-sort="5572">
 <div class="thumbnail">
-<p><a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html"> <img src="./blog/How-to-finally-learn-to-code-in-7-easy-steps/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external"></a></p><a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/How-to-finally-learn-to-code-in-7-easy-steps/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html">
 <h3 class="no-anchor listing-title">
-How to finally learn to code in 7 easy steps
+<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external">How to finally learn to code in 7 easy steps</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -531,14 +560,12 @@ R
 Python
 </div>
 </div>
-<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html">
 <div class="listing-description">
-This blog provide an example at the end.
+<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external">This blog provide an example at the end.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html">
+<a href="./blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html" class="no-external">
 <div class="listing-date">
 Jan 7, 2024
 </div>
@@ -548,32 +575,30 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Python" data-listing-date-sort="1704585600000" data-listing-file-modified-sort="1723194824732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="6" data-categories="Python" data-listing-date-sort="1704585600000" data-listing-file-modified-sort="1723503459830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2131">
 <div class="thumbnail">
-<p><a href="./blog/My-problem-with-python/index.html"> <img src="./blog/My-problem-with-python/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/My-problem-with-python/index.html" class="no-external"></a></p><a href="./blog/My-problem-with-python/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/My-problem-with-python/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/My-problem-with-python/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/My-problem-with-python/index.html">
 <h3 class="no-anchor listing-title">
-My problem with Python
+<a href="./blog/My-problem-with-python/index.html" class="no-external">My problem with Python</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/My-problem-with-python/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
 </div>
 </div>
-<a href="./blog/My-problem-with-python/index.html">
 <div class="listing-description">
-Today, we’re diving into a…
+<a href="./blog/My-problem-with-python/index.html" class="no-external">Today, we’re diving into a rather controversial topic: ‘My problem with Python.’ But before you raise your eyebrows, let me clarify: It’s not quite what you think. So, let’s…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/My-problem-with-python/index.html">
+<a href="./blog/My-problem-with-python/index.html" class="no-external">
 <div class="listing-date">
 Jan 7, 2024
 </div>
@@ -583,19 +608,19 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="R,Quarto,webr,conference" data-listing-date-sort="1702771200000" data-listing-file-modified-sort="1723194824724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="7" data-categories="R,Quarto,webr,conference" data-listing-date-sort="1702771200000" data-listing-file-modified-sort="1723503459822" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2370">
 <div class="thumbnail">
-<p><a href="./blog/2023_posit_conference/index.html"> <img src="https://posit.co/wp-content/uploads/2023/06/conf23-virtualregopen_blog-1.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2023_posit_conference/index.html" class="no-external"></a></p><a href="./blog/2023_posit_conference/index.html" class="no-external">
+<p><img loading="lazy" src="https://posit.co/wp-content/uploads/2023/06/conf23-virtualregopen_blog-1.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2023_posit_conference/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2023_posit_conference/index.html">
 <h3 class="no-anchor listing-title">
-Exciting Insights from the 2023 Posit conference
+<a href="./blog/2023_posit_conference/index.html" class="no-external">Exciting Insights from the 2023 Posit conference</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2023_posit_conference/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -610,14 +635,12 @@ webr
 conference
 </div>
 </div>
-<a href="./blog/2023_posit_conference/index.html">
 <div class="listing-description">
-I’ve been eagerly anticipating the public release of the videos from the recent Posit conference about one of my favorite programming languages: R. For someone who has…
+<a href="./blog/2023_posit_conference/index.html" class="no-external">I’ve been eagerly anticipating the public release of the videos from the recent Posit conference about one of my favorite programming languages: R. For someone who has…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2023_posit_conference/index.html">
+<a href="./blog/2023_posit_conference/index.html" class="no-external">
 <div class="listing-date">
 Dec 17, 2023
 </div>
@@ -627,19 +650,19 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="R,Python,Julia,Nim,JavaScript" data-listing-date-sort="1702771200000" data-listing-file-modified-sort="1723194824736" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15">
+<div class="quarto-post image-right" data-index="8" data-categories="R,Python,Julia,Nim,JavaScript" data-listing-date-sort="1702771200000" data-listing-file-modified-sort="1723503459834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2802">
 <div class="thumbnail">
-<p><a href="./blog/Polyglot_programmer/index.html"> <img src="./blog/Polyglot_programmer/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Polyglot_programmer/index.html" class="no-external"></a></p><a href="./blog/Polyglot_programmer/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/Polyglot_programmer/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Polyglot_programmer/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Polyglot_programmer/index.html">
 <h3 class="no-anchor listing-title">
-The polyglot programmer: mastering multiple languages for optimal solutions
+<a href="./blog/Polyglot_programmer/index.html" class="no-external">The polyglot programmer: mastering multiple languages for optimal solutions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Polyglot_programmer/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -657,14 +680,12 @@ Nim
 JavaScript
 </div>
 </div>
-<a href="./blog/Polyglot_programmer/index.html">
 <div class="listing-description">
-Welcome to the exciting world of polyglot programming! As a programmer, the ability to speak multiple programming languages fluently is akin to a craftsman possessing a…
+<a href="./blog/Polyglot_programmer/index.html" class="no-external">Welcome to the exciting world of polyglot programming! As a programmer, the ability to speak multiple programming languages fluently is akin to a craftsman possessing a…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Polyglot_programmer/index.html">
+<a href="./blog/Polyglot_programmer/index.html" class="no-external">
 <div class="listing-date">
 Dec 17, 2023
 </div>
@@ -674,19 +695,19 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="R,Python" data-listing-date-sort="1702771200000" data-listing-file-modified-sort="1723194824744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14">
+<div class="quarto-post image-right" data-index="9" data-categories="R,Python" data-listing-date-sort="1702771200000" data-listing-file-modified-sort="1723503459842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2699">
 <div class="thumbnail">
-<p><a href="./blog/Two_minutes_rule/index.html"> <img src="./blog/Two_minutes_rule/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Two_minutes_rule/index.html" class="no-external"></a></p><a href="./blog/Two_minutes_rule/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/Two_minutes_rule/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Two_minutes_rule/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Two_minutes_rule/index.html">
 <h3 class="no-anchor listing-title">
-The two-minute rule for busy coders/learners
+<a href="./blog/Two_minutes_rule/index.html" class="no-external">The two-minute rule for busy coders/learners</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Two_minutes_rule/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -695,14 +716,12 @@ R
 Python
 </div>
 </div>
-<a href="./blog/Two_minutes_rule/index.html">
 <div class="listing-description">
-We generally have time on our hands, but what makes us feel short of time is the prioritization of our activities.
+<a href="./blog/Two_minutes_rule/index.html" class="no-external">We generally have time on our hands, but what makes us feel short of time is the prioritization of our activities.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Two_minutes_rule/index.html">
+<a href="./blog/Two_minutes_rule/index.html" class="no-external">
 <div class="listing-date">
 Dec 17, 2023
 </div>
@@ -712,19 +731,19 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="R,Python,C,C++,Nim,Haskell,OCaml,JavaScript,HTML/CSS,SQL,Lua,Computer Science,Interactive Exercises" data-listing-date-sort="1700956800000" data-listing-file-modified-sort="1723194824736" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="10" data-categories="R,Python,C,C++,Nim,Haskell,OCaml,JavaScript,HTML/CSS,SQL,Lua,Computer Science,Interactive Exercises" data-listing-date-sort="1700956800000" data-listing-file-modified-sort="1723503459834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1277">
 <div class="thumbnail">
-<p><a href="./blog/Programming_exercise_websites/index.html"> <img src="./blog/Programming_exercise_websites/Coding_study_robot.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Programming_exercise_websites/index.html" class="no-external"></a></p><a href="./blog/Programming_exercise_websites/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/Programming_exercise_websites/Coding_study_robot.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Programming_exercise_websites/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Programming_exercise_websites/index.html">
 <h3 class="no-anchor listing-title">
-Free programming exercice websites
+<a href="./blog/Programming_exercise_websites/index.html" class="no-external">Free programming exercice websites</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Programming_exercise_websites/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -766,14 +785,12 @@ Computer Science
 Interactive Exercises
 </div>
 </div>
-<a href="./blog/Programming_exercise_websites/index.html">
 <div class="listing-description">
-Below, you will find a table that summarizes the best free exercise websites to learn to code. We have filtered the choices based on the…
+<a href="./blog/Programming_exercise_websites/index.html" class="no-external">Below, you will find a table that summarizes the best free exercise websites to learn to code. We have filtered the choices based on the proportion of free content, the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Programming_exercise_websites/index.html">
+<a href="./blog/Programming_exercise_websites/index.html" class="no-external">
 <div class="listing-date">
 Nov 26, 2023
 </div>
@@ -783,25 +800,25 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-listing-date-sort="1696636800000" data-listing-file-modified-sort="1723194824740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="11" data-listing-date-sort="1696636800000" data-listing-file-modified-sort="1723503459838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="577">
 <div class="thumbnail">
-<p><a href="./blog/R_road_map/Index.html"> <img src="https://sunnylib.com/wp-content/uploads/2020/04/r-language.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/R_road_map/Index.html" class="no-external"></a></p><a href="./blog/R_road_map/Index.html" class="no-external">
+<p><img loading="lazy" src="https://sunnylib.com/wp-content/uploads/2020/04/r-language.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/R_road_map/Index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/R_road_map/Index.html">
 <h3 class="no-anchor listing-title">
-R Road Map
+<a href="./blog/R_road_map/Index.html" class="no-external">R Road Map</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/R_road_map/Index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<strong>R Learning Roadmap for Budding Data Scientists and Statisticians</strong>
+<a href="./blog/R_road_map/Index.html" class="no-external"><strong>R Learning Roadmap for Budding Data Scientists and Statisticians</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/R_road_map/Index.html">
+<a href="./blog/R_road_map/Index.html" class="no-external">
 <div class="listing-date">
 Oct 7, 2023
 </div>
@@ -811,25 +828,25 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-listing-date-sort="1696636800000" data-listing-file-modified-sort="1723194824728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="12" data-listing-date-sort="1696636800000" data-listing-file-modified-sort="1723503459826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="752">
 <div class="thumbnail">
-<p><a href="./blog/Coding_road_map/Index.html"> <img src="https://i3.ytimg.com/vi/SzJ46YA_RaA/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Coding_road_map/Index.html" class="no-external"></a></p><a href="./blog/Coding_road_map/Index.html" class="no-external">
+<p><img loading="lazy" src="https://i3.ytimg.com/vi/SzJ46YA_RaA/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Coding_road_map/Index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Coding_road_map/Index.html">
 <h3 class="no-anchor listing-title">
-A Computer Science Roadmap
+<a href="./blog/Coding_road_map/Index.html" class="no-external">A Computer Science Roadmap</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Coding_road_map/Index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<strong>A Computer Science Roadmap: From Theory to Mastery</strong>
+<a href="./blog/Coding_road_map/Index.html" class="no-external"><strong>A Computer Science Roadmap: From Theory to Mastery</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Coding_road_map/Index.html">
+<a href="./blog/Coding_road_map/Index.html" class="no-external">
 <div class="listing-date">
 Oct 7, 2023
 </div>
@@ -839,19 +856,19 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Computer Science,R" data-listing-date-sort="1689465600000" data-listing-file-modified-sort="1723194824720" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="13" data-categories="Computer Science,R" data-listing-date-sort="1689465600000" data-listing-file-modified-sort="1723503459818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2202">
 <div class="thumbnail">
-<p><a href="./blog/2023-07-16-contributing-to-project-on-github/index.html"> <p class="card-img-top"><img src="blog/2023-07-16-contributing-to-project-on-github/teamwork.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external"></a></p><a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/2023-07-16-contributing-to-project-on-github/teamwork.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html">
 <h3 class="no-anchor listing-title">
-Contributing to projects on GitHub
+<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external">Contributing to projects on GitHub</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Computer Science'); return false;">
 Computer Science
@@ -860,14 +877,12 @@ Computer Science
 R
 </div>
 </div>
-<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html">
 <div class="listing-description">
-Welcome to the magical world of GitHub, where every coder, regardless of their skill level, has the power to contribute. Today, we’ll guide you on an intriguing journey of…
+<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external">Welcome to the magical world of GitHub, where every coder, regardless of their skill level, has the power to contribute. Today, we’ll guide you on an intriguing journey of…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html">
+<a href="./blog/2023-07-16-contributing-to-project-on-github/index.html" class="no-external">
 <div class="listing-date">
 Jul 16, 2023
 </div>
@@ -877,32 +892,30 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="R" data-listing-date-sort="1689465600000" data-listing-file-modified-sort="1723194824724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="14" data-categories="R" data-listing-date-sort="1689465600000" data-listing-file-modified-sort="1723503459822" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2253">
 <div class="thumbnail">
-<p><a href="./blog/2023-07-16-you-must-use-rproject/index.html"> <p class="card-img-top"><img src="blog/2023-07-16-you-must-use-rproject/cover.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external"></a></p><a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/2023-07-16-you-must-use-rproject/cover.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2023-07-16-you-must-use-rproject/index.html">
 <h3 class="no-anchor listing-title">
-You must use projects with RStudio!
+<a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external">You must use projects with RStudio!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
 </div>
 </div>
-<a href="./blog/2023-07-16-you-must-use-rproject/index.html">
 <div class="listing-description">
-Hello budding data scientist! Welcome to another thrilling journey in the enigmatic world of coding. Today, we’re here to chat about a topic so fascinating that it might…
+<a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external">Hello budding data scientist! Welcome to another thrilling journey in the enigmatic world of coding. Today, we’re here to chat about a topic so fascinating that it might…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2023-07-16-you-must-use-rproject/index.html">
+<a href="./blog/2023-07-16-you-must-use-rproject/index.html" class="no-external">
 <div class="listing-date">
 Jul 16, 2023
 </div>
@@ -912,19 +925,19 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="Python,AI" data-listing-date-sort="1687824000000" data-listing-file-modified-sort="1723194824744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="15" data-categories="Python,AI" data-listing-date-sort="1687824000000" data-listing-file-modified-sort="1723503459842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="302">
 <div class="thumbnail">
-<p><a href="./blog/llm2/index.html"> <p class="card-img-top"><img src="blog/llm2/ai.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./blog/llm2/index.html" class="no-external"></a></p><a href="./blog/llm2/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/llm2/ai.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/llm2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/llm2/index.html">
 <h3 class="no-anchor listing-title">
-Your first chat bot with python!
+<a href="./blog/llm2/index.html" class="no-external">Your first chat bot with python!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/llm2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -933,14 +946,12 @@ Python
 AI
 </div>
 </div>
-<a href="./blog/llm2/index.html">
 <div class="listing-description">
-By David Munoz Tord
+<a href="./blog/llm2/index.html" class="no-external">By David Munoz Tord</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/llm2/index.html">
+<a href="./blog/llm2/index.html" class="no-external">
 <div class="listing-date">
 Jun 27, 2023
 </div>
@@ -950,32 +961,30 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="R" data-listing-date-sort="1687737600000" data-listing-file-modified-sort="1723194824720" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="16" data-categories="R" data-listing-date-sort="1687737600000" data-listing-file-modified-sort="1723503459818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1190">
 <div class="thumbnail">
-<p><a href="./blog/2023-06-26-let-s-contribute/index.html"> <p class="card-img-top"><img src="blog/2023-06-26-let-s-contribute/give-and-take.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external"></a></p><a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external">
+<p class="card-img-top"><img src="blog/2023-06-26-let-s-contribute/give-and-take.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2023-06-26-let-s-contribute/index.html">
 <h3 class="no-anchor listing-title">
-How to contribute to our website with blog posts using R and RStudio
+<a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external">How to contribute to our website with blog posts using R and RStudio</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
 </div>
 </div>
-<a href="./blog/2023-06-26-let-s-contribute/index.html">
 <div class="listing-description">
-<strong>Hello, esteemed statisticians and fellows of WeData!</strong>
+<a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external"><strong>Hello, esteemed statisticians and fellows of WeData!</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2023-06-26-let-s-contribute/index.html">
+<a href="./blog/2023-06-26-let-s-contribute/index.html" class="no-external">
 <div class="listing-date">
 Jun 26, 2023
 </div>
@@ -985,32 +994,30 @@ Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="R" data-listing-date-sort="1687651200000" data-listing-file-modified-sort="1723194824732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="R" data-listing-date-sort="1687651200000" data-listing-file-modified-sort="1723503459830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
 <div class="thumbnail">
-<p><a href="./blog/Echarts4r/index.html"> <img src="./blog/Echarts4r/viz.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Echarts4r/index.html" class="no-external"></a></p><a href="./blog/Echarts4r/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/Echarts4r/viz.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/Echarts4r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Echarts4r/index.html">
 <h3 class="no-anchor listing-title">
-Data Viz with Echarts4r
+<a href="./blog/Echarts4r/index.html" class="no-external">Data Viz with Echarts4r</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Echarts4r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
 </div>
 </div>
-<a href="./blog/Echarts4r/index.html">
 <div class="listing-description">
-Learn about <em>data visualization</em> and familiarize yourself with some of the basic functions of the {echarts4r}.
+<a href="./blog/Echarts4r/index.html" class="no-external">Learn about <em>data visualization</em> and familiarize yourself with some of the basic functions of the {echarts4r}.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Echarts4r/index.html">
+<a href="./blog/Echarts4r/index.html" class="no-external">
 <div class="listing-date">
 Jun 25, 2023
 </div>
@@ -1020,32 +1027,30 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="R" data-listing-date-sort="1683936000000" data-listing-file-modified-sort="1723194824736" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="18" data-categories="R" data-listing-date-sort="1683936000000" data-listing-file-modified-sort="1723503459834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
 <div class="thumbnail">
-<p><a href="./blog/R-Lunches/index.html"> <img src="./blog/R-Lunches/conf.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/R-Lunches/index.html" class="no-external"></a></p><a href="./blog/R-Lunches/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/R-Lunches/conf.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/R-Lunches/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/R-Lunches/index.html">
 <h3 class="no-anchor listing-title">
-R Lunches in university of Geneva
+<a href="./blog/R-Lunches/index.html" class="no-external">R Lunches in university of Geneva</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/R-Lunches/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
 </div>
 </div>
-<a href="./blog/R-Lunches/index.html">
 <div class="listing-description">
-R lunches are multidisciplinary meetings on R at UniMail.
+<a href="./blog/R-Lunches/index.html" class="no-external">R lunches are multidisciplinary meetings on R at UniMail.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/R-Lunches/index.html">
+<a href="./blog/R-Lunches/index.html" class="no-external">
 <div class="listing-date">
 May 13, 2023
 </div>
@@ -1055,32 +1060,30 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="YouTube" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1723194824732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="19" data-categories="YouTube" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1723503459830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
 <div class="thumbnail">
-<p><a href="./blog/Live/index.html"> <img src="https://i3.ytimg.com/vi/jfo1tuMHIMs/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Live/index.html" class="no-external"></a></p><a href="./blog/Live/index.html" class="no-external">
+<p><img loading="lazy" src="https://i3.ytimg.com/vi/jfo1tuMHIMs/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Live/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Live/index.html">
 <h3 class="no-anchor listing-title">
-We-Data Live on YouTube
+<a href="./blog/Live/index.html" class="no-external">We-Data Live on YouTube</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Live/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('YouTube'); return false;">
 YouTube
 </div>
 </div>
-<a href="./blog/Live/index.html">
 <div class="listing-description">
-<strong>Live</strong> of <em>December 29</em> edited in which we present in more detail WeData, its functioning and its future.
+<a href="./blog/Live/index.html" class="no-external"><strong>Live</strong> of <em>December 29</em> edited in which we present in more detail WeData, its functioning and its future.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Live/index.html">
+<a href="./blog/Live/index.html" class="no-external">
 <div class="listing-date">
 Jan 1, 2023
 </div>
@@ -1090,19 +1093,19 @@ David Munoz Tord, Fabrice Hategekimana and Vestin Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="Computer Science,YouTube" data-listing-date-sort="1669852800000" data-listing-file-modified-sort="1723194824744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="20" data-categories="Computer Science,YouTube" data-listing-date-sort="1669852800000" data-listing-file-modified-sort="1723503459842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
 <div class="thumbnail">
-<p><a href="./blog/True_Ignorant/index.html"> <img src="https://i3.ytimg.com/vi/E9a5Lv0po-o/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/True_Ignorant/index.html" class="no-external"></a></p><a href="./blog/True_Ignorant/index.html" class="no-external">
+<p><img loading="lazy" src="https://i3.ytimg.com/vi/E9a5Lv0po-o/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/True_Ignorant/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/True_Ignorant/index.html">
 <h3 class="no-anchor listing-title">
-What a tool! - An ignorant perspective
+<a href="./blog/True_Ignorant/index.html" class="no-external">What a tool! - An ignorant perspective</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/True_Ignorant/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Computer Science'); return false;">
 Computer Science
@@ -1111,14 +1114,12 @@ Computer Science
 YouTube
 </div>
 </div>
-<a href="./blog/True_Ignorant/index.html">
 <div class="listing-description">
-In this playlist are all the videos <strong>presenting useful tools</strong> when coding or when you are a student.
+<a href="./blog/True_Ignorant/index.html" class="no-external">In this playlist are all the videos <strong>presenting useful tools</strong> when coding or when you are a student.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/True_Ignorant/index.html">
+<a href="./blog/True_Ignorant/index.html" class="no-external">
 <div class="listing-date">
 Dec 1, 2022
 </div>
@@ -1128,19 +1129,19 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="R,Interactive Exercises" data-listing-date-sort="1669852800000" data-listing-file-modified-sort="1723194824728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="21" data-categories="R,Interactive Exercises" data-listing-date-sort="1669852800000" data-listing-file-modified-sort="1723503459830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
 <div class="thumbnail">
-<p><a href="./blog/Data_manip_Fundamental/index.html"> <img src="./blog/Data_manip_Fundamental/homework.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Data_manip_Fundamental/index.html" class="no-external"></a></p><a href="./blog/Data_manip_Fundamental/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/Data_manip_Fundamental/homework.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Data_manip_Fundamental/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Data_manip_Fundamental/index.html">
 <h3 class="no-anchor listing-title">
-Data Manipulation with R
+<a href="./blog/Data_manip_Fundamental/index.html" class="no-external">Data Manipulation with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Data_manip_Fundamental/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -1149,14 +1150,12 @@ R
 Interactive Exercises
 </div>
 </div>
-<a href="./blog/Data_manip_Fundamental/index.html">
 <div class="listing-description">
-Learn more about data manipulation: how to <em>pivot, join and filter data</em> using {dplyr} and {tidyr} packages.
+<a href="./blog/Data_manip_Fundamental/index.html" class="no-external">Learn more about data manipulation: how to <em>pivot, join and filter data</em> using {dplyr} and {tidyr} packages.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Data_manip_Fundamental/index.html">
+<a href="./blog/Data_manip_Fundamental/index.html" class="no-external">
 <div class="listing-date">
 Dec 1, 2022
 </div>
@@ -1166,19 +1165,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="Python,YouTube" data-listing-date-sort="1667260800000" data-listing-file-modified-sort="1723194824736" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="22" data-categories="Python,YouTube" data-listing-date-sort="1667260800000" data-listing-file-modified-sort="1723503459834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
 <div class="thumbnail">
-<p><a href="./blog/Python_Fundamentals/index.html"> <img src="https://i3.ytimg.com/vi/jRpefZJKANY/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Python_Fundamentals/index.html" class="no-external"></a></p><a href="./blog/Python_Fundamentals/index.html" class="no-external">
+<p><img loading="lazy" src="https://i3.ytimg.com/vi/jRpefZJKANY/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Python_Fundamentals/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Python_Fundamentals/index.html">
 <h3 class="no-anchor listing-title">
-Python Basics
+<a href="./blog/Python_Fundamentals/index.html" class="no-external">Python Basics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Python_Fundamentals/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -1187,14 +1186,12 @@ Python
 YouTube
 </div>
 </div>
-<a href="./blog/Python_Fundamentals/index.html">
 <div class="listing-description">
-<strong>Goal</strong>: To initiate people who would like to start with <strong>Python</strong> by <em>starting with the basics or the basics</em> or people who want to…
+<a href="./blog/Python_Fundamentals/index.html" class="no-external"><strong>Goal</strong>: To initiate people who would like to start with <strong>Python</strong> by <em>starting with the basics or the basics</em> or people who want to reinforce their knowledge by going through…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Python_Fundamentals/index.html">
+<a href="./blog/Python_Fundamentals/index.html" class="no-external">
 <div class="listing-date">
 Nov 1, 2022
 </div>
@@ -1204,19 +1201,19 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="R,Interactive Exercises" data-listing-date-sort="1664582400000" data-listing-file-modified-sort="1723194824728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="23" data-categories="R,Interactive Exercises" data-listing-date-sort="1664582400000" data-listing-file-modified-sort="1723503459826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
 <div class="thumbnail">
-<p><a href="./blog/Data_explor_Fundamentals/index.html"> <img src="./blog/Data_explor_Fundamentals/homework.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Data_explor_Fundamentals/index.html" class="no-external"></a></p><a href="./blog/Data_explor_Fundamentals/index.html" class="no-external">
+<p><img loading="lazy" src="./blog/Data_explor_Fundamentals/homework.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Data_explor_Fundamentals/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Data_explor_Fundamentals/index.html">
 <h3 class="no-anchor listing-title">
-Data Exploration with R
+<a href="./blog/Data_explor_Fundamentals/index.html" class="no-external">Data Exploration with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Data_explor_Fundamentals/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -1225,14 +1222,12 @@ R
 Interactive Exercises
 </div>
 </div>
-<a href="./blog/Data_explor_Fundamentals/index.html">
 <div class="listing-description">
-Learn about <em>data exploration</em> and familiarize yourself with some of the basic functions of the tidyverse.
+<a href="./blog/Data_explor_Fundamentals/index.html" class="no-external">Learn about <em>data exploration</em> and familiarize yourself with some of the basic functions of the tidyverse.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Data_explor_Fundamentals/index.html">
+<a href="./blog/Data_explor_Fundamentals/index.html" class="no-external">
 <div class="listing-date">
 Oct 1, 2022
 </div>
@@ -1242,19 +1237,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="R,YouTube" data-listing-date-sort="1661990400000" data-listing-file-modified-sort="1723194824740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="24" data-categories="R,YouTube" data-listing-date-sort="1661990400000" data-listing-file-modified-sort="1723503459838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
 <div class="thumbnail">
-<p><a href="./blog/Stats_With_R/index.html"> <img src="https://i3.ytimg.com/vi/c4WkVrs1rKU/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Stats_With_R/index.html" class="no-external"></a></p><a href="./blog/Stats_With_R/index.html" class="no-external">
+<p><img loading="lazy" src="https://i3.ytimg.com/vi/c4WkVrs1rKU/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Stats_With_R/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Stats_With_R/index.html">
 <h3 class="no-anchor listing-title">
-Satistics with R
+<a href="./blog/Stats_With_R/index.html" class="no-external">Satistics with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Stats_With_R/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -1263,14 +1258,12 @@ R
 YouTube
 </div>
 </div>
-<a href="./blog/Stats_With_R/index.html">
 <div class="listing-description">
-To cover the structure of a classical <em>statistical analysis with R</em>. We will then go into more depth on each part while presenting packages in the language that…
+<a href="./blog/Stats_With_R/index.html" class="no-external">To cover the structure of a classical <em>statistical analysis with R</em>. We will then go into more depth on each part while presenting packages in the language that make the work…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Stats_With_R/index.html">
+<a href="./blog/Stats_With_R/index.html" class="no-external">
 <div class="listing-date">
 Sep 1, 2022
 </div>
@@ -1280,19 +1273,19 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="Computer Science,YouTube" data-listing-date-sort="1661990400000" data-listing-file-modified-sort="1723194824728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="25" data-categories="Computer Science,YouTube" data-listing-date-sort="1661990400000" data-listing-file-modified-sort="1723503459826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
 <div class="thumbnail">
-<p><a href="./blog/Code_Hygiene/index.html"> <img data-src="https://i3.ytimg.com/vi/YaT1ksk--xc/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Code_Hygiene/index.html" class="no-external"></a></p><a href="./blog/Code_Hygiene/index.html" class="no-external">
+<p><img loading="lazy" data-src="https://i3.ytimg.com/vi/YaT1ksk--xc/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Code_Hygiene/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Code_Hygiene/index.html">
 <h3 class="no-anchor listing-title">
-Code Hygiene. Don’t Laugh it off !
+<a href="./blog/Code_Hygiene/index.html" class="no-external">Code Hygiene. Don’t Laugh it off !</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Code_Hygiene/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Computer Science'); return false;">
 Computer Science
@@ -1301,14 +1294,12 @@ Computer Science
 YouTube
 </div>
 </div>
-<a href="./blog/Code_Hygiene/index.html">
 <div class="listing-description">
-Introduce the <em>basics of hygiene</em> in the code to…
+<a href="./blog/Code_Hygiene/index.html" class="no-external">Introduce the <em>basics of hygiene</em> in the code to have clean and reusable scripts. Workflow and refactoring are also important elements to achieve good results. We explain…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Code_Hygiene/index.html">
+<a href="./blog/Code_Hygiene/index.html" class="no-external">
 <div class="listing-date">
 Sep 1, 2022
 </div>
@@ -1318,19 +1309,19 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="Bash,YouTube" data-listing-date-sort="1659312000000" data-listing-file-modified-sort="1723194824740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="26" data-categories="Bash,YouTube" data-listing-date-sort="1659312000000" data-listing-file-modified-sort="1723503459838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <div class="thumbnail">
-<p><a href="./blog/Terminal_Basic/index.html"> <img data-src="https://i3.ytimg.com/vi/X3kObIzGH2s/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Terminal_Basic/index.html" class="no-external"></a></p><a href="./blog/Terminal_Basic/index.html" class="no-external">
+<p><img loading="lazy" data-src="https://i3.ytimg.com/vi/X3kObIzGH2s/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Terminal_Basic/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Terminal_Basic/index.html">
 <h3 class="no-anchor listing-title">
-Learn Terminal Basics
+<a href="./blog/Terminal_Basic/index.html" class="no-external">Learn Terminal Basics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Terminal_Basic/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bash'); return false;">
 Bash
@@ -1339,14 +1330,12 @@ Bash
 YouTube
 </div>
 </div>
-<a href="./blog/Terminal_Basic/index.html">
 <div class="listing-description">
-<strong>Video series</strong> on <em>terminal automation</em>. We explain why working with the terminal is still a good idea.
+<a href="./blog/Terminal_Basic/index.html" class="no-external"><strong>Video series</strong> on <em>terminal automation</em>. We explain why working with the terminal is still a good idea.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Terminal_Basic/index.html">
+<a href="./blog/Terminal_Basic/index.html" class="no-external">
 <div class="listing-date">
 Aug 1, 2022
 </div>
@@ -1356,19 +1345,19 @@ Fabrice Hategekimana
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="R,Interactive Exercises" data-listing-date-sort="1656633600000" data-listing-file-modified-sort="1723194824728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="27" data-categories="R,Interactive Exercises" data-listing-date-sort="1656633600000" data-listing-file-modified-sort="1723503459826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
 <div class="thumbnail">
-<p><a href="./blog/Data_Viz_Fundamentals/index.html"> <img data-src="./blog/Data_Viz_Fundamentals/homework.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external"></a></p><a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external">
+<p><img loading="lazy" data-src="./blog/Data_Viz_Fundamentals/homework.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/Data_Viz_Fundamentals/index.html">
 <h3 class="no-anchor listing-title">
-Data Viz Fundamentals with R
+<a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external">Data Viz Fundamentals with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -1377,14 +1366,12 @@ R
 Interactive Exercises
 </div>
 </div>
-<a href="./blog/Data_Viz_Fundamentals/index.html">
 <div class="listing-description">
-Go over the <em>basics of data visualization with R</em> and learn more advanced concepts using the ggplot package.
+<a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external">Go over the <em>basics of data visualization with R</em> and learn more advanced concepts using the ggplot package.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/Data_Viz_Fundamentals/index.html">
+<a href="./blog/Data_Viz_Fundamentals/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2022
 </div>
@@ -1394,19 +1381,19 @@ David Munoz Tord
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="R,YouTube" data-listing-date-sort="1654041600000" data-listing-file-modified-sort="1723194824740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="28" data-categories="R,YouTube" data-listing-date-sort="1654041600000" data-listing-file-modified-sort="1723503459838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
 <div class="thumbnail">
-<p><a href="./blog/R_basics/index.html"> <img data-src="https://i3.ytimg.com/vi/hWsmaR3Nh6w/0.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/R_basics/index.html" class="no-external"></a></p><a href="./blog/R_basics/index.html" class="no-external">
+<p><img loading="lazy" data-src="https://i3.ytimg.com/vi/hWsmaR3Nh6w/0.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/R_basics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/R_basics/index.html">
 <h3 class="no-anchor listing-title">
-Learn R Basics
+<a href="./blog/R_basics/index.html" class="no-external">Learn R Basics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/R_basics/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -1415,14 +1402,12 @@ R
 YouTube
 </div>
 </div>
-<a href="./blog/R_basics/index.html">
 <div class="listing-description">
-<strong>Goal</strong>: To initiate people who would like to <em>start with R</em> by starting with…
+<a href="./blog/R_basics/index.html" class="no-external"><strong>Goal</strong>: To initiate people who would like to <em>start with R</em> by starting with the basics or the basics or people who want to reinforce their knowledge by going through important…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/R_basics/index.html">
+<a href="./blog/R_basics/index.html" class="no-external">
 <div class="listing-date">
 Jun 1, 2022
 </div>
@@ -1481,6 +1466,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1549,13 +1561,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1590,18 +1604,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1633,11 +1636,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/we-data\.ch\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1647,8 +1689,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1660,7 +1711,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1704,6 +1878,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1729,6 +1904,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1791,7 +1992,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</div>   
+    <div class="nav-footer-left">
+<p><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</p>
+</div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1829,6 +2032,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 
