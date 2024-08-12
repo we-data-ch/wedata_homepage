@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://we-data.ch/index.html</loc>
-    <lastmod>2024-04-04T09:50:43.395Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.978Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects/2022-12-echarts4r/index.html</loc>
-    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.978Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/llm2/index.html</loc>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://we-data.ch/talks.html</loc>
-    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.978Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog.html</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://we-data.ch/projects.html</loc>
-    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.978Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_manip_Fundamental/index.html</loc>
@@ -130,22 +130,34 @@
   </url>
   <url>
     <loc>https://we-data.ch/talks/2023-04-Deploy-your-R-code/index.html</loc>
-    <lastmod>2024-02-13T18:00:32.470Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.978Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/team.html</loc>
-    <lastmod>2024-03-05T11:46:17.106Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.994Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/CNN/index.html</loc>
-    <lastmod>2024-03-11T17:58:23.516Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.863Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/github_wrapped/index.html</loc>
-    <lastmod>2024-03-19T09:20:57.612Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.916Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/podcast/index.html</loc>
-    <lastmod>2024-04-04T09:51:28.291Z</lastmod>
+    <lastmod>2024-07-24T17:44:05.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/exercises.html</loc>
+    <lastmod>2024-08-12T22:04:06.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/blog/biodiveRsity/index.html</loc>
+    <lastmod>2024-08-09T11:06:43.120Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/exercises/001_Basic/basics.html</loc>
+    <lastmod>2024-08-12T22:44:14.585Z</lastmod>
   </url>
 </urlset>

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "We Data",
     "section": "",
-    "text": "About us\n\nWe are an association of the University of Geneva that aims to share its passion for data science and computer science. We have a strong interest in statistics and computational methods. Initially, the association’s target audience was people in the social sciences but we quickly expanded into other fields of research.  More concretely, the association aims to achieve its objectives by creating freely-accessible educational content on its platforms in a variety of forms: YouTube videos, blog posts, exercises, etc. The association co-organizes the R-Lunches, a series of events related to R in which various speakers present topics related to the R language. The association tries to keep abreast of and participate as often as possible in digital initiatives at the University of Geneva. \n\n\n\nStill curious? click ‘About’ above or this button here: Tell me more\n\n\n\n\n\n\n\nBlog\nLatest from the blog\n\n\n\n\n🚀🚀 Github Wrapped 2023 🚀🚀\n\n Mar 19, 2024\n\nNo matching items\n\n\n  \n\n\n\n\nBlog\n\n\n\n\n\nPodcast\n\n\nExploring WeData’s Story\n\n\nLearning From Data: A Podcast of WeData’s Story now on Spotify 🎧\n\n\n Apr 3, 2024\n\n\n\nFull Podcast\n\n\n\n\n\nTalking about us\n\n\nVie de l’UNIGE\n\n\nDes vidéos pour acquérir des compétences en science des données\n\n\n Sep 8, 2023\n\n\n\nFull Article"
+    "text": "About us\n\nWe are an association of the University of Geneva that aims to share its passion for data science and computer science. We have a strong interest in statistics and computational methods. Initially, the association’s target audience was people in the social sciences but we quickly expanded into other fields of research.  More concretely, the association aims to achieve its objectives by creating freely-accessible educational content on its platforms in a variety of forms: YouTube videos, blog posts, exercises, etc. The association co-organizes the R-Lunches, a series of events related to R in which various speakers present topics related to the R language. The association tries to keep abreast of and participate as often as possible in digital initiatives at the University of Geneva. \n\n\n\nStill curious? click ‘About’ above or this button here: Tell me more\n\n\n\n\n\n\n\nBlog\nLatest from the blog\n\n\n\n\nBiodiversity Bonanza: Crafting a Shiny Species Spotter!\n\n Aug 9, 2024\n\nNo matching items\n\n\n  \n\n\n\n\nBlog\n\n\n\n\n\nPodcast\n\n\nExploring WeData’s Story\n\n\nLearning From Data: A Podcast of WeData’s Story now on Spotify 🎧\n\n\n Apr 3, 2024\n\n\n\nFull Podcast\n\n\n\n\n\nTalking about us\n\n\nVie de l’UNIGE\n\n\nDes vidéos pour acquérir des compétences en science des données\n\n\n Sep 8, 2023\n\n\n\nFull Article"
   },
   {
     "objectID": "projects/2022-12-echarts4r/index.html",
@@ -410,7 +410,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "Talks\n\n\n\n\n\n\n\n\n\n\n\nDeploy Your R Code!\n\n\n\n\n\n\n\n\n\n\n\nApr 4, 2023\n\n\nDavid Munoz Tord\n\n\n\n\n\n\nNo matching items"
+    "text": "Talks"
   },
   {
     "objectID": "blog.html",
@@ -424,7 +424,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\n\nEcharts4r\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2022\n\n\nDavid Munoz Tord\n\n\n\n\n\n\nNo matching items"
+    "text": "Projects"
   },
   {
     "objectID": "blog/Data_manip_Fundamental/index.html",
@@ -691,5 +691,75 @@
     "title": "Learning From Data: A Podcast of WeData’s Story now on Spotify 🎧",
     "section": "",
     "text": "During the interview, we uncovered our backgrounds, shared pivotal moments that ignited our passion for data science, and elucidated why WeData became our chosen platform. From exploring migration and integration to delving into statistics and text mining, we explored the diverse facets of data science that fuel our curiosity and propel our endeavors.\nListen to the full episode here."
+  },
+  {
+    "objectID": "exercises.html",
+    "href": "exercises.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Exercises\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1. Basic R\n\n\n\n\n\n\nbeginner\n\n\n\nExercises for absolute beginners O.o\n\n\n\n\n\nVestin Hategekimana\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/biodiveRsity/index.html",
+    "href": "blog/biodiveRsity/index.html",
+    "title": "Biodiversity Bonanza: Crafting a Shiny Species Spotter!",
+    "section": "",
+    "text": "Ahoy, fellow code adventurers and nature enthusiasts! Today, we’re diving headfirst into the wild world of biodiversity data. Grab your digital binoculars, because we’re about to embark on a thrilling journey to build a Shiny app that’ll make David Attenborough jealous!\n\n\nPicture this: You’re a wildlife researcher with a mountain of data and a burning question - “How have animal sightings changed over time?” Fear not! We’re crafting a tool so snazzy, it’ll turn that data mountain into a molehill faster than you can say “Marmota marmota”!\n\n\n\n\nThe Shapeshifting Maps: Different ways to visualize you data and even query the actual images.\nThe All-Seeing Search Bar: A selectize input so smart, it’ll find your species faster than a cheetah chasing its lunch.\nThe Time-Traveling Timeline: A plot that’ll zip through years of animal sightings quicker than you can say “Great Scott!”\n\nLet’s peek under the hood of our biodiversity hotrod…\nSee the full code on GitHub"
+  },
+  {
+    "objectID": "blog/biodiveRsity/index.html#welcome-to-the-forest-of-data",
+    "href": "blog/biodiveRsity/index.html#welcome-to-the-forest-of-data",
+    "title": "Biodiversity Bonanza: Crafting a Shiny Species Spotter!",
+    "section": "",
+    "text": "Ahoy, fellow code adventurers and nature enthusiasts! Today, we’re diving headfirst into the wild world of biodiversity data. Grab your digital binoculars, because we’re about to embark on a thrilling journey to build a Shiny app that’ll make David Attenborough jealous!\n\n\nPicture this: You’re a wildlife researcher with a mountain of data and a burning question - “How have animal sightings changed over time?” Fear not! We’re crafting a tool so snazzy, it’ll turn that data mountain into a molehill faster than you can say “Marmota marmota”!\n\n\n\n\nThe Shapeshifting Maps: Different ways to visualize you data and even query the actual images.\nThe All-Seeing Search Bar: A selectize input so smart, it’ll find your species faster than a cheetah chasing its lunch.\nThe Time-Traveling Timeline: A plot that’ll zip through years of animal sightings quicker than you can say “Great Scott!”\n\nLet’s peek under the hood of our biodiversity hotrod…\nSee the full code on GitHub"
+  },
+  {
+    "objectID": "blog/biodiveRsity/index.html#the-star-players-in-our-data-drama",
+    "href": "blog/biodiveRsity/index.html#the-star-players-in-our-data-drama",
+    "title": "Biodiversity Bonanza: Crafting a Shiny Species Spotter!",
+    "section": "🎭 The Star Players in Our Data Drama",
+    "text": "🎭 The Star Players in Our Data Drama\n\n🗺️ The Cartographer’s Delight: Our Magical Map Module\nHold onto your compasses, explorers! We’re about to unfold a map so interactive!\n\nmap_server &lt;- function(id, selected_species_data, use_heatmap, config) {\n  moduleServer(id, function(input, output, session) {\n    output$map &lt;- renderLeaflet({\n      leaflet() |&gt;\n        addTiles() |&gt;\n        setView(lng = config$MAP_CENTER_LNG, lat = config$MAP_CENTER_LAT, zoom = config$MAP_ZOOM)\n    })\n    \n    observe({\n      data &lt;- selected_species_data()\n      use_heatmap &lt;- use_heatmap()\n      \n      if (!is.null(data) && nrow(data) &gt; 0) {\n        valid_data &lt;- data[!is.na(data$latitudeDecimal) & !is.na(data$longitudeDecimal), ]\n        if (nrow(valid_data) &gt; 0) {\n          map &lt;- leafletProxy(\"map\") |&gt;\n            clearMarkerClusters() |&gt;\n            clearHeatmap()\n          \n          if (use_heatmap) {\n            map |&gt; addHeatmap(\n              data = valid_data,\n              lng = ~longitudeDecimal, \n              lat = ~latitudeDecimal,\n              blur = config$HEATMAP_BLUR, \n              max = config$HEATMAP_MAX, \n              radius = config$HEATMAP_RADIUS\n            )\n          } else {\n\n            \n            map |&gt; addMarkers(\n              data = valid_data,\n              lng = ~longitudeDecimal, \n              lat = ~latitudeDecimal,\n              popup = ~paste(\n                \"&lt;strong&gt;\", scientificName, \"&lt;/strong&gt;&lt;br&gt;\",\n                \"Date: \", eventDate, \"&lt;br&gt;\",\n                ifelse(!is.na(accessURI), \n                       paste0(\"&lt;img src='\", accessURI, \"' width='100'&gt;&lt;br&gt;\",\n                              \"Image by: \", creator, \"&lt;br&gt;\",\n                              \"License: \", multimedia_license),\n                       \"No image available\")\n              ),\n              clusterOptions = markerClusterOptions(\n                showCoverageOnHover = FALSE,\n                zoomToBoundsOnClick = TRUE,\n                spiderfyOnMaxZoom = TRUE,\n                removeOutsideVisibleBounds = TRUE,\n                disableClusteringAtZoom = config$CLUSTER_ZOOM_DISABLE\n              )\n            )\n          }\n        }\n      }\n    })\n  })\n}\n\n\n🌋 Features That’ll Make You Erupt with Joy\nShapeshifting Views: Toggle between marker clusters and heatmaps faster than a chameleon changes colors! Popup Bonanza: Click a marker and BOOM! Species info, dates, and even glamour shots of our animal celebs! Cluster Parties: Watch as our markers gather in cliques like teenagers at a mall. Zoom in to break up the party!\n\n\n🎭 The Great Heatmap vs. Marker Debate\nOur map is like a secret agent with two disguises:\nHeatmap Mode: Transform your map into a thermal vision of biodiversity hotspots. It’s like predator vision, but for science! Marker Mode: Unleash a confetti of markers, each hiding a treasure trove of information. It’s Where’s Waldo, but for species!\n\n\n\n🔠 The Search Sorcerer\nThis little wizard conjures up species names faster than you can type “platypus”. It’s like Google for critters, but cooler!\n\nsearch_server &lt;- function(id, biodiversity_data) {\n  # Server sorcery unfolds\n\n  search_server &lt;- function(id, biodiversity_data) {\n  moduleServer(id, function(input, output, session) {\n    # Prepare search data\n    search_data &lt;- biodiversity_data |&gt;\n      select(scientificName, vernacularName) |&gt;\n      distinct() |&gt;\n      mutate(search_term = paste(scientificName, vernacularName, sep = \" - \")) |&gt;\n      arrange(scientificName)\n\n    updateSelectizeInput(session, \"species_search\", \n                         choices = setNames(search_data$scientificName, search_data$search_term),\n                         selected = \"Marmota marmota\",\n                         options = list(\n                           placeholder = 'Type to search species',\n                           maxOptions = 10000,  # Increase this number\n                           searchField = c('value', 'label'),\n                           render = I(\"{\n                             option: function(item, escape) {\n                               return '&lt;div&gt;' + escape(item.label) + '&lt;/div&gt;';\n                             }\n                           }\")\n                         ))\n    \n    return(reactive({ input$species_search }))\n  })\n}\n\n}\n\n\n\n📊 The Timeline Tamer\nWatch years of animal sightings dance before your eyes! This module turns boring numbers into a visual feast that would make any statistician swoon.\n\ntimeline_server &lt;- function(id, selected_data) {\n  # Data wrangling extravaganza\n    timeline_server &lt;- function(id, selected_data) {\n  moduleServer(id, function(input, output, session) {\n    output$timeline &lt;- renderPlotly({\n      data &lt;- selected_data()\n      if (!is.null(data) && nrow(data) &gt; 0) {\n        # Aggregate data by year\n        yearly_counts &lt;- data |&gt;\n          mutate(year = lubridate::year(eventDate)) |&gt;\n          count(year)\n        \n        # Create the base plot\n        p &lt;- plot_ly() |&gt;\n          add_trace(data = yearly_counts, x = ~year, y = ~n, type = \"bar\", \n                    name = \"Observations\", marker = list(color = \"#165098\"))\n        \n        # Check if data spans more than one year\n        if (length(unique(yearly_counts$year)) &gt; 1) {\n          # Calculate smooth regression\n          loess_fit &lt;- loess(n ~ year, data = yearly_counts, span = 0.75)\n          smoothed_data &lt;- data.frame(\n            year = seq(min(yearly_counts$year), max(yearly_counts$year), length.out = 100)\n          )\n          smoothed_data$n &lt;- predict(loess_fit, newdata = smoothed_data)\n          \n          # Add trend line to the plot\n          p &lt;- p |&gt;\n            add_trace(data = smoothed_data, x = ~year, y = ~n, type = \"scatter\", mode = \"lines\",\n                      name = \"Trend\", line = list(color = \"#e94560\", width = 3))\n        }\n        \n        # Layout (same as before)\n        p &lt;- p |&gt;\n          layout(\n            title = list(text = \"Observations Over Time\", font = list(size = 24, color = \"#ffffff\")),\n            xaxis = list(title = \"Year\", titlefont = list(size = 18, color = \"#a9a9a9\"),\n                         tickfont = list(size = 14, color = \"#a9a9a9\"),\n                         tickformat = \"d\"),\n            yaxis = list(title = \"Number of Observations\", titlefont = list(size = 18, color = \"#a9a9a9\"),\n                         tickfont = list(size = 14, color = \"#a9a9a9\")),\n            legend = list(font = list(color = \"#a9a9a9\")),\n            paper_bgcolor = \"#1a1a2e\",\n            plot_bgcolor = \"#16213e\",\n            margin = list(l = 80, r = 40, b = 60, t = 80, pad = 4),\n            barmode = \"overlay\"\n          )\n        \n        p\n      }\n    })\n  })\n}\n  \n}\n\n\n🎢 Thrills, Spills, and Coding Chills\nBuilding this cartographic app was no walk in the park. We faced:\nThe Coordinate Conundrum: We wrangled latitude and longitude like a cowboy at a rodeo. Yee-haw, data points! The Cluster Kerfuffle: We taught our markers to play nice and form orderly groups. It’s like herding cats, but with GPS! The Heatmap Hustle: We turned data density into a visual feast. It’s hotter than a jalapeño… visually speaking! The Great Data Deluge: We tamed a tsunami of biodiversity data with our bare hands (and some nifty dplyr magic)! The Single-Year Showdown: We outsmarted the dreaded “span is too small” error. Take that, statistics gremlins!\n\n\n🚀 Launching Our Creation into the Wild\n\nrsconnect::deployApp()\n\n\n\n🔮 The Future is Wild\nWith our map module, you can:\nZoom from continent to backyard faster than you can say “biodiversity hotspot” Uncover species hangout spots like a nature paparazzi Play “Six Degrees of Species Separation” with our interconnected data points Search for species faster than a peregrine falcon in a nosedive Watch observation trends unfold like a time-lapse of a blooming rainforest Impress your scientist friends at parties (because who doesn’t talk about R at parties?)\nBut wait, there’s more! Imagine if this app could:\nTime-travel through species migrations (DeLorean not included) Predict future animal meetup spots (like Tinder, but for wildlife) Generate 3D holograms of habitats (Star Wars, eat your heart out!) Map species like a GPS for the animal kingdom Predict animal trends better than a psychic octopus Generate David Attenborough-style narration for each species (okay, we’re dreaming big here)\nSo there you have it, folks! Our map module isn’t just a feature, it’s a portal to adventure. It’s not just showing where animals have been spotted; it’s inviting you to become the next great explorer from the comfort of your laptop. Remember, in the world of biodiversity data, X marks the spot… and we’ve got all the Xs you could ever want! Now go forth and map your way to glory!\n\n\n🎉 The Grand Finale\nThere you have it, folks!\n\nWe’ve just built the Swiss Army knife of biodiversity visualization. It slices, it dices, it even makes julienne fries! (Okay, maybe not that last part.) Remember, in the jungle of data, the prepared coder is king. So go forth, explore, and may your plots be ever in your favor!\nOpen it full\n\n\nNotes\nP.S. No animals were harmed in the making of this Shiny app, but several keyboards were tickled mercilessly."
+  },
+  {
+    "objectID": "exercises/001_Basic/basics.html",
+    "href": "exercises/001_Basic/basics.html",
+    "title": "1. Basic R",
+    "section": "",
+    "text": "Calculate the sum of 15 and 30.\nSolution:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the + operator to add two numbers like a machine calculator.\n\n\n\n\n\n\n\n\n\n\n\nSolution:\n\n\n\n\n\n15 + 30"
+  },
+  {
+    "objectID": "exercises/001_Basic/basics.html#exercise-1-basic-arithmetic",
+    "href": "exercises/001_Basic/basics.html#exercise-1-basic-arithmetic",
+    "title": "1. Basic R",
+    "section": "",
+    "text": "Calculate the sum of 15 and 30.\nSolution:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the + operator to add two numbers like a machine calculator.\n\n\n\n\n\n\n\n\n\n\n\nSolution:\n\n\n\n\n\n15 + 30"
+  },
+  {
+    "objectID": "exercises/001_Basic/basics.html#exercise-2-variable-assignment",
+    "href": "exercises/001_Basic/basics.html#exercise-2-variable-assignment",
+    "title": "1. Basic R",
+    "section": "Exercise 2: Variable Assignment",
+    "text": "Exercise 2: Variable Assignment\nAssign the value 100 to a variable named my_variable and print it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the &lt;- (or =) operator to assign a value to a variable.\n\n\n\n\n\n\n\n\n\n\n\nSolution:\n\n\n\n\n\n# Assign value to a variable\nmy_variable &lt;- 100\n\n# or\nmy_variable = 100\n\n# Print the variable\nmy_variable"
+  },
+  {
+    "objectID": "exercises/001_Basic/basics.html#exercise-3-creating-a-vector",
+    "href": "exercises/001_Basic/basics.html#exercise-3-creating-a-vector",
+    "title": "1. Basic R",
+    "section": "Exercise 3: Creating a Vector",
+    "text": "Exercise 3: Creating a Vector\nCreate a vector named my_vector containing the numbers 1, 2, 3, 4, and 5.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the c() function to create a vector.\n\n\n\n\n\n\n\n\n\n\n\nTips\n\n\n\n\n\nAlternatively use the : function to create a vector.\n\n\n\n\n\n\n\n\n\n\n\nSolution:\n\n\n\n\n\n# Create a vector\nc(1, 2, 3, 4, 5)\n\n# or\n1:5"
+  },
+  {
+    "objectID": "exercises/001_Basic/basics.html#exercise-4-basic-function-usage",
+    "href": "exercises/001_Basic/basics.html#exercise-4-basic-function-usage",
+    "title": "1. Basic R",
+    "section": "Exercise 4: Basic Function Usage",
+    "text": "Exercise 4: Basic Function Usage\nFind the mean of the numbers 10, 20, 30, 40, and 50.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse the mean() function to calculate the average of a set of numbers.\n\n\n\n\n\n\n\n\n\n\n\nSolution:\n\n\n\n\n\n# Calculate the mean\nnumbers &lt;- c(10, 20, 30, 40, 50)\nmean(numbers)"
+  },
+  {
+    "objectID": "exercises/001_Basic/basics.html#exercise-5-conditional-statement",
+    "href": "exercises/001_Basic/basics.html#exercise-5-conditional-statement",
+    "title": "1. Basic R",
+    "section": "Exercise 5: Conditional Statement",
+    "text": "Exercise 5: Conditional Statement\nWrite a conditional statement that checks if a number x is greater than 10. If it is, print “Greater than 10”; otherwise, print “10 or less”.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nUse an if statement to perform a conditional check.\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSolution:\nx &lt;- 12\n\n# Conditional statement\nif (x &gt; 10) {\n  print(\"Greater than 10\")\n} else {\n  print(\"10 or less\")\n}"
   }
 ]
