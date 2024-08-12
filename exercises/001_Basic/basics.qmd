@@ -16,7 +16,7 @@ Calculate the sum of 15 and 30.
 **Solution:**
 ```{webr}
 #| exercise: ex_1
-
+_____
 ```
 
 ::: { .hint exercise="ex_1"}
@@ -43,7 +43,7 @@ Assign the value 100 to a variable named `my_variable` and print it.
 
 ```{webr}
 #| exercise: ex_2
-
+_____
 ```
 
 ::: { .hint exercise="ex_2"}
@@ -78,7 +78,7 @@ Create a vector named `my_vector` containing the numbers 1, 2, 3, 4, and 5.
 
 ```{webr}
 #| exercise: ex_3
-
+_____
 ```
 
 
@@ -117,6 +117,7 @@ Find the mean of the numbers 10, 20, 30, 40, and 50.
 ```{webr}
 #| exercise: ex_4
 numbers <- c(10, 20, 30, 40, 50)
+_____
 ```
 
 ::: { .hint exercise="ex_4"}
@@ -144,6 +145,7 @@ Write a conditional statement that checks if a number `x` is greater than 10. If
 ```{webr}
 #| exercise: ex_5
 x <- 12
+_____
 ```
 
 
