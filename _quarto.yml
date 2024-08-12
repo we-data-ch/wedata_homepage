@@ -33,6 +33,8 @@ website:
       # - text: "{{< fa chart-line >}} Projects"
       #   href: projects.qmd
       # team members
+      - text: "{{< fa book}} Exercises"
+        href: exercises.qmd
       - text: "{{< fa users >}} Team"
         href: team.qmd
       - text: "{{< fa address-card >}} About"
