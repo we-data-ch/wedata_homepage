@@ -1,20 +1,14 @@
 [
   {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/2022-12-echarts4r/index.html"
-    ]
-  },
-  {
     "listing": "/talks.html",
     "items": [
       "/talks/2023-04-Deploy-your-R-code/index.html"
     ]
   },
   {
-    "listing": "/exercises.html",
+    "listing": "/projects.html",
     "items": [
-      "/exercises/001_Basic/basics.html"
+      "/projects/2022-12-echarts4r/index.html"
     ]
   },
   {
