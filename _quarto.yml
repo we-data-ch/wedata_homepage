@@ -33,6 +33,8 @@ website:
       # - text: "{{< fa chart-line >}} Projects"
       #   href: projects.qmd
       # team members
+      - text: "{{< fa book >}} Exercises"
+        href: https://we-data-ch.github.io/wedata-ultimate-r-exercises/
       - text: "{{< fa users >}} Team"
         href: team.qmd
       - text: "{{< fa address-card >}} About"
