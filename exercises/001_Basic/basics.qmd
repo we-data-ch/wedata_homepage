@@ -2,7 +2,6 @@
 title: "1. Basic R"
 author: "Vestin Hategekimana"
 description: "Exercises for absolute beginners O.o"
-categories: beginner
 engine: knitr
 format: live-html
 ---
