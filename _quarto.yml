@@ -37,6 +37,10 @@ website:
         href: https://we-data-ch.github.io/wedata-ultimate-r-exercises/
       - text: "{{< fa users >}} Team"
         href: team.qmd
+      - text: "{{< fa code >}} Projects"
+        href: projects.qmd
+      - text: "{{< fa calendar >}} Activities"
+        href: activities.qmd
       - text: "{{< fa address-card >}} About"
         href: about.qmd
       # - text: "{{< fa paperclip >}} Vitae"

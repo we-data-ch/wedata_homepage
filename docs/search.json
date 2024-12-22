@@ -704,7 +704,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\n\n\n\n\n\n\n\nEcharts4r\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2022\n\n\nDavid Munoz Tord\n\n\n\n\n\n\nNo matching items"
+    "text": "GitHub\nTypR is a word game with Typescript (a super set of javascript) and the common way of noming things in the R community. The initial goal is to create a better experience with building Packages for R (I want them to be easily compatible with the CRAN’s requirements to be easy to ship). Indeed, TypR is not only a type checker but bring greater tool to build packages for datascience in genral and want to be an easy way to convert research paper into code. TypR add great static types and a flexible syntax with some cool tricks (metaprogramming) that make him great to work with."
   },
   {
     "objectID": "talks.html",
@@ -712,5 +712,47 @@
     "title": "Talks",
     "section": "",
     "text": "Talks\n\n\n\n\n\n\n\n\n\n\n\nDeploy Your R Code!\n\n\n\n\n\n\n\n\n\n\n\nApr 4, 2023\n\n\nDavid Munoz Tord\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "activities.html#if-you-want-to-help-you-can",
+    "href": "activities.html#if-you-want-to-help-you-can",
+    "title": "Activities",
+    "section": "",
+    "text": "Share valuable information\nEngage online (discuss, ask or reply to questions, etc.)\nStay curious and share new ideas or discoveries"
+  },
+  {
+    "objectID": "activities.html#if-you-want-to-help-you-can-1",
+    "href": "activities.html#if-you-want-to-help-you-can-1",
+    "title": "Activities",
+    "section": "If you want to help you can…",
+    "text": "If you want to help you can…\n\nSuggest speakers for the next semester\nBe the speaker for one session\nCommunicate the event\n\nSee the Contact part."
+  },
+  {
+    "objectID": "activities.html",
+    "href": "activities.html",
+    "title": "Activities",
+    "section": "",
+    "text": "Discord\nThe association has a social life both online via WhatsApp, discord and in real life. This involves chatting about specific topics, sharing information and experience, and asking and answering questions. There’s also the more social aspect of meeting other embers face-to-face.\n\n\n\nShare valuable information\nEngage online (discuss, ask or reply to questions, etc.)\nStay curious and share new ideas or discoveries"
+  },
+  {
+    "objectID": "projects.html#typr",
+    "href": "projects.html#typr",
+    "title": "Projects",
+    "section": "",
+    "text": "GitHub\nTypR is a word game with Typescript (a super set of javascript) and the common way of noming things in the R community. The initial goal is to create a better experience with building Packages for R (I want them to be easily compatible with the CRAN’s requirements to be easy to ship). Indeed, TypR is not only a type checker but bring greater tool to build packages for datascience in genral and want to be an easy way to convert research paper into code. TypR add great static types and a flexible syntax with some cool tricks (metaprogramming) that make him great to work with."
+  },
+  {
+    "objectID": "projects.html#tpg-shinyapp",
+    "href": "projects.html#tpg-shinyapp",
+    "title": "Projects",
+    "section": "TPG ShinyApp",
+    "text": "TPG ShinyApp\n\nGitHub\nThe Geneva Public Transport (TPG) has made part of their data freely accessible online on their website. The goal of this project is to create a utility Shiny app based on these data."
+  },
+  {
+    "objectID": "projects.html#digital-in-the-association-sector",
+    "href": "projects.html#digital-in-the-association-sector",
+    "title": "Projects",
+    "section": "Digital in the association sector",
+    "text": "Digital in the association sector\nAssociations are crucial for communities in areas such as sustainable development and leisure activities. However, they are often understaffed in terms of human resources. The goal of this project, which is a continuation of the ‘digital transformation’ course, is to create an app to encourage associative volunteering and facilitate potential matches between young people and Geneva-based associations using a digital platform."
   }
 ]
