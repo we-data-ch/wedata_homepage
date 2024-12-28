@@ -2,158 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://we-data.ch/talks/2023-04-Deploy-your-R-code/index.html</loc>
-    <lastmod>2024-12-22T20:49:29.257Z</lastmod>
+    <lastmod>2024-12-28T18:19:19.288Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/talks.html</loc>
-    <lastmod>2024-12-22T20:49:30.205Z</lastmod>
+    <lastmod>2024-12-28T18:19:20.216Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/activities.html</loc>
-    <lastmod>2024-12-22T20:49:30.541Z</lastmod>
+    <lastmod>2024-12-28T18:19:20.552Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Stats_With_R/index.html</loc>
-    <lastmod>2024-12-22T20:49:30.857Z</lastmod>
+    <lastmod>2024-12-28T18:19:20.848Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023-07-16-you-must-use-rproject/index.html</loc>
-    <lastmod>2024-12-22T20:49:31.473Z</lastmod>
+    <lastmod>2024-12-28T18:19:21.444Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/biodiveRsity/index.html</loc>
-    <lastmod>2024-12-22T20:49:34.553Z</lastmod>
+    <lastmod>2024-12-28T18:19:24.380Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_manip_Fundamental/index.html</loc>
-    <lastmod>2024-12-22T20:49:34.877Z</lastmod>
+    <lastmod>2024-12-28T18:19:24.684Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/My-problem-with-python/index.html</loc>
-    <lastmod>2024-12-22T20:49:35.445Z</lastmod>
+    <lastmod>2024-12-28T18:19:25.244Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Echarts4r/index.html</loc>
-    <lastmod>2024-12-22T20:49:35.953Z</lastmod>
+    <lastmod>2024-12-28T18:19:25.748Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/R_basics/index.html</loc>
-    <lastmod>2024-12-22T20:49:36.249Z</lastmod>
+    <lastmod>2024-12-28T18:19:26.044Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/How-to-finally-learn-to-code-in-7-easy-steps/index.html</loc>
-    <lastmod>2024-12-22T20:49:37.481Z</lastmod>
+    <lastmod>2024-12-28T18:19:27.244Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/True_Ignorant/index.html</loc>
-    <lastmod>2024-12-22T20:49:37.789Z</lastmod>
+    <lastmod>2024-12-28T18:19:27.540Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2024-02-11_R_and_Python/index.html</loc>
-    <lastmod>2024-12-22T20:49:39.045Z</lastmod>
+    <lastmod>2024-12-28T18:19:28.792Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_Viz_Fundamentals/index.html</loc>
-    <lastmod>2024-12-22T20:49:39.909Z</lastmod>
+    <lastmod>2024-12-28T18:19:29.648Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/R_road_map/Index.html</loc>
-    <lastmod>2024-12-22T20:49:40.297Z</lastmod>
+    <lastmod>2024-12-28T18:19:30.036Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Coding_road_map/Index.html</loc>
-    <lastmod>2024-12-22T20:49:40.721Z</lastmod>
+    <lastmod>2024-12-28T18:19:30.468Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023-07-16-contributing-to-project-on-github/index.html</loc>
-    <lastmod>2024-12-22T20:49:41.497Z</lastmod>
+    <lastmod>2024-12-28T18:19:31.232Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Code_Hygiene/index.html</loc>
-    <lastmod>2024-12-22T20:49:41.805Z</lastmod>
+    <lastmod>2024-12-28T18:19:31.536Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/R-Lunches/index.html</loc>
-    <lastmod>2024-12-22T20:49:42.133Z</lastmod>
+    <lastmod>2024-12-28T18:19:31.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://we-data.ch/blog/2024-24-12-Deploy-Container/index.html</loc>
+    <lastmod>2024-12-28T18:19:33.000Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Data_explor_Fundamentals/index.html</loc>
-    <lastmod>2024-12-22T20:49:42.437Z</lastmod>
+    <lastmod>2024-12-28T18:19:33.840Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/podcast/index.html</loc>
-    <lastmod>2024-12-22T20:49:42.761Z</lastmod>
+    <lastmod>2024-12-28T18:19:34.152Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Terminal_Basic/index.html</loc>
-    <lastmod>2024-12-22T20:49:43.077Z</lastmod>
+    <lastmod>2024-12-28T18:19:34.464Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023-06-26-let-s-contribute/index.html</loc>
-    <lastmod>2024-12-22T20:49:43.709Z</lastmod>
+    <lastmod>2024-12-28T18:19:35.076Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/github_wrapped/index.html</loc>
-    <lastmod>2024-12-22T20:49:46.745Z</lastmod>
+    <lastmod>2024-12-28T18:19:38.004Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/llm2/index.html</loc>
-    <lastmod>2024-12-22T20:49:47.133Z</lastmod>
+    <lastmod>2024-12-28T18:19:38.384Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Programming_exercise_websites/index.html</loc>
-    <lastmod>2024-12-22T20:49:47.529Z</lastmod>
+    <lastmod>2024-12-28T18:19:38.776Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/2023_posit_conference/index.html</loc>
-    <lastmod>2024-12-22T20:49:48.161Z</lastmod>
+    <lastmod>2024-12-28T18:19:39.408Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Two_minutes_rule/index.html</loc>
-    <lastmod>2024-12-22T20:49:48.885Z</lastmod>
+    <lastmod>2024-12-28T18:19:40.100Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/CNN/index.html</loc>
-    <lastmod>2024-12-22T20:49:49.189Z</lastmod>
+    <lastmod>2024-12-28T18:19:40.420Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Python_Fundamentals/index.html</loc>
-    <lastmod>2024-12-22T20:49:49.485Z</lastmod>
+    <lastmod>2024-12-28T18:19:40.712Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Polyglot_programmer/index.html</loc>
-    <lastmod>2024-12-22T20:49:50.141Z</lastmod>
+    <lastmod>2024-12-28T18:19:41.364Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog/Live/index.html</loc>
-    <lastmod>2024-12-22T20:49:50.457Z</lastmod>
+    <lastmod>2024-12-28T18:19:41.676Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects/2022-12-echarts4r/index.html</loc>
-    <lastmod>2024-12-22T20:49:50.817Z</lastmod>
+    <lastmod>2024-12-28T18:19:42.048Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/about.html</loc>
-    <lastmod>2024-12-22T20:49:51.113Z</lastmod>
+    <lastmod>2024-12-28T18:19:42.348Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/projects.html</loc>
-    <lastmod>2024-12-22T20:49:51.425Z</lastmod>
+    <lastmod>2024-12-28T18:19:42.656Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/index.html</loc>
-    <lastmod>2024-12-22T20:49:51.881Z</lastmod>
+    <lastmod>2024-12-28T18:19:43.144Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/team.html</loc>
-    <lastmod>2024-12-22T20:49:52.277Z</lastmod>
+    <lastmod>2024-12-28T18:19:43.512Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/contact.html</loc>
-    <lastmod>2024-12-22T20:49:52.581Z</lastmod>
+    <lastmod>2024-12-28T18:19:43.780Z</lastmod>
   </url>
   <url>
     <loc>https://we-data.ch/blog.html</loc>
-    <lastmod>2024-12-22T20:49:54.617Z</lastmod>
+    <lastmod>2024-12-28T18:19:45.940Z</lastmod>
   </url>
 </urlset>

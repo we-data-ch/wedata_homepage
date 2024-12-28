@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="David Munoz Tord">
+<meta name="dcterms.date" content="2024-12-28">
+
+<title>We Data - Dockerizing a Shiny App: A Step Towards Seamless Deployments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/me.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECFW8LLBS7"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
+</script>
+
+
+<!-- =======================  Google Translate 
+======================= -->
+
+<meta name="twitter:title" content="We Data - Dockerizing a Shiny App: A Step Towards Seamless Deployments">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://we-data.ch/blog/2024-24-12-Deploy-Container/docker_docusaurus.jpg">
+<meta name="twitter:creator" content="@munoztd0">
+<meta name="twitter:card" content="summary_large_image">
+</head><body class="floating nav-fixed"><div style="float: right">
+   <div id="google_translate_element" style="position: absolute; right: 0px; z-index: 1;"></div>
+</div>
+
+
+ <style type="text/css">
+ 
+   .fixed-con {
+    z-index: 9724790009779558!important;
+    background-color: #f7f8fc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .VIpgJd-ZVi9od-aZ2wEe-wOHMyf{
+   z-index: 9724790009779!important;
+   top:0;
+   left:unset;
+   right:-5px;
+   display:none!important;
+   border-radius:50%;
+   border:2px solid gold;
+  }
+  .VIpgJd-ZVi9od-aZ2wEe-OiiCO{
+    width:80px;
+    height:80px;
+  }
+  /*hide google translate link | logo | banner-frame */
+  .goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame,div#goog-gt-{
+    display: none!important;
+  }
+  .goog-te-gadget {
+    color: transparent!important;
+    font-size:0px;
+  }
+
+  .goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+  }
+   
+ /*google translate Dropdown */
+ 
+ #google_translate_element select{
+ background:#f6edfd;
+ color:#383ffa;
+ border: none;
+ border-radius:3px;
+ padding:6px 8px
+ }
+</style>
+   
+
+
+  <script>
+ function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+ pageLanguage: 'en',
+ defaultLanguage: 'en',
+ includedLanguages: 'de,en,fr,es,ja,ko,ru,ar',
+ autoDisplay: 'true',
+ layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+ }, 'google_translate_element');
+ }
+ </script>
+ 
+ <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/primary.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://we-data-ch.github.io/wedata-ultimate-r-exercises/" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Exercises</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../team.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-users" aria-label="users"></i> Team</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-code" aria-label="code"></i> Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../activities.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-calendar" aria-label="calendar"></i> Activities</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Dockerizing a Shiny App: A Step Towards Seamless Deployments</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Shiny</div>
+                <div class="quarto-category">Docker</div>
+                <div class="quarto-category">App</div>
+                <div class="quarto-category">Deployment</div>
+                <div class="quarto-category">AWS</div>
+                <div class="quarto-category">EKS</div>
+                <div class="quarto-category">DevOps</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>David Munoz Tord </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 28, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-in-the-hell-is-he-talking-about" id="toc-what-in-the-hell-is-he-talking-about" class="nav-link active" data-scroll-target="#what-in-the-hell-is-he-talking-about">What in the hell is he talking about?</a>
+  <ul class="collapse">
+  <li><a href="#the-challenge" id="toc-the-challenge" class="nav-link" data-scroll-target="#the-challenge"><strong>The Challenge</strong></a></li>
+  <li><a href="#shiny-and-docker-a-perfect-match" id="toc-shiny-and-docker-a-perfect-match" class="nav-link" data-scroll-target="#shiny-and-docker-a-perfect-match"><strong>Shiny and Docker: A Perfect Match</strong></a></li>
+  <li><a href="#dockerizing-dbviewer-two-approaches-for-isolation" id="toc-dockerizing-dbviewer-two-approaches-for-isolation" class="nav-link" data-scroll-target="#dockerizing-dbviewer-two-approaches-for-isolation"><strong>Dockerizing DbVieweR: Two Approaches for Isolation</strong></a></li>
+  <li><a href="#dockerizing-with-renv-for-dependency-management" id="toc-dockerizing-with-renv-for-dependency-management" class="nav-link" data-scroll-target="#dockerizing-with-renv-for-dependency-management"><strong>1. Dockerizing with <code>renv</code> for Dependency Management</strong></a></li>
+  <li><a href="#dockerizing-with-full-containerization" id="toc-dockerizing-with-full-containerization" class="nav-link" data-scroll-target="#dockerizing-with-full-containerization"><strong>2. Dockerizing with Full Containerization</strong></a></li>
+  <li><a href="#why-docker-for-dbviewer" id="toc-why-docker-for-dbviewer" class="nav-link" data-scroll-target="#why-docker-for-dbviewer"><strong>Why Docker for DbVieweR?</strong></a></li>
+  <li><a href="#deployment-process" id="toc-deployment-process" class="nav-link" data-scroll-target="#deployment-process"><strong>Deployment Process</strong></a></li>
+  <li><a href="#key-features-of-this-setup" id="toc-key-features-of-this-setup" class="nav-link" data-scroll-target="#key-features-of-this-setup"><strong>Key Features of This Setup</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="what-in-the-hell-is-he-talking-about" class="level2">
+<h2 class="anchored" data-anchor-id="what-in-the-hell-is-he-talking-about">What in the hell is he talking about?</h2>
+<p><img src="./docker_docusaurus.jpg" alt="docker" style="width: 100%; height: auto;"></p>
+<p>Docker is a powerful tool that allows you to package your applications into containers, making them portable and easy to deploy. In this post, we’ll explore how to Dockerize a Shiny app, creating an isolated environment for each project and ensuring that your app runs smoothly in any environment. We’ll walk through two approaches for Dockerizing a Shiny app and deploying it on AWS Fargate using EKS, providing a production-ready setup with proper monitoring, scaling, and security measures in place. Let’s get started!</p>
+<section id="the-challenge" class="level3">
+<h3 class="anchored" data-anchor-id="the-challenge"><strong>The Challenge</strong></h3>
+<p>When you’re working with multiple projects, especially ones that require different versions of R packages or libraries (like in <a href="https://david-munoztord.online/projects/DbVieweR/">DbVieweR Project</a>.), the last thing you want is to muddle up your environment. You need clear separation for each project, and this is where Docker comes in, providing an isolated environment that guarantees that each project runs in its own container with its own dependencies.</p>
+</section>
+<section id="shiny-and-docker-a-perfect-match" class="level3">
+<h3 class="anchored" data-anchor-id="shiny-and-docker-a-perfect-match"><strong>Shiny and Docker: A Perfect Match</strong></h3>
+<p>In this post, we’ll walk through the steps to Dockerize <strong>any shiny app</strong> and deploy it in a containerized environment, creating separate instances for different databases or applications that you may be working on. With Docker, we can avoid dependency conflicts, streamline deployments, and ensure that our environment is as reproducible as possible.</p>
+</section>
+<section id="dockerizing-dbviewer-two-approaches-for-isolation" class="level3">
+<h3 class="anchored" data-anchor-id="dockerizing-dbviewer-two-approaches-for-isolation"><strong>Dockerizing DbVieweR: Two Approaches for Isolation</strong></h3>
+<p>Let’s explore two approaches for Dockerizing DbVieweR—one based on using a custom environment with <code>renv</code> (the traditional method) and another using Docker’s complete containerization capabilities.</p>
+</section>
+<section id="dockerizing-with-renv-for-dependency-management" class="level3">
+<h3 class="anchored" data-anchor-id="dockerizing-with-renv-for-dependency-management"><strong>1. Dockerizing with <code>renv</code> for Dependency Management</strong></h3>
+<p>Using <code>renv</code> inside a Docker container can be useful if you want to maintain control over the R environment and packages. Here’s how:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Use an official R image as the base</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">FROM</span> rocker/shiny</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Install necessary system dependencies</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">RUN</span> <span class="ex">apt-get</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    libcurl4-openssl-dev <span class="dt">\</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    libssl-dev <span class="dt">\</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    libxml2-dev <span class="dt">\</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">rm</span> <span class="at">-rf</span> /var/lib/apt/lists/<span class="pp">*</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># Install necessary R packages</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="kw">RUN</span> <span class="ex">R</span> <span class="at">-e</span> <span class="st">"install.packages(c('renv', 'DBI', 'RPostgreSQL'))"</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co"># Set up the working directory</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="kw">WORKDIR</span> /srv/shiny-server</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># Copy the app and renv.lock (if you have it)</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="kw">COPY</span> . .</span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># Restore the R environment using renv</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="kw">RUN</span> <span class="ex">R</span> <span class="at">-e</span> <span class="st">"renv::restore()"</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Expose port 3838 for the Shiny app</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="kw">EXPOSE</span> 3838</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co"># Run the Shiny app</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="kw">CMD</span> [<span class="st">"R"</span>, <span class="st">"-e"</span>, <span class="st">"shiny::runApp('/srv/shiny-server')"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Key Notes:</strong> - We use rocker/shiny as our base image consistently - System dependencies are installed for various R packages - Essential R packages are installed - App files and renv.lock are copied into the container - Environment is replicated using renv::restore()</p>
+</section>
+<section id="dockerizing-with-full-containerization" class="level3">
+<h3 class="anchored" data-anchor-id="dockerizing-with-full-containerization"><strong>2. Dockerizing with Full Containerization</strong></h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Use an official R image as the base here we use shiny</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">FROM</span> rocker/shiny</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Install necessary system dependencies for DB and app</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="kw">RUN</span> <span class="ex">apt-get</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    libcurl4-openssl-dev <span class="dt">\</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    libssl-dev <span class="dt">\</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>    libxml2-dev <span class="dt">\</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>    libsqlite3-dev <span class="dt">\</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">rm</span> <span class="at">-rf</span> /var/lib/apt/lists/<span class="pp">*</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="co"># Install R packages required for the app</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="kw">RUN</span> <span class="ex">R</span> <span class="at">-e</span> <span class="st">"install.packages(c('shiny', 'DBI', 'RPostgreSQL'))"</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co"># Set up the working directory</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="kw">WORKDIR</span> /srv/shiny-server</span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="co"># Copy the app's source code into the container</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="kw">COPY</span> . .</span>
+<span id="cb2-20"><a href="#cb2-20"></a></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="co"># Expose port for the Shiny app</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="kw">EXPOSE</span> 3838</span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="co"># Run the Shiny app</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="kw">CMD</span> [<span class="st">"R"</span>, <span class="st">"-e"</span>, <span class="st">"shiny::runApp('/srv/shiny-server')"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="why-docker-for-dbviewer" class="level3">
+<h3 class="anchored" data-anchor-id="why-docker-for-dbviewer"><strong>Why Docker for DbVieweR?</strong></h3>
+<p>For DbVieweR, Docker provides: 1. <strong>Consistency:</strong> Your app behaves the same way everywhere 2. <strong>Isolation:</strong> Each project gets its own instance 3. <strong>Portability:</strong> Deploy anywhere without code changes 4. <strong>Reproducibility:</strong> Easy environment replication</p>
+</section>
+<section id="deployment-process" class="level3">
+<h3 class="anchored" data-anchor-id="deployment-process"><strong>Deployment Process</strong></h3>
+<section id="build-and-push-initial-image" class="level4">
+<h4 class="anchored" data-anchor-id="build-and-push-initial-image">1. Build and Push Initial Image</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">docker</span> build <span class="at">-t</span> your-dockerhub-username/app-name:latest .</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">docker</span> push your-dockerhub-username/app-name:latest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-custom-dockerfile" class="level4">
+<h4 class="anchored" data-anchor-id="create-custom-dockerfile">2. Create Custom Dockerfile</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Use the custom DbVieweR image from Docker Hub</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">FROM</span> your-dockerhub-username/app-name:latest</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Set the working directory</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">WORKDIR</span> /srv/shiny-server</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># Copy the Shiny app</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="kw">COPY</span> ./your-shiny-app-directory /srv/shiny-server/</span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co"># Expose Shiny port</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="kw">EXPOSE</span> 3838</span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co"># Set environment variables</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="kw">ENV</span> SHINY_PORT=3838</span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="co"># Run Shiny server</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="kw">CMD</span> [<span class="st">"/usr/bin/shiny-server"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="local-development-setup-docker-compose.yml" class="level4">
+<h4 class="anchored" data-anchor-id="local-development-setup-docker-compose.yml">3. Local Development Setup (docker-compose.yml)</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.8'</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="at">  </span><span class="fu">shiny-app</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span><span class="at"> .</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"3838:3838"</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> SHINY_PORT=3838</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./app:/srv/shiny-server</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">    </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">      </span><span class="kw">-</span><span class="at"> shiny-net</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="at">  </span><span class="fu">shiny-net</span><span class="kw">:</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> bridge</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>From now on, you can run your Shiny app locally using :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">docker-compose</span> up <span class="at">--build</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- here we ass a screnshot calle dimage1 -->
+<p><img src="./image1.png" class="img-fluid" alt="console"> You then just have to open your browser on <code>http://[::]:3838</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">app</figcaption>
+</figure>
+</div>
+</section>
+<section id="advanced.-eks-cluster-configuration-cluster.yaml" class="level4">
+<h4 class="anchored" data-anchor-id="advanced.-eks-cluster-configuration-cluster.yaml">4 (Advanced). EKS Cluster Configuration (cluster.yaml)</h4>
+<p>Now let’s deploy our Shiny app on AWS Fargate using EKS. Here’s a sample. This is useful if you want to run your app in a production environment.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">apiVersion</span><span class="kw">:</span><span class="at"> eksctl.io/v1alpha5</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> ClusterConfig</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> shiny-cluster</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="at">  </span><span class="fu">region</span><span class="kw">:</span><span class="at"> us-west-2</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="fu">fargate</span><span class="kw">:</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="at">  </span><span class="fu">selectors</span><span class="kw">:</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">namespace</span><span class="kw">:</span><span class="at"> shiny-namespace</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="fu">vpc</span><span class="kw">:</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="at">  </span><span class="fu">cidr</span><span class="kw">:</span><span class="at"> </span><span class="st">"192.168.0.0/16"</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="at">  </span><span class="fu">nat</span><span class="kw">:</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="at">    </span><span class="fu">gateway</span><span class="kw">:</span><span class="at"> Single</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="advanced.-kubernetes-deployment-deployment.yaml" class="level4">
+<h4 class="anchored" data-anchor-id="advanced.-kubernetes-deployment-deployment.yaml">5 (Advanced). Kubernetes Deployment (deployment.yaml)</h4>
+<p>Kubernetes is a powerful tool for managing containerized applications. Here’s a sample deployment configuration for your Shiny app:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">apiVersion</span><span class="kw">:</span><span class="at"> apps/v1</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Deployment</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> shiny-deployment</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="at">  </span><span class="fu">namespace</span><span class="kw">:</span><span class="at"> shiny-namespace</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="fu">spec</span><span class="kw">:</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="at">  </span><span class="fu">replicas</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="at">  </span><span class="fu">selector</span><span class="kw">:</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="at">    </span><span class="fu">matchLabels</span><span class="kw">:</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="at">      </span><span class="fu">app</span><span class="kw">:</span><span class="at"> shiny-app</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="at">    </span><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="at">      </span><span class="fu">labels</span><span class="kw">:</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="at">        </span><span class="fu">app</span><span class="kw">:</span><span class="at"> shiny-app</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="at">    </span><span class="fu">spec</span><span class="kw">:</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="at">      </span><span class="fu">containers</span><span class="kw">:</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> shiny-container</span></span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="at">        </span><span class="fu">image</span><span class="kw">:</span><span class="at"> your-dockerhub-username/dbviewer-shiny-app:latest</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a><span class="at">        </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb8-20"><a href="#cb8-20"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">containerPort</span><span class="kw">:</span><span class="at"> </span><span class="dv">3838</span></span>
+<span id="cb8-21"><a href="#cb8-21"></a><span class="at">        </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a><span class="at">          </span><span class="fu">requests</span><span class="kw">:</span></span>
+<span id="cb8-23"><a href="#cb8-23"></a><span class="at">            </span><span class="fu">memory</span><span class="kw">:</span><span class="at"> </span><span class="st">"512Mi"</span></span>
+<span id="cb8-24"><a href="#cb8-24"></a><span class="at">            </span><span class="fu">cpu</span><span class="kw">:</span><span class="at"> </span><span class="st">"250m"</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a><span class="at">          </span><span class="fu">limits</span><span class="kw">:</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a><span class="at">            </span><span class="fu">memory</span><span class="kw">:</span><span class="at"> </span><span class="st">"1Gi"</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a><span class="at">            </span><span class="fu">cpu</span><span class="kw">:</span><span class="at"> </span><span class="st">"500m"</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a><span class="at">        </span><span class="fu">readinessProbe</span><span class="kw">:</span></span>
+<span id="cb8-29"><a href="#cb8-29"></a><span class="at">          </span><span class="fu">httpGet</span><span class="kw">:</span></span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="at">            </span><span class="fu">path</span><span class="kw">:</span><span class="at"> /</span></span>
+<span id="cb8-31"><a href="#cb8-31"></a><span class="at">            </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="dv">3838</span></span>
+<span id="cb8-32"><a href="#cb8-32"></a><span class="at">          </span><span class="fu">initialDelaySeconds</span><span class="kw">:</span><span class="at"> </span><span class="dv">30</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a><span class="at">          </span><span class="fu">periodSeconds</span><span class="kw">:</span><span class="at"> </span><span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="advanced.-service-configuration-service.yaml" class="level4">
+<h4 class="anchored" data-anchor-id="advanced.-service-configuration-service.yaml">6 (Advanced). Service Configuration (service.yaml)</h4>
+<p>Finally, create a service configuration to expose your Shiny app to the outside world:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">apiVersion</span><span class="kw">:</span><span class="at"> v1</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">kind</span><span class="kw">:</span><span class="at"> Service</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> shiny-service</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="at">  </span><span class="fu">namespace</span><span class="kw">:</span><span class="at"> shiny-namespace</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="fu">spec</span><span class="kw">:</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> LoadBalancer</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="at">  </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="dv">80</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="at">    </span><span class="fu">targetPort</span><span class="kw">:</span><span class="at"> </span><span class="dv">3838</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="at">    </span><span class="fu">protocol</span><span class="kw">:</span><span class="at"> TCP</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="at">  </span><span class="fu">selector</span><span class="kw">:</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="at">    </span><span class="fu">app</span><span class="kw">:</span><span class="at"> shiny-app</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For EKS deployment:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Create cluster</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="ex">eksctl</span> create cluster <span class="at">-f</span> cluster.yaml</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co"># Create namespace</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="ex">kubectl</span> create namespace shiny-namespace</span>
+<span id="cb10-6"><a href="#cb10-6"></a></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="co"># Apply configurations</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="ex">kubectl</span> apply <span class="at">-f</span> deployment.yaml</span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="ex">kubectl</span> apply <span class="at">-f</span> service.yaml</span>
+<span id="cb10-10"><a href="#cb10-10"></a></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co"># Monitor deployment</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="ex">kubectl</span> get pods <span class="at">-n</span> shiny-namespace</span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="ex">kubectl</span> get services <span class="at">-n</span> shiny-namespace</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="key-features-of-this-setup" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-of-this-setup"><strong>Key Features of This Setup</strong></h3>
+<ol type="1">
+<li><strong>Resource Management</strong>
+<ul>
+<li>Explicit CPU and memory limits</li>
+<li>Controlled scaling capabilities</li>
+</ul></li>
+<li><strong>Health Monitoring</strong>
+<ul>
+<li>Readiness probes</li>
+<li>Container health checks</li>
+</ul></li>
+<li><strong>Networking</strong>
+<ul>
+<li>Load balancer configuration</li>
+<li>Port mapping</li>
+<li>Network isolation</li>
+</ul></li>
+<li><strong>Security</strong>
+<ul>
+<li>Namespace isolation</li>
+<li>Resource constraints</li>
+<li>Network policies</li>
+</ul></li>
+</ol>
+<p>This configuration provides a production-ready setup for running your Shiny app on AWS Fargate with proper monitoring, scaling, and security measures in place !</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><i class="fa-solid fa-copyright" aria-label="copyright"></i> 2024, David Munoz Tord</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <img src="../../images/primary.png" width="auto" height="30px">
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/we-data-ch">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@wedata_unige">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/wedata_unige">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/wedata-gen%C3%A8ve/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

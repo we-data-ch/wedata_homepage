@@ -8,6 +8,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blog/2024-24-12-Deploy-Container/index.html",
       "/blog/biodiveRsity/index.html",
       "/blog/github_wrapped/index.html",
       "/blog/CNN/index.html",
@@ -42,6 +43,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/2024-24-12-Deploy-Container/index.html",
       "/blog/biodiveRsity/index.html",
       "/blog/github_wrapped/index.html",
       "/blog/CNN/index.html",
