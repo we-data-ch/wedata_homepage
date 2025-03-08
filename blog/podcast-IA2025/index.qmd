@@ -1,0 +1,33 @@
+---
+date: "2025-03-08"
+title: "We Data, do you?: Discussing AI in 2025 🎧"
+categories:
+  - Spotify
+  - Podcast
+  - AI
+  - Machine Learning
+image: podcast.png
+author: David Munoz Tord
+---
+
+# Discussing AI in 2025: Hot Takes and Bold Predictions
+
+Thrilled to share that our newest episode of the "We Data, do you?" podcast is now available on Spotify! 🚀 Join David, Vestin, and Fabrice as they dive into the fascinating world of AI in 2025, offering hot takes and bold predictions about where the technology is heading. 🌐
+
+Episode available now on Spotify! 🎧 Listen in to gain valuable insights into the evolving AI landscape!
+
+## About This Episode
+
+In this exciting discussion, our hosts explore the current state of AI and share their perspectives on the most significant developments of 2025 so far, including:
+
+- OpenAI's latest innovations and market position
+- The emerging paradigm of CrewAI and collaborative AI systems
+- Claude 3.7's remarkable capabilities and real-world applications
+- Gemini's impact on the broader AI ecosystem
+
+Whether you're a seasoned AI professional or just curious about the future of technology, this episode offers thought-provoking perspectives and expert analysis.
+
+[Listen to the full episode here.](https://open.spotify.com/episode/2UCu3NLcf3S9v0Ki4PDVj9)
+
+Join the conversation and share your thoughts on the future of AI!
+

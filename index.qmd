@@ -71,19 +71,19 @@ Latest from the blog
 
 <h3> Podcast </h3>
 
-<p>Exploring WeData’s Story</p>
+<p>Discussion on AI in 2025</p>
 
 <h4>
-[Learning From Data: A Podcast of WeData’s Story now on Spotify 🎧 ](https://open.spotify.com/episode/0YEwGkNdPBNnymTA4yKca8)</h4>
+[Listen to our first episode now on Spotify 🎧 ](https://open.spotify.com/episode/2UCu3NLcf3S9v0Ki4PDVj9)</h4>
 
 
-<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Apr 3, 2024</small></p>
+<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Mar 8, 2025</small></p>
 
 
 :::
 
 ::: {.feature-bottom}
-[Full Podcast](https://open.spotify.com/episode/0YEwGkNdPBNnymTA4yKca8){.btn .btn-secondary role="button"}
+[Full Podcast](ttps://open.spotify.com/episode/2UCu3NLcf3S9v0Ki4PDVj9){.btn .btn-secondary role="button"}
 :::
 :::
 
