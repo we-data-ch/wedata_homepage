@@ -33,8 +33,10 @@ listing:
 ::: {.g-col-8}
 ##### About us
 
-> We are an association of the University of Geneva that aims to share its passion for data science and computer science. We have a strong interest in statistics and computational methods. Initially, the association's target audience was people in the social sciences but we quickly expanded into other fields of research.
-<br><br> More concretely, the association aims to achieve its objectives by creating freely-accessible educational content on its platforms in a variety of forms: YouTube videos, blog posts, exercises, etc. The association co-organizes the R-Lunches, a series of events related to R in which various speakers present topics related to the R language. The association tries to keep abreast of and participate as often as possible in digital initiatives at the University of Geneva.
+> We are an independent association dedicated to sharing our passion for data science and computer science, with a strong focus on statistics and computational methods. While our initial audience was people in the social sciences, we have since expanded our reach to various research fields and professional communities.
+
+
+<br><br> Concretely, the association pursues its goals by creating freely accessible educational content on multiple platforms, including YouTube videos, blog posts, exercises, and more. We also organize and offer consulting services, workshops, and talks to help individuals and organizations enhance their skills in data analysis and programming. Additionally, the association hosts regular events and presentations on relevant topics, aiming to foster knowledge sharing and community engagement in the digital and data science spheres
 <br>
 :::
 
