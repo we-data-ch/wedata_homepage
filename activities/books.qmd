@@ -1,0 +1,12 @@
+---
+title: "Books"
+format: html
+---
+
+One of the best ways to share knowledge is through books. They are dense and allow for organizing information in an interesting way. With new technologies (such as [Quarto](https://quarto.org/)), it is now very easy for anyone to create an online book and publish it for free. The initiative of [Bookdown](https://bookdown.org/) is one of the most successful in this regard. It has made it possible to create a specific selection of books that can be found in the reference book known as [The Big Book of R](https://www.bigbookofr.com/).
+
+With such powerful tools and the possibility for any browser to directly translate the content of a page, the sharing of knowledge has been greatly simplified, allowing new initiatives to emerge.
+
+The book writing project is one of these initiatives. We propose that any member of WeData can write a book on a field in which they are an expert and take advantage of the visibility of WeData. All ongoing books are listed below:
+
+### Coming soon!
