@@ -20,6 +20,12 @@ TypR is a word game with Typescript (a superset of JavaScript) and the common wa
 
 The Geneva Public Transport (TPG) has made part of their data freely accessible online on their website. The goal of this project is to create a utility Shiny app based on these data.
 
+# WeData's digital literacy school
+
+**COMING SOON**
+
+Today, in our digital world, we live in two parallel worlds that are separated. On one side, we have the digital world with significant technological advancements, the advent of large language models (LLMs) being a very important example. On the other side, we have civil society struggling to keep up with what is happening in the technological sphere, and often, it is the least informed individuals who bear the consequences. The goal of this project is to create a learning curriculum on digital literacy. It will consist of two main blocks: **digital literacy** and **computational literacy**. The first block (digital literacy) includes three branches: data literacy, AI literacy, and technological literacy. The second block (computational literacy) also includes three branches: data science, computer science, and computational social sciences. This training will take the form of a popular school model inspired by the Swiss system. It will therefore be open to the general public and will allow people who wish to learn about these current topics to do so without needing to enroll in a Higher Education Institution or a University.
+
 # Digital in the association sector
 
 ![](images/coming_soon_transparent.png){width=200}
