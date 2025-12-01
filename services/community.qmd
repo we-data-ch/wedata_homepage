@@ -1,0 +1,37 @@
+---
+title: "Community & Open‑Source"
+page-layout: article
+---
+
+## Community & Open‑Source
+## {{< fa users >}}  Community & Open‑Source
+
+<br> Contributing and organising to amplify impact. We contribute to open tooling, run community events and produce public learning materials that make good practices accessible.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **Open‑source contributions & maintainership (rOpenSci, Opifex)** — Package review, maintenance and community support to improve tools researchers rely on.  
+		![Open‑source contributions](https://picsum.photos/seed/ropensci/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **We Data (co‑founder), R‑Lunch meetups and workshops** — Community-building events that share practical skills, create networks and foster collaboration.  
+		![Events & workshops](https://picsum.photos/seed/wedata/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Blog posts, YouTube tutorials and reproducible examples** — Public learning materials and demos that accelerate adoption of best practices and reproducible workflows.  
+		![Learning resources](https://picsum.photos/seed/blog/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Partnerships (UN Geneva “AI for Good” Hub and others)** — Collaborative projects with institutional partners to deliver research and policy impact.  
+		![Partnerships](https://picsum.photos/seed/un/400/250){width="400" height="250"}
+
+<br>
+
+### Examples:
+
+-   {{< fa angle-double-right >}} Led package review and maintenance contributions to rOpenSci-backed packages, improving tests and documentation.
+-   {{< fa angle-double-right >}} Organised and delivered R‑Lunch sessions and hands-on workshops focused on reproducible workflows.
+-   {{< fa angle-double-right >}} Produced tutorials and reproducible examples published on the blog and YouTube that demonstrate real-world workflows.
+
+<br>
+
+### Contact
+
+If you'd like to collaborate or learn more, reach out at [david.munoztord@mailbox.org](mailto:david.munoztord@mailbox.org).

@@ -1,0 +1,31 @@
+---
+title: "Training & Education"
+page-layout: article
+---
+
+## {{< fa chalkboard-teacher >}}  Training & Education
+
+<br> Role‑tailored workshops and learning paths for immediate impact.
+
+Overview: We design hands‑on courses that take participants from concept to applied practice. Each session is tailored to role, domain and desired outcomes.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **R (intro · data science · computational social sciences)** — Idiomatic R, reproducible pipelines and packaging so teams produce robust, shareable results.  
+	![R training](https://picsum.photos/seed/r_training/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Python (intro · analytics · computational sciences)** — Practical modules on data manipulation, numerical computing and reproducible workflows.  
+	![Python training](https://picsum.photos/seed/python_training/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Bash & Git** — Command‑line proficiency and branching/CI practices to reduce collaboration friction.  
+	![Bash Git](https://picsum.photos/seed/bash_git/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Quarto & Typst** — Reproducible authoring and technical document generation for papers and reports.  
+	![Authoring](https://picsum.photos/seed/authoring/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Cloud fundamentals (Azure), Docker & CI/CD** — Essentials for deploying reliable services.  
+	![Cloud](https://picsum.photos/seed/cloud/400/250){width="400" height="250"}
+
+<br>
+
+Benefits: Short learning curves, ready‑to‑use materials, and measurable improvements in team output.

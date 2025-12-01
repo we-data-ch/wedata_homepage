@@ -1,0 +1,28 @@
+---
+title: "Data Visualization"
+page-layout: article
+---
+
+## {{< fa chart-bar >}}  Data Visualization
+
+<br> Visuals that clarify results and support decisions.
+
+Overview: We craft static and interactive visuals that meet scientific standards and drive action.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **Static & interactive visualizations** — Purposeful charts and dashboards for insight and storytelling.  
+	![Visualizations](https://picsum.photos/seed/viz/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Graphical review of scientific figures** — Improve clarity, reproducibility and journal readiness.  
+	![Figure review](https://picsum.photos/seed/figures/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Shiny dashboards & exploration interfaces** — Interactive tools for probing data and exporting results.  
+	![Shiny dashboards](https://picsum.photos/seed/shiny/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Client‑facing analytical reports** — Concise, action‑oriented deliverables.  
+	![Reports](https://picsum.photos/seed/reports/400/250){width="400" height="250"}
+
+<br>
+
+Benefits: Clearer insight, better stakeholder buy‑in and publishable visual outputs.

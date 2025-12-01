@@ -1,0 +1,31 @@
+---
+title: "Software Development & Engineering"
+page-layout: article
+---
+
+## {{< fa laptop-code >}}  Software Development & Engineering
+
+<br> Prototypes to production systems that serve users and teams reliably.
+
+Overview: We design and implement software—from early prototypes to hardened services—balancing rapid delivery with engineering discipline.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **R packages & Shiny applications** — Reusable code, tests and production‑grade analytics UIs.  
+	![R packages](https://picsum.photos/seed/r_packages/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Full‑stack data applications (servers, DB layers, Shiny server admin)** — End‑to‑end app delivery.  
+	![Full stack](https://picsum.photos/seed/fullstack/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **MLOps (R, Python, Julia)** — Training, validation, serving and monitoring pipelines.  
+	![MLOps](https://picsum.photos/seed/mlops/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **CI/CD pipelines & deployment support** — Automated testing and safe delivery practices.  
+	![CI CD](https://picsum.photos/seed/cicd_engineering/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Self‑hosting infrastructure & deployment environments** — Hardened hosting for private or regulated needs.  
+	![Self hosting](https://picsum.photos/seed/selfhost/400/250){width="400" height="250"}
+
+<br>
+
+Benefits: Faster time to production, clearer maintenance ownership and predictable operations.

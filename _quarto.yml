@@ -28,6 +28,8 @@ website:
         href: index.qmd
       - text: "{{< fa laptop-code >}} Blog"
         href: blog.qmd
+      - text: "{{< fa briefcase >}} Services"
+        href: services/index.qmd
       # - text: "{{< fa chalkboard-user >}} Talks"
       #   href: talks.qmd
       # - text: "{{< fa chart-line >}} Projects"

@@ -1,0 +1,30 @@
+---
+title: "Contact & Engagement"
+page-layout: article
+---
+
+## {{< fa envelope-open-text >}}  Contact & Engagement
+
+<br> Start with a brief — we’ll reply with a concise proposal.
+
+Overview: We offer workshops, short projects and retained advisory. Engagements are scoped to outcomes, timelines and available capacity.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **How to start** — Send a short brief with objectives, audience, timeline and constraints.  
+	![How to start](https://picsum.photos/seed/contact/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Preferred delivery format** — Tell us the preferred delivery format (workshop, pilot project, retainer).  
+	![Formats](https://picsum.photos/seed/formats/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Compliance & constraints** — Share any compliance or data constraints up front.  
+	![Compliance](https://picsum.photos/seed/compliance/400/250){width="400" height="250"}
+
+<br>
+
+What we deliver in response:
+
+-   {{< fa angle-double-right >}} **Concise proposal** — Scope, deliverables, timeline and budget estimate.
+-   {{< fa angle-double-right >}} **Suggested next steps** — Available dates and follow-up options.
+
+For urgent requests, include preferred dates and we will propose a compressed timeline if capacity allows.

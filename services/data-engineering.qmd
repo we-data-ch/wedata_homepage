@@ -1,0 +1,19 @@
+---
+title: "Data Engineering"
+page-layout: article
+---
+
+## Data Engineering
+
+Short line: Turn messy sources into dependable, model‑ready data.
+
+Overview: We implement ingestion, transformation and storage that make data trustworthy and accessible for analytics and ML.
+
+Expandable services:
+- Data harvesting & ingestion — Stable connectors, scheduling and change capture.
+- ETL/ELT pipeline design & orchestration — Maintainable transformations with lineage and observability.
+- Database storage & schema design — Scalable schemas and indexing tuned for analytics.
+- Data management & governance — Cataloguing, access controls and documentation to reduce technical debt.
+- Model‑ready datasets & deployment environments — Versioned data and reproducible compute for analytics teams.
+
+Benefits: Reduced technical debt, improved discoverability and faster model development cycles.

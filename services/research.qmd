@@ -1,0 +1,34 @@
+---
+title: "Research & Analytics Consulting"
+page-layout: article
+---
+
+## {{< fa flask >}}  Research & Analytics Consulting
+
+<br> From research question to deployable, auditable results.
+
+Overview: We partner on applied research and analytics mandates with an emphasis on reproducibility, uncertainty quantification and operationalisation.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **Demography (description · prediction · simulation)** — Population models and scenario analysis for planning and policy.  
+	![Demography](https://picsum.photos/seed/demography/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Public policy analysis** — Evidence synthesis and impact assessments that inform decisions.  
+	![Policy analysis](https://picsum.photos/seed/policy/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Social network analysis** — Network construction, community detection and interpretation.  
+	![Networks](https://picsum.photos/seed/networks/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Bayesian modelling & statistical inference** — Transparent probabilistic models and clear uncertainty communication.  
+	![Bayesian modelling](https://picsum.photos/seed/bayesian/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Reproducible analysis pipelines** — End‑to‑end workflows from raw data to report with versioning and provenance.  
+	![Pipelines](https://picsum.photos/seed/pipelines/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Fraud, risk, behaviour, demand and operations modelling** — Predictive and diagnostic models tuned to operational constraints.  
+	![Modelling](https://picsum.photos/seed/modelling/400/250){width="400" height="250"}
+
+<br>
+
+Benefits: Reusable, auditable outputs, clear assumptions and smooth handover to operational teams.

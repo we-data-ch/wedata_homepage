@@ -1,0 +1,59 @@
+---
+title: "Services"
+page-layout: full
+title-block-banner: true
+image: "../images/coming_soon.jpg"
+---
+
+## Services
+
+We help teams and organisations turn data, code and analytics into reliable products and clear decisions. Our services combine training, applied research, engineering, data‑ops, visualization, security and longer‑term innovation — available as focused workshops, multi‑week projects, or retained advisory.
+
+---
+
+Below are our practice areas — click any card to learn more about what we deliver and the benefits you can expect.
+
+## {{< fa chalkboard-teacher >}} Training & Education
+
+Role‑tailored workshops and hands‑on learning paths that upskill teams quickly and deliver usable materials.  
+[Learn more ›](training.qmd)
+
+## {{< fa flask >}} Research & Analytics Consulting
+
+Applied research and analytics that turn questions into auditable, production‑ready results — reproducible, transparent and actionable.  
+[Learn more ›](research.qmd)
+
+## {{< fa laptop-code >}} Software Development & Engineering
+
+From prototype to production: robust, maintainable systems and frontend/backends that serve users reliably.  
+[Learn more ›](engineering.qmd)
+
+## {{< fa cog >}} Data Engineering
+
+Ingestion, transformation and storage designed for reliability and model readiness — reduce technical debt and accelerate analytics.  
+[Learn more ›](data-engineering.qmd)
+
+## {{< fa chart-bar >}} Data Visualization
+
+Static and interactive visuals that clarify results, support decisions, and meet publication standards.  
+[Learn more ›](viz.qmd)
+
+## {{< fa shield-alt >}} Code Quality, Security & Deployment
+
+Practical audits, hardened pipelines and secure delivery to reduce risk and increase confidence in production.  
+[Learn more ›](security.qmd)
+
+## {{< fa users >}} Community & Open‑Source
+
+Open tooling, public learning materials, and events that grow capacity and improve reproducibility.  
+[Learn more ›](community.qmd)
+
+## {{< fa lightbulb >}} Innovation Projects
+
+Prototypes and research software that de‑risk long‑term technical choices and explore new opportunities.  
+[Learn more ›](innovation.qmd)
+
+## {{< fa envelope-open-text >}} Contact & Engagement
+
+Start with a brief and we'll propose a focused engagement — workshop, pilot or retained advisory.  
+[Get in touch ›](contact.qmd)

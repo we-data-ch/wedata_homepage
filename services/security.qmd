@@ -1,0 +1,28 @@
+---
+title: "Code Quality, Security & Deployment"
+page-layout: article
+---
+
+## {{< fa shield-alt >}}  Code Quality, Security & Deployment
+
+<br> Audit, harden and ship with confidence.
+
+Overview: We audit codebases and deployment pipelines to lower risk, improve maintainability and accelerate delivery.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **Code review (Rust, R, Python, JavaScript)** — Practical recommendations for tests, clarity and performance.  
+	![Code review](https://picsum.photos/seed/code_review/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Pentesting of web applications** — Identify and prioritise security issues and remediation steps.  
+	![Pentesting](https://picsum.photos/seed/pentest/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **CI/CD integration & production deployment support** — Hardened pipelines, monitoring and runbooks.  
+	![CI CD](https://picsum.photos/seed/cicd/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Governance & secure delivery standards** — Policies, versioning and controls tailored to your needs.  
+	![Governance](https://picsum.photos/seed/governance/400/250){width="400" height="250"}
+
+<br>
+
+Benefits: Fewer incidents, faster recovery and stronger compliance.

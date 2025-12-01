@@ -1,0 +1,25 @@
+---
+title: "Innovation Projects"
+page-layout: article
+---
+
+## {{< fa lightbulb >}}  Innovation Projects
+
+<br> Long‑term R&D and research software to de‑risk future choices.
+
+Overview: We lead prototypes and research software projects that explore new language features, frameworks and tooling.
+
+We can help you with:
+
+-   {{< fa angle-double-right >}} **TypR** — Typed R concepts to improve reliability and developer ergonomics.  
+	![TypR](https://picsum.photos/seed/typr/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Relm** — MVU‑based web framework for R for reproducible frontends.  
+	![Relm](https://picsum.photos/seed/relm/400/250){width="400" height="250"}
+
+-   {{< fa angle-double-right >}} **Long‑term research software & prototypes** — Proofs‑of‑concept and transition plans to production.  
+	![Prototypes](https://picsum.photos/seed/prototypes/400/250){width="400" height="250"}
+
+<br>
+
+Benefits: Early validation of technical choices and clearer roadmaps for long‑term development.
