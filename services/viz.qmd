@@ -11,17 +11,20 @@ Overview: We craft static and interactive visuals that meet scientific standards
 
 We can help you with:
 
--   {{< fa angle-double-right >}} **Static & interactive visualizations** — Purposeful charts and dashboards for insight and storytelling.  
-	![Visualizations](https://picsum.photos/seed/viz/400/250){width="400" height="250"}
+-   {{< fa angle-double-right >}} **Static & interactive data visualizations** — Purposeful charts and dashboards for insight and storytelling.  
+	![Visualizations](https://r-graph-gallery.com/img/fromTheWeb/streamchart-xmen.png){width="400" height="250"}
+
+-   {{< fa globe-americas >}} **Geospatial & cartographic visualization** — Map design, tiled maps, choropleths and spatial analysis to reveal geographic patterns and spatial relationships.  
+	![Geospatial maps](https://r-graph-gallery.com/img/graph/web-map-choropleth-quantile.png){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **Graphical review of scientific figures** — Improve clarity, reproducibility and journal readiness.  
-	![Figure review](https://picsum.photos/seed/figures/400/250){width="400" height="250"}
+	![Figure review](https://cdn.the-scientist.com/assets/articleNo/72103/iImg/53932/71407-ts-evergreenimage-figures-4p-m.webp){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **Shiny dashboards & exploration interfaces** — Interactive tools for probing data and exporting results.  
-	![Shiny dashboards](https://picsum.photos/seed/shiny/400/250){width="400" height="250"}
+	![Shiny dashboards](https://shiny.posit.co/py/docs/assets/tipping-dashboard.png.html){width="400" height="250"}
 
--   {{< fa angle-double-right >}} **Client‑facing analytical reports** — Concise, action‑oriented deliverables.  
-	![Reports](https://picsum.photos/seed/reports/400/250){width="400" height="250"}
+-   {{< fa angle-double-right >}} **Client‑facing clinical reports** — Concise, action‑oriented deliverables.  
+	![Reports](https://webflow-prod-assets.s3.amazonaws.com/6525256482c9e9a06c7a9d3c%2F65b01b4496c6d6b6e08dde9a_Teal-Efficacy-App.webp){width="400" height="250"}
 
 <br>
 

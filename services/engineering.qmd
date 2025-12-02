@@ -12,19 +12,19 @@ Overview: We design and implement software—from early prototypes to hardened s
 We can help you with:
 
 -   {{< fa angle-double-right >}} **R packages & Shiny applications** — Reusable code, tests and production‑grade analytics UIs.  
-	![R packages](https://picsum.photos/seed/r_packages/400/250){width="400" height="250"}
+	![R packages](https://rtask.thinkr.fr/wp-content/uploads/2019/07/shinytemplate.png){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **Full‑stack data applications (servers, DB layers, Shiny server admin)** — End‑to‑end app delivery.  
-	![Full stack](https://picsum.photos/seed/fullstack/400/250){width="400" height="250"}
+	![Full stack](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fpfy5c4f3b02f99ytm2fg.jpg){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **MLOps (R, Python, Julia)** — Training, validation, serving and monitoring pipelines.  
-	![MLOps](https://picsum.photos/seed/mlops/400/250){width="400" height="250"}
+	![MLOps](https://library.smu.edu.sg/sites/library.smu.edu.sg/files/topics-insights/WebBanner_Julia_Python_R.jpg){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **CI/CD pipelines & deployment support** — Automated testing and safe delivery practices.  
-	![CI CD](https://picsum.photos/seed/cicd_engineering/400/250){width="400" height="250"}
+	![CI CD](https://media.licdn.com/dms/image/v2/D4D12AQFZQxeb-CbhxQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1715529241948?e=2147483647&v=beta&t=7hCN3zg7bGUmpu3NZezOwvP5AQUijiRiz2S3KkG0f74){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **Self‑hosting infrastructure & deployment environments** — Hardened hosting for private or regulated needs.  
-	![Self hosting](https://picsum.photos/seed/selfhost/400/250){width="400" height="250"}
+	![Self hosting](https://info.cloudcarib.com/hs-fs/hubfs/cloud_computing_2.jpg?width=908&name=cloud_computing_2.jpg){width="400" height="250"}
 
 <br>
 
