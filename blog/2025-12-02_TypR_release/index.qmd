@@ -4,8 +4,12 @@ author: "David Munoz Tord"
 date: "2025-12-02"
 categories: [R, TypR, Programming, Release]
 tags: [R, DataScience, ProgrammingLanguage, Innovation, Typesafety]
-page-layout: post
-toc: false
+page-layout: article 
+toc: true
+toc-location: left
+code-line-numbers: true
+code-copy: true
+df-print: paged
 image: "https://raw.githubusercontent.com/we-data-ch/typr/refs/heads/main/images/TypR_logo.png"
 ---
 
