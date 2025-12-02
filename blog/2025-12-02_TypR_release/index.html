@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="David Munoz Tord">
+<meta name="dcterms.date" content="2025-12-02">
 
-<title>We Data -</title>
+<title>We Data - TypR — A typed R for safer data science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +25,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/me.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/me.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -65,36 +65,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-format','listing-website','listing-language','listing-freeze','listing-title-block-banner','listing-date','listing-title','listing-categories','listing-image','listing-author','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-tags','listing-slug','listing-page-layout','listing-toc','listing-toc-location','listing-code-line-numbers','listing-code-copy','listing-df-print','listing-editor_options',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
-      page: 25,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-project","listing-execute","listing-format","listing-website","listing-language","listing-freeze","listing-title-block-banner","listing-date","listing-title","listing-categories","listing-image","listing-author","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-tags","listing-slug","listing-page-layout","listing-toc","listing-toc-location","listing-code-line-numbers","listing-code-copy","listing-df-print","listing-editor_options"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing-blog'] = new List('listing-listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECFW8LLBS7"></script>
 
 <script type="text/javascript">
@@ -109,13 +79,12 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 <!-- =======================  Google Translate 
 ======================= -->
 
-<meta name="twitter:title" content="We Data -">
-<meta name="twitter:image" content="https://we-data.ch/images/me.png">
+<meta name="twitter:title" content="We Data - TypR — A typed R for safer data science">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/we-data-ch/typr/refs/heads/main/images/TypR_logo.png">
 <meta name="twitter:creator" content="@munoztd0">
-<meta name="twitter:image-height" content="213">
-<meta name="twitter:image-width" content="213">
 <meta name="twitter:card" content="summary_large_image">
-</head><body class="nav-fixed"><div style="float: right">
+</head><body class="floating nav-fixed"><div style="float: right">
    <div id="google_translate_element" style="position: absolute; right: 0px; z-index: 1;"></div>
 </div>
 
@@ -186,8 +155,6 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
  
  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 
 
@@ -198,8 +165,8 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/primary.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/primary.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -209,15 +176,15 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-house-user" aria-label="house-user"></i> Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./services/index.html" rel="" target="">
+    <a class="nav-link" href="../../services/index.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-briefcase" aria-label="briefcase"></i> Services</span></a>
   </li>  
   <li class="nav-item">
@@ -225,23 +192,23 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
  <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Exercises</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team.html" rel="" target="">
+    <a class="nav-link" href="../../team.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-users" aria-label="users"></i> Team</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-code" aria-label="code"></i> Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./activities.html" rel="" target="">
+    <a class="nav-link" href="../../activities.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-calendar" aria-label="calendar"></i> Activities</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-address-card" aria-label="address-card"></i> About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html" rel="" target="">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
  <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
   </li>  
 </ul>
@@ -275,141 +242,85 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">TypR — A typed R for safer data science</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">TypR</div>
+                <div class="quarto-category">Programming</div>
+                <div class="quarto-category">Release</div>
+              </div>
+                  </div>
+  </div>
     
-<!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+  
+  <div class="quarto-title-meta">
 
-
-
-<div id="img-me" class="center">
-<p><img src="images/me.png" class="img-fluid"></p>
-</div>
-<!-- ::: {.center-text} -->
-<!-- ##  Hi  <br><br>  -->
-<!-- ::: -->
-<div class="grid">
-<section id="about-us" class="level5 g-col-8">
-<h5 class="anchored" data-anchor-id="about-us">About us</h5>
-<blockquote class="blockquote">
-<p>We are an independent association dedicated to sharing our passion for data science and computer science, with a strong focus on statistics and computational methods. While our initial audience was people in the social sciences, we have since expanded our reach to various research fields and professional communities.</p>
-</blockquote>
-<p><br><br> Concretely, the association pursues its goals by creating freely accessible educational content on multiple platforms, including YouTube videos, blog posts, exercises, and more. We also organize and offer consulting services, workshops, and talks to help individuals and organizations enhance their skills in data analysis and programming. Additionally, the association hosts regular events and presentations on relevant topics, aiming to foster knowledge sharing and community engagement in the digital and data science spheres <br></p>
-</section>
-<div class="g-col-4 vh-center center-text">
-<p>Still curious? click ‘About’<br> above or this button here:<br><br> <a href="./about.html" class="btn btn-secondary" role="button">Tell me more</a> <br><br> ##### Quick line</p>
-<blockquote class="blockquote">
-<p>We turn data into decisions — training, research and engineering for teams who need trustworthy results.</p>
-</blockquote>
-</div>
-</div>
-<p><br></p>
-<div class="content-block">
-<div class="features">
-<div class="feature">
-<section id="blog" class="level3 feature-top">
-<h3 class="anchored" data-anchor-id="blog">Blog</h3>
-<p>Latest from the blog</p>
-<div id="listing-listing-blog" class="quarto-listing quarto-listing-container-custom">
-<!-- attributes for item -->
-
-<!--  freeze,
-      title-block-banner,
-      title,
-      author,
-      date,
-      categories,
-      image,
-      path,
-      image-alt,
-      description,
-      filename,
-      file-modified,
-      reading-time,
-      sortableValues -->
-<h4 class="anchored">
-<a href="./blog/2025-12-02_TypR_release/index.html">TypR — A typed R for safer data science</a>
-</h4>
-<p><small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Dec 2, 2025</small></p>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-<nav id="listing-blog-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>David Munoz Tord </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 2, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#our-mission" id="toc-our-mission" class="nav-link active" data-scroll-target="#our-mission">Our mission</a></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">Try it</a></li>
+  </ul>
 </nav>
-</div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>🚀 Big News!</p>
+<p>We are excited to announce the release of a new version of our programming language TypR — a typed version of R. This release marks an important milestone toward a more reliable ecosystem tailored to the needs of modern data science and software engineering teams.</p>
+<section id="our-mission" class="level2">
+<h2 class="anchored" data-anchor-id="our-mission">Our mission</h2>
+<ul>
+<li>Bring the full power of R for statistical analysis and data science, while adding a robust type system.</li>
+<li>Improve code safety, readability, and project maintainability.</li>
+<li>Make collaboration easier by reducing errors caused by data conversions and inconsistencies.</li>
+</ul>
+<p>We truly believe this evolution can transform the way developers and data scientists work with R together.</p>
 </section>
-<div class="feature-bottom">
-<p><a href="./blog.html" class="btn btn-secondary" role="button">Blog</a></p>
-</div>
-</div>
-<div class="feature">
-<div class="feature-top">
-<h3 class="anchored">
-Podcast
-</h3>
-<p>
-Discussion on AI in 2025
-</p>
-<h4 class="anchored">
-<a href="https://open.spotify.com/episode/2UCu3NLcf3S9v0Ki4PDVj9">Listen to our first episode now on Spotify 🎧</a>
-</h4>
-<p>
-<small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Mar 8, 2025</small>
-</p>
-</div>
-<div class="feature-bottom">
-<p><a href="ttps://open.spotify.com/episode/2UCu3NLcf3S9v0Ki4PDVj9" class="btn btn-secondary" role="button">Full Podcast</a></p>
-</div>
-</div>
-<div class="feature">
-<div class="feature-top">
-<h3 class="anchored">
-Talking about us
-</h3>
-<p>
-Vie de l’UNIGE
-</p>
-<h4 class="anchored">
-<a href="https://www.unige.ch/lejournal/vie-unige/automne-2023/data-science-for-all">Des vidéos pour acquérir des<br> compétences en science des données</a>
-</h4>
-<p>
-<small><i class="fa-solid fa-calendar" aria-label="calendar"></i> Sep 8, 2023</small>
-</p>
-</div>
-<div class="feature-bottom">
-<p><a href="https://www.unige.ch/lejournal/vie-unige/automne-2023/data-science-for-all/" class="btn btn-secondary" role="button">Full Article</a></p>
-</div>
-</div>
-<!-- ::: {.feature} -->
-<!-- ::: {.feature-top} -->
-<!-- ### Talks -->
-<!-- Latest talk I've done -->
-<!-- ::: {#listing-talks} -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: {.feature-bottom} -->
-<!-- [Talks](talks.qmd){.btn .btn-secondary role="button"} -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: {.feature} -->
-<!-- ::: {.feature-top} -->
-<!-- ### Projects -->
-<!-- Latest tinkering -->
-<!-- ::: {#listing-projects} -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: {.feature-bottom} -->
-<!-- [Projects](projects.qmd){.btn .btn-secondary role="button"} -->
-<!-- ::: -->
-<!-- ::: -->
-</div>
-</div>
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try it</h2>
+<ul>
+<li>GitHub: https://github.com/we-data-ch/typr</li>
+<li>Video: https://youtube.com/watch?v=xLoFlHbDQfc&amp;feature=youtu.be</li>
+</ul>
+<p>We’d love for you to try out this new version, share your feedback, and join the community in building the future of this language!</p>
+<hr>
+<p>Tagged: #R #DataScience #ProgrammingLanguage #Innovation #Typesafety</p>
 
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -767,7 +678,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- <img src="./images/primary.png" width="auto" height="30px">
+ <img src="../../images/primary.png" width="auto" height="30px">
   </li>  
 </ul>
     </div>
