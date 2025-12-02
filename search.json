@@ -707,93 +707,100 @@
     "text": "Full Slides\nPresentation Recording"
   },
   {
+    "objectID": "services/community.html",
+    "href": "services/community.html",
+    "title": "We Data",
+    "section": "",
+    "text": "Contributing and organising to amplify impact. We contribute to open tooling, run community events and produce public learning materials that make good practices accessible.\nWe can help you with:\n\n Open‑source contributions & maintainership (rOpenSci, Opifex) — Package review, maintenance and community support to improve tools researchers rely on.\n\n We Data (co‑founder), R‑Lunch meetups and workshops — Community-building events that share practical skills, create networks and foster collaboration.\n\n Blog posts, YouTube tutorials and reproducible examples — Public learning materials and demos that accelerate adoption of best practices and reproducible workflows.\n\n Partnerships (UN Geneva “AI for Good” Hub and others) — Collaborative projects with institutional partners to deliver research and policy impact.\n\n\n\n\n\n\n Led package review and maintenance contributions to rOpenSci-backed packages, improving tests and documentation.\n Organised and delivered R‑Lunch sessions and hands-on workshops focused on reproducible workflows.\n Produced tutorials and reproducible examples published on the blog and YouTube that demonstrate real-world workflows.\n\n\n\n\n\nIf you’d like to collaborate or learn more, reach out at david.munoztord@mailbox.org."
+  },
+  {
     "objectID": "services/community.html#fa-users-community-opensource",
     "href": "services/community.html#fa-users-community-opensource",
-    "title": "Community & Open‑Source",
-    "section": " Community & Open‑Source",
-    "text": "Community & Open‑Source\n Contributing and organising to amplify impact. We contribute to open tooling, run community events and produce public learning materials that make good practices accessible.\nWe can help you with:\n\n Open‑source contributions & maintainership (rOpenSci, Opifex) — Package review, maintenance and community support to improve tools researchers rely on.\n\n We Data (co‑founder), R‑Lunch meetups and workshops — Community-building events that share practical skills, create networks and foster collaboration.\n\n Blog posts, YouTube tutorials and reproducible examples — Public learning materials and demos that accelerate adoption of best practices and reproducible workflows.\n\n Partnerships (UN Geneva “AI for Good” Hub and others) — Collaborative projects with institutional partners to deliver research and policy impact.\n\n\n\n\nExamples:\n\n Led package review and maintenance contributions to rOpenSci-backed packages, improving tests and documentation.\n Organised and delivered R‑Lunch sessions and hands-on workshops focused on reproducible workflows.\n Produced tutorials and reproducible examples published on the blog and YouTube that demonstrate real-world workflows.\n\n\n\n\nContact\nIf you’d like to collaborate or learn more, reach out at david.munoztord@mailbox.org."
+    "title": "We Data",
+    "section": "",
+    "text": "Contributing and organising to amplify impact. We contribute to open tooling, run community events and produce public learning materials that make good practices accessible.\nWe can help you with:\n\n Open‑source contributions & maintainership (rOpenSci, Opifex) — Package review, maintenance and community support to improve tools researchers rely on.\n\n We Data (co‑founder), R‑Lunch meetups and workshops — Community-building events that share practical skills, create networks and foster collaboration.\n\n Blog posts, YouTube tutorials and reproducible examples — Public learning materials and demos that accelerate adoption of best practices and reproducible workflows.\n\n Partnerships (UN Geneva “AI for Good” Hub and others) — Collaborative projects with institutional partners to deliver research and policy impact.\n\n\n\n\n\n\n Led package review and maintenance contributions to rOpenSci-backed packages, improving tests and documentation.\n Organised and delivered R‑Lunch sessions and hands-on workshops focused on reproducible workflows.\n Produced tutorials and reproducible examples published on the blog and YouTube that demonstrate real-world workflows.\n\n\n\n\n\nIf you’d like to collaborate or learn more, reach out at david.munoztord@mailbox.org."
   },
   {
     "objectID": "services/contact.html",
     "href": "services/contact.html",
-    "title": "Contact & Engagement",
+    "title": "We Data",
     "section": "",
     "text": "Start with a brief — we’ll reply with a concise proposal.\nOverview: We offer workshops, short projects and retained advisory. Engagements are scoped to outcomes, timelines and available capacity.\nWe can help you with:\n\n How to start — Send a short brief with objectives, audience, timeline and constraints.\n\n Preferred delivery format — Tell us the preferred delivery format (workshop, pilot project, retainer).\n\n Compliance & constraints — Share any compliance or data constraints up front.\n\n\n\nWhat we deliver in response:\n\n Concise proposal — Scope, deliverables, timeline and budget estimate.\n Suggested next steps — Available dates and follow-up options.\n\nFor urgent requests, include preferred dates and we will propose a compressed timeline if capacity allows."
   },
   {
     "objectID": "services/contact.html#fa-envelope-open-text-contact-engagement",
     "href": "services/contact.html#fa-envelope-open-text-contact-engagement",
-    "title": "Contact & Engagement",
+    "title": "We Data",
     "section": "",
     "text": "Start with a brief — we’ll reply with a concise proposal.\nOverview: We offer workshops, short projects and retained advisory. Engagements are scoped to outcomes, timelines and available capacity.\nWe can help you with:\n\n How to start — Send a short brief with objectives, audience, timeline and constraints.\n\n Preferred delivery format — Tell us the preferred delivery format (workshop, pilot project, retainer).\n\n Compliance & constraints — Share any compliance or data constraints up front.\n\n\n\nWhat we deliver in response:\n\n Concise proposal — Scope, deliverables, timeline and budget estimate.\n Suggested next steps — Available dates and follow-up options.\n\nFor urgent requests, include preferred dates and we will propose a compressed timeline if capacity allows."
   },
   {
     "objectID": "services/research.html",
     "href": "services/research.html",
-    "title": "Research & Analytics Consulting",
+    "title": "We Data",
     "section": "",
     "text": "From research question to deployable, auditable results.\nOverview: We partner on applied research and analytics mandates with an emphasis on reproducibility, uncertainty quantification and operationalisation.\nWe can help you with:\n\n Demography (description · prediction · simulation) — Population models and scenario analysis for planning and policy.\n\n Public policy analysis — Evidence synthesis and impact assessments that inform decisions.\n\n Social network analysis — Network construction, community detection and interpretation.\n\n Bayesian modelling & statistical inference — Transparent probabilistic models and clear uncertainty communication.\n\n Reproducible analysis pipelines — End‑to‑end workflows from raw data to report with versioning and provenance.\n\n Fraud, risk, behaviour, demand and operations modelling — Predictive and diagnostic models tuned to operational constraints.\n\n\n\nBenefits: Reusable, auditable outputs, clear assumptions and smooth handover to operational teams."
   },
   {
     "objectID": "services/research.html#fa-flask-research-analytics-consulting",
     "href": "services/research.html#fa-flask-research-analytics-consulting",
-    "title": "Research & Analytics Consulting",
+    "title": "We Data",
     "section": "",
     "text": "From research question to deployable, auditable results.\nOverview: We partner on applied research and analytics mandates with an emphasis on reproducibility, uncertainty quantification and operationalisation.\nWe can help you with:\n\n Demography (description · prediction · simulation) — Population models and scenario analysis for planning and policy.\n\n Public policy analysis — Evidence synthesis and impact assessments that inform decisions.\n\n Social network analysis — Network construction, community detection and interpretation.\n\n Bayesian modelling & statistical inference — Transparent probabilistic models and clear uncertainty communication.\n\n Reproducible analysis pipelines — End‑to‑end workflows from raw data to report with versioning and provenance.\n\n Fraud, risk, behaviour, demand and operations modelling — Predictive and diagnostic models tuned to operational constraints.\n\n\n\nBenefits: Reusable, auditable outputs, clear assumptions and smooth handover to operational teams."
   },
   {
     "objectID": "services/training.html",
     "href": "services/training.html",
-    "title": "Training & Education",
+    "title": "We Data",
     "section": "",
     "text": "Role‑tailored workshops and learning paths for immediate impact.\nOverview: We design hands‑on courses that take participants from concept to applied practice. Each session is tailored to role, domain and desired outcomes.\nWe can help you with:\n\n R (intro · data science · computational social sciences) — Idiomatic R, reproducible pipelines and packaging so teams produce robust, shareable results.\n\n Python (intro · analytics · computational sciences) — Practical modules on data manipulation, numerical computing and reproducible workflows.\n\n Bash & Git — Command‑line proficiency and branching/CI practices to reduce collaboration friction.\n\n Quarto & Typst — Reproducible authoring and technical document generation for papers and reports.\n\n Cloud fundamentals (Azure), Docker & CI/CD — Essentials for deploying reliable services.\n\n\n\nBenefits: Short learning curves, ready‑to‑use materials, and measurable improvements in team output."
   },
   {
     "objectID": "services/training.html#fa-chalkboard-teacher-training-education",
     "href": "services/training.html#fa-chalkboard-teacher-training-education",
-    "title": "Training & Education",
+    "title": "We Data",
     "section": "",
     "text": "Role‑tailored workshops and learning paths for immediate impact.\nOverview: We design hands‑on courses that take participants from concept to applied practice. Each session is tailored to role, domain and desired outcomes.\nWe can help you with:\n\n R (intro · data science · computational social sciences) — Idiomatic R, reproducible pipelines and packaging so teams produce robust, shareable results.\n\n Python (intro · analytics · computational sciences) — Practical modules on data manipulation, numerical computing and reproducible workflows.\n\n Bash & Git — Command‑line proficiency and branching/CI practices to reduce collaboration friction.\n\n Quarto & Typst — Reproducible authoring and technical document generation for papers and reports.\n\n Cloud fundamentals (Azure), Docker & CI/CD — Essentials for deploying reliable services.\n\n\n\nBenefits: Short learning curves, ready‑to‑use materials, and measurable improvements in team output."
   },
   {
     "objectID": "services/security.html",
     "href": "services/security.html",
-    "title": "Code Quality, Security & Deployment",
+    "title": "We Data",
     "section": "",
     "text": "Audit, harden and ship with confidence.\nOverview: We audit codebases and deployment pipelines to lower risk, improve maintainability and accelerate delivery.\nWe can help you with:\n\n Code review (Rust, R, Python, JavaScript) — Practical recommendations for tests, clarity and performance.\n\n Pentesting of web applications — Identify and prioritise security issues and remediation steps.\n\n CI/CD integration & production deployment support — Hardened pipelines, monitoring and runbooks.\n\n Governance & secure delivery standards — Policies, versioning and controls tailored to your needs.\n\n\n\nBenefits: Fewer incidents, faster recovery and stronger compliance."
   },
   {
     "objectID": "services/security.html#fa-shield-alt-code-quality-security-deployment",
     "href": "services/security.html#fa-shield-alt-code-quality-security-deployment",
-    "title": "Code Quality, Security & Deployment",
+    "title": "We Data",
     "section": "",
     "text": "Audit, harden and ship with confidence.\nOverview: We audit codebases and deployment pipelines to lower risk, improve maintainability and accelerate delivery.\nWe can help you with:\n\n Code review (Rust, R, Python, JavaScript) — Practical recommendations for tests, clarity and performance.\n\n Pentesting of web applications — Identify and prioritise security issues and remediation steps.\n\n CI/CD integration & production deployment support — Hardened pipelines, monitoring and runbooks.\n\n Governance & secure delivery standards — Policies, versioning and controls tailored to your needs.\n\n\n\nBenefits: Fewer incidents, faster recovery and stronger compliance."
   },
   {
     "objectID": "services/engineering.html",
     "href": "services/engineering.html",
-    "title": "Software Development & Engineering",
+    "title": "We Data",
     "section": "",
     "text": "Prototypes to production systems that serve users and teams reliably.\nOverview: We design and implement software—from early prototypes to hardened services—balancing rapid delivery with engineering discipline.\nWe can help you with:\n\n R packages & Shiny applications — Reusable code, tests and production‑grade analytics UIs.\n\n Full‑stack data applications (servers, DB layers, Shiny server admin) — End‑to‑end app delivery.\n\n MLOps (R, Python, Julia) — Training, validation, serving and monitoring pipelines.\n\n CI/CD pipelines & deployment support — Automated testing and safe delivery practices.\n\n Self‑hosting infrastructure & deployment environments — Hardened hosting for private or regulated needs.\n\n\n\nBenefits: Faster time to production, clearer maintenance ownership and predictable operations."
   },
   {
     "objectID": "services/engineering.html#fa-laptop-code-software-development-engineering",
     "href": "services/engineering.html#fa-laptop-code-software-development-engineering",
-    "title": "Software Development & Engineering",
+    "title": "We Data",
     "section": "",
     "text": "Prototypes to production systems that serve users and teams reliably.\nOverview: We design and implement software—from early prototypes to hardened services—balancing rapid delivery with engineering discipline.\nWe can help you with:\n\n R packages & Shiny applications — Reusable code, tests and production‑grade analytics UIs.\n\n Full‑stack data applications (servers, DB layers, Shiny server admin) — End‑to‑end app delivery.\n\n MLOps (R, Python, Julia) — Training, validation, serving and monitoring pipelines.\n\n CI/CD pipelines & deployment support — Automated testing and safe delivery practices.\n\n Self‑hosting infrastructure & deployment environments — Hardened hosting for private or regulated needs.\n\n\n\nBenefits: Faster time to production, clearer maintenance ownership and predictable operations."
   },
   {
     "objectID": "services/innovation.html",
     "href": "services/innovation.html",
-    "title": "Innovation Projects",
+    "title": "We Data",
     "section": "",
     "text": "Long‑term R&D and research software to de‑risk future choices.\nOverview: We lead prototypes and research software projects that explore new language features, frameworks and tooling.\nWe can help you with:\n\n TypR — Typed R concepts to improve reliability and developer ergonomics.\n\n Relm — MVU‑based web framework for R for reproducible frontends.\n\n Long‑term research software & prototypes — Proofs‑of‑concept and transition plans to production.\n\n\n\nBenefits: Early validation of technical choices and clearer roadmaps for long‑term development."
   },
   {
     "objectID": "services/innovation.html#fa-lightbulb-innovation-projects",
     "href": "services/innovation.html#fa-lightbulb-innovation-projects",
-    "title": "Innovation Projects",
+    "title": "We Data",
     "section": "",
     "text": "Long‑term R&D and research software to de‑risk future choices.\nOverview: We lead prototypes and research software projects that explore new language features, frameworks and tooling.\nWe can help you with:\n\n TypR — Typed R concepts to improve reliability and developer ergonomics.\n\n Relm — MVU‑based web framework for R for reproducible frontends.\n\n Long‑term research software & prototypes — Proofs‑of‑concept and transition plans to production.\n\n\n\nBenefits: Early validation of technical choices and clearer roadmaps for long‑term development."
   },
@@ -877,28 +884,28 @@
   {
     "objectID": "services/viz.html",
     "href": "services/viz.html",
-    "title": "Data Visualization",
+    "title": "We Data",
     "section": "",
     "text": "Visuals that clarify results and support decisions.\nOverview: We craft static and interactive visuals that meet scientific standards and drive action.\nWe can help you with:\n\n Static & interactive data visualizations — Purposeful charts and dashboards for insight and storytelling.\n\n Geospatial & cartographic visualization — Map design, tiled maps, choropleths and spatial analysis to reveal geographic patterns and spatial relationships.\n\n Graphical review of scientific figures — Improve clarity, reproducibility and journal readiness.\n\n Shiny dashboards & exploration interfaces — Interactive tools for probing data and exporting results.\n\n Client‑facing clinical reports — Concise, action‑oriented deliverables.\n\n\n\nBenefits: Clearer insight, better stakeholder buy‑in and publishable visual outputs."
   },
   {
     "objectID": "services/viz.html#fa-chart-bar-data-visualization",
     "href": "services/viz.html#fa-chart-bar-data-visualization",
-    "title": "Data Visualization",
+    "title": "We Data",
     "section": "",
     "text": "Visuals that clarify results and support decisions.\nOverview: We craft static and interactive visuals that meet scientific standards and drive action.\nWe can help you with:\n\n Static & interactive data visualizations — Purposeful charts and dashboards for insight and storytelling.\n\n Geospatial & cartographic visualization — Map design, tiled maps, choropleths and spatial analysis to reveal geographic patterns and spatial relationships.\n\n Graphical review of scientific figures — Improve clarity, reproducibility and journal readiness.\n\n Shiny dashboards & exploration interfaces — Interactive tools for probing data and exporting results.\n\n Client‑facing clinical reports — Concise, action‑oriented deliverables.\n\n\n\nBenefits: Clearer insight, better stakeholder buy‑in and publishable visual outputs."
   },
   {
     "objectID": "services/data-engineering.html",
     "href": "services/data-engineering.html",
-    "title": "Data Engineering",
+    "title": "We Data",
     "section": "",
     "text": "Turn messy sources into dependable, model‑ready data.\nOverview: We implement ingestion, transformation and storage that make data trustworthy and accessible for analytics and ML.\nWe can help you with:\n\n Data harvesting & ingestion — Stable connectors, scheduling and change capture.\n\n ETL/ELT pipeline design & orchestration — Maintainable transformations with lineage and observability.\n\n Database storage & schema design — Scalable schemas and indexing tuned for analytics.\n\n Data management & governance — Cataloguing, access controls and documentation to reduce technical debt.\n\n\n\n\n\n\n Built ingestion pipelines for multi-source datasets and implemented versioned storage for reproducible analysis.\n Designed ETL/ELT orchestration and monitoring for large-scale analytics workloads."
   },
   {
     "objectID": "services/data-engineering.html#fa-cog-data-engineering",
     "href": "services/data-engineering.html#fa-cog-data-engineering",
-    "title": "Data Engineering",
+    "title": "We Data",
     "section": "",
     "text": "Turn messy sources into dependable, model‑ready data.\nOverview: We implement ingestion, transformation and storage that make data trustworthy and accessible for analytics and ML.\nWe can help you with:\n\n Data harvesting & ingestion — Stable connectors, scheduling and change capture.\n\n ETL/ELT pipeline design & orchestration — Maintainable transformations with lineage and observability.\n\n Database storage & schema design — Scalable schemas and indexing tuned for analytics.\n\n Data management & governance — Cataloguing, access controls and documentation to reduce technical debt.\n\n\n\n\n\n\n Built ingestion pipelines for multi-source datasets and implemented versioned storage for reproducible analysis.\n Designed ETL/ELT orchestration and monitoring for large-scale analytics workloads."
   },
