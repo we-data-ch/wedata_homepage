@@ -1,5 +1,5 @@
 ---
-title: "Research & Analytics Consulting"
+title: ""
 page-layout: article
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Innovation Projects"
+title: ""
 page-layout: article
 ---
 

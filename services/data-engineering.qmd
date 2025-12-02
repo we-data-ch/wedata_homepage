@@ -1,5 +1,5 @@
 ---
-title: "Data Engineering"
+title: ""
 page-layout: article
 ---
 
@@ -15,7 +15,7 @@ We can help you with:
 	![Harvesting](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*MTWLp_V79poGSZ9W1bHGZA.png){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **ETL/ELT pipeline design & orchestration** — Maintainable transformations with lineage and observability.  
-	![ETL](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*aD2CoogRaCJXN36xnHOThA.jpeg){width="400" height="250"}
+	![ETL](https://www.incworx.com/wp-content/uploads/2021/12/what-is-etl-used-for-1080x675.jpg){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **Database storage & schema design** — Scalable schemas and indexing tuned for analytics.  
 	![Storage](https://xpertlab.com/wp-content/uploads/2024/01/database_design-1024x536.png){width="400" height="250"}

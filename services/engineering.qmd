@@ -1,5 +1,5 @@
 ---
-title: "Software Development & Engineering"
+title: ""
 page-layout: article
 ---
 
@@ -21,7 +21,7 @@ We can help you with:
 	![MLOps](https://library.smu.edu.sg/sites/library.smu.edu.sg/files/topics-insights/WebBanner_Julia_Python_R.jpg){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **CI/CD pipelines & deployment support** — Automated testing and safe delivery practices.  
-	![CI CD](https://media.licdn.com/dms/image/v2/D4D12AQFZQxeb-CbhxQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1715529241948?e=2147483647&v=beta&t=7hCN3zg7bGUmpu3NZezOwvP5AQUijiRiz2S3KkG0f74){width="400" height="250"}
+	![CI CD](https://www.blackduck.com/glossary/what-is-cicd/_jcr_content/root/synopsyscontainer/column_1946395452_co/colRight/image_copy.coreimg.svg/1727199377195/cicd.svg){width="400" height="250"}
 
 -   {{< fa angle-double-right >}} **Self‑hosting infrastructure & deployment environments** — Hardened hosting for private or regulated needs.  
 	![Self hosting](https://info.cloudcarib.com/hs-fs/hubfs/cloud_computing_2.jpg?width=908&name=cloud_computing_2.jpg){width="400" height="250"}

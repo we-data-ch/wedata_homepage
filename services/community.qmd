@@ -1,9 +1,8 @@
 ---
-title: "Community & Open‑Source"
+title: ""
 page-layout: article
 ---
 
-## Community & Open‑Source
 ## {{< fa users >}}  Community & Open‑Source
 
 <br> Contributing and organising to amplify impact. We contribute to open tooling, run community events and produce public learning materials that make good practices accessible.
