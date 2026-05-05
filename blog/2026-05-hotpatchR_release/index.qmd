@@ -1,0 +1,122 @@
+---
+title: "hotpatchR: surgical hotfixes for locked R containers"
+author: "David Munoz Tord"
+date: 2026-05-05
+categories: ["R","Software","CRAN"]
+tags: ["R","CRAN","hotfix","containers"]
+description: "hotpatchR: runtime namespace patching for legacy containers."
+image: "https://github.com/munoztd0/hotpatchR/blob/main/inst/hex/logo.png?raw=true"
+---
+
+Two weeks ago, my client-provided laptop completely died on me. While waiting for IT to ship a replacement, I suddenly found myself on two days of administrative leave. I had three choices:
+
+1. Catch up on some mandatory corporate training videos.
+
+2. Finally build a tool to solve a soul-crushing workflow problem I’d been dealing with for months.
+
+Guess which one I chose...
+
+
+I am excited to announce that hotpatchR is now officially available on CRAN!
+
+https://github.com/munoztd0/hotpatchR
+
+
+## **The Problem: The Legacy Container Nightmare**
+
+If you work in biotech or enterprise data science, you probably know this pain: a critical bug is found in production, but the code is running in a locked, validated Docker container from two years ago. You cannot rebuild the package, and you cannot update the container. You have to hotfix it at runtime.
+
+
+Because R uses locked package namespaces, you can't just `source()` a fixed function into the global environment. If you fix an internal `child()` function, the internal `parent()` function will ignore your fix and keep calling the broken version trapped inside the locked package.
+
+
+## **The "Old Way"**
+
+To bypass the namespace trap, developers had to manually map out massive dependency trees. If you wanted to fix a 10-line utility function, you also had to copy and paste the massive 300-line parent function that called it, just to force the routing to work. It was a massive vector for technical debt.
+
+
+## **The Solution**
+
+I spent those two days building a better way. `hotpatchR` is a surgical memory-injection tool for R. Instead of hacking files or copying massive dependency trees, `hotpatchR` dynamically unlocks the target package namespace in memory, replaces the specific broken function pointer with your new code, and re-locks it.
+
+
+The result? Every other function in the package instantly starts routing to your new fix.
+
+
+No copying parent functions. No messy CI/CD Bash scripts. You just write the exact function that is broken, and run:
+
+```r
+hotpatchR::apply_hotfix_file("path/to/hotfix.R")
+```
+
+
+It transforms how we maintain legacy deployments, turning a fragile, multi-step chore into a safe, automated, 3-line process.
+
+
+If you maintain legacy R deployments or validated environments, give it a look. You can pull it from CRAN today:
+
+```r
+install.packages("hotpatchR")
+```
+
+(Big shoutout to my old laptop for giving up the ghost and giving me the time to finally build this). 🚀
+
+
+## **What hotpatchR solves**
+
+`hotpatchR` changes the problem from "global environment hacking" to "namespace surgery." Instead of copying dependencies into the global environment, it overwrites the function inside the package namespace itself.
+
+Benefits:
+
+- surgical patching of exactly the broken functions
+- internal callers automatically see the fix
+- no need to copy parent callers or entire dependency chains
+- easier validation in live test workflows
+
+
+## **Test-hotfix use case**
+
+`hotpatchR` is built for the common legacy scenario where a package version is fixed in place and you want to validate a runtime correction using existing package tests. With `inject_patch()`, you can replace a broken internal function.
+
+A typical test-hotfix flow looks like this:
+
+```r
+library(hotpatchR)
+
+baseline <- dummy_parent_func("test")
+print(baseline)
+#> "Parent output -> I am the BROKEN child. Input: test"
+
+inject_patch(
+  pkg = "hotpatchR",
+  patch_list = list(dummy_child_func = function(x) {
+    paste("I am the FIXED child! Input:", x)
+  })
+)
+
+patched_result <- dummy_parent_func("test")
+print(patched_result)
+#> "Parent output -> I am the FIXED child! Input: test"
+
+
+# Eventually, you can reverse the patch to restore the original behavior if needed:
+undo_patch(pkg = "hotpatchR", names = "dummy_child_func")
+restored_result <- dummy_parent_func("test")
+print(restored_result)
+#> "Parent output -> I am the BROKEN child. Input: test"
+```
+
+
+## **Core API**
+
+- `inject_patch(pkg, patch_list)`: overwrite functions inside a package namespace or environment
+- `undo_patch(pkg, names = NULL)`: restore backed-up originals for patched bindings
+- `test_patched_dir(pkg, test_path)`: run `testthat` tests against the modified namespace
+- `apply_hotfix_file(file, pkg = NULL)`: load a hotfix script and inject the included patch list
+
+
+## **How it works**
+
+`inject_patch()` unlocks the binding inside the target namespace, assigns the replacement function, and then re-locks the binding. This keeps the change local to the package namespace and preserves normal internal function resolution.
+
+
