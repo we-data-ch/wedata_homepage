@@ -14,7 +14,7 @@ website:
   description: "We Data website"
   favicon: "images/me.png"
   google-analytics: "G-ECFW8LLBS7"
-  bluesky-card:
+  twitter-card:
     creator: "@munoztd0"
   site-url: https://we-data.ch/
   repo-actions: [edit, issue]
