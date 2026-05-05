@@ -6742,10 +6742,10 @@ readers do not read off random characters that represent icons */
 .fa-sellcast:before {
   content: "\f2da"; }
 
-.fa-square-twitter:before {
+.fa-square-bluesky:before {
   content: "\f081"; }
 
-.fa-twitter-square:before {
+.fa-bluesky-square:before {
   content: "\f081"; }
 
 .fa-r-project:before {
@@ -7315,7 +7315,7 @@ readers do not read off random characters that represent icons */
 .fa-erlang:before {
   content: "\f39d"; }
 
-.fa-x-twitter:before {
+.fa-x-bluesky:before {
   content: "\e61b"; }
 
 .fa-cotton-bureau:before {
@@ -7735,7 +7735,7 @@ readers do not read off random characters that represent icons */
 .fa-jenkins:before {
   content: "\f3b6"; }
 
-.fa-twitter:before {
+.fa-bluesky:before {
   content: "\f099"; }
 
 .fa-rockrms:before {
@@ -7813,7 +7813,7 @@ readers do not read off random characters that represent icons */
 .fa-quora:before {
   content: "\f2c4"; }
 
-.fa-square-x-twitter:before {
+.fa-square-x-bluesky:before {
   content: "\e61a"; }
 
 .fa-reacteurope:before {
