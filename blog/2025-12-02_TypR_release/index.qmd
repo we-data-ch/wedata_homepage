@@ -10,7 +10,7 @@ toc-location: left
 code-line-numbers: true
 code-copy: true
 df-print: paged
-image: "https://raw.githubusercontent.com/we-data-ch/typr/refs/heads/main/images/TypR_logo.png"
+image: "https://github.com/we-data-ch/typr/blob/main/src/TypR_logo.png?raw=true"
 ---
 
 🚀 Big News!
