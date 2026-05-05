@@ -1,0 +1,17 @@
+---
+title: "Help me help you!"
+author: "David Munoz Tord"
+date: 2023-05-05
+categories: [Talk, Thoughts, Debugging, R, Development, Reprex]
+format: html
+---
+
+::: {.iframe-container}
+<iframe class="iframe-responsive" scrolling="no" src="https://munoztd0.github.io/help_me_help_you_R_Debug/#/title-slide"></iframe>
+:::
+
+<br>
+
+<a href="https://munoztd0.github.io/help_me_help_you_R_Debug/#/full-slides" class="btn btn-secondary">Full Slides</a>
+
+<a href="https://unige.zoom.us/rec/share/bmPWK9YqdK9FI74DtVnhEgaca8isNWNkjwxjVP2TeRJ_TnRsRp3HpRb5DFuYQZXO.hBVyShgZ9SLyqESP" class="btn btn-secondary">Presentation Recording</a>
