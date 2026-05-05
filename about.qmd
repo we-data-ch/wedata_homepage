@@ -10,9 +10,9 @@ about:
       - icon: youtube
         text: YouTube
         href: https://www.youtube.com/@wedata_unige
-      - icon: twitter
+      - icon: bluesky
         text: Twitter
-        href: https://twitter.com/wedata_unige
+        href: https://bsky.app/profile/wedata.bsky.social
       - icon: linkedin
         text: LinkedIn
         href: https://www.linkedin.com/company/wedata-gen%C3%A8ve/

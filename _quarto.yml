@@ -14,7 +14,7 @@ website:
   description: "We Data website"
   favicon: "images/me.png"
   google-analytics: "G-ECFW8LLBS7"
-  twitter-card:
+  bluesky-card:
     creator: "@munoztd0"
   site-url: https://we-data.ch/
   repo-actions: [edit, issue]
@@ -54,8 +54,8 @@ website:
         href: https://github.com/we-data-ch
       - icon: youtube
         href: https://www.youtube.com/@wedata_unige
-      - icon: twitter
-        href: https://twitter.com/wedata_unige
+      - icon: bluesky
+        href: https://bsky.app/profile/wedata.bsky.social
       - icon: linkedin
         href: https://www.linkedin.com/company/wedata-gen%C3%A8ve/
   page-footer:
@@ -68,8 +68,8 @@ website:
         href: https://github.com/we-data-ch
       - icon: youtube
         href: https://www.youtube.com/@wedata_unige
-      - icon: twitter
-        href: https://twitter.com/wedata_unige
+      - icon: bluesky
+        href: https://bsky.app/profile/wedata.bsky.social
       - icon: linkedin
         href: https://www.linkedin.com/company/wedata-gen%C3%A8ve/
 

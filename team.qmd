@@ -17,7 +17,7 @@ output:
 <img src="./images/vestin.webp" alt="Vestin Hategekimana" style="width:150px; height:150px;">
 <div class="links">
 <a href="mailto:Vestin.Hategekimana@unige.ch"><i class="far fa-envelope"></i></a>
-<a href="https://twitter.com/PEcodemo"><i class="fab fa-twitter"></i></a>
+<a href="https://bsky.app/profile/cyuhat.bsky.social"><i class="fab fa-bluesky"></i></a>
 <a href="https://vestin-hategekimana.netlify.app/o"><i class="fas fa-globe"></i></a>
 <a href="https://github.com/CyuHat"><i class="fab fa-github"></i></a>
 </div>
@@ -40,7 +40,7 @@ output:
 <div class="image">
 <img src="./images/fabrice.jpg" alt="Fabrice Hategekimana" style="width:130px; height:150px;">
 <div class="links">
-<a href="https://twitter.com/FabriceHategek3"><i class="fab fa-twitter"></i></a>
+<a href="https://bluesky.com/FabriceHategek3"><i class="fab fa-bluesky"></i></a>
 <a href="https://github.com/fabriceHategekimana"><i class="fab fa-github"></i></a>
 </div>
 </div>
@@ -64,7 +64,7 @@ output:
 <img src="./images/DMT.png" alt="David Muñoz Tord" style="width:150px; height:150px;">
 <div class="links">
 <a href="mailto:david.munoztord@mailbox.org"><i class="far fa-envelope"></i></a>
-<a href="https://twitter.com/tord_munoz"><i class="fab fa-twitter"></i></a>
+<a href="https://bsky.app/profile/munoztd0.bsky.social"><i class="fab fa-bluesky"></i></a>
 <a href="https://david-munoztord.com"><i class="fas fa-globe"></i></a>
 <a href="https://github.com/munoztd0"><i class="fab fa-github"></i></a>
 </div>
@@ -90,7 +90,7 @@ output:
 <img src="./images/andres.jpeg" alt="Andres" style="width:150px; height:150px;">
 <div class="links">
 <a href="mailto:andres.acunamarroquin@gmail.com"><i class="far fa-envelope"></i></a>
-<!-- <a href="https://twitter.com/tord_munoz"><i class="fab fa-twitter"></i></a> -->
+<!-- <a href="https://bsky.app/profile/munoztd0.bsky.social"><i class="fab fa-bluesky"></i></a> -->
 <!-- <a href="https://david-munoztord.com"><i class="fas fa-globe"></i></a> -->
 <!-- <a href="https://github.com/munoztd0"><i class="fab fa-github"></i></a> -->
 </div>
