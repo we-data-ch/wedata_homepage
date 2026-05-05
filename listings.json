@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blog/2026-05-Help_me_help_you/index.html",
       "/blog/2025-12-02_TypR_release/index.html",
       "/blog/podcast-IA2025/index.html",
       "/blog/2024-24-12-Deploy-Container/index.html",
@@ -24,7 +25,7 @@
       "/blog/2023-06-26-let-s-contribute/index.html",
       "/blog/Echarts4r/index.html",
       "/blog/R-Lunches/index.html",
-      "/blog/2026-05-Help_me_help_you/index.html",
+      "/blog/2023-04-Deploy-your-R-code/index.html",
       "/blog/Live/index.html",
       "/blog/Data_manip_Fundamental/index.html",
       "/blog/True_Ignorant/index.html",
@@ -34,19 +35,14 @@
       "/blog/Code_Hygiene/index.html",
       "/blog/Terminal_Basic/index.html",
       "/blog/Data_Viz_Fundamentals/index.html",
-      "/blog/R_basics/index.html"
-    ]
-  },
-  {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/2026-05-Help_me_help_you/index.html",
-      "/talks/2023-04-Deploy-your-R-code/index.html"
+      "/blog/R_basics/index.html",
+      "/blog/2022-12-echarts4r/index.html"
     ]
   },
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/2026-05-Help_me_help_you/index.html",
       "/blog/2025-12-02_TypR_release/index.html",
       "/blog/podcast-IA2025/index.html",
       "/blog/2024-24-12-Deploy-Container/index.html",
@@ -69,7 +65,7 @@
       "/blog/2023-06-26-let-s-contribute/index.html",
       "/blog/Echarts4r/index.html",
       "/blog/R-Lunches/index.html",
-      "/blog/2026-05-Help_me_help_you/index.html",
+      "/blog/2023-04-Deploy-your-R-code/index.html",
       "/blog/Live/index.html",
       "/blog/Data_manip_Fundamental/index.html",
       "/blog/True_Ignorant/index.html",
@@ -79,7 +75,8 @@
       "/blog/Code_Hygiene/index.html",
       "/blog/Terminal_Basic/index.html",
       "/blog/Data_Viz_Fundamentals/index.html",
-      "/blog/R_basics/index.html"
+      "/blog/R_basics/index.html",
+      "/blog/2022-12-echarts4r/index.html"
     ]
   }
 ]
