@@ -1,7 +1,7 @@
 ---
 title: "Help me help you!"
 author: "David Munoz Tord"
-date: 2023-05-05
+date: 2026-05-05
 categories: [Talk, Thoughts, Debugging, R, Development, Reprex]
 format: html
 ---
