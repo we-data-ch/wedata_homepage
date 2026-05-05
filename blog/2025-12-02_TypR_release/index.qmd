@@ -27,8 +27,12 @@ We truly believe this evolution can transform the way developers and data scient
 
 ## Try it
 
-- GitHub: https://github.com/we-data-ch/typr
-- Video: https://youtube.com/watch?v=xLoFlHbDQfc&feature=youtu.be
+- (GitHub)[https://github.com/we-data-ch/typr]
+
+::: {.iframe-container}
+<iframe class="iframe-responsive" scrolling="no" src="https://youtube.com/watch?v=xLoFlHbDQfc&feature=youtu.be"></iframe>
+:::
+
 
 We’d love for you to try out this new version, share your feedback, and join the community in building the future of this language!
 
