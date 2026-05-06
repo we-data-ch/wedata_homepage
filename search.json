@@ -242,7 +242,7 @@
     "href": "blog/2026-05-hotpatchR_release/index.html",
     "title": "hotpatchR: surgical hotfixes for locked R containers",
     "section": "",
-    "text": "Two weeks ago, my client-provided laptop completely died on me. While waiting for IT to ship a replacement, I suddenly found myself on two days of administrative leave. I had three choices:\nGuess which one I chose…\nI am excited to announce that hotpatchR is now officially available on CRAN!\nhttps://github.com/munoztd0/hotpatchR"
+    "text": "Two weeks ago, my client-provided laptop completely died on me. While waiting for IT to ship a replacement, I suddenly found myself on two days of administrative leave. I had three choices:\nGuess which one I chose…\nI am excited to announce that hotpatchR is now officially available on CRAN !"
   },
   {
     "objectID": "blog/2026-05-hotpatchR_release/index.html#the-problem-the-legacy-container-nightmare",
@@ -291,7 +291,7 @@
     "href": "blog/2026-05-hotpatchR_release/index.html#how-it-works",
     "title": "hotpatchR: surgical hotfixes for locked R containers",
     "section": "How it works",
-    "text": "How it works\ninject_patch() unlocks the binding inside the target namespace, assigns the replacement function, and then re-locks the binding. This keeps the change local to the package namespace and preserves normal internal function resolution."
+    "text": "How it works\ninject_patch() unlocks the binding inside the target namespace, assigns the replacement function, and then re-locks the binding. This keeps the change local to the package namespace and preserves normal internal function resolution.\nCheck it out on GitHub."
   },
   {
     "objectID": "blog/2025-12-02_TypR_release/index.html",

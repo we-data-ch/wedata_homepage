@@ -331,8 +331,7 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 <li><p>Finally build a tool to solve a soul-crushing workflow problem I’d been dealing with for months.</p></li>
 </ol>
 <p>Guess which one I chose…</p>
-<p>I am excited to announce that hotpatchR is now officially available on CRAN!</p>
-<p>https://github.com/munoztd0/hotpatchR</p>
+<p>I am excited to announce that hotpatchR is now officially available on CRAN !</p>
 <section id="the-problem-the-legacy-container-nightmare" class="level2">
 <h2 class="anchored" data-anchor-id="the-problem-the-legacy-container-nightmare"><strong>The Problem: The Legacy Container Nightmare</strong></h2>
 <p>If you work in biotech or enterprise data science, you probably know this pain: a critical bug is found in production, but the code is running in a locked, validated Docker container from two years ago. You cannot rebuild the package, and you cannot update the container. You have to hotfix it at runtime.</p>
@@ -404,6 +403,7 @@ gtag('config', 'G-ECFW8LLBS7', { 'anonymize_ip': true});
 <section id="how-it-works" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-works"><strong>How it works</strong></h2>
 <p><code>inject_patch()</code> unlocks the binding inside the target namespace, assigns the replacement function, and then re-locks the binding. This keeps the change local to the package namespace and preserves normal internal function resolution.</p>
+<p>Check it out on <a href="https://github.com/munoztd0/hotpatchR">GitHub</a>.</p>
 
 
 </section>
