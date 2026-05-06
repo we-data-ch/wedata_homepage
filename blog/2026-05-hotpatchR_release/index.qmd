@@ -17,9 +17,7 @@ Two weeks ago, my client-provided laptop completely died on me. While waiting fo
 Guess which one I chose...
 
 
-I am excited to announce that hotpatchR is now officially available on CRAN!
-
-https://github.com/munoztd0/hotpatchR
+I am excited to announce that hotpatchR is now officially available on CRAN !
 
 
 ## **The Problem: The Legacy Container Nightmare**
@@ -119,4 +117,4 @@ print(restored_result)
 
 `inject_patch()` unlocks the binding inside the target namespace, assigns the replacement function, and then re-locks the binding. This keeps the change local to the package namespace and preserves normal internal function resolution.
 
-
+Check it out on [GitHub](https://github.com/munoztd0/hotpatchR).
