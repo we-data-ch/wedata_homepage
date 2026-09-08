@@ -44,7 +44,6 @@ listing:
 Still curious? click 'About'<br> above or this button here:<br><br>
 [Tell me more](about.qmd){.btn .btn-secondary role="button"}
 <br><br>
-##### Quick line
 
 > We turn data into decisions — training, research and engineering for teams who need trustworthy results.
 :::

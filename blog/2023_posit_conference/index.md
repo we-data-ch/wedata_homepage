@@ -1,194 +1,99 @@
 ---
-date: "2023-12-17" 
+date: "2023-12-17"
 author: "Vestin Hategekimana"
 title: "Exciting Insights from the 2023 Posit conference"
 categories: ["R", "Quarto", "webr", "conference"]
-image: https://posit.co/wp-content/uploads/2023/06/conf23-virtualregopen_blog-1.jpg
+image: image.png
 ---
 
 # Exciting Insights from the 2023 Posit conference
 
-I've been eagerly anticipating the public release of the videos from the recent Posit conference about one of my favorite programming languages: R. For someone who has gained so much from previous editions of this conference, the wait was filled with a mix of anticipation and excitement. Knowing the discussions and advancements shared in these conferences has always been a key way for me to stay up-to-date and catch up with the latest in R programming. And now, [with 108 videos available](https://www.youtube.com/playlist?list=PL9HYL-VRX0oRFZslRGHwHuwea7SvAATHp), it's like a treasure trove of knowledge just waiting to be explored!
+I've been waiting for the Posit conference videos to drop. For me, these talks are one of the best ways to stay current with what's happening in R. Now that [all 108 videos are up](https://www.youtube.com/playlist?list=PL9HYL-VRX0oRFZslRGHwHuwea7SvAATHp), I've been working through them.
 
-The highlight for me this year was twofold. First, I was looking forward to learning about the developments and new features of two innovative tools, [Quarto](https://quarto.org/) and [WebR](https://docs.r-wasm.org/webr/latest/). These tools represent significant advancements in our field, and I couldn't wait to see what they had to offer. Even though I was fairly up to date on the subject, seeing these tools in action is still very interesting. Second, the talks about packages always catch my interest. They're crucial for understanding the practical applications and integrations of R and how the community grow.
+Two things stood out this year. First, I wanted to see where [Quarto](https://quarto.org/) and [WebR](https://docs.r-wasm.org/webr/latest/) are heading. Even though I follow both projects, seeing them demonstrated is always useful. Second, I always watch the package talks. They show what the community is actually building and using.
 
-While the applications of R in production and academia are undeniably relevant, they aren't the core focus of this blog post. Instead, what always amazes me is the depth and variety of topics covered, which seems to expand with every passing year. This year was no exception, and I found myself pleasantly surprised by some of the content.
+This post covers the talks I liked most and why they stuck with me.
 
-In this blog post, I want to share my favorite talks from the conference and dive into why they resonated with me. I hope that by sharing these insights, I can spark the same excitement and passion for programming and data science in you, my readers.
+## What's new this year: Posit, not just RStudio
 
-## Exciting Topics We'll Explore Together
+The most visible change was the rebrand from RStudio to Posit. It signals that the company wants to support more than just R. Python is now a first-class citizen in their tooling, and other languages might follow. Some R users worried this meant Posit was leaving R behind, but the conference made it clear that R is still central. The balance felt genuine.
 
--   **Speeding up Big Data Manipulation**: We'll delve into a package, [{duckplyr}](https://github.com/duckdblabs/duckplyr), that is revolutionizing the way we handle large datasets. Expect to see some groundbreaking methods that are making data manipulation fast.
+The breadth of topics this year matched previous editions. If anything, the range keeps expanding.
 
--   **Inline Variables**: A deep dive into how inline variables are changing the game in coding and how the [{epox}](https://github.com/gadenbuie/epoxy) package is boosting it.
+## Speeding up big data manipulation: duckplyr
 
--   **UI for UI**: An intriguing concept that's reshaping our approach to user interface design. We will see how [{ShinyUiEditor}](https://rstudio.github.io/shinyuieditor/) can make you life easier for building Shiny apps.
+Kirill Müller introduced [{duckplyr}](https://github.com/duckdblabs/duckplyr), a dplyr interface that pushes computation to DuckDB. That means you can keep writing dplyr code you already know, but it runs faster on larger datasets and more complex queries.
 
--   **Quarto talks**: A dedicated section where we'll unpack the latest features and advancements in Quarto. If you're as excited about this tool as I am, you're in for a treat!
+I've bounced between data.table, dtplyr, dbplyr, arrow, and raw DuckDB over the years. duckplyr looks like the next stop on that journey. The talk showed concrete speedups without forcing you to learn a new API. I'm planning to add it to my regular toolbox.
 
--   **WebR talks**: Similarly, we'll dive into what's new with WebR. The developments here are nothing short of revolutionary.
-
--   **Other Interesting Talks**: And of course, there were many more gems in the conference. I'll highlight some talks that, while they might not have been in the limelight, offered incredible discoveries.
-
-As we embark on this journey through the highlights of the conference, I invite you to share my enthusiasm and optimism for the future of data science. The world of programming is continually evolving, and it's an exciting time to be part of this field. Let's dive in and discover the wonders of programming together!
-
-------------------------------------------------------------------------
-
-## What's new this year: embracing a broader programming horizon
-
-This year's conference brought a notable change: the host company's shift from "RSudio" to "Posit". This isn't just a name change; it symbolizes a commitment to embracing a wider range of programming languages, extending beyond the familiar R to include Python and more. This move reflects an understanding that the data science world is diverse and ever-evolving.
-
-Initially, some R enthusiasts were concerned that Posit might pivot away from R in favor of the trendier Python language. However, these fears were assuaged as the conference unfolded, showcasing a balanced focus on both R and Python (next on the list: Julia?).
-
-Despite the initial apprehension, this year's conference mirrored the richness and depth of its predecessors. The variety of talks confirmed Posit's dedication to supporting a spectrum of programming languages and topics.
-
-------------------------------------------------------------------------
-
-## Speeding up big data manipulation:
-
-At this year's conference, Kirill Müller unveiled something pretty cool for us data scientist: "duckplyr." It is a new tool, aiming to handle big data. Think of it as a turbocharged bridge between DuckDB and dplyr, but with the familiar dplyr vibe.
-
-```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V9GwSPjKMKw?si=gP09h6LrdhXpx6j6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-### Why is it a big deal?
 
-I have been on this data journey for a while, hopping from data.table to dtplyr, to dbplyr, to dbcooper, to arrow and duckdb and now I am aiming at "duckplyr." Kirill Müller's talk showed how it can make our dplyr code go through data in DuckDB -- faster and smoother, especially with those tricky queries. And guess what? There's more to come, like handling complex data types better.
+## Inline variables: epoxy
 
-I'm always looking for something that can make my data work feel less like a chore and more like a breeze. "Duckplyr" might just be the next thing in my toolbox. It's exciting to see tools evolving to keep up with our big data challenges.
+Garrick Aden-Buie's [{epoxy}](https://github.com/gadenbuie/epoxy) package makes it easy to embed formatted data directly into Quarto and R Markdown text. Numbers, percentages, currencies. They slot into sentences cleanly without awkward paste() calls or manual formatting.
 
-In short, "duckplyr" is shaping up to be a game-changer for big data manipulation. Can't wait to see where this goes!
+I spent part of the talk wondering how the custom code chunks work under the hood. Lua scripting in Pandoc? I'll need to look into that.
 
-------------------------------------------------------------------------
-
-## Inline variable
-
-Garrick Aden-Buie's introduction of 'epoxy' at the latest conference was a standout moment for data presentation. 'Epoxy' brings a fresh perspective to presenting data in Quarto and RMarkdown, making it easy to integrate formatted data into text (markdown).
-
-```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tq5Uwbexk3k?si=vRzYWxuN10PBzHnF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-### The Essence of 'Epoxy'
 
-This tool transforms how we embed data, such as currencies or percentages, directly into our reports, enhancing readability and comprehension. Beyond its practical applications, 'epoxy' intrigued me. Could its custom code chunks be a result of Lua scripting? This adds an exciting dimension to its functionality.
+## UI for UI: ShinyUiEditor
 
-'Epoxy' is all about clarity and engagement in data reporting. It's a game-changer for making reports not only informative but also visually appealing.
+Nick Strayer demoed [ShinyUiEditor](https://rstudio.github.io/shinyuieditor/), a drag-and-drop tool for building Shiny UIs. I've mostly built apps with Nim and Python recently, but this tool made me want to revisit Shiny. The editor handles layout and wiring inputs to outputs visually, and you can drop in Markdown for context.
 
-------------------------------------------------------------------------
+It's in beta now. If it keeps improving, it could lower the barrier for building Shiny apps significantly.
 
-## UI for UI:
-
-Nick Strayer's introduction of ShinyUIEditor at the recent Posit conference was a standout moment for anyone interested in Shiny app development. Before encountering this tool, I leaned towards Nim and Python for app creation. But ShinyUIEditor has reignited my enthusiasm for Shiny apps (WebR and Shinylive contributed to it too).
-
-```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G3uxNtACutI?si=c-RODsNpvwa0rpl6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-### Transforming Shiny Development
 
-ShinyUIEditor goes beyond basic app design. It's a real-world solution for creating interactive Shiny dashboards with ease. Nick highlighted how the editor simplifies the UI setup. What's impressive about ShinyUIEditor is its drag-and-drop functionality. It makes adding and configuring UI elements a breeze. Nick's demonstration of building a Shiny app from the ground up showcased this simplicity and efficiency. The ShinyUIEditor isn't just about layout; it also integrates interactivity by connecting inputs and outputs. The ability to add Markdown text for explanations further enhances its utility.
+## Quarto talks
 
-ShinyUIEditor has finally entered its Beta phase! Nick also hinted at future developments for the ShinyUIEditor, promising an even more robust tool for Shiny developers.
+I use Quarto almost daily, so I was looking forward to these. Three talks in particular:
 
-The ShinyUIEditor has transformed my view of Shiny app development. It's making app creation more accessible, efficient, and enjoyable. I'm excited to delve back into Shiny apps, thanks to this innovative tool.
+### Extending Quarto (Richard Iannone)
 
-------------------------------------------------------------------------
+Richard showed off several Quarto extensions, including shortcodes for icons and `qformat` for number formatting inside documents. He also pointed to the [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) repo as a place to find more. Worth bookmarking if you use Quarto regularly.
 
-## Quarto Talks: Exploring New Frontiers in Data Presentation
-
-As a fervent advocate of [Quarto](https://quarto.org/) and its core features, binge-watching the conference videos was like a treasure hunt for me. Three talks, in particular, caught my eye, each unveiling features of Quarto that not only impressed but also sparked my curiosity and enthusiasm.
-
-::: panel-tabset
-## (1) Extending Quarto
-
-```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EihuM4oyOvs?si=OIk8-K6GFJcvPKkD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-## (2) Parameterized Quarto
 
-```{=html}
+### Parameterized reporting (Jadey Ryan)
+
+Jadey walked through how parameterized reports turn static documents into reusable templates. You define placeholders for data, then generate variations automatically. She also emphasized accessibility and practical styling tips. I'm already thinking about where I can apply this to cut down on copy-paste reporting.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lbE5uOqfT70?si=0QAkUXaBVWBdpnNr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-## (3) Reproducible manuscript with Quarto
 
-```{=html}
+### Reproducible manuscripts (Mine Çetinkaya-Rundel)
+
+Mine introduced the manuscript project type in Quarto. It lets you write a paper in multiple output formats (PDF, HTML, and DOCX) with the computations embedded and version-controlled. That removes friction when sharing code with co-authors who use different tools.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BoiW9UWDLY0?si=o0vvZH64TQo39TM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-:::
 
-### Talk 1: Enhancing Quarto with Extensions (by Richard Iannone)
+## WebR talks
 
-Richard's talk was a deep dive into the world of Quarto extensions. He showcased a variety of them, including eye-catching short code extensions for icons like Font Awesome and Lordicon. His demonstration of "qformat" for number formatting in Quarto documents was particularly intriguing. The emphasis on good documentation and the mention of the ["Awesome Quarto" GitHub repository](https://github.com/mcanouil/awesome-quarto) as a comprehensive resource was a valuable takeaway for anyone looking to expand their Quarto capabilities.
+WebR is still early (version 0.2.3) but it's moving fast. It runs R directly in the browser via WebAssembly, which opens up possibilities for teaching and for serverless Shiny apps.
 
-### Talk 2: The Power of Parameterized Reporting (by Jadey Ryan)
+### WebAssembly and WebR (George Stagg)
 
-Jadey's transition from an environmental technician to a data scientist and her journey with parameterized reporting was nothing short of inspiring. She highlighted how parameterized reporting transforms static reports into dynamic documents with placeholders for data, making them more adaptable and relevant. Her focus on designing for accessibility and her practical tips on report styling were especially enlightening. This talk opened my eyes to the possibilities of parameterizing Quarto documents, **an approach I'm eager to implement**.
+George gave a concise overview of how WebR works without a backend server. He showed interactive code chunks and some educational use cases. The performance and security implications look promising.
 
-### Talk 3: Reproducible Manuscripts with Quarto (by Mine Çetinkaya-Rundel)
-
-**Mine's presentation on creating reproducible scientific manuscripts using Quarto was a game changer**. She shed light on how Quarto projects can manage complexity in scientific projects and integrate various tools and languages. The introduction of the manuscript project type in Quarto, enabling the creation of manuscripts in multiple formats with embedded computations, was a highlight. This feature elevates Quarto from a tool for authoring academic work to a platform for truly transparent and reproducible research. Now there's no excuse: it's very easy to share all your code and collaborate with colleagues using different methods.
-
-### My Reflections
-
-Each of these talks showcased different aspects of Quarto's versatility and power. From enhancing the visual appeal with extensions to the practicality of parameterized reporting and the groundbreaking approach to reproducible manuscripts, Quarto is proving to be an indispensable tool in data science. As someone who initially leaned towards other programming languages for app creation, these Quarto features have rekindled my interest and excitement in working with Shiny apps and Quarto documents (And that's not all - wait until you see the next part!).
-
-------------------------------------------------------------------------
-
-## WebR talks:
-
-WebR is making waves in the R community, offering powerful capabilities for teaching and app creation, despite being in its nascent stage (version 0.2.3). Its impact on Shiny app development, particularly through serverless applications via Shinylive, has rekindled my interest in the platform.
-
-::: panel-tabset
-## (1) Magic with WebAssembly
-
-```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P7aTHrgjHt4?si=coINMAK_3P9c_nRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-## (2) R-Shiny without server
 
-```{=html}
+### R-Shiny without a server (Joe Cheng)
+
+Joe focused on Shinylive: Shiny apps running entirely in the browser through WebAssembly. Startup is slower than a regular Shiny server, but the deployment simplicity is appealing. No server to maintain, just static files.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/j1M6YyU2ZX8?si=W8LsuM88VaxlPrpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-:::
 
-### Talk 1: Magic with WebAssembly and WebR (by George Stagg)
-
-George Stagg provided a succinct overview of WebR, emphasizing its ability to run R code directly in web browsers without a supporting server. He discussed how Web Assembly enables WebR to operate across various platforms and showcased its application in educational tools and documentation. George also demonstrated WebR's unique features, such as manipulating data and running R functions, and highlighted its promising performance and security.
-
-### Talk 2: Running R-Shiny without a server (by Joe Cheng)
-
-Joe Cheng's presentation focused on the integration of WebAssembly with Shiny, specifically through Shinylive. He discussed the evolution of serverless Shiny apps and their potential in interactive web-based applications. Despite some limitations like slower start times, Joe's talk suggested a bright future for Shinylive in enhancing Shiny's capabilities.
-
-### My Reflections
-
-These presentations have heightened my excitement for WebR's future. I've explored every feature that WebR offers, from engaging with interactive code chunks in Quarto and crafting Shiny apps using Shinylive, to integrating R within JavaScript via the webr npm library. The next venture on my journey with WebR is to delve into the creation of standalone Electron apps, harnessing its vast capabilities. Will it works?
-
-------------------------------------------------------------------------
+I've already played with WebR in Quarto, built small Shinylive apps, and used the webr npm package to run R inside JavaScript. The next thing I want to try is packaging a standalone Electron app with WebR. Not sure if it'll work smoothly, but it's on my list.
 
 ## Other interesting talks
 
-Amid a conference rich in sessions about Quarto, WebR, and LLM, one presentation stood out for its innovative approach to data visualization. Deepsha Menghani's session brilliantly demonstrated how to bring data to life through interactivity and animation. I highly recommand this talk!
+One standout was Deepsha Menghani's session on creative data visualization. She used Roy Kent from *Ted Lasso* as a dataset, animated his catchphrase frequency with Plotly, and added interactive filters. She also linked plots so selections in one view updated others, and warned against overusing animation, a point I appreciated.
 
-```{=html}
+The talk made me want to build more exploratory, linked visualizations in my own work.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AbuK2F57NEs?si=GQRRflGBIYnRIlMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-### Deepsha menghani's creative approach to data storytelling
 
-Deepsha Menghani used the character Roy Kent from "Ted Lasso" as a focal point to explore advanced data visualization techniques. She skillfully employed animation to depict Roy Kent's frequent use of a certain expletive, adding a layer of time to the story with the Plotly package. Further enhancing the interactive experience, she introduced the concept of Roy Kent's 'f-score' and implemented a checkbox filter, allowing viewers to tailor the data exploration to their preferences. Additionally, Deepsha showcased the power of linking different plots to provide a comprehensive view of how specific episodes impact broader trends.
+## Wrapping up
 
-She also stressed the importance of a balanced approach in visualization. While emphasizing that tools like animations and interactivity are powerful, she cautioned against their overuse, which can lead to cluttered and confusing visuals. Her presentation was not just about static data; it extended into dynamic, interactive realms, mentioning the use of Crosstalk and the integration of these techniques into Shiny apps.
+This year's Posit conference delivered what I needed: concrete tools (duckplyr, epoxy, ShinyUiEditor), new Quarto workflows I'll use, and a clearer picture of where WebR is headed. The community around R and Python keeps building useful things, and these videos are the fastest way I know to catch up.
 
-### My Reflections
-
-This presentation stood out as a gem in the conference, highlighting the evolving art of data visualization. I'm determined to use the tools and concepts presented in this video to create better visualizations, dashboards and interactive applications. Truly brilliant!
-
-------------------------------------------------------------------------
-
-## Wrapping up: a conference full of learning
-
-As this blog post comes to a close, I am once again reminded of the invaluable learning experiences these conferences provide. From the groundbreaking advancements in WebR and its impact on R programming to the imaginative ways of visualizing data presented by Deepsha Menghani, every session was a testament to the continuous evolution and excitement in our field.
-
-I am particularly thrilled by the innovations in Quarto and the new frontiers opened by WebR, which are not just enhancing our skills but also expanding the ways we think about and interact with data. The discussions and exchanges with the community are, as always, the lifeblood of these conferences, keeping us connected and in tune with the latest trends and developments.
-
-Looking forward to the next conference, I'm filled with optimism and eagerness to see what new breakthroughs and discussions it will bring. These events are not just about learning; they're a celebration of our vibrant community and the continuous journey of discovery in the world of data and programming.
-
-**Let's see what the future holds!**
+Looking forward to seeing what shows up next year.

@@ -4,7 +4,7 @@ author: "Vestin Hategekimana"
 categories: ["R", "Python"]
 tags: ["Learning"]
 date: 2023-12-17
-image: image.jpg
+image: image.png
 ---
 
 # The two-minute rule for busy coders/learners
@@ -12,246 +12,166 @@ image: image.jpg
 ::: callout-important
 ## For busy readers
 
--   We generally have time on our hands, but what makes us feel short of time is the prioritization of our activities.
-
--   Starting to code is difficult, so the activity will be low on our priority list.
-
--   To make it easier to get started, you need to start with 2-5 minute sessions every week and gradually increase the importance of the activity.
-
--   To find out how to put this into practice and discover other tips, read the blog post.
+- We generally have more time than we think. What makes us feel busy is how we prioritize.
+- Starting to code is hard, so it tends to sink to the bottom of the list.
+- The fix: start with 2–5 minute sessions every week, then slowly scale up.
+- Read on for how to make this work in practice.
 :::
 
-Hey, aspiring coders! Let's dive deeper into making coding a seamless part of your busy life. If you're struggling to find time, the **two-minute rule** is your new best friend. It's all about setting yourself up for success with quick, easy-to-start tasks. Let's expand on this and give you some real actionable steps!
+If you're struggling to find time to code, the two-minute rule might help. The idea is simple: when a habit feels too big to start, make the first step so small that you can't say no.
 
 ::: callout-note
-As you read this article, please take note so that you do not need to come back too often. And be sure to apply everything right away!😁
+As you read, jot down notes so you don't have to come back too often. And try to apply one thing right away.
 :::
 
-### The two-minute rule explained
+## How it works
 
-The Two-Minute Rule is pretty straightforward: **If a habit is hard to get into because of a lack of time, try to start slowly with short 2-minute sessions**. This principle, a fusion of the [Atomic habits philosophy](https://jamesclear.com/atomic-habits-summary) and the [Kaizen method](https://in.kaizen.com/blog/post/2016/07/19/a-japanese-technique-for-overcoming-laziness), is perfect for building a coding habit. It's about overcoming the inertia of starting by making the first step super easy. It is a practice that emphasizes continuous improvement through small, incremental changes in habits while getting rid of bad habits (which is not the focus today).
+The rule is straightforward: **if something is hard to start because of time, begin with a 2-minute session.** This borrows from *Atomic Habits* and the Kaizen method: small, regular improvements that compound over time.
 
-In concrete terms, you start by forging a habit by being regular for a small period of time, in our case 2 minutes every week. Then, when the habit is acquired, you can start to increase the duration and frequency according to what suits you best. You can start with 5 or 10 minutes if that's not too much of a challenge.[**But don't be greedy and hasty at first!**]{style="color: blue;"}
+In practice, you anchor a habit by showing up consistently, even if the sessions are tiny. Once the habit sticks, you can increase the duration and frequency. Start with 5 or 10 minutes if 2 feels silly, but don't overdo it at the beginning.
 
-Indeed we are looking for [**long term results**]{style="color: blue;"}. Of course, nothing restrain you to have non-regular coding period outside of your new habit, but keep the regularity with this specific habit!
+The goal is **long-term consistency**, not a burst of effort. You can still code outside these sessions. The habit is just the baseline you don't break.
 
-**How to apply that in your coding habit? Follow this steps:**
+## Applying it to coding
 
-1.  **Set clear objectives:** Making a roadmap is event better! There are lots of different things to learn in coding. Not everything is necessary, and that's why it's important to set concrete, practical objectives. For example:
+1. **Set a clear objective.** Be specific. "Know machine learning" is too broad. "Build a complete ML pipeline from raw data to predictions" is better. For R, "Fit a Bayesian multilevel model in a research project on wage inequality" beats "learn Bayesian stats."
 
-    -   **For Python** it might be "Know how to create a complete machine learning workflow" rather than "Know how to do machine learning".
+2. **Break it into small steps.** A vague goal is overwhelming. Split it into chronological, measurable pieces. If you need inspiration, search for roadmaps online or ask an AI model to help draft one, then refine it yourself.
 
-    -   **For R** it might be "Apply a Bayesian multilevel model in a research project on wage inequality" rather than "Know how to use Bayesian statistics".
+   For example:
 
-2.  **Divide this/these objective(s) in multiple smaller steps:** To avoid being overwhelmed by a huge goal, you need to break it down into smaller, chronological and measurable objectives. If you're having trouble doing this, there are plenty of roadmap infographics on the Internet, and in the worst case, ask Chat-GPT or another model to do it for you. Going back to the previous examples:
+   **Python:**
+   1. Import data
+   2. Clean data
+   3. Engineer features
+   4. Fit a random forest
+   5. Compare models
+   6. Make predictions
+   7. Export the final model
 
-    -   **For Python** it could be:
+   **R:**
+   1. Select and collect data
+   2. Clean and prepare
+   3. Run descriptive analysis
+   4. Specify priors
+   5. Fit and optimize the model
+   6. Create regression tables
 
-        1.  "Import data"
+3. **Pick a specific time and place.** Tie the habit to a context. Example: "Every Friday at 6 p.m. at my desk, I'll code for 2 minutes." Expand the duration only after it feels automatic. Regularity matters more than intensity.
 
-        2.  "Clean data"
+4. **Remove friction.** See the next section for how to set up your environment so starting is effortless.
 
-        3.  ...
+## Identifying obstacles and setting up your coding zone
 
-        4.  "Apply random forest model"
+Common blockers:
 
-        5.  "Compare performance of different models"
+- Distractions from phone or computer notifications
+- Environment setup taking too long
+- Not knowing which resource to open
+- No clear next step
+- Forgetting everything between sessions
+- Missing a schedule, then dropping the habit entirely
 
-        6.  "Make predictions"
+**Write down your specific blockers and fix them one at a time.**
 
-        7.  "Export model"...
+The best way to lower resistance is to build an environment that invites you to start:
 
-    -   **For R** it could be:
+1. **Eliminate distractions.** Turn off non-essential notifications. Put your phone in another room. You have limited focused time. Protect it.
 
-        1.  "Select appropriate data"
+2. **Create a dedicated workspace.** Even a corner of a desk works. Keep it uncluttered.
+   - **Use projects.** Most editors support project folders (e.g., [RStudio projects](https://r4ds.had.co.nz/workflow-projects.html), [VS Code workspaces](https://code.visualstudio.com/docs/editor/workspaces)). A project puts all your scripts, data, and notes in one place so you can resume instantly.
+   - **Stay tidy.** Clean folders and consistent naming save hours later. A well-organized project also becomes a template you can reuse.
 
-        2.  "Collect data"
+3. **Keep tools and resources within reach.**
+   - **Bookmark what you're using.** Have tabs ready with tutorials, docs, or references. AI tools can help, but rely on them too much and you'll skip the actual learning.
+   - **Take your own notes.** Keep a running file (Markdown, Word, whatever) with tips, gotchas, and quick-start steps. Your notes will always be faster than re-googling.
+   - **Use TODO extensions.** In [RStudio](https://github.com/dokato/todor) and [VS Code](https://www.stepsize.com/blog/best-vs-code-extensions-to-handle-todos), TODO extensions let you mark specific tasks in your code so you know exactly where to start next time.
 
-        3.  ...
+4. **Build in accountability.**
+   - **Plan B.** Pick a backup time in case the primary slot falls through. Don't just "make it up next session". Regularity matters more than total time.
+   - **Plan C.** Pick a non-coding alternative that keeps the habit alive. See the activity list below for ideas.
+   - **Find a group.** Work alongside others, even remotely. Share progress in a chat or meet regularly. External accountability helps without guilt.
 
-        4.  "Perform descriptive analysis"
+Don't try to implement all of this at once. I've ordered the suggestions by priority. Start with eliminating distractions and defining a workspace. Once that feels natural, tackle project organization, then resource setup, then accountability. One at a time.
 
-        5.  "Specify appropriate priors"
+## What to do in short sessions
 
-        6.  "Optimize the model"
+> Activities you can do on a smartphone are marked 📱. Non-coding activities are marked ✅. Pen-and-paper tasks are marked ✏️.
 
-        7.  "Create regression tables"...
+### Two to five minutes
 
-3.  **Set a precise time**: To anchor a good habit, it's important to rely on regularity rather than effort. Start by setting a simple rhythm (in this case, 2 minutes) and, above all, a precise context. For example: "**Every Friday at 6 p.m. on my table in my room, I'm going to learn to code, for 2 minutes**". You can increase the length and frequency of these sessions as you get used to them. [**There's no point in starting intensively - it's the regularity that counts**.]{style="color: blue;"}
+- Complete one online coding exercise ([list of platforms](https://wedata-active-blog.netlify.app/posts/programming_exercise_websites/)) 📱
+- Read a tutorial or docs page and take notes 📱 ✅ ✏️
+- Re-read or re-type a script you're trying to memorize
+- Set up a working directory ✅
+- Break a project into the next three concrete steps ✅
+- Write a TODO comment explaining what to do next
+- Type out a code snippet from a tutorial
+- Bookmark a resource for your next session 📱 ✅
+- Write down one new goal ✅ ✏️
 
-4.  **Identify obstacles and set up a coding zone:** See the next section for more details!
+### Ten to fifteen minutes
 
-### Identifying obstacles and setting up your coding zone
+- Any of the above
+- Start a new project (spread across multiple sessions)
+- Try a new library or package
+- Debug a small error or search for a solution
+- Follow a short YouTube tutorial, coding along if possible 📱 ✅
+- Clean up and reorganize a project ✅
 
-Think about what stops you from coding. Here are some classical examples:
+### Thirty minutes or more
 
--   Distraction in your PC/smartphone?
+- Any of the above
+- Build a small standalone project
+- Work through a longer tutorial (code along)
+- Learn a new editor trick or language feature 📱
+- Learn a supporting tool (Git, regex, LaTeX, HTML)
 
--   Is it setting up your environment?
+### When you genuinely can't code
 
--   Finding the right resources?
+- Sketch or reorganize your roadmap 📱 ✅ ✏️
+- Talk programming with a friend or online community 📱 ✅ ✏️
+- Collect and bookmark new resources 📱 ✅ ✏️
 
--   Lack of roadmap or precise steps?
+## Start now, start small
 
--   Starting take too much time (more than 2 minutes)?
+That's the core framework. If you take nothing else away, pick one two-minute task from the list above and do it now, or schedule it for a specific time today.
 
--   Forgetting everything each time?
+## Example: Sandiya learns R
 
--   Non regularity?
+Sandiya is a geographer who wants to use R to map urban car density from parking data. She knows nothing about R, so she applies the two-minute rule.
 
-[**Write these down and tackle them!**]{style="color: blue;"}
+**Step 1: Define the goal.** Analyze how car density varies across parking locations over time. To do that, she needs to learn R, handle data analysis, scrape web data, and do geospatial work.
 
-The best way to resolve most of the problems is to create an environment that invites you to code and get started fast. Here's how:
+**Step 2: Draft a roadmap.**
 
-1.  **Eliminate distractions:** Turn off non-essential notifications and put your smartphone aside. You have little time to focus on your work, don't waste it!
-2.  **Dedicated space:** Even if it's just a corner of your desk, make it your "coding zone."
-    1.  **Projects:** On your computer, use projects which are dedicated environement (generally a folder) in which you find all the scripts and tools you need to start coding. For instance, [Rstudio](https://r4ds.had.co.nz/workflow-projects.html) and [VS code](https://code.visualstudio.com/docs/editor/workspaces) have their dedicated way to organise project.
-    2.  **Keep things tidy:** Spend time organizing your projects and your code in a clean way. Every minute you spend getting your project clean will be hours of work you'll save yourself in the future. What's more, your project will become a great example for your future works, and therefore a golden resource!
-3.  **Keep your tools handy:** Have your laptop, charger, and any books or resources you need within reach.
-    1.  **Bookmark resources:** Keep tabs open with coding websites or tutorials you're following to check anything you need. Ai tools are also ressources, but limit their use (you risk becoming dependent and learning nothing).
-    2.  **Take notes as you learn**: The best ressources are the one you make. Keep a file open (Markdown, Word document, etc.) to note everything useful to help you remember tips/tricks and to write down steps to get started fast (you rarely can remember everything the first time).
-    3.  **Look for productivity tools**: Many code editor like RStudio or VS Code have powerfull extensions. I highly recommand **TODO extensions** on both [RStudio](https://github.com/dokato/todor) and [VS Code](https://www.stepsize.com/blog/best-vs-code-extensions-to-handle-todos), since they let you start right away with specific tasks on your code and help you navigate them.
-4.  **Look for accountability**: It's no easy task to forge a new habit and stick to it. Often it's events beyond our control that prevent us from sticking to them. That's why it's important to think ahead, to make it difficult to get out of these habits and easy to get in. The most important thing is not to blame ourselves, but to get back into the swing of things as soon as possible:
-    1.  **Plan B**: Not only do you need to choose a good time that won't be disrupted, but you also need to anticipate how you can make up for any unforeseen circumstances. You need to plan ahead for a Plan B, which is another time when the session can be rescheduled. It's not enough to "make up the time" at the next session; what counts is regularity, not time spent.
-    2.  **Plan C**: There are extreme cases where it's literally impossible to continue the activity as desired. In such cases, coding is no longer possible (prolonged absence, lost computer, broken hand, etc.). If possible, you need to plan ahead for a viable alternative to keep up the pace. This doesn't necessarily mean coding. The following section gives a list of things you can do.
-    3.  **Working with colleagues**: The best way to stay accountable without putting too much blame or pressure on yourself is to join a work group that has set itself a goal of regularity (it doesn't have to be the same subject). For example, you can organize regular face-to-face or online meetings. During these meetings, everyone works on their personal project. Or you can simply share your progress without the need for meetings. Whatever suits you!
+1. R basics
+2. Data analysis skills
+3. Web scraping
+4. Geospatial analysis in R
 
-All of the above may seem like big challenges, especially if you're not familiar with them. But don't worry, you don't have to apply them all at once. I've arranged them in order of importance. Concentrate on one element at a time until it becomes natural for you. Then you can concentrate on the next element. Since eliminating distractions and finding a dedicated place to work are required, you can start with setting up your project, then move on to keeping your work area clean, then move on to making resources available, and so on. See? A piece of cake!
+**Step 3: Anchor the habit.** Every Tuesday at 4 p.m., she sits down for two minutes of R practice. She gradually increases the time.
 
-### Coding tasks by time
+**Step 4: First sessions.**
+- Week 1: Install R and RStudio.
+- Week 2: Start exercises on [W3Schools](https://www.w3schools.com/r/r_exercises.asp). Free, no account needed, good explanations.
 
-Ok, we have everyting to start. So what now? What can you possibly do in two, five our ten minutes? Also what about the extrem cases when we can't possibly code? Let's break down some coding activities:
+**Step 5: Expand.** After two months, she's reading *R for Data Science* and adds Thursdays at 4 p.m. Sessions are now 30 minutes.
 
-> *Note: activities that can be done whith a smartphone are marked with a (*📱*) and activities tha can be done without coding are marked with a (*✅*). Also, when no technology is needed it is marked with a (*✏️*).*
+**Step 6: Data analysis.** She replicates examples from tutorials and grows confident with dplyr and ggplot2.
 
--   **Two- or five-minute tasks:**
+**Step 7: Web scraping.** She watches YouTube videos and reads blog posts, taking notes and collecting her data. Sessions stretch to an hour.
 
-    -   Do an online coding exercise ([here is a list of good platforms](https://wedata-active-blog.netlify.app/posts/programming_exercise_websites/)) 📱
+**Step 8: Geospatial work.** She works through a Bookdown on geospatial analysis in R, replicating the examples.
 
-    -   Read a tutorial/documentation/book and take note 📱✅✏️
+**Step 9: Six months later.** Sandiya is putting in six hours a week across Tuesday and Thursday sessions. She's comfortable enough with R to write and submit her paper.
 
-    -   Drill a simple script to memorize it
+**Step 10: Adapt when life interrupts.** Some weeks she reschedules to Saturday morning. She doesn't aim for perfect attendance. She aims to not stay away for long.
 
-    -   Set up a working directory in the computer✅
+**Step 11: Next challenge.** With R now a solid habit, she starts thinking about learning Python the same way.
 
-    -   Organise a project in smaller steps✅
+Sandiya didn't do anything extraordinary. She picked a clear goal, broke it down, started absurdly small, and kept showing up. That's the whole trick.
 
-    -   Write a comment/TODO in the code explaining your next steps.
+---
 
-    -   Read a code snippet and type it out.
-
-    -   Bookmark a tutorial for your next session. 📱✅
-
-    -   Set new goals✅✏️
-
--   **Ten- or five-minute tasks:**
-
-    -   All the previous tasks
-
-    -   Start a new project (divided in multiple sessions)
-
-    -   Try a new library/package
-
-    -   Debug code or find solutions on internet
-
-    -   Follow a short YouTube tutorial (it is better to code in the same time) 📱✅
-
-    -   Organise/clean the project ✅
-
--   **Thirty-Minute or more tasks:**
-
-    -   All the previous tasks
-
-    -   Build a small project
-
-    -   Work through longer tutorials (you should definitely code along)
-
-    -   Learn new coding tricks 📱
-
-    -   Learn other coding tools (GitHub for instance)
-
-    -   Learn new languages (latex, regex, html, etc.)
-
--   **When coding is impossible**:
-
-    -   Organize your roadmap 📱✅✏️
-
-    -   Discuss about programming 📱✅✏️
-
-    -   Compile new resources 📱✅✏️
-
-### Start now, start small
-
-We've finished the main part of the tutorial, so you can stop here. If you're still not sure how to get started, in the next section we present a concrete example.
-
-::: callout-important
-Before you move on, choose a two-minute task from this list and do it. Right now (or plan it for later). It's all about building momentum!
-:::
-
-## Final example
-
-Now we have everything we need to start these new habits. Let's take the example of Sandiya, a geographer who wants to learn how to use R for a future article. The problem is that she knows nothing about R. So she decides to use the two-minute principle.
-
-### Sandiya's journey: mastering R with the two-minute rule
-
-Once upon a time in the bustling city, there was a geographer named Sandiya. Passionate about urbanism, she had a dream: to create a detailed map of urban car density using geodata from parking places. But there was a catch -- she didn't know R, the programming language perfect for this task.
-
-**Step 1: Defining the goal**
-
-Sandiya's project was clear: analyze car density variability in various parking places over time. But to do this, she needed to learn R, master data analysis, understand web scraping, and get a grip on geospatial analysis.
-
-**Step 2: Crafting a roadmap**
-
-After fruitful discussions and online research, Sandiya outlined her learning path:
-
-1.  **Basics of R**
-
-2.  **Data Analysis Skills**
-
-3.  **Web Scraping Knowledge**
-
-4.  **Geospatial Analysis with R**
-
-With her roadmap in hand, she decided to start small, applying the Two-Minute Rule.
-
-**Step 3: Setting the habit**
-
-Every Tuesday at 4 pm, Sandiya's living room transformed into her learning zone. She started with just two minutes of R practice and gradually increased her time.
-
-**Step 4: The initial strides**
-
-In her first session, Sandiya installed R and RStudio, a small but crucial step. The following week, she began online exercises on [W3Schools](https://www.w3schools.com/r/r_exercises.asp), steadily progressing through them. It was a wise choice, since the website is completly free, doesn't require an account and has tutorials on R.
-
-**Step 5: Expanding the learning schedule**
-
-Two months in, Sandiya was already diving into "[R for Data Science](https://r4ds.had.co.nz/)" (a free online book to learn R). She added Thursdays at 4 pm to her schedule, now feeling more confident and eager to learn. She was already working 30 minutes per session.
-
-**Step 6: Gaining confidence**
-
-After another two months, she had honed her data analysis skills. Tackling a data analysis tutorial, she replicated the examples, cementing her understanding.
-
-**Step 7: Diving into web scraping**
-
-Sandiya then turned to YouTube videos and blog posts to learn web scraping. She meticulously took notes, starting to collect her needed data. She needed more time, so she decided to work at least one hour per session.
-
-**Step 8: Embracing geospatial analysis**
-
-Simultaneously, she delved into a Bookdown on geospatial analysis in R, replicating examples and building her skills.
-
-**Step 9: Six months of transformation**
-
-Six months from her humble two-minute beginnings, Sandiya was working six hours weekly on R (three hours each on Tuesday and Thursday) and had reached an advanced level. She was able to submit her paper for publication.
-
-**Step 10: Flexibility and persistence**
-
-Not every week was perfect. Sometimes, life intervened, and Sandiya rescheduled her Tuesday sessions to Saturday mornings. But she persisted.
-
-**Step 11: Eyeing a new challenge**
-
-Now, comfortably adept at R and with a regular habit firmly in place, Sandiya began contemplating learning Python, using the same effective, gradual method.
-
-Sandiya's story is a testament to the power of small, consistent steps. Starting with just two minutes of focused time, she transformed her skill set and realized her dream. Her journey, marked by clear goals, a structured roadmap, and adaptable persistence, is an inspiring blueprint for anyone looking to embark on a similar path. Remember, every big accomplishment starts with one small step. Just like Sandiya, you too can achieve your learning goals, one small, focused session at a time. 🌟💻🗺️
-
-------------------------------------------------------------------------
-
-Remember, coding doesn't have to be a daunting time-sink. With the Two-Minute Rule, you're not just learning to code; you're integrating it into your life in manageable, enjoyable pieces. Keep it up, and watch how these minutes add up to significant progress. Happy coding, friends! 🚀💻✨
+Coding doesn't have to consume your life. Two minutes is enough to start. The minutes add up faster than you think.

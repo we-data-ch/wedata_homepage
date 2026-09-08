@@ -6,11 +6,11 @@ format: html
 # Typr
 ![](./images/TypR_logo.png){width=200}
 
-[GitHub](https://github.com/fabriceHategekimana/typr) / [Website](https://fabricehategekimana.github.io/typr.github.io/build/) / [Docker](https://hub.docker.com/r/fabricehategekimana/typr)
+[GitHub](https://github.com/fabriceHategekimana/typr) / [Website](https://we-data-ch.github.io/typr.github.io/) / [Docker](https://hub.docker.com/r/fabricehategekimana/typr)
 
 **TypR a type system for R!**
 
-TypR is a word game with Typescript (a superset of JavaScript) and the common way of naming things in the R community. The initial goal is to create a better experience with building packages for R. Indeed, TypR is not only a type checker but brings greater tools to build packages for data science in general and wants to be an easy way to convert research papers into code. TypR adds great static types and a flexible syntax with some cool tricks (metaprogramming) that make it great to work with.
+A modern type system for R, designed to improve safety, ease package maintenance, and encourage explicit, long-lasting data modeling. It can be used for Shiny app and ETL too. It brings a whole framework with it and has ambitious project (compile to JavaScript and WebAssembly). TypR is a word game with TypeScript (a superset of JavaScript) and the common way of naming things in the R community. 
 
 # TPG ShinyApp
 

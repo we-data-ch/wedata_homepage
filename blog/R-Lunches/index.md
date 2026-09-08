@@ -10,6 +10,6 @@ R lunches are multidisciplinary meetings on R at UniMail.
 
 We finished this semester R Lunches but you can still find the video links if you missed one! 
 
-[Read more about it](https://use-r-carlvogt.github.io/prochains-lunchs/)
+[Read more about it](https://we-data-ch.github.io/r_lunches_website/)
 
 
